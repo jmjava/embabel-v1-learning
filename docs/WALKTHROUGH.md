@@ -2,14 +2,26 @@
 
 This repository is a study curriculum for [Embabel Agent Framework](https://docs.embabel.com/embabel-agent/guide/1.0.0-SNAPSHOT/) **1.0.0**, with **Java** and **Kotlin** side-by-side demos, linkable Javadoc/KDoc, and unit tests designed for step-debugging.
 
+## Study aids (start here if short on time)
+
+| Doc | Use it for |
+|-----|------------|
+| [`TOP_10.md`](TOP_10.md) | The ten ideas to memorize |
+| [`CHEATSHEET.md`](CHEATSHEET.md) | One-page API / annotation reference |
+| [`CHAPTER_SUMMARIES.md`](CHAPTER_SUMMARIES.md) | Per-lesson “what / why / top points” |
+| [`BREAKPOINTS.md`](BREAKPOINTS.md) | Debugger stop map |
+| [`JAVA_VS_KOTLIN.md`](JAVA_VS_KOTLIN.md) | Language deltas |
+| [`ADVANCED_NUANCES.md`](ADVANCED_NUANCES.md) | Sharp edges after the basics |
+
 ## How to study
 
-1. Read [`LessonOrder`](../learning-common/src/main/java/com/embabel/learning/common/curriculum/LessonOrder.java) for the sequence.
-2. Open the lesson package (Java `package-info.java` and/or the Kotlin class KDoc).
-3. Read the agent/service class — follow `{@link}` / KDoc cross-links to counterparts.
-4. Debug the matching `*GuidedTest` (breakpoints are declared with `@DebugGuide`).
-5. Compare languages in [`JAVA_VS_KOTLIN.md`](JAVA_VS_KOTLIN.md).
-6. Keep [`BREAKPOINTS.md`](BREAKPOINTS.md) open as a cheat sheet.
+1. Skim [`TOP_10.md`](TOP_10.md) and keep [`CHEATSHEET.md`](CHEATSHEET.md) open.
+2. Read [`LessonOrder`](../learning-common/src/main/java/com/embabel/learning/common/curriculum/LessonOrder.java) for the sequence.
+3. Before each lesson, read its section in [`CHAPTER_SUMMARIES.md`](CHAPTER_SUMMARIES.md).
+4. Open the lesson package (Java `package-info.java` and/or the Kotlin class KDoc).
+5. Read the agent/service class — follow `{@link}` / KDoc cross-links to counterparts.
+6. Debug the matching `*GuidedTest` (breakpoints are declared with `@DebugGuide`).
+7. Compare languages in [`JAVA_VS_KOTLIN.md`](JAVA_VS_KOTLIN.md).
 
 Generate API docs:
 

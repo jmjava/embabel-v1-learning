@@ -23,9 +23,13 @@ Start at **[`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md)**.
 
 | Doc | Purpose |
 |-----|---------|
-| [docs/WALKTHROUGH.md](docs/WALKTHROUGH.md) | Lesson map + how to study |
+| [docs/TOP_10.md](docs/TOP_10.md) | Ten ideas to memorize |
+| [docs/CHEATSHEET.md](docs/CHEATSHEET.md) | One-page API / annotation cheat sheet |
+| [docs/CHAPTER_SUMMARIES.md](docs/CHAPTER_SUMMARIES.md) | Per-lesson summaries + top points |
+| [docs/WALKTHROUGH.md](docs/WALKTHROUGH.md) | Full lesson map + how to study |
 | [docs/JAVA_VS_KOTLIN.md](docs/JAVA_VS_KOTLIN.md) | Language differences |
-| [docs/BREAKPOINTS.md](docs/BREAKPOINTS.md) | Debugger cheat sheet |
+| [docs/BREAKPOINTS.md](docs/BREAKPOINTS.md) | Debugger stop map |
+| [docs/ADVANCED_NUANCES.md](docs/ADVANCED_NUANCES.md) | Sharp edges |
 | [docs/SPEC_COMPLETENESS.md](docs/SPEC_COMPLETENESS.md) | Spec Q&A + next extensions |
 
 Curriculum order is defined in
