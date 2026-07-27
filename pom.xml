@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.5.13</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.embabel.learning</groupId>
+    <artifactId>embabel-v1-learning</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Embabel V1 Learning Demo</name>
+    <description>
+        Comprehensive Embabel Agent Framework study project with Java and Kotlin demos,
+        linkable Javadoc/KDoc walkthroughs, and guided unit tests with breakpoint maps.
+    </description>
+
+    <modules>
+        <module>learning-common</module>
+        <module>java-demo</module>
+        <module>kotlin-demo</module>
+    </modules>
+
+    <properties>
+        <java.version>21</java.version>
+        <kotlin.version>2.1.10</kotlin.version>
+        <kotlin.compiler.apiVersion>2.1</kotlin.compiler.apiVersion>
+        <embabel-agent.version>1.0.0</embabel-agent.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.embabel.agent</groupId>
+                <artifactId>embabel-agent-dependencies</artifactId>
+                <version>${embabel-agent.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.embabel.learning</groupId>
+                <artifactId>learning-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>3.11.2</version>
+                    <configuration>
+                        <doclint>none</doclint>
+                        <failOnError>false</failOnError>
+                        <source>21</source>
+                        <links>
+                            <link>https://docs.oracle.com/en/java/javase/21/docs/api/</link>
+                            <link>https://docs.spring.io/spring-framework/docs/current/javadoc-api/</link>
+                        </links>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.jetbrains.dokka</groupId>
+                    <artifactId>dokka-maven-plugin</artifactId>
+                    <version>2.0.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>openai-models</id>
+            <activation>
+                <property>
+                    <name>env.OPENAI_API_KEY</name>
+                </property>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>com.embabel.agent</groupId>
+                    <artifactId>embabel-agent-starter-openai</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>anthropic-models</id>
+            <activation>
+                <property>
+                    <name>env.ANTHROPIC_API_KEY</name>
+                </property>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>com.embabel.agent</groupId>
+                    <artifactId>embabel-agent-starter-anthropic</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+</project>
