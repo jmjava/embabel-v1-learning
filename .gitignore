@@ -1,7 +1,13 @@
 target/
 .idea/
 *.iml
-.vscode/
+# Keep shared snippets / recommendations; ignore personal editor state
+.vscode/*
+!.vscode/embabel-java.code-snippets
+!.vscode/embabel-kotlin.code-snippets
+!.vscode/SNIPPETS.md
+!.vscode/extensions.json
+
 .classpath
 .project
 .settings/
