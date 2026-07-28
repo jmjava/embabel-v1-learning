@@ -1,7 +1,8 @@
 # Embabel one-page cheat sheet
 
 **Printable PDF:** [`print/embabel-cheatsheet.pdf`](print/embabel-cheatsheet.pdf)  
-Regenerate: `./scripts/generate-cheatsheet-pdf.sh`
+Regenerate: `./scripts/generate-cheatsheet-pdf.sh`  
+**VS Code snippets:** type `emb-` — see [`.vscode/SNIPPETS.md`](../.vscode/SNIPPETS.md)
 
 Keep this (or the PDF) next to the debugger.
 

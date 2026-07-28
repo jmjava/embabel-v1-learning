@@ -2,6 +2,10 @@
 
 This repository is a study curriculum for [Embabel Agent Framework](https://docs.embabel.com/embabel-agent/guide/1.0.0-SNAPSHOT/) **1.0.0**, with **Java** and **Kotlin** side-by-side demos, linkable Javadoc/KDoc, and unit tests designed for step-debugging.
 
+## VS Code / Cursor snippets
+
+Type `emb-` in a `.java` / `.kt` file. Full list: [`.vscode/SNIPPETS.md`](../.vscode/SNIPPETS.md).
+
 ## Study aids (start here if short on time)
 
 | Doc | Use it for |

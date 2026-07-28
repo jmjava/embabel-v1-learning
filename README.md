@@ -17,6 +17,12 @@ export OPENAI_API_KEY=...          # and/or ANTHROPIC_API_KEY
 ./mvnw -pl kotlin-demo spring-boot:run
 ```
 
+## VS Code / Cursor snippets
+
+Workspace snippets (prefix `emb-…`) load from [`.vscode/`](.vscode/). See [`.vscode/SNIPPETS.md`](.vscode/SNIPPETS.md).
+
+Examples: `emb-agent`, `emb-action`, `emb-hitl`, `emb-subagent`, `emb-repeat`, `emb-dsl` (Kotlin).
+
 ## Study path
 
 Start at **[`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md)**.
