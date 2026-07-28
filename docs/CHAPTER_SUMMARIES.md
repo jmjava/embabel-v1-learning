@@ -261,9 +261,14 @@ One page per lesson: **what**, **why**, **top points**, **code to open**, **test
 
 ## Suggested review circuit (60–90 minutes)
 
+Use the checkbox page: **[`REVIEW_CIRCUIT.md`](REVIEW_CIRCUIT.md)**.
+
+Outline:
+
 1. Skim [`TOP_10.md`](TOP_10.md)  
-2. Skim [`CHEATSHEET.md`](CHEATSHEET.md)  
+2. Skim [`CHEATSHEET.md`](CHEATSHEET.md) / [PDF](print/embabel-cheatsheet.pdf)  
 3. Debug Lesson 02 (both languages)  
 4. Debug Lessons 04, 06, 12  
 5. Read Lesson 10 summaries + planner annotations  
 6. Skim [`ADVANCED_NUANCES.md`](ADVANCED_NUANCES.md)  
+7. Drill [`QUIZ_FLASHCARDS.md`](QUIZ_FLASHCARDS.md)  

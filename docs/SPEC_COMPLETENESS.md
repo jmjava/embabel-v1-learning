@@ -67,3 +67,9 @@ The original request asked for an extensive Embabel demo with Java+Kotlin, linka
 4. Add breakpoint printer JUnit extension.
 5. Add lesson coverage reflective test.
 6. Publish aggregated Javadoc/Dokka to GitHub Pages.
+
+## Study-aid upgrades (done)
+
+- [x] Printable cheat sheet PDF (`docs/print/embabel-cheatsheet.pdf`, regenerator script)
+- [x] Flashcard quiz per lesson (`docs/QUIZ_FLASHCARDS.md`)
+- [x] 60–90 minute checkbox review circuit (`docs/REVIEW_CIRCUIT.md`)

@@ -23,9 +23,12 @@ Start at **[`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md)**.
 
 | Doc | Purpose |
 |-----|---------|
+| [docs/REVIEW_CIRCUIT.md](docs/REVIEW_CIRCUIT.md) | 60–90 min checkbox review circuit |
 | [docs/TOP_10.md](docs/TOP_10.md) | Ten ideas to memorize |
-| [docs/CHEATSHEET.md](docs/CHEATSHEET.md) | One-page API / annotation cheat sheet |
+| [docs/CHEATSHEET.md](docs/CHEATSHEET.md) | API / annotation cheat sheet (Markdown) |
+| [docs/print/embabel-cheatsheet.pdf](docs/print/embabel-cheatsheet.pdf) | Printable PDF cheat sheet |
 | [docs/CHAPTER_SUMMARIES.md](docs/CHAPTER_SUMMARIES.md) | Per-lesson summaries + top points |
+| [docs/QUIZ_FLASHCARDS.md](docs/QUIZ_FLASHCARDS.md) | Flashcard Q&A per lesson |
 | [docs/WALKTHROUGH.md](docs/WALKTHROUGH.md) | Full lesson map + how to study |
 | [docs/JAVA_VS_KOTLIN.md](docs/JAVA_VS_KOTLIN.md) | Language differences |
 | [docs/BREAKPOINTS.md](docs/BREAKPOINTS.md) | Debugger stop map |

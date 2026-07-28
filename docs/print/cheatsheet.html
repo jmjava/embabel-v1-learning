@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Embabel Cheat Sheet</title>
+  <style>
+    @page { size: Letter; margin: 0.35in; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "IBM Plex Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 8.4pt;
+      line-height: 1.28;
+      color: #1a1a1a;
+      margin: 0;
+    }
+    h1 {
+      font-size: 14pt;
+      margin: 0 0 4px;
+      letter-spacing: -0.02em;
+    }
+    .sub {
+      color: #444;
+      margin: 0 0 10px;
+      font-size: 8.5pt;
+    }
+    h2 {
+      font-size: 9.5pt;
+      margin: 6px 0 2px;
+      border-bottom: 1px solid #222;
+      padding-bottom: 1px;
+      page-break-after: avoid;
+    }
+    h3 {
+      font-size: 9.5pt;
+      margin: 8px 0 3px;
+      page-break-after: avoid;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 0 6px;
+      page-break-inside: avoid;
+    }
+    th, td {
+      border: 1px solid #bbb;
+      padding: 2px 5px;
+      vertical-align: top;
+      text-align: left;
+    }
+    th { background: #f0f0f0; font-weight: 600; }
+    code, pre {
+      font-family: "IBM Plex Mono", "SF Mono", Consolas, monospace;
+      font-size: 7.4pt;
+    }
+    pre {
+      background: #f6f6f6;
+      border: 1px solid #ddd;
+      padding: 5px 7px;
+      margin: 3px 0 6px;
+      white-space: pre-wrap;
+      page-break-inside: avoid;
+    }
+    ul { margin: 2px 0 6px 16px; padding: 0; }
+    li { margin: 0 0 1px; }
+    .cols { display: flex; gap: 12px; }
+    .cols > div { flex: 1; min-width: 0; }
+    .footer {
+      margin-top: 8px;
+      font-size: 7.5pt;
+      color: #555;
+      border-top: 1px solid #ccc;
+      padding-top: 4px;
+    }
+    @media print {
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Embabel Agent Framework — Cheat Sheet</h1>
+  <p class="sub">Embabel 1.0 learning demo · Print / PDF companion to <code>docs/CHEATSHEET.md</code></p>
+
+  <h2>Mental model</h2>
+  <pre>User/system input → Blackboard (typed)
+                 → Planner picks next @Action
+                 → Action: LLM / code / tools / subagents
+                 → Return posts types → REPLAN
+                 → @AchievesGoal return type → DONE
+
+OODA: Observe blackboard → Orient conditions → Decide plan → Act</pre>
+
+  <div class="cols">
+    <div>
+      <h2>Annotations</h2>
+      <table>
+        <tr><th>Annotation</th><th>Meaning</th></tr>
+        <tr><td><code>@Agent</code></td><td>Spring + agent; description for selection</td></tr>
+        <tr><td><code>@EmbabelComponent</code></td><td>Reusable actions, not a full agent</td></tr>
+        <tr><td><code>@Action</code></td><td>Planner step; types drive GOAP</td></tr>
+        <tr><td><code>@AchievesGoal</code></td><td>Completing action finishes process</td></tr>
+        <tr><td><code>@Condition</code></td><td>Boolean fact (side-effect free)</td></tr>
+        <tr><td><code>@RequireNameMatch</code></td><td>Bind by name, not only type</td></tr>
+        <tr><td><code>@State</code></td><td>Scope actions; enable loops</td></tr>
+        <tr><td><code>@Export(remote=true)</code></td><td>Shell / MCP / A2A exposure</td></tr>
+        <tr><td><code>@LlmTool</code> / <code>@Tool</code></td><td>Custom tool / domain tool (needs attach)</td></tr>
+      </table>
+
+      <h3>@Action knobs</h3>
+      <table>
+        <tr><th>Attr</th><th>When</th></tr>
+        <tr><td><code>pre</code>/<code>post</code></td><td>Named conditions</td></tr>
+        <tr><td><code>cost</code>/<code>value</code></td><td>GOAP cost / Utility value</td></tr>
+        <tr><td><code>canRerun</code></td><td>May run more than once</td></tr>
+        <tr><td><code>outputBinding</code></td><td>Name return for RequireNameMatch</td></tr>
+        <tr><td><code>clearBlackboard</code></td><td>Looping state actions</td></tr>
+        <tr><td><code>description</code></td><td>Critical for Supervisor</td></tr>
+      </table>
+    </div>
+    <div>
+      <h2>Planners</h2>
+      <table>
+        <tr><th>Planner</th><th>Picks by</th><th>Best for</th></tr>
+        <tr><td><b>GOAP</b></td><td>Cheap typed path</td><td>Business workflows</td></tr>
+        <tr><td><b>UTILITY</b></td><td>Highest net value</td><td>Triage / explore</td></tr>
+        <tr><td><b>HYBRID</b></td><td>Gather + goal stop</td><td>Gather→synthesize</td></tr>
+        <tr><td><b>SUPERVISOR</b></td><td>LLM chooses tools</td><td>Flexible multi-step</td></tr>
+      </table>
+
+      <h2>Tools (per PromptRunner)</h2>
+      <table>
+        <tr><th>API</th><th>Does</th></tr>
+        <tr><td><code>withToolObject</code></td><td>Expose domain <code>@Tool</code>s</td></tr>
+        <tr><td><code>withToolGroup(WEB)</code></td><td>Capability bundle</td></tr>
+        <tr><td><code>withTool(...)</code></td><td>Custom <code>@LlmTool</code></td></tr>
+        <tr><td><code>Subagent...consuming</code></td><td>Agent-as-tool</td></tr>
+        <tr><td><code>ToolCallContext</code></td><td>Out-of-band; not in schema</td></tr>
+      </table>
+
+      <h2>Blackboard rules</h2>
+      <ul>
+        <li>Latest of a type wins — unless named binding</li>
+        <li>Return new type = post effect</li>
+        <li><code>null</code> / failed ifPossible → replan</li>
+        <li>Conditions called often → pure</li>
+        <li>State transitions hide prior states</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>LLM patterns</h2>
+  <div class="cols">
+    <div>
+      <pre>// Java
+ai.withDefaultLlm().createObject(p, Story.class);
+ai.withLlm(LlmOptions.withAutoLlm().withTemperature(0.7))
+  .creating(Story.class).fromPrompt(p);
+ai.withDefaultLlm().createObjectIfPossible(p, Person.class);</pre>
+    </div>
+    <div>
+      <pre>// Kotlin
+context.ai().withDefaultLlm().createObject&lt;Story&gt;(p)
+context.ai().withDefaultLlm().createObjectIfPossible&lt;Person&gt;(p)
+fromForm&lt;PersonProfile&gt;("Fill this in")</pre>
+    </div>
+  </div>
+
+  <h2>Invocation</h2>
+  <pre>AgentInvocation.builder(agentPlatform)
+  .options(ProcessOptions.DEFAULT.withVerbosity(Verbosity.DEFAULT.withShowPrompts(true)))
+  .build(ReviewedStory.class)
+  .invoke(new UserInput("..."));  // selects by goal return type</pre>
+
+  <div class="cols">
+    <div>
+      <h2>Java vs Kotlin</h2>
+      <table>
+        <tr><th></th><th>Java</th><th>Kotlin</th></tr>
+        <tr><td>DTO</td><td>record</td><td>data class</td></tr>
+        <tr><td>Context</td><td>often Ai</td><td>often OperationContext</td></tr>
+        <tr><td>Create</td><td>Class arg</td><td>reified create/createObject</td></tr>
+        <tr><td>HITL</td><td>WaitFor.formSubmission</td><td>fromForm</td></tr>
+        <tr><td>Agents</td><td>annotations</td><td>annotations or DSL @Bean</td></tr>
+      </table>
+    </div>
+    <div>
+      <h2>Debug first stops</h2>
+      <ul>
+        <li>First <code>@Action</code> entry</li>
+        <li><code>createObject</code> / <code>fromPrompt</code></li>
+        <li>Action <code>return</code> (blackboard post)</li>
+        <li><code>@Condition</code> / planner choice</li>
+        <li>Goal <code>@AchievesGoal</code></li>
+      </ul>
+      <h2>Don't forget</h2>
+      <ul>
+        <li>Source order ≠ execution order</li>
+        <li><code>@Tool</code> needs <code>withToolObject</code></li>
+        <li>High HITL <code>cost</code> = fallback</li>
+        <li>Supervisor needs action descriptions</li>
+        <li>StuckHandler ≠ incomplete model</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="footer">
+    Source: docs/CHEATSHEET.md · Regenerate: scripts/generate-cheatsheet-pdf.sh ·
+    Companion: docs/TOP_10.md · docs/CHAPTER_SUMMARIES.md · docs/REVIEW_CIRCUIT.md
+  </p>
+</body>
+</html>
