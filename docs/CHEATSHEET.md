@@ -2,7 +2,8 @@
 
 **Printable PDF:** [`print/embabel-cheatsheet.pdf`](print/embabel-cheatsheet.pdf)  
 Regenerate: `./scripts/generate-cheatsheet-pdf.sh`  
-**VS Code snippets:** type `emb-` — see [`.vscode/SNIPPETS.md`](../.vscode/SNIPPETS.md)
+**VS Code snippets:** type `emb-` — see [`.vscode/SNIPPETS.md`](../.vscode/SNIPPETS.md)  
+**Starter class templates:** [`../templates/README.md`](../templates/README.md)
 
 Keep this (or the PDF) next to the debugger.
 
