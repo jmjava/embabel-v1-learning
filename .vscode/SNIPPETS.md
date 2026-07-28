@@ -50,6 +50,10 @@ All prefixes work in **both** Java and Kotlin unless noted.
 | `emb-dsl` | Kotlin DSL `agent { }` + `@Bean` (**Kotlin**) |
 | `emb-validated` | data class + `@field:Pattern` (**Kotlin**) |
 
+## Full-file starter templates
+
+For complete class skeletons (not just snippets), copy from [`templates/`](../templates/) — map in [`templates/README.md`](../templates/README.md).
+
 ## Tips
 
 - After expanding `emb-agent`, rename types at the tab-stops before filling prompts.

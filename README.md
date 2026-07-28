@@ -17,6 +17,12 @@ export OPENAI_API_KEY=...          # and/or ANTHROPIC_API_KEY
 ./mvnw -pl kotlin-demo spring-boot:run
 ```
 
+## Starter class templates
+
+Copy-paste skeletons for common agent patterns (not compiled by Maven):
+
+**[`templates/`](templates/)** — Java + Kotlin side-by-side · map in [`templates/README.md`](templates/README.md)
+
 ## VS Code / Cursor snippets
 
 Workspace snippets (prefix `emb-…`) load from [`.vscode/`](.vscode/). See [`.vscode/SNIPPETS.md`](.vscode/SNIPPETS.md).
