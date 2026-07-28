@@ -1,6 +1,9 @@
 # Embabel one-page cheat sheet
 
-Print this. Keep it next to the debugger.
+**Printable PDF:** [`print/embabel-cheatsheet.pdf`](print/embabel-cheatsheet.pdf)  
+Regenerate: `./scripts/generate-cheatsheet-pdf.sh`
+
+Keep this (or the PDF) next to the debugger.
 
 ## Mental model (30 seconds)
 
