@@ -6,7 +6,8 @@ import org.springframework.boot.runApplication
 /**
  * Bootstraps the Kotlin Embabel learning shell.
  *
- * Embabel 1.0 auto-configures from the starter — `@EnableAgents` is deprecated/unnecessary.
+ * Embabel 1.5 auto-configures from the starter — `@EnableAgents` is deprecated/unnecessary.
+ * Cookbook 1.5 counterparts live in `cookbook15`.
  *
  * Study entry: `docs/WALKTHROUGH.md` and [com.embabel.learning.common.curriculum.LessonOrder].
  *

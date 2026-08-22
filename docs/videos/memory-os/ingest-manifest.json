@@ -1,0 +1,145 @@
+{
+  "schema": "jmjava.memory-os.video-ingest/v1",
+  "project": "embabel-v1-learning",
+  "track": "cookbook-1.5",
+  "embabel_version": "1.5.0",
+  "cookbook_repo": "https://github.com/embabel/embabel-cookbook",
+  "cookbook_docs": "https://docs.embabel.com/embabel-cookbook/1.5.0/",
+  "memory_os_repo": "https://github.com/jmjava/memory-os",
+  "renderer": {
+    "primary": "https://github.com/jmjava/memory-os",
+    "fallback": "https://github.com/jmjava/documentation-generator"
+  },
+  "segments": [
+    {
+      "id": "00",
+      "title": "Cookbook 1.5 overview",
+      "cookbook_slug": null,
+      "lesson": null,
+      "narration_path": "docs/demos/narration/00-overview.md",
+      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/",
+      "code_entry": "com.embabel.learning.common.curriculum.CookbookChapterCatalog",
+      "video_path": null
+    },
+    {
+      "id": "01",
+      "title": "Action Domain Type Chaining",
+      "cookbook_slug": "action-domain-type-chaining",
+      "lesson": 16,
+      "narration_path": "docs/demos/narration/01-action-domain-type-chaining.md",
+      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#action-domain-type-chaining",
+      "code_entry": "com.embabel.learning.java.cookbook15.TypeChainingTravelAgent",
+      "video_path": null
+    },
+    {
+      "id": "02",
+      "title": "Action Condition",
+      "cookbook_slug": "action-condition",
+      "lesson": 6,
+      "narration_path": "docs/demos/narration/02-action-condition.md",
+      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#action-condition",
+      "code_entry": "com.embabel.learning.java.lesson06.ConditionalResearchAgent",
+      "video_path": null
+    },
+    {
+      "id": "03",
+      "title": "Agent Stuck State",
+      "cookbook_slug": "agent-stuck-state",
+      "lesson": 13,
+      "narration_path": "docs/demos/narration/03-agent-stuck-state.md",
+      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#agent-stuck-state",
+      "code_entry": "com.embabel.learning.java.lesson13.SelfUnstickingAgent",
+      "video_path": null
+    },
+    {
+      "id": "04",
+      "title": "Action Heuristics",
+      "cookbook_slug": "action-heuristics",
+      "lesson": 17,
+      "narration_path": "docs/demos/narration/04-action-heuristics.md",
+      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#action-heuristics",
+      "code_entry": "com.embabel.learning.java.cookbook15.HeuristicTravelAgent",
+      "video_path": null
+    },
+    {
+      "id": "05",
+      "title": "Repeat Until Acceptable",
+      "cookbook_slug": "repeat-until-acceptable",
+      "lesson": 9,
+      "narration_path": "docs/demos/narration/05-repeat-until-acceptable.md",
+      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#repeat-until-acceptable",
+      "code_entry": "com.embabel.learning.java.lesson09.RepeatUntilStoryAgent",
+      "video_path": null
+    },
+    {
+      "id": "06",
+      "title": "Agent Debugging",
+      "cookbook_slug": "agent-debugging",
+      "lesson": 13,
+      "narration_path": "docs/demos/narration/06-agent-debugging.md",
+      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#agent-debugging",
+      "code_entry": "com.embabel.learning.common.curriculum.DebugGuide",
+      "video_path": null
+    },
+    {
+      "id": "07",
+      "title": "Object Creation",
+      "cookbook_slug": "object-creation",
+      "lesson": 1,
+      "narration_path": "docs/demos/narration/07-object-creation.md",
+      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#object-creation",
+      "code_entry": "com.embabel.learning.java.lesson01.InjectedAiDemo",
+      "video_path": null
+    },
+    {
+      "id": "08",
+      "title": "Create Object If Possible",
+      "cookbook_slug": "create-object-if-possible",
+      "lesson": 18,
+      "narration_path": "docs/demos/narration/08-create-object-if-possible.md",
+      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#create-object-if-possible",
+      "code_entry": "com.embabel.learning.java.cookbook15.PossibleTripPlanner",
+      "video_path": null
+    },
+    {
+      "id": "09",
+      "title": "Prompt Contributors",
+      "cookbook_slug": "prompt-contributors",
+      "lesson": 21,
+      "narration_path": "docs/demos/narration/09-prompt-contributors.md",
+      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#prompt-contributors",
+      "code_entry": "com.embabel.learning.java.cookbook15.MessageAndToolTripPlanner",
+      "video_path": null
+    },
+    {
+      "id": "10",
+      "title": "Thinking",
+      "cookbook_slug": "thinking",
+      "lesson": 19,
+      "narration_path": "docs/demos/narration/10-thinking.md",
+      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#thinking",
+      "code_entry": "com.embabel.learning.java.cookbook15.ThinkingTripPlanner",
+      "video_path": null
+    },
+    {
+      "id": "11",
+      "title": "Streaming",
+      "cookbook_slug": "streaming",
+      "lesson": 20,
+      "narration_path": "docs/demos/narration/11-streaming.md",
+      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#streaming",
+      "code_entry": "com.embabel.learning.java.cookbook15.StreamingTripPlanner",
+      "video_path": null
+    },
+    {
+      "id": "12",
+      "title": "Tool Call",
+      "cookbook_slug": "tool-call",
+      "lesson": 21,
+      "narration_path": "docs/demos/narration/12-tool-call.md",
+      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#tool-call",
+      "code_entry": "com.embabel.learning.java.cookbook15.MessageAndToolTripPlanner",
+      "video_path": null
+    }
+  ]
+}

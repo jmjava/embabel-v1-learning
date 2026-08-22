@@ -1,6 +1,6 @@
 # Embabel Guided Walkthrough
 
-This repository is a study curriculum for [Embabel Agent Framework](https://docs.embabel.com/embabel-agent/guide/1.0.0-SNAPSHOT/) **1.0.0**, with **Java** and **Kotlin** side-by-side demos, linkable Javadoc/KDoc, and unit tests designed for step-debugging.
+This repository is a study curriculum for [Embabel Agent Framework](https://docs.embabel.com/embabel-agent/guide/1.0.0-SNAPSHOT/) **1.5.0**, with **Java** and **Kotlin** side-by-side demos, an official [Cookbook 1.5](https://github.com/embabel/embabel-cookbook) map, linkable Javadoc/KDoc, and unit tests designed for step-debugging.
 
 ## Starter class templates
 
@@ -61,6 +61,14 @@ Generate API docs:
 | 13 | StuckHandler | `lesson13.SelfUnstickingAgent` | `lesson13.SelfUnstickingAgent` | Java |
 | 14 | AgentInvocation | `lesson14.InvocationDemoService` | `lesson14.InvocationDemoService` | — |
 | 15 | Kotlin DSL | — | `lesson15.FactCheckerDsl` | Kotlin |
+| 16 | Cookbook type chaining | `cookbook15.TypeChainingTravelAgent` | same | both |
+| 17 | Cookbook action cost | `cookbook15.HeuristicTravelAgent` | same | both |
+| 18 | `createObjectIfPossible` | `cookbook15.PossibleTripPlanner` | same | both |
+| 19 | Thinking traces | `cookbook15.ThinkingTripPlanner` | same | Java |
+| 20 | Streaming objects | `cookbook15.StreamingTripPlanner` | same | Java |
+| 21 | Messages + tool inspectors | `cookbook15.MessageAndToolTripPlanner` | same | Java |
+
+1.5 cookbook chapter table and video scripts: [`COOKBOOK_15.md`](COOKBOOK_15.md).
 
 ## Official docs cross-reference
 

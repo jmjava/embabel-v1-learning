@@ -1,6 +1,6 @@
-# Embabel V1 Learning Demo
+# Embabel 1.5 Learning Demo
 
-Comprehensive study project for the [Embabel Agent Framework](https://github.com/embabel/embabel-agent) (**1.0.0**): Java + Kotlin demos, linkable Javadoc curriculum, and guided unit tests with breakpoint maps.
+Study project for the [Embabel Agent Framework](https://github.com/embabel/embabel-agent) (**1.5.0**): Java + Kotlin demos, official [Cookbook](https://github.com/embabel/embabel-cookbook) chapter map, guided unit tests, and video scripts for [Memory OS](https://github.com/jmjava/memory-os).
 
 ## Quick start
 
@@ -31,10 +31,12 @@ Examples: `emb-agent`, `emb-action`, `emb-hitl`, `emb-subagent`, `emb-repeat`, `
 
 ## Study path
 
-Start at **[`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md)**.
+Start at **[`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md)**.  
+1.5 cookbook track: **[`docs/COOKBOOK_15.md`](docs/COOKBOOK_15.md)**.
 
 | Doc | Purpose |
 |-----|---------|
+| [docs/COOKBOOK_15.md](docs/COOKBOOK_15.md) | Embabel 1.5 + official cookbook map + videos |
 | [docs/REVIEW_CIRCUIT.md](docs/REVIEW_CIRCUIT.md) | 60–90 min checkbox review circuit |
 | [docs/TOP_10.md](docs/TOP_10.md) | Ten ideas to memorize |
 | [docs/CHEATSHEET.md](docs/CHEATSHEET.md) | API / annotation cheat sheet (Markdown) |
@@ -52,10 +54,12 @@ Curriculum order is defined in
 
 ## Modules
 
-- `learning-common` — shared domain types, `@Lesson` / `@DebugGuide`
-- `java-demo` — Java agents + guided tests + shell app
-- `kotlin-demo` — Kotlin agents (incl. DSL lesson) + guided tests + shell app
+- `learning-common` — shared domain types, `@Lesson` / `@DebugGuide`, cookbook catalog
+- `java-demo` — Java agents + 1.5 `cookbook15` track + guided tests + shell app
+- `kotlin-demo` — Kotlin agents (incl. DSL + 1.5 cookbook track) + guided tests + shell app
+- `docs/demos` — docgen narration for twelve cookbook chapters
+- `docs/videos/memory-os` — Memory OS ingest manifest
 
 ## What you will learn
 
-GOAP type-driven planning, annotation agents, injected `Ai`, domain tools (DICE), HITL, conditions/bindings, tool groups, subagents, RepeatUntil workflows, Utility/Supervisor planners, `@State` loops, guardrails, stuck recovery, `AgentInvocation`, and Kotlin DSL agents — with nuances called out in Javadoc/KDoc.
+GOAP type-driven planning, annotation agents, injected `Ai`, domain tools (DICE), HITL, conditions/bindings, tool groups, subagents, RepeatUntil workflows, Utility/Supervisor planners, `@State` loops, guardrails, stuck recovery, `AgentInvocation`, Kotlin DSL agents, plus Embabel 1.5 cookbook APIs: action cost heuristics, `createObjectIfPossible`, thinking traces, streaming objects, `fromMessages`, and tool-call inspectors.

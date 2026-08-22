@@ -20,6 +20,12 @@ package com.embabel.learning.common.curriculum;
  *   <li>{@code 13} Stuck recovery</li>
  *   <li>{@code 14} Invocation APIs &amp; ProcessOptions</li>
  *   <li>{@code 15} Kotlin DSL agents (Kotlin module only)</li>
+ *   <li>{@code 16} Cookbook 1.5 — domain type chaining</li>
+ *   <li>{@code 17} Cookbook 1.5 — action cost heuristics</li>
+ *   <li>{@code 18} Cookbook 1.5 — {@code createObjectIfPossible}</li>
+ *   <li>{@code 19} Cookbook 1.5 — thinking traces</li>
+ *   <li>{@code 20} Cookbook 1.5 — streaming objects</li>
+ *   <li>{@code 21} Cookbook 1.5 — messages, tools, inspectors</li>
  * </ol>
  *
  * <h2>How to use this curriculum</h2>
@@ -48,6 +54,12 @@ public final class LessonOrder {
     public static final int STUCK = 13;
     public static final int INVOCATION = 14;
     public static final int KOTLIN_DSL = 15;
+    public static final int COOKBOOK_TYPE_CHAINING = 16;
+    public static final int COOKBOOK_HEURISTICS = 17;
+    public static final int COOKBOOK_CREATE_IF_POSSIBLE = 18;
+    public static final int COOKBOOK_THINKING = 19;
+    public static final int COOKBOOK_STREAMING = 20;
+    public static final int COOKBOOK_MESSAGES_AND_TOOLS = 21;
 
     private LessonOrder() {
     }

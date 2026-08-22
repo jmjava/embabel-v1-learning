@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.embabel.learning</groupId>
         <artifactId>embabel-v1-learning</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.5.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>learning-common</artifactId>
