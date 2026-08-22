@@ -30,6 +30,8 @@ palace:
     width: 1280
     height: 720
     min_locus_sec: 15.0
+    review_pause_sec: 2.5
+    review_answer_sec: 3.0
 floors:
 - id: floor-1
   number: 1
@@ -65,6 +67,8 @@ floors:
     narration_enriched: true
     overlay: '@Action types'
     recall_cue: Glass pipes → types are the wiring.
+    review_question: What do return types do in GOAP?
+    review_answer: Types are the wiring — @Action types
     key_distinction: Source order is not execution order.
     metaphor_part: The seed splits into typed pipes.
     hero_now: A pipe-creature whose body is labeled type-tubes.
@@ -88,6 +92,8 @@ floors:
     narration_enriched: true
     overlay: REPLAN
     recall_cue: Spinning compass → replan.
+    review_question: What happens after every action?
+    review_answer: Replan — OODA / REPLAN
     metaphor_part: The compass eye.
     hero_now: The same creature with a spinning OODA compass for an eye.
     hero_from: A pipe-creature of labeled type-tubes.
@@ -110,6 +116,8 @@ floors:
     narration_enriched: true
     overlay: code + LLM
     recall_cue: Stamp and quill → code plus LLM.
+    review_question: Must every action call an LLM?
+    review_answer: Mix code and LLM
     metaphor_part: Split workbench arms.
     hero_now: The creature grows a steel stamp-hand and a glowing quill-hand.
     hero_from: Pipe-creature with a compass eye.
@@ -132,6 +140,8 @@ floors:
     narration_enriched: true
     overlay: withToolObject
     recall_cue: Wrist toolbox → per-call tools.
+    review_question: Where do tools attach?
+    review_answer: Per call — withToolObject
     metaphor_part: Toolbox on one wrist.
     hero_now: A toolbox bolted only onto the quill wrist.
     hero_from: Stamp-hand and quill-hand.
@@ -153,6 +163,8 @@ floors:
     narration_enriched: true
     overlay: '@RequireNameMatch'
     recall_cue: Labeled crate → named binding.
+    review_question: How do you pick among two values of the same type?
+    review_answer: Named bindings — @RequireNameMatch
     metaphor_part: Named crates on the pipes.
     hero_now: Two crates hang from the pipes; only the named crate opens.
     hero_from: Toolbox on the quill wrist.
@@ -176,6 +188,8 @@ floors:
     narration_enriched: true
     overlay: planner
     recall_cue: Four hats → four planners.
+    review_question: What do the four hats mean?
+    review_answer: Planner choice — GOAP, Utility, Hybrid, Supervisor
     metaphor_part: Hats on the compass head.
     hero_now: Four hats stacked on the compass head.
     hero_from: Named crates on the pipes.
@@ -215,6 +229,8 @@ floors:
     narration_enriched: true
     overlay: creating(T)
     recall_cue: Record mold → typed create.
+    review_question: What API creates a typed object?
+    review_answer: creating(T) / createObject
     metaphor_part: The mold-mouth.
     hero_now: The mouth is a record-shaped mold.
     hero_from: Four hats on the compass head.
@@ -237,6 +253,8 @@ floors:
     narration_enriched: true
     overlay: createObjectIfPossible
     recall_cue: Slump hole → null then replan.
+    review_question: What does createObjectIfPossible return when the prompt is incomplete?
+    review_answer: null, then replan
     metaphor_part: The null pit under the mold.
     hero_now: Half-melted clay slumping through a null hole.
     hero_from: Record-shaped mold-mouth.
@@ -259,6 +277,8 @@ floors:
     narration_enriched: true
     overlay: fromMessages
     recall_cue: Stacked envelopes → fromMessages.
+    review_question: How should prompts be structured?
+    review_answer: fromMessages — SystemMessage plus UserMessage
     metaphor_part: Envelope-skin.
     hero_now: The same body wearing System and User envelopes.
     hero_from: Half-melted clay at the null hole.
@@ -282,6 +302,8 @@ floors:
     narration_enriched: true
     overlay: thinking()
     recall_cue: Glass skull ticker → thinking traces.
+    review_question: What does thinking() add in Embabel 1.5?
+    review_answer: Thinking traces — ThinkingResponse
     metaphor_part: The glass skull.
     hero_now: A glass skull ticking decision reasoning.
     hero_from: Envelope-skinned body.
@@ -305,6 +327,8 @@ floors:
     narration_enriched: true
     overlay: createObjectStream
     recall_cue: One brick at a time → stream.
+    review_question: What emits typed objects as they arrive?
+    review_answer: createObjectStream
     metaphor_part: Conveyor spine.
     hero_now: A conveyor spine turning JSON into records.
     hero_from: Glass skull with a thinking ticker.
@@ -326,6 +350,8 @@ floors:
     narration_enriched: true
     overlay: withToolCallInspectors
     recall_cue: Clipboard photo → inspected tool call.
+    review_question: How do you log tool calls in Embabel 1.5?
+    review_answer: withToolCallInspectors
     metaphor_part: The inspector clipboard.
     hero_now: A clipboard organ watching the wrist toolbox.
     hero_from: Conveyor spine of JSON bricks.
