@@ -1,39 +1,32 @@
-# Memory OS ingest
+# Memory OS palace for Cookbook 1.5
 
-Target repo: [github.com/jmjava/memory-os](https://github.com/jmjava/memory-os)
+Primary renderer: [jmjava/memory-os](https://github.com/jmjava/memory-os)
+(private; Cloud Agents use `BROAD_REPO_TOKEN` to install the CLI).
 
-This learning branch could not clone that repository from the current GitHub token
-(it is missing or private). The contract below is the integration surface so a
-follow-up can wire the renderer without rewriting scripts.
+## Bundle
 
-## What Memory OS should receive
+| File | Role |
+|------|------|
+| `embabel-cookbook-15.md` | Palace Markdown (authoring) |
+| `embabel-cookbook-15.palace.yaml` | Compiled engine spec (`memoryos compile`) |
+| `ingest-manifest.json` | Chapter ↔ lesson ↔ locus map |
 
-Each cookbook chapter becomes one **memory segment**:
+Generated assets stay local and are gitignored: `images/`, `audio/`, `build/`.
 
-| Field | Meaning |
-|-------|---------|
-| `id` | Stable segment id (`00`–`12`) |
-| `title` | Human title |
-| `cookbook_slug` | Official cookbook chapter slug |
-| `lesson` | Lesson number in this repo |
-| `narration_path` | Markdown spoken script |
-| `transcript` | Same text, ready for embedding |
-| `source_url` | Official cookbook HTML anchor |
-| `code_entry` | Fully qualified teaching class |
-| `video_path` | Optional rendered MP4 once docgen/memory-os produces it |
+## Generate assets
 
-`ingest-manifest.json` is the machine-readable catalog.
+```bash
+# already on PATH in the reusable Cloud Agent environment
+memoryos compile docs/videos/memory-os/embabel-cookbook-15.md \
+  --id embabel-cookbook-15 \
+  -o docs/videos/memory-os/embabel-cookbook-15.palace.yaml
+memoryos validate docs/videos/memory-os/embabel-cookbook-15.palace.yaml
 
-## Suggested ingest flow
+# live OpenAI (OPENAI_API_KEY)
+memoryos images  docs/videos/memory-os/embabel-cookbook-15.palace.yaml --dry-run
+memoryos narrate docs/videos/memory-os/embabel-cookbook-15.palace.yaml --dry-run
+memoryos build   docs/videos/memory-os/embabel-cookbook-15.palace.yaml --floor floor-1
+```
 
-1. Read `ingest-manifest.json`.
-2. Load each `narration_path` as the transcript.
-3. If `video_path` exists, attach the MP4; otherwise queue render via `docgen`
-   or Memory OS’s own compositor.
-4. Store embeddings of title + transcript + `code_entry` so later agents can
-   recall “how thinking() works in Embabel 1.5”.
-
-## Render without Memory OS
-
-Use the sibling tool [documentation-generator](https://github.com/jmjava/documentation-generator)
-and the bundle in `docs/demos/`. The manifest `renderer` field names both tools.
+One locus stays on screen until its narration finishes (minimum 30s).
+Do not vendor memory-os into this repo; refresh the CLI from git during install.

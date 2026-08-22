@@ -21,6 +21,8 @@ class CookbookVideoBundleTest {
             assertTrue(Files.size(narration) > 80, narration + " looks empty");
         }
         assertTrue(Files.isRegularFile(root.resolve("docs/demos/narration/00-overview.md")));
+        assertTrue(Files.isRegularFile(root.resolve("docs/videos/memory-os/embabel-cookbook-15.md")));
+        assertTrue(Files.isRegularFile(root.resolve("docs/videos/memory-os/embabel-cookbook-15.palace.yaml")));
 
         JsonNode manifest = new ObjectMapper().readTree(
                 root.resolve("docs/videos/memory-os/ingest-manifest.json").toFile()

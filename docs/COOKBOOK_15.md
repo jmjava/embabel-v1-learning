@@ -37,16 +37,21 @@ Catalog code: `CookbookChapter` / `CookbookChapterCatalog` in `learning-common`.
 
 ## Videos
 
-Goal: produce narrated explainers, then ingest them into
-[jmjava/memory-os](https://github.com/jmjava/memory-os).
+Primary path is a Memory OS palace (method of loci) compiled from
+[`docs/videos/memory-os/embabel-cookbook-15.md`](videos/memory-os/embabel-cookbook-15.md).
 
-Until that repo is reachable from this environment, the same scripts render through
-[documentation-generator](https://github.com/jmjava/documentation-generator) (`docgen`).
+```bash
+memoryos compile docs/videos/memory-os/embabel-cookbook-15.md \
+  --id embabel-cookbook-15 \
+  -o docs/videos/memory-os/embabel-cookbook-15.palace.yaml
+memoryos validate docs/videos/memory-os/embabel-cookbook-15.palace.yaml
+memoryos build docs/videos/memory-os/embabel-cookbook-15.palace.yaml --floor floor-1
+```
 
-See:
+Spoken chapter scripts in [`docs/demos/narration/`](demos/narration/) remain available
+for [documentation-generator](https://github.com/jmjava/documentation-generator).
 
-- [`docs/demos/README.md`](demos/README.md) — docgen bundle
-- [`docs/videos/memory-os/README.md`](videos/memory-os/README.md) — Memory OS ingest contract
+See [`docs/videos/memory-os/README.md`](videos/memory-os/README.md).
 
 ## Run
 

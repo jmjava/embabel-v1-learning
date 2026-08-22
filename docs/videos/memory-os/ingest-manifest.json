@@ -10,6 +10,13 @@
     "primary": "https://github.com/jmjava/memory-os",
     "fallback": "https://github.com/jmjava/documentation-generator"
   },
+  "palace": {
+    "markdown": "docs/videos/memory-os/embabel-cookbook-15.md",
+    "spec": "docs/videos/memory-os/embabel-cookbook-15.palace.yaml",
+    "id": "embabel-cookbook-15",
+    "floors": 2,
+    "loci": 12
+  },
   "segments": [
     {
       "id": "00",

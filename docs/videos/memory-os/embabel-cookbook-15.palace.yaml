@@ -1,0 +1,211 @@
+memoryos: 1
+palace:
+  id: embabel-cookbook-15
+  title: Embabel Cookbook 1.5 Memory Palace
+  purpose: Generate a guided study video that teaches Embabel Agent Framework 1.5 by walking
+    the official Cookbook chapters as a two-floor memory palace.
+  audience: JVM engineers who know Spring and want the Cookbook 1.5 planner and PromptRunner
+    APIs as recallable rooms, not a slide deck.
+  learning_method: Method of loci / memory palace. Every locus must have one dominant concept,
+    one exaggerated visual mnemonic, and one concise technical explanation.
+  style:
+    visual: 'First-person cinematic walkthrough of a grand travel-academy building. The narrator
+      physically moves from locus to locus. Technical labels appear briefly as clean overlays.
+      Visuals should be exaggerated, memorable, and slightly absurd without becoming distracting.
+      Every locus is its own room: a unique oversized hero object, accent color, and lighting
+      — never a reused generic hallway.'
+    narration: Calm technical instructor. Explain the mnemonic first, then connect it to the
+      Embabel 1.5 API. Pause briefly between loci to encourage active recall.
+floors:
+- id: floor-1
+  number: 1
+  title: Planner Behavior
+  objective: 'Remember how Embabel 1.5 plans: types first, then conditions, cost, loops, stuck
+    status, and the three debug views.'
+  recall_route: Types → Conditions → Stuck → Cost → RepeatUntil → Debug
+  loci:
+  - id: arrival-hall
+    seq: 1
+    location: Arrival Hall
+    concept: Domain Type Chaining
+    visual: A giant brass luggage carousel sorts glowing suitcases labeled FlightRequest and
+      ItineraryRequest onto two different conveyor belts. Source-order numbers on the floor
+      are crossed out.
+    narration: Actions do not run in source order. They run when their input types appear.
+      Classify user input into a flight request or an itinerary request, and the planner chains
+      to the matching action, then to a shared travel activity that achieves the goal.
+    overlay: '@Action types'
+    recall_cue: Carousel belts → type chaining.
+  - id: ticket-windows
+    seq: 2
+    location: Ticket Windows
+    concept: Action Conditions
+    visual: Two ticket windows. One lights up only when a neon sign reads directFlightRequested.
+      The other lights only for stopsAllowed. A clerk stamps pre on each window.
+    narration: When two actions want similar input, named conditions decide which is eligible.
+      Put the condition name in pre. Keep condition methods cheap and side-effect free. The
+      planner may evaluate them more than once.
+    overlay: '@Condition pre'
+    recall_cue: Lit window → named condition.
+  - id: dead-end-corridor
+    seq: 3
+    location: Dead-End Corridor
+    concept: Stuck State
+    visual: A corridor labeled NonTravelInquiry ends at a brick wall stamped STUCK. The travel
+      door is locked. A clipboard shows action history with only classifyRequest.
+    narration: Stuck is a status, not a crash. If classify produces a type no later action
+      consumes, the process stops with STUCK. Dump the blackboard and the history, then attach
+      a StuckHandler or ask a follow-up.
+    overlay: STUCK
+    recall_cue: Brick wall → stuck status.
+  - id: bargain-counter
+    seq: 4
+    location: Bargain Counter
+    concept: Action Heuristics
+    visual: Two identical gold tickets sit on a scale. The cheap ticket weighs 0.1 and slams
+      the scale down. The premium ticket weighs 0.9 and floats. Both tickets say they achieve
+      the same goal.
+    narration: When two actions produce the same goal type, GOAP uses action cost as a heuristic.
+      Lower cost wins. Cost is not a dollar invoice. Use it for preferred defaults and expensive
+      fallbacks.
+    overlay: '@Action cost'
+    recall_cue: Scale → cheaper action wins.
+  - id: revision-studio
+    seq: 5
+    location: Revision Studio
+    concept: Repeat Until Acceptable
+    visual: 'A film-editing loop: draft reel, scoreboard showing 0.2 then 0.9, red feedback
+      stamp, then a three-day itinerary accepted. A clock on the wall reads maxIterations.'
+    narration: RepeatUntilAcceptableBuilder is a subprocess on ActionContext. Name the return
+      type, set max iterations and a score threshold. The repeating lambda drafts. The evaluator
+      returns TextFeedback. Below threshold, feedback feeds the next attempt.
+    overlay: RepeatUntilAcceptable
+    recall_cue: Scoreboard loop → repeat until.
+  - id: observation-deck
+    seq: 6
+    location: Observation Deck
+    concept: Agent Debugging
+    visual: 'Three giant windows overlook the academy: History, Blackboard, and Status. A
+      fourth window is a debugger with @DebugGuide sticky notes.'
+    narration: When a plan surprises you, look at action history, the blackboard types, and
+      process status. Official cookbook tests log blackboard.infoString. This repo adds @DebugGuide
+      breakpoints so you can step FakeOperationContext without a live model.
+    overlay: history + blackboard
+    recall_cue: Three windows → debug views.
+- id: floor-2
+  number: 2
+  title: Agentic AI APIs
+  objective: 'Remember the 1.5 PromptRunner recipes: typed create, nullable create, messages,
+    thinking, streaming, and inspected tool calls.'
+  recall_route: creating → ifPossible → fromMessages → thinking → stream → tools
+  loci:
+  - id: type-foundry
+    seq: 1
+    location: Type Foundry
+    concept: Object Creation
+    visual: A foundry pours molten JSON into a steel mold shaped like a Java record. A validation
+      stamp reads @Pattern. No @Agent badge is in sight.
+    narration: You do not need an agent. Inject Ai, call creating(YourRecord.class), add examples
+      and validation, finish with fromPrompt. The model must return JSON that matches the
+      record.
+    overlay: creating(Class)
+    recall_cue: Record mold → object creation.
+  - id: incomplete-desk
+    seq: 2
+    location: Incomplete Desk
+    concept: Create Object If Possible
+    visual: A clerk's desk has two trays. A complete passport drops into TripBrief. A scrap
+      that says only "plan a trip" falls through a hole labeled null.
+    narration: createObject will guess. createObjectIfPossible is the 1.5 nullable path. Enough
+      destination and dates yields an object. A thin prompt yields null, so the app can ask
+      a follow-up instead of hallucinating.
+    overlay: createObjectIfPossible
+    recall_cue: Hole in the desk → null if impossible.
+  - id: message-gallery
+    seq: 3
+    location: Message Gallery
+    concept: Prompt Contributors
+    visual: 'Three framed letters hang in a row: a system portrait, then two user postcards.
+      They feed a single TravelPlan printing press.'
+    narration: fromPrompt is one string. fromMessages is a conversation. A system message
+      plus user messages still ends at creating(TravelPlan.class). Personas and RoleGoalBackstory
+      are the same idea on write-and-review agents.
+    overlay: fromMessages
+    recall_cue: Framed letters → fromMessages.
+  - id: glass-thought-room
+    seq: 4
+    location: Glass Thought Room
+    concept: Thinking
+    visual: A glass booth fills with handwritten bullets inside tags <decision_reasoning>.
+      Beside the booth sits a finished itinerary and, on a trapdoor, a stamped ThinkingException
+      for New York to Sydney in half a day.
+    narration: 'Ask supportsThinking, then call thinking() and createObject. You get a ThinkingResponse:
+      typed result, thinking content, optional exception. Impossible trips should fail closed
+      with a reason, not a fake plan.'
+    overlay: thinking()
+    recall_cue: Glass booth → thinking trace.
+  - id: conveyor-gallery
+    seq: 5
+    location: Conveyor Gallery
+    concept: Streaming
+    visual: A conveyor emits three distinct itinerary statues one at a time. A stopwatch hangs
+      labeled timeout. A gate reads supportsStreaming.
+    narration: createObject waits. Streaming emits typed objects as they arrive. Wrap the
+      runner in StreamingPromptRunnerBuilder, call createObjectStream, and collect with doOnNext.
+      Fake runners usually cannot stream; guard on supportsStreaming.
+    overlay: createObjectStream
+    recall_cue: One statue at a time → stream.
+  - id: tool-workshop
+    seq: 6
+    location: Tool Workshop
+    concept: Tool Call
+    visual: 'Two brass tools hang on pegs: weather vane and attraction magnet. An inspector''s
+      lamp photographs each grab. Then a TravelPlan scroll prints.'
+    narration: Mark methods @LlmTool, pass the object to withToolObject, and add ToolCallLoggingInspector
+      to see each call. The model should use weather and attractions before writing the plan.
+    overlay: '@LlmTool'
+    recall_cue: Inspector lamp → tool call log.
+recall:
+  enabled: true
+  intro: 'End the video with locations only. Ask the learner to name the concept, then reveal:'
+  floors:
+  - floor: floor-1
+    label: Planner
+    answer: Types → Conditions → Stuck → Cost → RepeatUntil → Debug
+  - floor: floor-2
+    label: PromptRunner
+    answer: creating → ifPossible → fromMessages → thinking → stream → tools
+extras:
+  front_matter:
+    core rule: One locus = one concept. One memorable image = one retrieval hook.
+  sections:
+    building-overview: |-
+      # 1. Building Overview
+
+      The academy has two floors that match the official Cookbook parts:
+
+      1.  **Floor 1 --- Planner Behavior:** How GOAP chooses and fails.
+      2.  **Floor 2 --- Agentic AI APIs:** How `Ai` / `PromptRunner` create,
+          think, stream, and call tools.
+
+      Each scene is one Cookbook chapter. Teaching code lives in this repo
+      under `cookbook15` and lessons 01, 06, 07, 09, and 13.
+    study-map: |-
+      # 5. Study Map
+
+      Official book: https://docs.embabel.com/embabel-cookbook/1.5.0/
+
+      Teaching counterparts in this repository:
+
+      - Floor 1 Scene 1 → lesson 16 `TypeChainingTravelAgent`
+      - Floor 1 Scene 2 → lesson 06
+      - Floor 1 Scene 3 → lesson 13
+      - Floor 1 Scene 4 → lesson 17 `HeuristicTravelAgent`
+      - Floor 1 Scene 5 → lesson 09
+      - Floor 1 Scene 6 → `@DebugGuide`
+      - Floor 2 Scene 1 → lesson 01
+      - Floor 2 Scene 2 → lesson 18 `PossibleTripPlanner`
+      - Floor 2 Scene 3 → lesson 21 `MessageAndToolTripPlanner`
+      - Floor 2 Scene 4 → lesson 19 `ThinkingTripPlanner`
+      - Floor 2 Scene 5 → lesson 20 `StreamingTripPlanner`
+      - Floor 2 Scene 6 → lesson 21 + lesson 07
