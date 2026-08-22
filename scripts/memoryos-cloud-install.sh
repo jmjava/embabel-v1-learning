@@ -19,7 +19,29 @@ fi
 
 "${VENV}/bin/pip" install --upgrade \
   "memoryos @ git+https://x-access-token:${BROAD_REPO_TOKEN}@github.com/jmjava/memory-os.git"
-sudo ln -sfn "${VENV}/bin/memoryos" /usr/local/bin/memoryos
+
+# Wrapper: if OPENAI_API_KEY is unset or a Cursor crsr_ value, use CURSOR_API_KEY
+# when that looks like an OpenAI key. No secret values are written to disk.
+# Remove any existing file or symlink first so tee does not overwrite the
+# venv entrypoint through a leftover /usr/local/bin/memoryos -> venv link.
+WRAPPER="/usr/local/bin/memoryos"
+sudo rm -f "${WRAPPER}"
+sudo tee "${WRAPPER}" >/dev/null <<'EOF'
+#!/usr/bin/env bash
+set -euo pipefail
+REAL="${HOME}/.venvs/memoryos/bin/memoryos"
+if [ -n "${CURSOR_API_KEY:-}" ]; then
+  case "${OPENAI_API_KEY:-}" in
+    ""|crsr_*)
+      case "${CURSOR_API_KEY}" in
+        sk-*) export OPENAI_API_KEY="${CURSOR_API_KEY}" ;;
+      esac
+      ;;
+  esac
+fi
+exec "${REAL}" "$@"
+EOF
+sudo chmod 755 "${WRAPPER}"
 
 if [ -x ./mvnw ]; then
   ./mvnw -q -DskipTests test-compile

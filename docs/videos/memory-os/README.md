@@ -22,7 +22,8 @@ memoryos compile docs/videos/memory-os/embabel-cookbook-15.md \
   -o docs/videos/memory-os/embabel-cookbook-15.palace.yaml
 memoryos validate docs/videos/memory-os/embabel-cookbook-15.palace.yaml
 
-# live OpenAI (OPENAI_API_KEY)
+# live OpenAI. If OPENAI_API_KEY is a Cursor crsr_ value, the memoryos
+# wrapper uses CURSOR_API_KEY when that value is an sk- project key.
 memoryos images  docs/videos/memory-os/embabel-cookbook-15.palace.yaml --dry-run
 memoryos narrate docs/videos/memory-os/embabel-cookbook-15.palace.yaml --dry-run
 memoryos build   docs/videos/memory-os/embabel-cookbook-15.palace.yaml --floor floor-1
