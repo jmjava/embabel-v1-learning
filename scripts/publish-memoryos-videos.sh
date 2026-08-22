@@ -18,7 +18,7 @@ copy_if_present() {
 }
 
 status=0
-copy_if_present embabel-cookbook-15.mp4 || status=1
-copy_if_present embabel-cookbook-15-floor-1.mp4 || status=1
-copy_if_present embabel-cookbook-15-floor-2.mp4 || status=1
+copy_if_present embabel-cheatsheet.mp4 || status=1
+copy_if_present embabel-cheatsheet-floor-1.mp4 || status=1
+copy_if_present embabel-cheatsheet-floor-2.mp4 || status=1
 exit "$status"

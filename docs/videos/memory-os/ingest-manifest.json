@@ -1,8 +1,8 @@
 {
   "schema": "jmjava.memory-os.video-ingest/v1",
   "project": "embabel-v1-learning",
-  "track": "cookbook-1.5",
-  "embabel_version": "1.5.0",
+  "track": "cheatsheet",
+  "embabel_version": "1.0+1.5",
   "cookbook_repo": "https://github.com/embabel/embabel-cookbook",
   "cookbook_docs": "https://docs.embabel.com/embabel-cookbook/1.5.0/",
   "memory_os_repo": "https://github.com/jmjava/memory-os",
@@ -11,142 +11,120 @@
     "fallback": "https://github.com/jmjava/documentation-generator"
   },
   "palace": {
-    "markdown": "docs/videos/memory-os/embabel-cookbook-15.md",
-    "spec": "docs/videos/memory-os/embabel-cookbook-15.palace.yaml",
-    "id": "embabel-cookbook-15",
+    "markdown": "docs/videos/memory-os/embabel-cheatsheet.md",
+    "spec": "docs/videos/memory-os/embabel-cheatsheet.palace.yaml",
+    "id": "embabel-cheatsheet",
     "floors": 2,
     "loci": 12
   },
   "segments": [
     {
-      "id": "00",
-      "title": "Cookbook 1.5 overview",
-      "cookbook_slug": null,
-      "lesson": null,
-      "narration_path": "docs/demos/narration/00-overview.md",
-      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/",
-      "code_entry": "com.embabel.learning.common.curriculum.CookbookChapterCatalog",
-      "video_path": null
-    },
-    {
       "id": "01",
-      "title": "Action Domain Type Chaining",
-      "cookbook_slug": "action-domain-type-chaining",
-      "lesson": 16,
-      "narration_path": "docs/demos/narration/01-action-domain-type-chaining.md",
-      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#action-domain-type-chaining",
-      "code_entry": "com.embabel.learning.java.cookbook15.TypeChainingTravelAgent",
-      "video_path": null
+      "title": "Types are the wiring",
+      "floor": 1,
+      "locus": "pipe-hall",
+      "lesson": 2,
+      "source": "docs/CHEATSHEET.md#mental-model-30-seconds",
+      "video_path": "docs/videos/recordings/embabel-cheatsheet-floor-1.mp4"
     },
     {
       "id": "02",
-      "title": "Action Condition",
-      "cookbook_slug": "action-condition",
-      "lesson": 6,
-      "narration_path": "docs/demos/narration/02-action-condition.md",
-      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#action-condition",
-      "code_entry": "com.embabel.learning.java.lesson06.ConditionalResearchAgent",
-      "video_path": null
+      "title": "Replan after every action",
+      "floor": 1,
+      "locus": "compass-rotunda",
+      "lesson": 3,
+      "source": "docs/CHEATSHEET.md#mental-model-30-seconds",
+      "video_path": "docs/videos/recordings/embabel-cheatsheet-floor-1.mp4"
     },
     {
       "id": "03",
-      "title": "Agent Stuck State",
-      "cookbook_slug": "agent-stuck-state",
-      "lesson": 13,
-      "narration_path": "docs/demos/narration/03-agent-stuck-state.md",
-      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#agent-stuck-state",
-      "code_entry": "com.embabel.learning.java.lesson13.SelfUnstickingAgent",
-      "video_path": null
+      "title": "Mix code and LLM",
+      "floor": 1,
+      "locus": "split-workbench",
+      "lesson": 3,
+      "source": "docs/CHEATSHEET.md#cookbook-rules-extracted",
+      "video_path": "docs/videos/recordings/embabel-cheatsheet-floor-1.mp4"
     },
     {
       "id": "04",
-      "title": "Action Heuristics",
-      "cookbook_slug": "action-heuristics",
-      "lesson": 17,
-      "narration_path": "docs/demos/narration/04-action-heuristics.md",
-      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#action-heuristics",
-      "code_entry": "com.embabel.learning.java.cookbook15.HeuristicTravelAgent",
-      "video_path": null
+      "title": "Tools attach per call",
+      "floor": 1,
+      "locus": "bolted-toolbox",
+      "lesson": 4,
+      "source": "docs/CHEATSHEET.md#tools-remember-the-attachment-scope",
+      "video_path": "docs/videos/recordings/embabel-cheatsheet-floor-1.mp4"
     },
     {
       "id": "05",
-      "title": "Repeat Until Acceptable",
-      "cookbook_slug": "repeat-until-acceptable",
-      "lesson": 9,
-      "narration_path": "docs/demos/narration/05-repeat-until-acceptable.md",
-      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#repeat-until-acceptable",
-      "code_entry": "com.embabel.learning.java.lesson09.RepeatUntilStoryAgent",
-      "video_path": null
+      "title": "Named bindings",
+      "floor": 1,
+      "locus": "named-crates",
+      "lesson": 6,
+      "source": "docs/CHEATSHEET.md#blackboard-rules-of-thumb",
+      "video_path": "docs/videos/recordings/embabel-cheatsheet-floor-1.mp4"
     },
     {
       "id": "06",
-      "title": "Agent Debugging",
-      "cookbook_slug": "agent-debugging",
-      "lesson": 13,
-      "narration_path": "docs/demos/narration/06-agent-debugging.md",
-      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#agent-debugging",
-      "code_entry": "com.embabel.learning.common.curriculum.DebugGuide",
-      "video_path": null
+      "title": "Planner choice",
+      "floor": 1,
+      "locus": "hat-rack",
+      "lesson": 10,
+      "source": "docs/CHEATSHEET.md#planners",
+      "video_path": "docs/videos/recordings/embabel-cheatsheet-floor-1.mp4"
     },
     {
       "id": "07",
-      "title": "Object Creation",
-      "cookbook_slug": "object-creation",
+      "title": "Typed createObject",
+      "floor": 2,
+      "locus": "mold-mouth",
       "lesson": 1,
-      "narration_path": "docs/demos/narration/07-object-creation.md",
-      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#object-creation",
-      "code_entry": "com.embabel.learning.java.lesson01.InjectedAiDemo",
-      "video_path": null
+      "source": "docs/CHEATSHEET.md#llm-call-patterns",
+      "video_path": "docs/videos/recordings/embabel-cheatsheet-floor-2.mp4"
     },
     {
       "id": "08",
-      "title": "Create Object If Possible",
-      "cookbook_slug": "create-object-if-possible",
+      "title": "createObjectIfPossible",
+      "floor": 2,
+      "locus": "null-pit",
       "lesson": 18,
-      "narration_path": "docs/demos/narration/08-create-object-if-possible.md",
-      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#create-object-if-possible",
-      "code_entry": "com.embabel.learning.java.cookbook15.PossibleTripPlanner",
-      "video_path": null
+      "source": "docs/CHEATSHEET.md#cookbook-rules-extracted",
+      "video_path": "docs/videos/recordings/embabel-cheatsheet-floor-2.mp4"
     },
     {
       "id": "09",
-      "title": "Prompt Contributors",
-      "cookbook_slug": "prompt-contributors",
+      "title": "fromMessages",
+      "floor": 2,
+      "locus": "envelope-skin",
       "lesson": 21,
-      "narration_path": "docs/demos/narration/09-prompt-contributors.md",
-      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#prompt-contributors",
-      "code_entry": "com.embabel.learning.java.cookbook15.MessageAndToolTripPlanner",
-      "video_path": null
+      "source": "docs/CHEATSHEET.md#cookbook-rules-extracted",
+      "video_path": "docs/videos/recordings/embabel-cheatsheet-floor-2.mp4"
     },
     {
       "id": "10",
-      "title": "Thinking",
-      "cookbook_slug": "thinking",
+      "title": "thinking() (1.5)",
+      "floor": 2,
+      "locus": "glass-skull",
       "lesson": 19,
-      "narration_path": "docs/demos/narration/10-thinking.md",
-      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#thinking",
-      "code_entry": "com.embabel.learning.java.cookbook15.ThinkingTripPlanner",
-      "video_path": null
+      "source": "docs/CHEATSHEET.md#10-vs-15-what-to-add-not-replace",
+      "video_path": "docs/videos/recordings/embabel-cheatsheet-floor-2.mp4"
     },
     {
       "id": "11",
-      "title": "Streaming",
-      "cookbook_slug": "streaming",
+      "title": "Streaming objects (1.5)",
+      "floor": 2,
+      "locus": "conveyor-spine",
       "lesson": 20,
-      "narration_path": "docs/demos/narration/11-streaming.md",
-      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#streaming",
-      "code_entry": "com.embabel.learning.java.cookbook15.StreamingTripPlanner",
-      "video_path": null
+      "source": "docs/CHEATSHEET.md#10-vs-15-what-to-add-not-replace",
+      "video_path": "docs/videos/recordings/embabel-cheatsheet-floor-2.mp4"
     },
     {
       "id": "12",
-      "title": "Tool Call",
-      "cookbook_slug": "tool-call",
+      "title": "Tool inspectors (1.5)",
+      "floor": 2,
+      "locus": "inspector-clipboard",
       "lesson": 21,
-      "narration_path": "docs/demos/narration/12-tool-call.md",
-      "source_url": "https://docs.embabel.com/embabel-cookbook/1.5.0/#tool-call",
-      "code_entry": "com.embabel.learning.java.cookbook15.MessageAndToolTripPlanner",
-      "video_path": null
+      "source": "docs/CHEATSHEET.md#tools-remember-the-attachment-scope",
+      "video_path": "docs/videos/recordings/embabel-cheatsheet-floor-2.mp4"
     }
   ]
 }

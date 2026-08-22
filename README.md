@@ -38,7 +38,7 @@ Examples: `emb-agent`, `emb-action`, `emb-hitl`, `emb-subagent`, `emb-repeat`, `
 
 Start at **[`docs/CHEATSHEET.md`](docs/CHEATSHEET.md)**, then **[`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md)**.  
 Official-source map: **[`docs/COOKBOOK_15.md`](docs/COOKBOOK_15.md)**.  
-Memory OS: **plan only** — [`docs/videos/memory-os/PLAN.md`](docs/videos/memory-os/PLAN.md) (renderer is upgrading; do not generate videos yet).
+Memory OS: **cheat-sheet palace** — [`docs/videos/memory-os/embabel-cheatsheet.md`](docs/videos/memory-os/embabel-cheatsheet.md) · [player](https://jmjava.github.io/embabel-v1-learning/).
 
 | Doc | Purpose |
 |-----|---------|
@@ -64,7 +64,7 @@ Curriculum order is defined in
 - `learning-common` — shared domain types, `@Lesson` / `@DebugGuide`, source catalog
 - `java-demo` — Java agents + guided tests + shell app (`cookbook15` only with `-Pembabel-15`)
 - `kotlin-demo` — Kotlin agents (incl. DSL) + guided tests + shell app
-- `docs/videos/memory-os` — palace **plan** (generation paused)
+- `docs/videos/memory-os` — cheat-sheet Memory OS palace (films on GitHub Pages)
 
 ## What you will learn
 

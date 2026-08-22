@@ -1,7 +1,7 @@
-# Memory OS plan (do not generate videos yet)
+# Memory OS plan (cheat-sheet palace)
 
-Memory OS is upgrading. **Do not run `memoryos images`, `narrate`, or `build`
-until that upgrade lands.** This file is the palace plan only.
+Memory OS `70bc124` is installed (`plan` + evolving hero). Authoring lives in
+[`embabel-cheatsheet.md`](embabel-cheatsheet.md). This table is the locus map.
 
 ## Goal
 

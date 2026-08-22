@@ -1,0 +1,372 @@
+memoryos: 1
+palace:
+  id: embabel-cheatsheet
+  title: Embabel Cheat Sheet Memory Palace
+  purpose: Generate a guided study video that teaches Embabel from the learning-repo cheat
+    sheet — planner rules first, then PromptRunner APIs — as a two-floor memory palace.
+  audience: JVM engineers who know Spring and want Embabel 1.0 plus 1.5 extras as recallable
+    rooms, not a slide deck and not a cookbook travel plot.
+  learning_method: Method of loci / memory palace. Every locus must have one dominant concept,
+    one exaggerated visual mnemonic, and one concise technical explanation.
+  style:
+    visual: First-person cinematic walkthrough of one living type-foundry. The narrator physically
+      moves from locus to locus. Technical labels appear briefly as clean overlays. Visuals
+      should be exaggerated, memorable, and slightly absurd without becoming distracting.
+      Every locus is the next metamorphosis of the same hero — never a reused generic hallway
+      and never a new disconnected prop.
+    narration: Calm technical instructor. Explain the mnemonic first, then connect it to the
+      Embabel rule. Pause briefly between loci to encourage active recall.
+  metaphor:
+    name: Embabel Cheat Sheet Memory Palace
+    throughline: The palace is one living type-foundry. We enter as raw input and the building
+      grows pipes, organs, and stamps as Embabel plans, then opens a mouth that speaks typed
+      objects.
+    material: Bronze and glass, symbolizing transformation and clarity.
+    hero: A glowing bronze type-ingot that evolves through the foundry's functions.
+    hero_origin: A sealed unlabeled bronze seed held in the foundry gate, stamped only UserInput.
+    progression: pipe-creature → speaking mold
+    planned: true
+  video:
+    width: 1280
+    height: 720
+    min_locus_sec: 15.0
+floors:
+- id: floor-1
+  number: 1
+  title: 1.0 Mental Model
+  objective: 'Remember the rules that stay true on Embabel 1.0 and 1.5: types are the wiring,
+    the process replans after every action, tools attach per call, and planner choice is a
+    product decision.'
+  recall_route: Types → Replan → Code+LLM → Per-call tools → Named bindings → Planner hats
+  metaphor:
+    region: The Foundry
+    role: Mental Model
+    hero_stage: A pipe-creature emerges, sprouting from the bronze seed and forming into functional
+      parts that symbolize the rules of Embabel.
+    entry: The sealed unlabeled bronze seed opens at the foundry gate, releasing a stream
+      of glowing bronze and metal.
+    exit: The pipe-creature transforms, melding into a mold that prepares for the next floor.
+  loci:
+  - id: pipe-hall
+    seq: 1
+    location: Pipe Hall
+    concept: Types Are The Wiring
+    visual: Giant glass pipes labeled UserInput, Story, ReviewedStory snake through the hall.
+      Floor tiles numbered 1-2-3 are crossed out. The bronze seed splits and becomes a pipe-creature
+      whose body is those types. No if signs anywhere.
+    narration: 'Welcome to the Pipe Hall. Here, you’ll notice giant glass pipes labeled UserInput,
+      Story, and ReviewedStory snaking through the room. Floor tiles numbered 1-2-3 are crossed
+      out, and a bronze seed has transformed into a pipe-creature made of those types. This
+      visual represents the concept that types are the wiring in Embabel. It means that actions
+      do not run in source order, and the control flow is defined by how you design your domain
+      objects. Remember, the source order is not the execution order. This connects back to
+      our previous location, where we established the foundation for understanding how actions
+      interact. Recall what the glass pipes signify: types are the wiring.'
+    narration_enriched: true
+    overlay: '@Action types'
+    recall_cue: Glass pipes → types are the wiring.
+    key_distinction: Source order is not execution order.
+    metaphor_part: The seed splits into typed pipes.
+    hero_now: A pipe-creature whose body is labeled type-tubes.
+    hero_from: Sealed unlabeled bronze seed stamped UserInput.
+    hero_becomes: The lead pipe grows a spinning compass eye.
+  - id: compass-rotunda
+    seq: 2
+    location: Compass Rotunda
+    concept: Replan After Every Action
+    visual: A huge OODA compass spins after every door the pipe-creature walks through. Observe,
+      Orient, Decide, Act glow in sequence. The creature's lead pipe grows a compass for an
+      eye.
+    narration: "Welcome to the Compass Rotunda. Here, a giant OODA compass spins after every\
+      \ door the pipe-creature walks through. The words Observe, Orient, Decide, Act glow\
+      \ in sequence, while the creature’s lead pipe has a compass for an eye. This represents\
+      \ the concept of Replan After Every Action. \n\nAfter each action, Embabel reassesses\
+      \ the world, adapting plans based on new objects, null conditions, or changes in context.\
+      \ This is part of the OODA loop, ensuring flexibility in decision-making. \n\nRemember\
+      \ the last location, Pipe Hall, where we established that types are the wiring. Now,\
+      \ can you visualize the spinning compass and recall the term replan?"
+    narration_enriched: true
+    overlay: REPLAN
+    recall_cue: Spinning compass → replan.
+    metaphor_part: The compass eye.
+    hero_now: The same creature with a spinning OODA compass for an eye.
+    hero_from: A pipe-creature of labeled type-tubes.
+    hero_becomes: The body splits into a steel stamp-hand and a glowing quill-hand.
+  - id: split-workbench
+    seq: 3
+    location: Split Workbench
+    concept: Mix Code And LLM
+    visual: One workbench, two arms of the same creature. The left is a Spring steel stamp
+      that prints deterministic results. The right is a glowing quill that writes typed LLM
+      objects. A sign reads "not every action needs a model."
+    narration: We are now standing in the Split Workbench. Picture a single workbench with
+      two arms of the same creature. One arm holds a Spring steel stamp that prints deterministic
+      results, while the other wields a glowing quill that writes typed LLM objects. This
+      scene represents the concept of mixing code and LLM. This approach combines the reliability
+      of deterministic Spring services within action methods, making them cheaper, testable,
+      and safer. Remember, you should only use the model at the typed boundary. Reflecting
+      back to the Compass Rotunda, recall how we emphasized the importance of replanning after
+      every action. Can you visualize the stamp and quill together as code plus LLM?
+    narration_enriched: true
+    overlay: code + LLM
+    recall_cue: Stamp and quill → code plus LLM.
+    metaphor_part: Split workbench arms.
+    hero_now: The creature grows a steel stamp-hand and a glowing quill-hand.
+    hero_from: Pipe-creature with a compass eye.
+    hero_becomes: A toolbox bolts onto the quill wrist only.
+  - id: bolted-toolbox
+    seq: 4
+    location: Bolted Toolbox
+    concept: Tools Attach Per Call
+    visual: A toolbox is bolted to the quill wrist, not to the foundry walls. @Tool wrenches
+      sit in the box. A second desk has no box and the wrenches are invisible. A tag reads
+      withToolObject.
+    narration: "We are standing in the Bolted Toolbox. Picture a sturdy toolbox bolted to\
+      \ a quill wrist, while the walls of the foundry remain bare. Inside the toolbox, various\
+      \ tool wrenches sit ready, while a second desk lacks a toolbox, rendering its wrenches\
+      \ invisible. This represents the concept of tools attach per call. \n\nThis means that\
+      \ tools connect to a PromptRunner temporarily, rather than being permanently attached\
+      \ to the entire agent. Understanding this helps scope the tools effectively. \n\nRecall\
+      \ that we just left the Split Workbench, where we mixed code and LLM. \n\nCan you remember\
+      \ how the toolbox relates to per-call tools?"
+    narration_enriched: true
+    overlay: withToolObject
+    recall_cue: Wrist toolbox → per-call tools.
+    metaphor_part: Toolbox on one wrist.
+    hero_now: A toolbox bolted only onto the quill wrist.
+    hero_from: Stamp-hand and quill-hand.
+    hero_becomes: Two identical crates hang from the pipes; only the labeled one opens.
+  - id: named-crates
+    seq: 5
+    location: Named Crates
+    concept: Bindings Beat Latest Wins
+    visual: Two identical bronze crates. The unlabeled crate is latest-wins and swallows the
+      first. The crate stamped outputBinding opens only for @RequireNameMatch. The creature
+      hangs both crates from its pipes.
+    narration: We are now in the Named Crates room. Picture two identical bronze crates. One
+      crate, unlabeled, represents the latest-wins rule and swallows the first crate. The
+      other crate, stamped with outputBinding, only opens for @RequireNameMatch. This concept
+      illustrates that the latest object of a type wins unless you specifically name it. Using
+      outputBinding with @RequireNameMatch prevents confusion when two values share a type.
+      Recall how we learned about tools attaching per call in the Bolted Toolbox. What does
+      the labeled crate represent?
+    narration_enriched: true
+    overlay: '@RequireNameMatch'
+    recall_cue: Labeled crate → named binding.
+    metaphor_part: Named crates on the pipes.
+    hero_now: Two crates hang from the pipes; only the named crate opens.
+    hero_from: Toolbox on the quill wrist.
+    hero_becomes: Four hats stack on the compass head.
+  - id: hat-rack
+    seq: 6
+    location: Hat Rack
+    concept: Planner Choice
+    visual: 'Four hats stack on the compass head: a cheap path cap (GOAP), a greedy gold crown
+      (Utility), a gather-then-stop satchel-hat (Hybrid), and an LLM concierge top hat (Supervisor).
+      Same pipe-creature, different hat, different walk.'
+    narration: 'We are now at the Hat Rack. Imagine four hats stacked on a compass head: a
+      cheap path cap representing GOAP, a greedy gold crown for Utility, a gather-then-stop
+      satchel-hat for Hybrid, and an elegant LLM concierge top hat symbolizing Supervisor.
+      This is the concept of planner choice. Planner choice is a product decision that determines
+      how the AI approaches a task. GOAP takes the cheapest path to a goal, Utility focuses
+      on the highest net value, Hybrid gathers resources before stopping, while Supervisor
+      allows the LLM to select tools flexibly, though at a higher cost. Recall how we moved
+      from the Crates, where bindings determined the latest wins. Now, can you recall the
+      four hats representing the planners?'
+    narration_enriched: true
+    overlay: planner
+    recall_cue: Four hats → four planners.
+    metaphor_part: Hats on the compass head.
+    hero_now: Four hats stacked on the compass head.
+    hero_from: Named crates on the pipes.
+    hero_becomes: The creature's mouth becomes a record-shaped mold.
+- id: floor-2
+  number: 2
+  title: PromptRunner And 1.5 Extras
+  objective: Remember how Ai and PromptRunner create typed objects, fail softly, speak in
+    messages, and — on Embabel 1.5 — think, stream, and inspect tool calls.
+  recall_route: creating → ifPossible → fromMessages → thinking → stream → inspectors
+  metaphor:
+    region: The Model-Mouth
+    role: PromptRunner And 1.5 Extras
+    hero_stage: The pipe-creature evolves into a speaking mold, capable of generating and
+      articulating typed objects with clarity.
+    entry: The glowing pipe-creature enters the Model-Mouth, resonating with the teal light
+      that represents communication and processing.
+    exit: The speaking mold prepares to inspect tool calls, transitioning into an inspector
+      clipboard that captures the essence of its functions.
+  loci:
+  - id: mold-mouth
+    seq: 1
+    location: Mold Mouth
+    concept: Typed Create Object
+    visual: The creature's mouth is a steel mold that only accepts a record-shaped ingot.
+      creating(Story.class) is engraved on the mold. An example ingot sits beside it. A validation
+      stamp waits.
+    narration: Welcome to the Mold Mouth. Here, you see a creature with a steel mold for a
+      mouth, which only accepts a record-shaped ingot. Engraved on the mold is creating(Story.class),
+      and beside it is an example ingot waiting for validation. This represents the technical
+      concept of typed createObject. This function allows Ai to create structured objects
+      from specific types, which ensures accuracy in data handling. Remember, you want to
+      use typed createObject and creating(T).fromPrompt over free text. Think of this as a
+      way to ensure your inputs are valid and tailored for your needs. Recall how this connects
+      to our previous location, where we learned about the importance of structured data.
+      What does creating(T) help you ensure?
+    narration_enriched: true
+    overlay: creating(T)
+    recall_cue: Record mold → typed create.
+    metaphor_part: The mold-mouth.
+    hero_now: The mouth is a record-shaped mold.
+    hero_from: Four hats on the compass head.
+    hero_becomes: Soft clay slumps through a hole labeled null.
+  - id: null-pit
+    seq: 2
+    location: Null Pit
+    concept: Create Object If Possible
+    visual: Soft clay tries the mold and slumps through a hole labeled null. A warning lantern
+      glows; nothing explodes. A side door marked REPLAN opens. The same creature now looks
+      half-melted.
+    narration: We are now standing in the Null Pit. Picture soft clay attempting to fill a
+      mold but instead slumping through a hole labeled null. A warning lantern glows, but
+      nothing explodes. To the side, a door marked REPLAN swings open, revealing a creature
+      that looks half-melted. This represents the createObjectIfPossible concept. This nullable
+      path allows incomplete prompts to return null, logging a warning without throwing an
+      error. A null result signals the need to replan, often toward human-in-the-loop processing.
+      Remember, we just came from the Mold Mouth, where we created a typed object. What happens
+      when a prompt returns null?
+    narration_enriched: true
+    overlay: createObjectIfPossible
+    recall_cue: Slump hole → null then replan.
+    metaphor_part: The null pit under the mold.
+    hero_now: Half-melted clay slumping through a null hole.
+    hero_from: Record-shaped mold-mouth.
+    hero_becomes: Envelope-skin labeled System and User.
+  - id: envelope-skin
+    seq: 3
+    location: Envelope Skin
+    concept: Messages And Contributors
+    visual: The clay grows envelope-skin. A SystemMessage sash and a UserMessage sash stack
+      in order. A single fat string scroll is crossed out. fromMessages is etched on the stack.
+    narration: "We are now in the Envelope Skin. Imagine clay expanding into a smooth envelope-like\
+      \ surface. Here, you see a SystemMessage sash and a UserMessage sash stacked neatly,\
+      \ while a single fat string is crossed out, with fromMessages etched onto the stack.\
+      \ This represents the concept of Messages and Contributors. \n\nMessages allow prompt\
+      \ contributors to build requests from structured components rather than a single continuous\
+      \ string. This matters because it enables clear communication and specialization without\
+      \ embedding tone into every prompt. \n\nRecall how we moved from the Null Pit, where\
+      \ we learned about creating objects if possible. Now, think of stacked envelopes representing\
+      \ fromMessages. What do the stacked envelopes signify?"
+    narration_enriched: true
+    overlay: fromMessages
+    recall_cue: Stacked envelopes → fromMessages.
+    metaphor_part: Envelope-skin.
+    hero_now: The same body wearing System and User envelopes.
+    hero_from: Half-melted clay at the null hole.
+    hero_becomes: A glass skull with a thinking ticker.
+  - id: glass-skull
+    seq: 4
+    location: Glass Skull
+    concept: Thinking Traces
+    visual: A glass skull grows on the envelope body. Inside, a ticker prints <decision_reasoning>.
+      A gate reads supportsThinking. A card shows ThinkingResponse with result plus thinking
+      blocks. A 1.5 badge hangs from the skull.
+    narration: "We are now in the Glass Skull. Imagine a glass skull growing from the envelope\
+      \ body, with a ticker printing <decision_reasoning> inside. A gate labeled supportsThinking\
+      \ stands nearby, while a card displays ThinkingResponse along with results and thinking\
+      \ blocks. This represents the technical concept of thinking traces. \n\nThinking traces\
+      \ on Embabel 1.5 help provide an explicit rationale along with the typed result. It’s\
+      \ crucial to use thinking() only when supportsThinking() is true and to read thinkingBlocks\
+      \ as an additional feature, not a replacement for the original object creation. \n\n\
+      Recall how this connects to the Envelope Skin, where we explored messages and contributors.\
+      \ What does the ticker in the glass skull print?"
+    narration_enriched: true
+    overlay: thinking()
+    recall_cue: Glass skull ticker → thinking traces.
+    metaphor_part: The glass skull.
+    hero_now: A glass skull ticking decision reasoning.
+    hero_from: Envelope-skinned body.
+    hero_becomes: A conveyor spine of JSON bricks.
+  - id: conveyor-spine
+    seq: 5
+    location: Conveyor Spine
+    concept: Streaming Objects
+    visual: The spine becomes a conveyor. JSON bricks arrive one by one and freeze into typed
+      records. A gate reads supportsStreaming. A stopwatch hangs. A 1.5 badge is riveted to
+      the belt.
+    narration: "We are standing in the Conveyor Spine. Imagine the spine transforming into\
+      \ a conveyor belt, where JSON bricks arrive one by one, freezing into typed records.\
+      \ A gate labeled supportsStreaming stands guard, while a stopwatch hangs above, reminding\
+      \ us of timing. This represents the concept of streaming objects. Streaming allows us\
+      \ to emit typed objects as they arrive, which is essential for efficient data processing.\
+      \ \n\nRecall that in the Glass Skull, we explored thinking traces. Here, we build on\
+      \ that by wrapping the runner in StreamingPromptRunnerBuilder, calling createObjectStream,\
+      \ and collecting with doOnNext, while guarding on supportsStreaming. \n\nNow, think\
+      \ back: how do we relate one brick at a time to streaming?"
+    narration_enriched: true
+    overlay: createObjectStream
+    recall_cue: One brick at a time → stream.
+    metaphor_part: Conveyor spine.
+    hero_now: A conveyor spine turning JSON into records.
+    hero_from: Glass skull with a thinking ticker.
+    hero_becomes: An inspector clipboard as the last organ.
+  - id: inspector-clipboard
+    seq: 6
+    location: Inspector Clipboard
+    concept: Tool Call Logs
+    visual: An inspector clipboard grows as the last organ. It photographs every wrench swing
+      from the wrist toolbox. @LlmTool wrenches hang in view. The mold-mouth then prints a
+      typed plan.
+    narration: We are now in the Inspector Clipboard. Picture an enormous clipboard that resembles
+      an organ, capturing every swing of a wrench from the wrist toolbox. Hanging nearby,
+      @LlmTool wrenches are visible, and the clipboard's mold-mouth prints a typed plan. This
+      represents tool call logs. Tool call logs keep track of every action taken with the
+      tools, ensuring accuracy and visibility in the process, which is critical for debugging
+      and refining models. Remember, we came from the Conveyor Spine, where we learned about
+      streaming objects. What does the clipboard photograph?
+    narration_enriched: true
+    overlay: withToolCallInspectors
+    recall_cue: Clipboard photo → inspected tool call.
+    metaphor_part: The inspector clipboard.
+    hero_now: A clipboard organ watching the wrist toolbox.
+    hero_from: Conveyor spine of JSON bricks.
+    hero_becomes: The finished living foundry, ready for recall.
+recall:
+  enabled: true
+  intro: 'End the video with locations only. Ask the learner to name the concept, then reveal:'
+  floors:
+  - floor: floor-1
+    label: Mental model
+    answer: Types → Replan → Code+LLM → Per-call tools → Named bindings → Planner hats
+  - floor: floor-2
+    label: PromptRunner
+    answer: creating → ifPossible → fromMessages → thinking → stream → inspectors
+extras:
+  front_matter:
+    core rule: One locus = one concept. One memorable image = one retrieval hook.
+  sections:
+    building-overview: |-
+      # 1. Building Overview
+
+      The foundry has two floors that match the cheat sheet, not cookbook
+      chapters:
+
+      1.  **Floor 1 --- 1.0 mental model:** Types, replan, code+LLM, tools
+          per call, named bindings, planner hats.
+      2.  **Floor 2 --- PromptRunner + 1.5 extras:** `creating`,
+          `createObjectIfPossible`, messages, thinking, streaming,
+          inspectors.
+
+      Teaching source: `docs/CHEATSHEET.md`. Dual versions:
+      `docs/VERSIONS.md`. Official recipes stay in the Cookbook; this
+      palace is the recall list.
+    study-map: |-
+      # 5. Study Map
+
+      Cheat sheet: `docs/CHEATSHEET.md`
+
+      Versions: `docs/VERSIONS.md` — default 1.0; `-Pembabel-15` for extras.
+
+      Official sources (extracted, not cloned):
+
+      - User Guide: https://docs.embabel.com/embabel-agent/guide/1.5.0-SNAPSHOT/
+      - Cookbook 1.5: https://docs.embabel.com/embabel-cookbook/1.5.0/

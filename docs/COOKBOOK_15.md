@@ -35,9 +35,9 @@ with fakes first.
 
 ## Memory OS
 
-Palace planning only while Memory OS upgrades:
-[`videos/memory-os/PLAN.md`](videos/memory-os/PLAN.md).
-Do not generate films yet.
+Cheat-sheet palace (not cookbook travel rooms):
+[`videos/memory-os/embabel-cheatsheet.md`](videos/memory-os/embabel-cheatsheet.md).
+Player: https://jmjava.github.io/embabel-v1-learning/
 
 ## Run
 

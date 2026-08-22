@@ -1,37 +1,38 @@
-# Memory OS palace (paused)
+# Memory OS palace (cheat sheet)
 
 Primary renderer: [jmjava/memory-os](https://github.com/jmjava/memory-os)
 (private; Cloud Agents use `BROAD_REPO_TOKEN` to install the CLI).
+Installed HEAD for this generation: `70bc124` (evolving-hero `plan` command).
 
-**Memory OS is upgrading. Do not generate videos yet.**
-Plan: [`PLAN.md`](PLAN.md). Study source: [`docs/CHEATSHEET.md`](../../CHEATSHEET.md).
+Study source: [`docs/CHEATSHEET.md`](../../CHEATSHEET.md).
+This is **not** a filmed walkthrough of cookbook travel recipes.
 
 ## Bundle
 
 | File | Role |
 |------|------|
-| `embabel-cookbook-15.md` | Palace Markdown (authoring) |
-| `embabel-cookbook-15.palace.yaml` | Compiled engine spec (`memoryos compile`) |
-| `ingest-manifest.json` | Chapter ↔ lesson ↔ locus map |
+| `embabel-cheatsheet.md` | Palace Markdown (authoring) |
+| `embabel-cheatsheet.palace.yaml` | Compiled + planned + enriched engine spec |
+| `ingest-manifest.json` | Locus ↔ lesson ↔ cheat-sheet map |
+| `PLAN.md` | Locus table used to author the palace |
 
 Generated assets stay local and are gitignored: `images/`, `audio/`, `build/`.
 
 ## Generate assets
 
 ```bash
-# already on PATH in the reusable Cloud Agent environment
-memoryos compile docs/videos/memory-os/embabel-cookbook-15.md \
-  --id embabel-cookbook-15 \
-  -o docs/videos/memory-os/embabel-cookbook-15.palace.yaml
-memoryos validate docs/videos/memory-os/embabel-cookbook-15.palace.yaml
-
-# live OpenAI (OPENAI_API_KEY)
-memoryos images  docs/videos/memory-os/embabel-cookbook-15.palace.yaml --dry-run
-memoryos narrate docs/videos/memory-os/embabel-cookbook-15.palace.yaml --dry-run
-memoryos build   docs/videos/memory-os/embabel-cookbook-15.palace.yaml --floor floor-1
+memoryos compile docs/videos/memory-os/embabel-cheatsheet.md \
+  --id embabel-cheatsheet \
+  -o docs/videos/memory-os/embabel-cheatsheet.palace.yaml
+memoryos validate docs/videos/memory-os/embabel-cheatsheet.palace.yaml
+memoryos plan    docs/videos/memory-os/embabel-cheatsheet.palace.yaml
+memoryos enrich  docs/videos/memory-os/embabel-cheatsheet.palace.yaml --target-seconds 28
+memoryos images  docs/videos/memory-os/embabel-cheatsheet.palace.yaml --dry-run
+memoryos narrate docs/videos/memory-os/embabel-cheatsheet.palace.yaml --dry-run
+memoryos build   docs/videos/memory-os/embabel-cheatsheet.palace.yaml
 ```
 
-One locus stays on screen until its narration finishes (minimum 30s).
+One locus stays on screen until its narration finishes (minimum 15s).
 Do not vendor memory-os into this repo; refresh the CLI from git during install.
 
 GitHub Pages player: https://jmjava.github.io/embabel-v1-learning/

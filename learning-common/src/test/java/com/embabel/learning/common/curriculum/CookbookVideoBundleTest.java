@@ -21,16 +21,18 @@ class CookbookVideoBundleTest {
             assertTrue(Files.size(narration) > 80, narration + " looks empty");
         }
         assertTrue(Files.isRegularFile(root.resolve("docs/demos/narration/00-overview.md")));
-        assertTrue(Files.isRegularFile(root.resolve("docs/videos/memory-os/embabel-cookbook-15.md")));
-        assertTrue(Files.isRegularFile(root.resolve("docs/videos/memory-os/embabel-cookbook-15.palace.yaml")));
+        assertTrue(Files.isRegularFile(root.resolve("docs/videos/memory-os/embabel-cheatsheet.md")));
+        assertTrue(Files.isRegularFile(root.resolve("docs/videos/memory-os/embabel-cheatsheet.palace.yaml")));
+        assertTrue(Files.isRegularFile(root.resolve("docs/CHEATSHEET.md")));
         assertTrue(Files.isRegularFile(root.resolve("docs/index.html")));
         assertTrue(Files.isRegularFile(root.resolve(".github/workflows/pages.yml")));
 
         JsonNode manifest = new ObjectMapper().readTree(
                 root.resolve("docs/videos/memory-os/ingest-manifest.json").toFile()
         );
-        assertEquals("1.5.0", manifest.get("embabel_version").asText());
-        assertEquals(13, manifest.get("segments").size());
+        assertEquals("cheatsheet", manifest.get("track").asText());
+        assertEquals("embabel-cheatsheet", manifest.get("palace").get("id").asText());
+        assertEquals(12, manifest.get("segments").size());
         assertEquals(
                 CookbookChapterCatalog.MEMORY_OS_REPO,
                 manifest.get("memory_os_repo").asText()
