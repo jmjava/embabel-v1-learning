@@ -23,6 +23,8 @@ class CookbookVideoBundleTest {
         assertTrue(Files.isRegularFile(root.resolve("docs/demos/narration/00-overview.md")));
         assertTrue(Files.isRegularFile(root.resolve("docs/videos/memory-os/embabel-cookbook-15.md")));
         assertTrue(Files.isRegularFile(root.resolve("docs/videos/memory-os/embabel-cookbook-15.palace.yaml")));
+        assertTrue(Files.isRegularFile(root.resolve("docs/index.html")));
+        assertTrue(Files.isRegularFile(root.resolve(".github/workflows/pages.yml")));
 
         JsonNode manifest = new ObjectMapper().readTree(
                 root.resolve("docs/videos/memory-os/ingest-manifest.json").toFile()

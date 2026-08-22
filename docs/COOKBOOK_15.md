@@ -51,7 +51,9 @@ memoryos build docs/videos/memory-os/embabel-cookbook-15.palace.yaml --floor flo
 Spoken chapter scripts in [`docs/demos/narration/`](demos/narration/) remain available
 for [documentation-generator](https://github.com/jmjava/documentation-generator).
 
-See [`docs/videos/memory-os/README.md`](videos/memory-os/README.md).
+Published player: https://jmjava.github.io/embabel-v1-learning/
+
+See [`docs/videos/memory-os/README.md`](videos/memory-os/README.md) and [`docs/GITHUB-PAGES.md`](GITHUB-PAGES.md).
 
 ## Run
 

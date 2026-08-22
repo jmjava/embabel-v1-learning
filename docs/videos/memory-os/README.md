@@ -30,3 +30,8 @@ memoryos build   docs/videos/memory-os/embabel-cookbook-15.palace.yaml --floor f
 
 One locus stays on screen until its narration finishes (minimum 30s).
 Do not vendor memory-os into this repo; refresh the CLI from git during install.
+
+GitHub Pages player: https://jmjava.github.io/embabel-v1-learning/
+
+After a successful `memoryos build`, run `./scripts/publish-memoryos-videos.sh` and
+commit the LFS-tracked MP4s under `docs/videos/recordings/`.

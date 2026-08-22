@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embabel Cookbook 1.5 — Memory Palace Videos</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:linear-gradient(135deg,#1c1917 0%,#292524 40%,#44403c 100%);min-height:100vh;padding:2rem;color:#1c1917}
+        .container{max-width:1100px;margin:0 auto}
+        header{text-align:center;color:#fafaf9;margin-bottom:2.5rem}
+        h1{font-size:2.3rem;margin-bottom:.5rem}
+        .subtitle{font-size:1.05rem;opacity:.88;line-height:1.5}
+        .subtitle a{color:#fde68a}
+        .section-title{color:#fafaf9;font-size:1.3rem;margin:2rem 0 1rem}
+        .videos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:1.5rem}
+        .video-card{background:#fff;border-radius:12px;padding:1.4rem;box-shadow:0 12px 32px rgba(0,0,0,.28);scroll-margin-top:1.5rem}
+        .video-card h2{font-size:1.25rem;margin-bottom:.4rem;color:#b45309}
+        .seg-id{font-size:.8rem;color:#78716c;font-family:ui-monospace,monospace;margin-bottom:.35rem}
+        .video-card p{color:#57534e;margin-bottom:.85rem;line-height:1.55}
+        .duration{display:inline-block;background:#b45309;color:#fff;padding:.2rem .7rem;border-radius:20px;font-size:.85rem;margin-bottom:.75rem}
+        video{width:100%;border-radius:8px;background:#000;margin-top:.6rem}
+        .missing{background:#f5f5f4;border:1px dashed #a8a29e;color:#78716c;padding:1.2rem;border-radius:8px;text-align:center}
+        .footer{text-align:center;color:#e7e5e4;margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.18)}
+        .footer a{color:#fde68a}
+        @media(max-width:768px){h1{font-size:1.7rem}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Embabel Cookbook 1.5</h1>
+            <p class="subtitle">
+                Memory-palace study videos generated with
+                <a href="https://github.com/jmjava/memory-os">memory-os</a>
+                from the
+                <a href="https://github.com/embabel/embabel-cookbook">official cookbook</a>.
+                Teaching code lives in
+                <a href="https://github.com/jmjava/embabel-v1-learning">embabel-v1-learning</a>.
+            </p>
+        </header>
+
+        <h2 class="section-title">Palace films</h2>
+        <div class="videos-grid">
+            <div class="video-card" id="full">
+                <p class="seg-id">#full</p>
+                <h2>Full palace</h2>
+                <span class="duration">Floors 1–2 + recall</span>
+                <p>Walk the whole Cookbook 1.5 academy: planner behavior, then PromptRunner APIs, then the active-recall quiz.</p>
+                <video controls preload="metadata" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'missing',textContent:'Video not published yet. Run memoryos build with a valid OpenAI platform key, then scripts/publish-memoryos-videos.sh.'}))">
+                    <source src="videos/recordings/embabel-cookbook-15.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-card" id="floor-1">
+                <p class="seg-id">#floor-1</p>
+                <h2>Floor 1 — Planner Behavior</h2>
+                <span class="duration">6 loci</span>
+                <p>Type chaining, conditions, stuck state, action cost, RepeatUntil, and the three debug views.</p>
+                <video controls preload="metadata" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'missing',textContent:'Floor 1 film not published yet.'}))">
+                    <source src="videos/recordings/embabel-cookbook-15-floor-1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-card" id="floor-2">
+                <p class="seg-id">#floor-2</p>
+                <h2>Floor 2 — Agentic AI APIs</h2>
+                <span class="duration">6 loci</span>
+                <p>creating, createObjectIfPossible, fromMessages, thinking(), streaming, and inspected tool calls.</p>
+                <video controls preload="metadata" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'missing',textContent:'Floor 2 film not published yet.'}))">
+                    <source src="videos/recordings/embabel-cookbook-15-floor-2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <p class="footer">
+            Spec: <a href="https://github.com/jmjava/embabel-v1-learning/blob/main/docs/videos/memory-os/embabel-cookbook-15.md">palace markdown</a>
+            · Map: <a href="https://github.com/jmjava/embabel-v1-learning/blob/main/docs/COOKBOOK_15.md">COOKBOOK_15.md</a>
+            · Publishing notes: <a href="https://github.com/jmjava/embabel-v1-learning/blob/main/docs/GITHUB-PAGES.md">GITHUB-PAGES.md</a>
+        </p>
+    </div>
+</body>
+</html>

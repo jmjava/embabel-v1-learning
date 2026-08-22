@@ -32,7 +32,8 @@ Examples: `emb-agent`, `emb-action`, `emb-hitl`, `emb-subagent`, `emb-repeat`, `
 ## Study path
 
 Start at **[`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md)**.  
-1.5 cookbook track: **[`docs/COOKBOOK_15.md`](docs/COOKBOOK_15.md)**.
+1.5 cookbook track: **[`docs/COOKBOOK_15.md`](docs/COOKBOOK_15.md)**.  
+Videos: **[jmjava.github.io/embabel-v1-learning](https://jmjava.github.io/embabel-v1-learning/)** (GitHub Pages).
 
 | Doc | Purpose |
 |-----|---------|

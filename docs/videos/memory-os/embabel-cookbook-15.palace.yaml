@@ -16,6 +16,18 @@ palace:
       — never a reused generic hallway.'
     narration: Calm technical instructor. Explain the mnemonic first, then connect it to the
       Embabel 1.5 API. Pause briefly between loci to encourage active recall.
+  image:
+    model: gpt-image-1-mini
+    size: 1536x1024
+    quality: medium
+  video:
+    width: 1280
+    height: 720
+    fps: 30
+    motion: kenburns
+    locus_pause_sec: 1.2
+    min_locus_sec: 15
+    overlay: true
 floors:
 - id: floor-1
   number: 1
