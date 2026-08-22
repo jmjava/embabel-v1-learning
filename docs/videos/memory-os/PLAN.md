@@ -42,19 +42,14 @@ before: exaggerated visual, one overlay label, one spoken rule.
 | 11 | Streaming objects **1.5** | Conveyor of JSON bricks becoming records |
 | 12 | Tool inspectors **1.5** | Clipboard watching each wrench swing |
 
-## Authoring steps (after Memory OS upgrades)
+## Status
 
-1. Confirm the new Memory OS compile/validate CLI still accepts palace Markdown.
-2. Rewrite authoring Markdown from this table (new file, e.g.
-   `embabel-cheatsheet.palace.md`) — do **not** copy cookbook chapter prose.
-3. `memoryos compile` + `validate` only. No images, TTS, or MP4 until the
-   upgraded renderer is confirmed.
-4. Then generate assets and publish via [`docs/GITHUB-PAGES.md`](../../GITHUB-PAGES.md).
+Shipped: `embabel-cheatsheet.md` → plan → enrich → images/TTS →
+`docs/videos/recordings/embabel-cheatsheet*.mp4`.
 
-## Out of scope now
+## Out of scope
 
-- Re-filming `docs/videos/recordings/*.mp4`
-- Live OpenAI image/TTS calls
+- Re-filming cookbook travel rooms
 - Docgen narration rewrites (optional later; cheat sheet is the source)
 
 ## Environment note
