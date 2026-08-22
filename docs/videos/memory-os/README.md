@@ -1,0 +1,37 @@
+# Memory OS palace for Cookbook 1.5
+
+Primary renderer: [jmjava/memory-os](https://github.com/jmjava/memory-os)
+(private; Cloud Agents use `BROAD_REPO_TOKEN` to install the CLI).
+
+## Bundle
+
+| File | Role |
+|------|------|
+| `embabel-cookbook-15.md` | Palace Markdown (authoring) |
+| `embabel-cookbook-15.palace.yaml` | Compiled engine spec (`memoryos compile`) |
+| `ingest-manifest.json` | Chapter ↔ lesson ↔ locus map |
+
+Generated assets stay local and are gitignored: `images/`, `audio/`, `build/`.
+
+## Generate assets
+
+```bash
+# already on PATH in the reusable Cloud Agent environment
+memoryos compile docs/videos/memory-os/embabel-cookbook-15.md \
+  --id embabel-cookbook-15 \
+  -o docs/videos/memory-os/embabel-cookbook-15.palace.yaml
+memoryos validate docs/videos/memory-os/embabel-cookbook-15.palace.yaml
+
+# live OpenAI (OPENAI_API_KEY)
+memoryos images  docs/videos/memory-os/embabel-cookbook-15.palace.yaml --dry-run
+memoryos narrate docs/videos/memory-os/embabel-cookbook-15.palace.yaml --dry-run
+memoryos build   docs/videos/memory-os/embabel-cookbook-15.palace.yaml --floor floor-1
+```
+
+One locus stays on screen until its narration finishes (minimum 30s).
+Do not vendor memory-os into this repo; refresh the CLI from git during install.
+
+GitHub Pages player: https://jmjava.github.io/embabel-v1-learning/
+
+After a successful `memoryos build`, run `./scripts/publish-memoryos-videos.sh` and
+commit the LFS-tracked MP4s under `docs/videos/recordings/`.

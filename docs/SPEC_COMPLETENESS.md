@@ -6,7 +6,7 @@ The original request asked for an extensive Embabel demo with Java+Kotlin, linka
 
 ### 1. Which Embabel version is the curriculum pinned to?
 
-**Answer applied:** Pin to **Embabel 1.0.0** (latest Maven Central release at build time), Spring Boot **3.5.13**, Java **21**. Document upgrade notes when moving to snapshots (`1.5.0-SNAPSHOT` used by official examples).
+**Answer applied (1.5 branch):** Pin to **Embabel 1.5.0** via `repo.embabel.com`, Spring Boot **3.5.13**, Java **21**. Lessons 01–15 remain the original study path; lessons 16–21 plus `docs/COOKBOOK_15.md` integrate [embabel-cookbook](https://github.com/embabel/embabel-cookbook).
 
 ### 2. Should demos require live LLM keys?
 
@@ -21,7 +21,7 @@ The original request asked for an extensive Embabel demo with Java+Kotlin, linka
 - MCP server export + `@SecureAgentTool`
 - A2A server profile
 - OpenTelemetry/Zipkin observability starter
-- Streaming + thinking callbacks
+- Streaming + thinking callbacks — **started in lessons 19–20** (Cookbook 1.5 APIs; live-model demos still need keys)
 - Budget guardrail / cost events
 - ConcurrentAgentProcess
 - Skills loading from local dir/GitHub

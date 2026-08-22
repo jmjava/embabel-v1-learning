@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Bootstraps the Java Embabel learning shell.
  * <p>
- * Embabel 1.0 auto-configures from the starter — {@code @EnableAgents} is no longer required
- * (and is deprecated).
+ * Embabel 1.5 auto-configures from the starter — {@code @EnableAgents} is no longer required
+ * (and is deprecated). Cookbook 1.5 counterparts live in {@code cookbook15}.
  * <p>
  * Study entry points:
  * <ul>

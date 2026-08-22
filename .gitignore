@@ -20,3 +20,9 @@ build/
 *.class
 hs_err_pid*
 replay_pid*
+docs/demos/recordings/
+docs/demos/timing/
+docs/demos/animations/__pycache__/
+docs/videos/memory-os/images/
+docs/videos/memory-os/audio/
+docs/videos/memory-os/build/
