@@ -44,10 +44,11 @@ stamped by the engine — stills must not paint lettering.
 
 ## Status
 
-Rebuilding on memory-os `4d694ac`: `embabel-cheatsheet.md` → plan →
+Shipped on memory-os `4d694ac`: `embabel-cheatsheet.md` → plan →
 enrich (speak the plan) → narrate → images → `ground` → `gate` →
 Q/A + whole-animal-stamped render →
-`docs/videos/recordings/embabel-cheatsheet*.mp4`.
+`docs/videos/recordings/embabel-cheatsheet*.mp4`
+(~14.3 min full, ~6.7 min floor 1, ~6.6 min floor 2).
 
 ## Out of scope
 
