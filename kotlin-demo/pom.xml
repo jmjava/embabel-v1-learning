@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.embabel.learning</groupId>
         <artifactId>embabel-v1-learning</artifactId>
-        <version>1.5.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>kotlin-demo</artifactId>
@@ -75,6 +75,9 @@
                     <compilerPlugins>
                         <plugin>spring</plugin>
                     </compilerPlugins>
+                    <excludes>
+                        <exclude>${embabel.extra.excludes}</exclude>
+                    </excludes>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -98,6 +101,9 @@
                     <systemPropertyVariables>
                         <embabel.agent.shell.interactive.enabled>false</embabel.agent.shell.interactive.enabled>
                     </systemPropertyVariables>
+                    <excludes>
+                        <exclude>${embabel.extra.excludes}</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
         </plugins>

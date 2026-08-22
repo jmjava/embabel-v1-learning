@@ -1,13 +1,18 @@
-# Embabel 1.5 Learning Demo
+# Embabel V1 Learning Demo
 
-Study project for the [Embabel Agent Framework](https://github.com/embabel/embabel-agent) (**1.5.0**): Java + Kotlin demos, official [Cookbook](https://github.com/embabel/embabel-cookbook) chapter map, guided unit tests, and video scripts for [Memory OS](https://github.com/jmjava/memory-os).
+Study project for the [Embabel Agent Framework](https://github.com/embabel/embabel-agent) on **one `main`**: Embabel **1.0** by default, **1.5** extras behind `-Pembabel-15`. Java + Kotlin demos, guided unit tests, and a cheat sheet extracted from the official [User Guide](https://docs.embabel.com/embabel-agent/guide/1.5.0-SNAPSHOT/) and [Cookbook](https://docs.embabel.com/embabel-cookbook/1.5.0/).
+
+This is not a second copy of the cookbook travel recipes. Memorize the [cheat sheet](docs/CHEATSHEET.md).
 
 ## Quick start
 
 ```bash
-./mvnw test
+./mvnw test                 # Embabel 1.0 — lessons 01–15
+./mvnw test -Pembabel-15    # Embabel 1.5 — plus thinking / streaming extras
 ./mvnw -pl learning-common,java-demo javadoc:javadoc
 ```
+
+Version switch: **[`docs/VERSIONS.md`](docs/VERSIONS.md)**.
 
 Interactive shells (optional LLM keys):
 
@@ -31,16 +36,17 @@ Examples: `emb-agent`, `emb-action`, `emb-hitl`, `emb-subagent`, `emb-repeat`, `
 
 ## Study path
 
-Start at **[`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md)**.  
-1.5 cookbook track: **[`docs/COOKBOOK_15.md`](docs/COOKBOOK_15.md)**.  
-Videos: **[jmjava.github.io/embabel-v1-learning](https://jmjava.github.io/embabel-v1-learning/)** (GitHub Pages).
+Start at **[`docs/CHEATSHEET.md`](docs/CHEATSHEET.md)**, then **[`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md)**.  
+Official-source map: **[`docs/COOKBOOK_15.md`](docs/COOKBOOK_15.md)**.  
+Memory OS: **plan only** — [`docs/videos/memory-os/PLAN.md`](docs/videos/memory-os/PLAN.md) (renderer is upgrading; do not generate videos yet).
 
 | Doc | Purpose |
 |-----|---------|
-| [docs/COOKBOOK_15.md](docs/COOKBOOK_15.md) | Embabel 1.5 + official cookbook map + videos |
+| [docs/CHEATSHEET.md](docs/CHEATSHEET.md) | Extracted API / planner rules (primary) |
+| [docs/VERSIONS.md](docs/VERSIONS.md) | 1.0 vs 1.5 on the same branch |
+| [docs/COOKBOOK_15.md](docs/COOKBOOK_15.md) | What we pulled from Guide + Cookbook |
 | [docs/REVIEW_CIRCUIT.md](docs/REVIEW_CIRCUIT.md) | 60–90 min checkbox review circuit |
 | [docs/TOP_10.md](docs/TOP_10.md) | Ten ideas to memorize |
-| [docs/CHEATSHEET.md](docs/CHEATSHEET.md) | API / annotation cheat sheet (Markdown) |
 | [docs/print/embabel-cheatsheet.pdf](docs/print/embabel-cheatsheet.pdf) | Printable PDF cheat sheet |
 | [docs/CHAPTER_SUMMARIES.md](docs/CHAPTER_SUMMARIES.md) | Per-lesson summaries + top points |
 | [docs/QUIZ_FLASHCARDS.md](docs/QUIZ_FLASHCARDS.md) | Flashcard Q&A per lesson |
@@ -55,12 +61,11 @@ Curriculum order is defined in
 
 ## Modules
 
-- `learning-common` — shared domain types, `@Lesson` / `@DebugGuide`, cookbook catalog
-- `java-demo` — Java agents + 1.5 `cookbook15` track + guided tests + shell app
-- `kotlin-demo` — Kotlin agents (incl. DSL + 1.5 cookbook track) + guided tests + shell app
-- `docs/demos` — docgen narration for twelve cookbook chapters
-- `docs/videos/memory-os` — Memory OS ingest manifest
+- `learning-common` — shared domain types, `@Lesson` / `@DebugGuide`, source catalog
+- `java-demo` — Java agents + guided tests + shell app (`cookbook15` only with `-Pembabel-15`)
+- `kotlin-demo` — Kotlin agents (incl. DSL) + guided tests + shell app
+- `docs/videos/memory-os` — palace **plan** (generation paused)
 
 ## What you will learn
 
-GOAP type-driven planning, annotation agents, injected `Ai`, domain tools (DICE), HITL, conditions/bindings, tool groups, subagents, RepeatUntil workflows, Utility/Supervisor planners, `@State` loops, guardrails, stuck recovery, `AgentInvocation`, Kotlin DSL agents, plus Embabel 1.5 cookbook APIs: action cost heuristics, `createObjectIfPossible`, thinking traces, streaming objects, `fromMessages`, and tool-call inspectors.
+GOAP type-driven planning, annotation agents, injected `Ai`, domain tools (DICE), HITL, conditions/bindings, tool groups, subagents, RepeatUntil workflows, Utility/Supervisor planners, `@State` loops, guardrails, stuck recovery, `AgentInvocation`, Kotlin DSL agents. On 1.5: action cost, `createObjectIfPossible`, thinking traces, streaming objects, `fromMessages`, tool-call inspectors.

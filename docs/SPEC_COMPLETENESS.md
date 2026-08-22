@@ -6,7 +6,7 @@ The original request asked for an extensive Embabel demo with Java+Kotlin, linka
 
 ### 1. Which Embabel version is the curriculum pinned to?
 
-**Answer applied (1.5 branch):** Pin to **Embabel 1.5.0** via `repo.embabel.com`, Spring Boot **3.5.13**, Java **21**. Lessons 01–15 remain the original study path; lessons 16–21 plus `docs/COOKBOOK_15.md` integrate [embabel-cookbook](https://github.com/embabel/embabel-cookbook).
+**Answer applied:** Same `main` holds **1.0** (default `./mvnw test`) and **1.5** (`./mvnw test -Pembabel-15`). Spring Boot **3.5.13**, Java **21**. Lessons 01–15 are the 1.0 study path. Lessons 16–21 are 1.5 extras. The study core is [`CHEATSHEET.md`](CHEATSHEET.md), extracted from the User Guide and Cookbook — not a clone of cookbook recipes. See [`VERSIONS.md`](VERSIONS.md).
 
 ### 2. Should demos require live LLM keys?
 
