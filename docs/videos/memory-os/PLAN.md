@@ -1,6 +1,8 @@
 # Memory OS plan (cheat-sheet palace)
 
-Memory OS `06729dc` is installed (`plan`, `gate`, Q→pause→A stamps).
+Memory OS `4d694ac` is installed (`plan` creature + body-slot walk,
+`enrich` speaks that plan, `ground` checks stills against the script,
+`gate` + Q→pause→A + whole-animal review).
 Authoring lives in [`embabel-cheatsheet.md`](embabel-cheatsheet.md).
 
 ## Goal
@@ -13,8 +15,10 @@ and [Cookbook 1.5](https://docs.embabel.com/embabel-cookbook/1.5.0/)).
 
 ## Palace shape
 
-Two floors, twelve loci, one concept per room. Same method-of-loci rules as
-before: exaggerated visual, one overlay label, one spoken rule.
+Two floors, twelve loci, one concept per room. One bronze type-ingot
+creature walks guessable body slots (head-slot → seeing-slot → …).
+Each organ is absurd and *is* the concept. Overlay labels and Q/A are
+stamped by the engine — stills must not paint lettering.
 
 ### Floor 1 — 1.0 mental model (always true)
 
@@ -40,8 +44,9 @@ before: exaggerated visual, one overlay label, one spoken rule.
 
 ## Status
 
-Shipped on memory-os `06729dc`: `embabel-cheatsheet.md` → plan → enrich →
-images → `gate` → TTS → Q/A-stamped render →
+Rebuilding on memory-os `4d694ac`: `embabel-cheatsheet.md` → plan →
+enrich (speak the plan) → narrate → images → `ground` → `gate` →
+Q/A + whole-animal-stamped render →
 `docs/videos/recordings/embabel-cheatsheet*.mp4`.
 
 ## Out of scope
