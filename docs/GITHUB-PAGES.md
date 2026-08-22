@@ -20,9 +20,9 @@
 ## Generate recordings
 
 ```bash
-memoryos build docs/videos/memory-os/embabel-cookbook-15.palace.yaml
-memoryos render docs/videos/memory-os/embabel-cookbook-15.palace.yaml --floor floor-1
-memoryos render docs/videos/memory-os/embabel-cookbook-15.palace.yaml --floor floor-2
+memoryos build docs/videos/memory-os/embabel-cheatsheet.palace.yaml
+memoryos render docs/videos/memory-os/embabel-cheatsheet.palace.yaml --floor floor-1
+memoryos render docs/videos/memory-os/embabel-cheatsheet.palace.yaml --floor floor-2
 ./scripts/publish-memoryos-videos.sh
 ```
 

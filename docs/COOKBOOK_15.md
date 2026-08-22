@@ -1,63 +1,47 @@
-# Embabel 1.5 + official Cookbook
+# Official sources → cheat sheet (not a cookbook clone)
 
-This branch pins the learning repo to **Embabel Agent 1.5.0** and maps every chapter in
-[embabel/embabel-cookbook](https://github.com/embabel/embabel-cookbook) onto a lesson,
-guided test, and video script.
+This repo does **not** try to be a second copy of
+[embabel/embabel-cookbook](https://github.com/embabel/embabel-cookbook).
+The Cookbook is executable travel-domain recipes. We extract the **rules**
+into [`CHEATSHEET.md`](CHEATSHEET.md) and keep 1.0 + 1.5 on the same `main`
+([`VERSIONS.md`](VERSIONS.md)).
 
-Published book: [docs.embabel.com/embabel-cookbook/1.5.0](https://docs.embabel.com/embabel-cookbook/1.5.0/)
+Published book: [docs.embabel.com/embabel-cookbook/1.5.0](https://docs.embabel.com/embabel-cookbook/1.5.0/)  
+User Guide: [1.0](https://docs.embabel.com/embabel-agent/guide/1.0.0-SNAPSHOT/) · [1.5](https://docs.embabel.com/embabel-agent/guide/1.5.0-SNAPSHOT/)
 
-## Why a second track
+## What we extracted
 
-Lessons 01–15 stay the 1.0 study path (GOAP, HITL, tools, planners, DSL).  
-Lessons 16–21 are the **1.5 cookbook track**: travel-domain counterparts of the official
-recipes, written so they run offline with `FakeOperationContext`.
+Cookbook chapters follow Introduction / Key Concepts / How It Works / Conclusion.
+The table is the Key Concepts line, not the travel plot.
 
-The official cookbook tests call a live LLM (OpenAI / Anthropic / Ollama). Ours keep
-the same APIs (`createObjectIfPossible`, `thinking()`, `StreamingPromptRunnerBuilder`,
-action `cost`, `fromMessages`, `ToolCallLoggingInspector`) but stay unit-testable.
+| Cookbook chapter | Rule to memorize | Already in this repo |
+|------------------|------------------|----------------------|
+| Action Domain Type Chaining | Return types are the plan. No ad hoc branching. | Lessons 02–03; cheat sheet “Types are the wiring” |
+| Action Condition | `@Condition` is a boolean gate for mutually exclusive actions | Lesson 06 |
+| Agent Stuck State | Wrong leftover type + no matching action = `STUCK` | Lesson 13 |
+| Action Heuristics | Same I/O shape → `cost` picks the cheap one | Lesson 17 (`-Pembabel-15`) |
+| Repeat Until Acceptable | `TextFeedback` score vs threshold; `maxIterations` safety cap | Lesson 09 |
+| Agent Debugging | Starters + scan/deploy; debug the planner, not source order | [`BREAKPOINTS.md`](BREAKPOINTS.md) |
+| Object Creation | `Ai` → `PromptRunner.creating(T).fromPrompt` | Lesson 01 |
+| Create Object If Possible | Insufficient prompt → `null`, no throw → replan | Lesson 18 (`-Pembabel-15`) |
+| Prompt Contributors | `fromMessages(SystemMessage, UserMessage)` beats one fat string | Lesson 21 (`-Pembabel-15`) |
+| Thinking **1.5** | `thinking()` → `ThinkingResponse` (result + blocks); model must support it | Lesson 19 (`-Pembabel-15`) |
+| Streaming **1.5** | `StreamingPromptRunnerBuilder` + `createObjectStream` | Lesson 20 (`-Pembabel-15`) |
+| Tool Call | `@LlmTool` + `withToolObject` + inspectors | Lessons 07 + 21 (`-Pembabel-15`) |
 
-## Chapter map
+Guide differentiators we keep in the cheat sheet: dynamic GOAP planning (not an
+FSM), typed domain objects as control flow, Spring injection, mix LLMs, test
+with fakes first.
 
-| # | Official chapter | This repo | Video narration |
-|---|------------------|-----------|-----------------|
-| 1 | Action Domain Type Chaining | Lesson 16 `cookbook15.TypeChainingTravelAgent` | `docs/demos/narration/01-action-domain-type-chaining.md` |
-| 2 | Action Condition | Lesson 06 (conditions) | `02-action-condition.md` |
-| 3 | Agent Stuck State | Lesson 13 | `03-agent-stuck-state.md` |
-| 4 | Action Heuristics | Lesson 17 `HeuristicTravelAgent` | `04-action-heuristics.md` |
-| 5 | Repeat Until Acceptable | Lesson 09 | `05-repeat-until-acceptable.md` |
-| 6 | Agent Debugging | `@DebugGuide` + `docs/BREAKPOINTS.md` | `06-agent-debugging.md` |
-| 7 | Object Creation | Lesson 01 | `07-object-creation.md` |
-| 8 | Create Object If Possible | Lesson 18 `PossibleTripPlanner` | `08-create-object-if-possible.md` |
-| 9 | Prompt Contributors | Lesson 21 `MessageAndToolTripPlanner` | `09-prompt-contributors.md` |
-| 10 | Thinking | Lesson 19 `ThinkingTripPlanner` | `10-thinking.md` |
-| 11 | Streaming | Lesson 20 `StreamingTripPlanner` | `11-streaming.md` |
-| 12 | Tool Call | Lesson 21 + Lesson 07 | `12-tool-call.md` |
+## Memory OS
 
-Catalog code: `CookbookChapter` / `CookbookChapterCatalog` in `learning-common`.
-
-## Videos
-
-Primary path is a Memory OS palace (method of loci) compiled from
-[`docs/videos/memory-os/embabel-cookbook-15.md`](videos/memory-os/embabel-cookbook-15.md).
-
-```bash
-memoryos compile docs/videos/memory-os/embabel-cookbook-15.md \
-  --id embabel-cookbook-15 \
-  -o docs/videos/memory-os/embabel-cookbook-15.palace.yaml
-memoryos validate docs/videos/memory-os/embabel-cookbook-15.palace.yaml
-memoryos build docs/videos/memory-os/embabel-cookbook-15.palace.yaml --floor floor-1
-```
-
-Spoken chapter scripts in [`docs/demos/narration/`](demos/narration/) remain available
-for [documentation-generator](https://github.com/jmjava/documentation-generator).
-
-Published player: https://jmjava.github.io/embabel-v1-learning/
-
-See [`docs/videos/memory-os/README.md`](videos/memory-os/README.md) and [`docs/GITHUB-PAGES.md`](GITHUB-PAGES.md).
+Cheat-sheet palace (not cookbook travel rooms):
+[`videos/memory-os/embabel-cheatsheet.md`](videos/memory-os/embabel-cheatsheet.md).
+Player: https://jmjava.github.io/embabel-v1-learning/
 
 ## Run
 
 ```bash
-./mvnw test
-./mvnw -pl java-demo spring-boot:run   # optional live LLM
+./mvnw test                 # Embabel 1.0
+./mvnw test -Pembabel-15    # Embabel 1.5 + extras
 ```

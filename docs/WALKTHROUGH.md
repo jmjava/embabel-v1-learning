@@ -1,6 +1,6 @@
 # Embabel Guided Walkthrough
 
-This repository is a study curriculum for [Embabel Agent Framework](https://docs.embabel.com/embabel-agent/guide/1.0.0-SNAPSHOT/) **1.5.0**, with **Java** and **Kotlin** side-by-side demos, an official [Cookbook 1.5](https://github.com/embabel/embabel-cookbook) map, linkable Javadoc/KDoc, and unit tests designed for step-debugging.
+This repository is a study curriculum for [Embabel Agent Framework](https://docs.embabel.com/embabel-agent/guide/1.0.0-SNAPSHOT/) **1.0 and 1.5 on the same branch**, with **Java** and **Kotlin** side-by-side demos, a [cheat sheet](CHEATSHEET.md) extracted from the User Guide and Cookbook, linkable Javadoc/KDoc, and unit tests designed for step-debugging.
 
 ## Starter class templates
 
@@ -14,8 +14,9 @@ Type `emb-` in a `.java` / `.kt` file. Full list: [`.vscode/SNIPPETS.md`](../.vs
 
 | Doc | Use it for |
 |-----|------------|
+| [`CHEATSHEET.md`](CHEATSHEET.md) | **Start here** — extracted API / planner rules |
+| [`VERSIONS.md`](VERSIONS.md) | 1.0 default vs `-Pembabel-15` |
 | [`TOP_10.md`](TOP_10.md) | The ten ideas to memorize |
-| [`CHEATSHEET.md`](CHEATSHEET.md) | API / annotation reference (Markdown) |
 | [`print/embabel-cheatsheet.pdf`](print/embabel-cheatsheet.pdf) | **Printable PDF** cheat sheet |
 | [`CHAPTER_SUMMARIES.md`](CHAPTER_SUMMARIES.md) | Per-lesson “what / why / top points” |
 | [`QUIZ_FLASHCARDS.md`](QUIZ_FLASHCARDS.md) | Flashcard Q&A per lesson |
@@ -26,8 +27,8 @@ Type `emb-` in a `.java` / `.kt` file. Full list: [`.vscode/SNIPPETS.md`](../.vs
 
 ## How to study
 
-1. Prefer the timed path: [`REVIEW_CIRCUIT.md`](REVIEW_CIRCUIT.md) (checkboxes).
-2. Skim [`TOP_10.md`](TOP_10.md) and keep the [cheat sheet PDF](print/embabel-cheatsheet.pdf) open.
+1. Read [`CHEATSHEET.md`](CHEATSHEET.md) (and [`VERSIONS.md`](VERSIONS.md) if you need 1.0 vs 1.5).
+2. Prefer the timed path: [`REVIEW_CIRCUIT.md`](REVIEW_CIRCUIT.md) (checkboxes).
 3. Read [`LessonOrder`](../learning-common/src/main/java/com/embabel/learning/common/curriculum/LessonOrder.java) for the sequence.
 4. Before each lesson, read its section in [`CHAPTER_SUMMARIES.md`](CHAPTER_SUMMARIES.md).
 5. Open the lesson package (Java `package-info.java` and/or the Kotlin class KDoc).
@@ -61,18 +62,16 @@ Generate API docs:
 | 13 | StuckHandler | `lesson13.SelfUnstickingAgent` | `lesson13.SelfUnstickingAgent` | Java |
 | 14 | AgentInvocation | `lesson14.InvocationDemoService` | `lesson14.InvocationDemoService` | — |
 | 15 | Kotlin DSL | — | `lesson15.FactCheckerDsl` | Kotlin |
-| 16 | Cookbook type chaining | `cookbook15.TypeChainingTravelAgent` | same | both |
-| 17 | Cookbook action cost | `cookbook15.HeuristicTravelAgent` | same | both |
-| 18 | `createObjectIfPossible` | `cookbook15.PossibleTripPlanner` | same | both |
-| 19 | Thinking traces | `cookbook15.ThinkingTripPlanner` | same | Java |
-| 20 | Streaming objects | `cookbook15.StreamingTripPlanner` | same | Java |
-| 21 | Messages + tool inspectors | `cookbook15.MessageAndToolTripPlanner` | same | Java |
+| 16–21 | 1.5 extras (cost, if-possible, thinking, stream, messages) | `cookbook15.*` | same | `-Pembabel-15` |
 
-1.5 cookbook chapter table and video scripts: [`COOKBOOK_15.md`](COOKBOOK_15.md).
+Lessons 16–21 compile only with `./mvnw test -Pembabel-15`. They illustrate cheat-sheet rules, not a second cookbook.
+
+Official-source map: [`COOKBOOK_15.md`](COOKBOOK_15.md). Memory OS: [`videos/memory-os/PLAN.md`](videos/memory-os/PLAN.md) (no generation yet).
 
 ## Official docs cross-reference
 
-Primary guide: https://docs.embabel.com/embabel-agent/guide/1.0.0-SNAPSHOT/
+1.0 guide: https://docs.embabel.com/embabel-agent/guide/1.0.0-SNAPSHOT/  
+1.5 guide: https://docs.embabel.com/embabel-agent/guide/1.5.0-SNAPSHOT/
 
 Especially: annotation model (§4.6), planners (§4.20), tools (§4.9), states (§4.19), testing (§4.38), RAG (§4.12), MCP (§4.34).
 
@@ -80,7 +79,8 @@ Especially: annotation model (§4.6), planners (§4.20), tools (§4.9), states (
 
 ```bash
 # Unit tests (no API keys required)
-./mvnw test
+./mvnw test                 # Embabel 1.0
+./mvnw test -Pembabel-15    # Embabel 1.5 extras
 
 # Interactive shell (needs OPENAI_API_KEY and/or ANTHROPIC_API_KEY)
 ./mvnw -pl java-demo spring-boot:run

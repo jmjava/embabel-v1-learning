@@ -7,6 +7,12 @@ Regenerate: `./scripts/generate-cheatsheet-pdf.sh`
 
 Keep this (or the PDF) next to the debugger.
 
+**Versions:** default Maven pin is Embabel **1.0**; `-Pembabel-15` compiles **1.5** extras.
+See [`VERSIONS.md`](VERSIONS.md). Rules below are extracted from the
+[User Guide](https://docs.embabel.com/embabel-agent/guide/1.5.0-SNAPSHOT/) and
+[Cookbook 1.5](https://docs.embabel.com/embabel-cookbook/1.5.0/) — not a second
+copy of the cookbook travel recipes.
+
 ## Mental model (30 seconds)
 
 ```
@@ -18,6 +24,35 @@ User/system input → Blackboard objects (typed)
 ```
 
 OODA loop: **Observe** blackboard → **Orient** conditions → **Decide** plan → **Act**.
+
+Guide core objects: **Actions** (steps) · **Goals** (what “done” is) · **Conditions**
+(reassessed after every action) · **Domain model** (types *are* the flow).
+Plans are inferred and rebuilt; you do not write an FSM.
+
+## 1.0 vs 1.5 (what to add, not replace)
+
+| | 1.0 (always) | 1.5 extras (`-Pembabel-15`) |
+|---|--------------|-----------------------------|
+| Plan | GOAP / Utility / Hybrid / Supervisor | same planners |
+| Create typed object | `createObject` / `creating(T).fromPrompt` | + `thinking()`, `fromMessages` |
+| Soft fail | `createObjectIfPossible` → `null` | same; thinking variant wraps `ThinkingResponse` |
+| Stream | not in this curriculum | `StreamingPromptRunnerBuilder.createObjectStream` |
+| Tools | `withToolObject` / groups / `@LlmTool` | + `withToolCallInspectors` |
+| Models | OpenAI / Anthropic starters | + DashScope, BYOK, templated system prompts |
+
+## Cookbook rules (extracted)
+
+1. **Type chaining** — classifier return type picks the next action; no `if` in the planner.
+2. **`@Condition`** — boolean gate for mutually exclusive siblings (direct vs one-stop).
+3. **Stuck** — leftover type with no matching action → `STUCK` (seed facts or `REPLAN`).
+4. **`cost`** — same input/output shape → cheaper action wins.
+5. **RepeatUntil** — evaluator returns `TextFeedback(score, text)`; stop at threshold or `maxIterations`.
+6. **`creating(T)`** — `Ai` → `PromptRunner` → example + optional validation → `fromPrompt`.
+7. **`createObjectIfPossible`** — incomplete prompt returns `null` (warn, don’t throw).
+8. **Messages** — `SystemMessage` + `UserMessage` via `fromMessages`, not one concatenated blob.
+9. **Thinking (1.5)** — `thinking()` only if `supportsThinking()`; read `thinkingBlocks`.
+10. **Streaming (1.5)** — newline JSON → typed flux; check `supportsStreaming()`.
+11. **Tool call** — `@LlmTool` is invisible until `withToolObject`; inspectors log calls.
 
 ## Annotations
 
@@ -129,4 +164,6 @@ Full map: [`BREAKPOINTS.md`](BREAKPOINTS.md).
 - `@Tool` without `withToolObject` = invisible  
 - High `cost` on HITL so it's a fallback  
 - Supervisor needs good action `description`s  
-- StuckHandler recovers — it doesn't fix a bad domain model  
+- StuckHandler recovers — it doesn't fix a bad domain model
+- Official cookbook is recipes; this page is the recall list
+- Memory OS palace: cheat-sheet films — [`videos/memory-os/embabel-cheatsheet.md`](videos/memory-os/embabel-cheatsheet.md)

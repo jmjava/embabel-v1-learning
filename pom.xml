@@ -13,12 +13,12 @@
 
     <groupId>com.embabel.learning</groupId>
     <artifactId>embabel-v1-learning</artifactId>
-    <version>1.5.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Embabel 1.5 Learning Demo</name>
+    <name>Embabel V1 Learning Demo</name>
     <description>
-        Embabel Agent Framework 1.5 study project: Java and Kotlin demos, official
-        cookbook chapter map, guided unit tests, and video scripts for Memory OS / docgen.
+        Embabel Agent Framework study project: Java and Kotlin demos for 1.0 and 1.5,
+        a concept cheat sheet extracted from the User Guide and Cookbook, and guided tests.
     </description>
 
     <modules>
@@ -31,7 +31,10 @@
         <java.version>21</java.version>
         <kotlin.version>2.1.10</kotlin.version>
         <kotlin.compiler.apiVersion>2.1</kotlin.compiler.apiVersion>
-        <embabel-agent.version>1.5.0</embabel-agent.version>
+        <!-- Default study path compiles against Embabel 1.0. Switch with -Pembabel-15. -->
+        <embabel-agent.version>1.0.0</embabel-agent.version>
+        <!-- Never-match when the 1.5 profile is on so cookbook15 extras compile. -->
+        <embabel.extra.excludes>**/cookbook15/**</embabel.extra.excludes>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -98,6 +101,27 @@
             <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <excludes>
+                            <exclude>${embabel.extra.excludes}</exclude>
+                        </excludes>
+                        <testExcludes>
+                            <exclude>${embabel.extra.excludes}</exclude>
+                        </testExcludes>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <configuration>
+                        <excludes>
+                            <exclude>${embabel.extra.excludes}</exclude>
+                        </excludes>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>3.11.2</version>
                     <configuration>
@@ -120,6 +144,13 @@
     </build>
 
     <profiles>
+        <profile>
+            <id>embabel-15</id>
+            <properties>
+                <embabel-agent.version>1.5.0</embabel-agent.version>
+                <embabel.extra.excludes>**/.never-match/**</embabel.extra.excludes>
+            </properties>
+        </profile>
         <profile>
             <id>openai-models</id>
             <activation>
