@@ -20,12 +20,8 @@ package com.embabel.learning.common.curriculum;
  *   <li>{@code 13} Stuck recovery</li>
  *   <li>{@code 14} Invocation APIs &amp; ProcessOptions</li>
  *   <li>{@code 15} Kotlin DSL agents (Kotlin module only)</li>
- *   <li>{@code 16} Cookbook 1.5 — domain type chaining</li>
- *   <li>{@code 17} Cookbook 1.5 — action cost heuristics</li>
- *   <li>{@code 18} Cookbook 1.5 — {@code createObjectIfPossible}</li>
- *   <li>{@code 19} Cookbook 1.5 — thinking traces</li>
- *   <li>{@code 20} Cookbook 1.5 — streaming objects</li>
- *   <li>{@code 21} Cookbook 1.5 — messages, tools, inspectors</li>
+ *   <li>{@code 16}–{@code 21} Embabel 1.5 extras ({@code -Pembabel-15}): cost,
+ *       {@code createObjectIfPossible}, thinking, streaming, messages/inspectors</li>
  * </ol>
  *
  * <h2>How to use this curriculum</h2>

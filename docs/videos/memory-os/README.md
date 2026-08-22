@@ -1,7 +1,10 @@
-# Memory OS palace for Cookbook 1.5
+# Memory OS palace (paused)
 
 Primary renderer: [jmjava/memory-os](https://github.com/jmjava/memory-os)
 (private; Cloud Agents use `BROAD_REPO_TOKEN` to install the CLI).
+
+**Memory OS is upgrading. Do not generate videos yet.**
+Plan: [`PLAN.md`](PLAN.md). Study source: [`docs/CHEATSHEET.md`](../../CHEATSHEET.md).
 
 ## Bundle
 
