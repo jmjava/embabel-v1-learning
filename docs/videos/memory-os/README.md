@@ -2,7 +2,7 @@
 
 Primary renderer: [jmjava/memory-os](https://github.com/jmjava/memory-os)
 (private; Cloud Agents use `BROAD_REPO_TOKEN` to install the CLI).
-Installed HEAD for this generation: `70bc124` (evolving-hero `plan` command).
+Installed HEAD for this generation: `06729dc` (per-locus Q/A stamps + `gate`).
 
 Study source: [`docs/CHEATSHEET.md`](../../CHEATSHEET.md).
 This is **not** a filmed walkthrough of cookbook travel recipes.
@@ -28,8 +28,9 @@ memoryos validate docs/videos/memory-os/embabel-cheatsheet.palace.yaml
 memoryos plan    docs/videos/memory-os/embabel-cheatsheet.palace.yaml
 memoryos enrich  docs/videos/memory-os/embabel-cheatsheet.palace.yaml --target-seconds 28
 memoryos images  docs/videos/memory-os/embabel-cheatsheet.palace.yaml --dry-run
+memoryos gate    docs/videos/memory-os/embabel-cheatsheet.palace.yaml
 memoryos narrate docs/videos/memory-os/embabel-cheatsheet.palace.yaml --dry-run
-memoryos build   docs/videos/memory-os/embabel-cheatsheet.palace.yaml
+memoryos build   docs/videos/memory-os/embabel-cheatsheet.palace.yaml --force
 ```
 
 One locus stays on screen until its narration finishes (minimum 15s).

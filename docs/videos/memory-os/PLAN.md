@@ -1,7 +1,7 @@
 # Memory OS plan (cheat-sheet palace)
 
-Memory OS `70bc124` is installed (`plan` + evolving hero). Authoring lives in
-[`embabel-cheatsheet.md`](embabel-cheatsheet.md). This table is the locus map.
+Memory OS `06729dc` is installed (`plan`, `gate`, Q→pause→A stamps).
+Authoring lives in [`embabel-cheatsheet.md`](embabel-cheatsheet.md).
 
 ## Goal
 
@@ -40,7 +40,8 @@ before: exaggerated visual, one overlay label, one spoken rule.
 
 ## Status
 
-Shipped: `embabel-cheatsheet.md` → plan → enrich → images/TTS →
+Shipped on memory-os `06729dc`: `embabel-cheatsheet.md` → plan → enrich →
+images → `gate` → TTS → Q/A-stamped render →
 `docs/videos/recordings/embabel-cheatsheet*.mp4`.
 
 ## Out of scope

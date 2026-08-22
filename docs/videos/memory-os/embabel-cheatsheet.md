@@ -98,6 +98,10 @@ whose body is those types. No `if` signs anywhere.
 
 **Recall cue:** Glass pipes → types are the wiring.
 
+**Review question:** What do return types do in GOAP?
+
+**Review answer:** Types are the wiring — @Action types
+
 **Metaphor part:** The seed splits into typed pipes.
 
 **Hero from:** Sealed unlabeled bronze seed stamped `UserInput`.
@@ -125,6 +129,10 @@ sequence. The creature's lead pipe grows a compass for an eye.
 > the next step. This is an OODA loop.
 
 **Recall cue:** Spinning compass → replan.
+
+**Review question:** What happens after every action?
+
+**Review answer:** Replan — OODA / REPLAN
 
 **Metaphor part:** The compass eye.
 
@@ -155,6 +163,10 @@ reads "not every action needs a model."
 
 **Recall cue:** Stamp and quill → code plus LLM.
 
+**Review question:** Must every action call an LLM?
+
+**Review answer:** Mix code and LLM
+
 **Metaphor part:** Split workbench arms.
 
 **Hero from:** Pipe-creature with a compass eye.
@@ -183,6 +195,10 @@ no box and the wrenches are invisible. A tag reads
 
 **Recall cue:** Wrist toolbox → per-call tools.
 
+**Review question:** Where do tools attach?
+
+**Review answer:** Per call — withToolObject
+
 **Metaphor part:** Toolbox on one wrist.
 
 **Hero from:** Stamp-hand and quill-hand.
@@ -210,6 +226,10 @@ hangs both crates from its pipes.
 > type. Otherwise the wrong instance surprises you.
 
 **Recall cue:** Labeled crate → named binding.
+
+**Review question:** How do you pick among two values of the same type?
+
+**Review answer:** Named bindings — @RequireNameMatch
 
 **Metaphor part:** Named crates on the pipes.
 
@@ -240,6 +260,10 @@ Same pipe-creature, different hat, different walk.
 > runtime.
 
 **Recall cue:** Four hats → four planners.
+
+**Review question:** What do the four hats mean?
+
+**Review answer:** Planner choice — GOAP, Utility, Hybrid, Supervisor
 
 **Metaphor part:** Hats on the compass head.
 
@@ -289,6 +313,10 @@ mold. An example ingot sits beside it. A validation stamp waits.
 
 **Recall cue:** Record mold → typed create.
 
+**Review question:** What API creates a typed object?
+
+**Review answer:** creating(T) / createObject
+
 **Metaphor part:** The mold-mouth.
 
 **Hero from:** Four hats on the compass head.
@@ -316,6 +344,10 @@ half-melted.
 
 **Recall cue:** Slump hole → null then replan.
 
+**Review question:** What does createObjectIfPossible return when the prompt is incomplete?
+
+**Review answer:** null, then replan
+
 **Metaphor part:** The null pit under the mold.
 
 **Hero from:** Record-shaped mold-mouth.
@@ -342,6 +374,10 @@ scroll is crossed out. `fromMessages` is etched on the stack.
 > without baking tone into every prompt string.
 
 **Recall cue:** Stacked envelopes → fromMessages.
+
+**Review question:** How should prompts be structured?
+
+**Review answer:** fromMessages — SystemMessage plus UserMessage
 
 **Metaphor part:** Envelope-skin.
 
@@ -371,6 +407,10 @@ plus thinking blocks. A 1.5 badge hangs from the skull.
 
 **Recall cue:** Glass skull ticker → thinking traces.
 
+**Review question:** What does thinking() add in Embabel 1.5?
+
+**Review answer:** Thinking traces — ThinkingResponse
+
 **Metaphor part:** The glass skull.
 
 **Hero from:** Envelope-skinned body.
@@ -399,6 +439,10 @@ to the belt.
 
 **Recall cue:** One brick at a time → stream.
 
+**Review question:** What emits typed objects as they arrive?
+
+**Review answer:** createObjectStream
+
 **Metaphor part:** Conveyor spine.
 
 **Hero from:** Glass skull with a thinking ticker.
@@ -425,6 +469,10 @@ wrenches hang in view. The mold-mouth then prints a typed plan.
 > the typed result. Invisible tools are the classic bug.
 
 **Recall cue:** Clipboard photo → inspected tool call.
+
+**Review question:** How do you log tool calls in Embabel 1.5?
+
+**Review answer:** withToolCallInspectors
 
 **Metaphor part:** The inspector clipboard.
 
