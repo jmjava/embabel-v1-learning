@@ -11,11 +11,7 @@ official cookbook travel recipes. Loci come from
 [User Guide](https://docs.embabel.com/embabel-agent/guide/1.5.0-SNAPSHOT/)
 and [Cookbook 1.5](https://docs.embabel.com/embabel-cookbook/1.5.0/)).
 
-The existing [`embabel-cookbook-15.md`](embabel-cookbook-15.md) / compiled
-YAML stay as a reference draft from the previous cookbook-chapter layout.
-They should be **replaced**, not re-rendered, after the Memory OS upgrade.
-
-## Palace shape (draft)
+## Palace shape
 
 Two floors, twelve loci, one concept per room. Same method-of-loci rules as
 before: exaggerated visual, one overlay label, one spoken rule.
@@ -57,4 +53,4 @@ Shipped: `embabel-cheatsheet.md` → plan → enrich → images/TTS →
 Cloud Agent install still needs `BROAD_REPO_TOKEN` for private `memory-os`.
 `OPENAI_API_KEY` / `CURSOR_API_KEY` names in this environment are swapped;
 the install wrapper remaps a `crsr_` OpenAI slot to an `sk-` Cursor slot.
-That matters only when generation resumes.
+That matters only if those names are still swapped.
