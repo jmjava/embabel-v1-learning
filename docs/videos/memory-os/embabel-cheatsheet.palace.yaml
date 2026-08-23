@@ -21,13 +21,16 @@ palace:
     throughline: The palace is one living type-foundry. We enter as raw input and the building
       grows pipes, organs, and stamps as Embabel plans, then opens a mouth that speaks typed
       objects.
-    material: metal and glass
-    hero: a glowing bronze type-ingot that sprouts typed pipes and a compass eye
-    hero_origin: A sealed unlabeled bronze seed held in the foundry gate, stamped only UserInput.
+    material: Bronze and glass with teal light illuminating the space.
+    hero: A glowing bronze type-ingot that starts unlabeled, sprouts typed pipes and a compass
+      eye, grows a split workbench and a bolted toolbox, then becomes a mold-mouth that can
+      slump through a dark hole, wear envelope-skin, think in a glass skull, stream glass-brick
+      vertebrae, and sprout an inspector clipboard.
+    hero_origin: A sealed unlabeled bronze seed held in the foundry gate.
     progression: head-slot → seeing-slot → hearing-slot → scent-slot → passage-slot → vault-slot
       → works-slot → grasp-slot → stand-slot → exit-slot
-    camera: first-person, inside the creature
-    hero_scale: medium-sized in frame
+    camera: first-person, inside the living type-foundry, looking at the next organ.
+    hero_scale: The type-ingot fills the frame, its bronze surface glowing with energy.
     planned: true
 floors:
 - id: floor-1
@@ -39,12 +42,10 @@ floors:
   recall_route: Types → Replan → Code+LLM → Per-call tools → Named bindings → Planner hats
   metaphor:
     region: The Foundry
-    role: 1.0 Mental Model
-    hero_stage: Pipe Creature with Compass Eye
-    entry: The seed opens into a pipe-creature
-    exit: Pipe Hall [Types Are The Wiring] → Compass Rotunda [Replan After Every Action] →
-      Split Workbench [Mix Code And LLM] → Bolted Toolbox [Tools Attach Per Call] → Named
-      Crates [Bindings Beat Latest Wins] → Hat Rack [Planner Choice]
+    role: Mental Model
+    hero_stage: Pipe-Creature
+    entry: The seed opens into a pipe-creature, revealing a network of glowing bronze pipes.
+    exit: The glowing pipes lead to a Compass Rotunda.
   loci:
   - id: pipe-hall
     seq: 1
@@ -53,18 +54,13 @@ floors:
     visual: Giant empty glass pipes snake through the hall. The bronze seed splits and becomes
       a pipe-creature whose body is those tubes. Source-order stepping stones are absent.
       No lettering.
-    narration: "Welcome to the Pipe Hall, located in the head-slot of our Pipe Creature with\
-      \ a Compass Eye. This creature has transformed from a sealed unlabeled bronze seed into\
-      \ a pipe-creature, its body now comprised of labeled type-tubes. The silhouette we see\
-      \ is that of a pipe-creature topped with a large, intricate gear. The gear's teeth are\
-      \ inscribed with symbols for turning ideas into action, emphasizing that types are the\
-      \ wiring of our system.\n\nThis concept matters because it highlights that actions do\
-      \ not run in source order; rather, they follow the structure defined by types. Understanding\
-      \ this helps in designing domain objects, which are crucial for controlling the flow\
-      \ of processes. \n\nAs we reflect on our previous form, we see the evolution from the\
-      \ bronze seed to this pipe-creature, illustrating the transformation of user input into\
-      \ structured actions. \n\nNow, think about this: How do glass pipes relate to the concept\
-      \ of types?"
+    narration: 'Welcome to the Pipe Hall, where we have reached the head-slot of our Pipe-Creature.
+      This creature has transformed from a sealed unlabeled bronze seed held in the foundry
+      gate into a pipe-creature whose body is made of interconnected glass type-tubes. Think
+      of this as the concept: types are the wiring. Actions do not run in source order. GOAP
+      walks blackboard types. Returning a new type posts an effect, so design domain objects
+      carefully — they are the control flow. Recall this: glass pipes represent that types
+      are the wiring. What will the next organ be?'
     narration_enriched: true
     overlay: '@Action types'
     recall_cue: Glass pipes → types are the wiring.
@@ -72,209 +68,53 @@ floors:
     review_answer: Types are the wiring — @Action types
     key_distinction: Source order is not execution order.
     metaphor_part: head-slot
-    hero_now: A pipe-creature whose body is labeled type-tubes.
-    hero_from: A sealed unlabeled bronze seed held in the foundry gate, stamped only UserInput.
-    hero_becomes: A pipe-creature with an oversized glowing gear for a head.
-    hero_silhouette: The outline of a pipe-creature topped with a large, intricate gear.
-    hero_shot: Photographed from below, capturing the gear head's glow and complexity.
-    hero_tell: The gear's teeth are inscribed with symbols for turning ideas into action.
-    visible:
-    - pipe
-    - creature
-    - whose
-    - body
-    - labeled
-    - type
-    - tubes
-    - gear's
-    - teeth
-    - inscribed
-    - symbols
-    - turning
-    - ideas
-    - action
-    - giant
-    - empty
-    - glass
-    - pipes
-    - snake
-    - hall
-    - bronze
-    - seed
-    - splits
-    - becomes
-    - those
-    - source
-    - order
-    - stepping
-    - stones
-    - absent
-    - lettering
-    - welcome
-    - located
-    - head
-    - slot
-    - compass
-    - transformed
-    - sealed
-    - unlabeled
-    - comprised
-    - silhouette
-    - topped
-    - large
-    - intricate
-    - gear
-    - emphasizing
-    - types
-    - wiring
-    - system
-    - matters
-    - because
-    - highlights
-    - actions
-    - rather
-    - follow
-    - structure
-    - defined
-    - understanding
-    - helps
-    - designing
-    - domain
-    - crucial
-    - controlling
-    - flow
-    - processes
-    - reflect
-    - previous
-    - form
-    - evolution
-    - illustrating
-    - transformation
-    - user
-    - input
-    - structured
-    - relate
-    visible_hero: A large golden gear with inscriptions.
-    visible_setting: A dark and cavernous space with a round stone surface.
-    grounded: true
+    hero_now: A pipe-creature whose body is glass type-tubes.
+    hero_from: A sealed unlabeled bronze seed held in the foundry gate.
+    hero_becomes: A pipe-creature with a spinning brass compass for an eye.
+    hero_silhouette: A creature made of interconnected glass tubes, shaped like a twisting
+      pipe.
+    hero_shot: Captured from above, highlighting the intricate network of glowing glass tubes
+      that form the creature's body.
+    hero_tell: The creature's head is a complex arrangement of glass tubes that reflect the
+      teal light.
+    must_show:
+    - A pipe-creature made of glass tubes
+    - A complex head of glass tubes reflecting light
+    stamp_text:
+    - Types are the wiring
   - id: compass-rotunda
     seq: 2
     location: Compass Rotunda
     concept: Replan After Every Action
-    visual: A huge OODA compass spins after every door the pipe-creature walks through. Observe,
-      Orient, Decide, Act glow in sequence. The creature's lead pipe grows a compass for an
-      eye.
-    narration: "Welcome to the Compass Rotunda, where we find ourselves in the seeing-slot\
-      \ of our Pipe Creature, now transformed. Previously, it was a pipe-creature whose body\
-      \ was labeled type-tubes. Now, it has grown a spinning OODA compass for an eye. This\
-      \ creature’s silhouette features a prominent, multifaceted crystal eye that casts beams\
-      \ of organized light, symbolizing clarity in decision-making.\n\nThis visual represents\
-      \ the concept of Replan After Every Action. Embabel reassesses the world after each\
-      \ action taken. The plans are not fixed scripts; new objects, null, or flipped conditions\
-      \ can alter the next step in real-time. Think of this as an OODA loop: Observe, Orient,\
-      \ Decide, Act. \n\nConnecting back to our previous location, the Pipe Hall reminded\
-      \ us that types are the wiring for our actions. Now, as our pipe-creature moves forward\
-      \ with its spinning compass eye, it embodies the dynamic nature of planning in Embabel.\
-      \ \n\nRecall this: What does the spinning compass represent?"
+    visual: A huge brass compass spins after every door the pipe-creature walks through. Four
+      glowing quadrants pulse in sequence. The creature's lead pipe grows a compass for an
+      eye. No painted letters on the dial.
+    narration: Welcome to the Compass Rotunda, in the seeing-slot of our Pipe-Creature. Here
+      we have the same creature, now with a spinning brass compass for an eye. Think of this
+      as the concept of Replan After Every Action. After each action, Embabel reassesses the
+      world. Plans are flexible, adapting to new objects or changing conditions. This is part
+      of the OODA loop, essential for effective decision-making. Recall the previous location,
+      the Pipe Hall, where types serve as the wiring. What does the spinning compass represent?
     narration_enriched: true
     overlay: REPLAN
     recall_cue: Spinning compass → replan.
     review_question: What happens after every action?
     review_answer: Replan — OODA / REPLAN
     metaphor_part: seeing-slot
-    hero_now: The same creature with a spinning OODA compass for an eye.
-    hero_from: A pipe-creature whose body is labeled type-tubes.
-    hero_becomes: The pipe-creature with a crystalline lens eye that refracts light into patterns.
-    hero_silhouette: A pipe-creature with a prominent, multifaceted crystal eye.
-    hero_shot: Captured from a side angle, showcasing the refractive patterns emanating from
-      the crystal eye.
-    hero_tell: The crystal eye casts beams of organized light, symbolizing clarity in decision-making.
-    visible:
-    - same
-    - creature
-    - spinning
-    - ooda
-    - compass
-    - crystal
-    - casts
-    - beams
-    - organized
-    - light
-    - symbolizing
-    - clarity
-    - decision
-    - making
-    - huge
-    - spins
-    - door
-    - pipe
-    - walks
-    - observe
-    - orient
-    - decide
-    - glow
-    - sequence
-    - creature's
-    - lead
-    - grows
-    - welcome
-    - rotunda
-    - find
-    - ourselves
-    - seeing
-    - slot
-    - transformed
-    - previously
-    - whose
-    - body
-    - labeled
-    - type
-    - tubes
-    - grown
-    - silhouette
-    - features
-    - prominent
-    - multifaceted
-    - visual
-    - represents
-    - replan
-    - action
-    - embabel
-    - reassesses
-    - world
-    - taken
-    - plans
-    - fixed
-    - scripts
-    - 'null'
-    - flipped
-    - conditions
-    - alter
-    - next
-    - step
-    - real
-    - time
-    - loop
-    - connecting
-    - back
-    - previous
-    - location
-    - hall
-    - reminded
-    - types
-    - wiring
-    - actions
-    - moves
-    - forward
-    - embodies
-    - dynamic
-    - nature
-    - planning
-    - recall
-    - represent
-    visible_hero: a crystal emitting light
-    visible_setting: a dark, abstract space with a glowing object
-    grounded: true
+    hero_now: The same creature with a spinning brass compass for an eye.
+    hero_from: A pipe-creature whose body is glass type-tubes.
+    hero_becomes: The creature grows a steel stamp-hand and a glowing quill-hand.
+    hero_silhouette: A pipe-creature with a prominent spinning brass compass embedded in its
+      head.
+    hero_shot: Captured from the side, showcasing the creature's glowing eye and the surrounding
+      pipes.
+    hero_tell: The eye is a brass compass that spins continuously, guiding the creature's
+      perception.
+    must_show:
+    - Pipe-Creature with a spinning brass compass eye
+    - Glowing pipes surrounding the creature
+    stamp_text:
+    - REPLAN
   - id: split-workbench
     seq: 3
     location: Split Workbench
@@ -282,17 +122,14 @@ floors:
     visual: One workbench, two arms of the same creature. The left is a Spring steel stamp
       that prints deterministic results. The right is a glowing quill that writes typed LLM
       objects. No sign, no lettering.
-    narration: "Welcome to the Split Workbench in the Embabel Type-Foundry, specifically at\
-      \ the hearing-slot of our Pipe Creature. This creature has just transformed from having\
-      \ a spinning OODA compass for an eye to growing a steel stamp-hand and a glowing quill-hand.\
-      \ \n\nThis form represents the concept of mixing code and LLM, where the steel stamp\
-      \ prints deterministic results while the glowing quill writes typed LLM objects. This\
-      \ concept is crucial because it blends the agency of code with the agency of LLM, making\
-      \ deterministic Spring services inside @Action methods cheaper, testable, and safer.\
-      \ \n\nPreviously, we were in the Compass Rotunda, focusing on how we replan after every\
-      \ action. Now, as we visualize this pipe-creature with large horn speakers emitting\
-      \ rhythmic pulses of sound waves, think of this as the merging of ideas. \n\nHere’s\
-      \ a recall cue: what do the stamp and quill represent?"
+    narration: 'Welcome to the Split Workbench in the Embabel Type-Foundry. Here, the Pipe-Creature
+      has transformed from a glowing bronze type-ingot with a spinning brass compass for an
+      eye into a creature with two distinct arms: one is a steel stamp-hand, and the other
+      is a glowing quill-hand. This planned form encodes the concept of mixing code and LLM.
+      This means we can combine deterministic Spring services inside Action methods—these
+      are cheaper, testable, and safer. Remember, the previous location emphasized replanning
+      after every action with the compass eye. Now, think about how the stamp and quill together
+      represent code plus LLM. What do these two hands create?'
     narration_enriched: true
     overlay: code + LLM
     recall_cue: Stamp and quill → code plus LLM.
@@ -300,103 +137,29 @@ floors:
     review_answer: Mix code and LLM
     metaphor_part: hearing-slot
     hero_now: The creature grows a steel stamp-hand and a glowing quill-hand.
-    hero_from: The same creature with a spinning OODA compass for an eye.
-    hero_becomes: The pipe-creature develops massive horn-like speakers on its sides.
-    hero_silhouette: A pipe-creature with large horn speakers protruding from its body.
-    hero_shot: Photographed from the front, highlighting the size and shape of the horn speakers.
-    hero_tell: The horns emit rhythmic pulses of sound waves, representing the merging of
-      ideas.
-    visible:
-    - creature
-    - grows
-    - steel
-    - stamp
-    - hand
-    - glowing
-    - quill
-    - horns
-    - emit
-    - rhythmic
-    - pulses
-    - sound
-    - waves
-    - representing
-    - merging
-    - ideas
-    - workbench
-    - arms
-    - same
-    - left
-    - spring
-    - prints
-    - deterministic
-    - results
-    - right
-    - writes
-    - typed
-    - sign
-    - lettering
-    - welcome
-    - split
-    - embabel
-    - type
-    - foundry
-    - specifically
-    - hearing
-    - slot
-    - pipe
-    - transformed
-    - having
-    - spinning
-    - ooda
-    - compass
-    - growing
-    - form
-    - represents
-    - mixing
-    - code
-    - while
-    - crucial
-    - because
-    - blends
-    - agency
-    - making
-    - services
-    - inside
-    - action
-    - methods
-    - cheaper
-    - testable
-    - safer
-    - previously
-    - rotunda
-    - focusing
-    - replan
-    - visualize
-    - large
-    - horn
-    - speakers
-    - emitting
-    - recall
-    - represent
-    visible_hero: horn speakers
-    visible_setting: A dark, abstract space with a focus on a central object.
-    grounded: true
+    hero_from: The same creature with a spinning brass compass for an eye.
+    hero_becomes: A toolbox bolted only onto the quill wrist.
+    hero_silhouette: Creature with a steel stamp-hand and a glowing quill-hand
+    hero_shot: Captured at a low angle, highlighting the dual hands in action over a workbench.
+    hero_tell: One arm is a rigid steel stamp that clicks with each print, creating audible
+      impressions.
+    must_show:
+    - A creature with a steel stamp-hand and glowing quill-hand
+    - A split workbench with both hands in action
+    stamp_text:
+    - code + LLM
   - id: bolted-toolbox
     seq: 4
     location: Bolted Toolbox
     concept: Tools Attach Per Call
     visual: A toolbox is bolted to the quill wrist, not to the foundry walls. Wrenches sit
       in the box. A second desk has no box and the wrenches are invisible. No tags or lettering.
-    narration: "We are in the scent-slot of the Pipe Creature with Compass Eye. The creature\
-      \ has just grown a steel stamp-hand and a glowing quill-hand. Now, it is a toolbox bolted\
-      \ only onto the quill wrist. This toolbox represents the concept: tools attach per call.\
-      \ \n\nThink of this as a way to understand that tools are not permanently fixed to the\
-      \ entire agent; they attach only to a specific PromptRunner at the moment they are needed.\
-      \ This matters because it allows for flexibility and efficiency in processing inputs.\
-      \ \n\nRecalling our previous location, the Split Workbench, where we mixed code and\
-      \ LLM, now we see how the tools are narrowly scoped and only visible when called upon.\
-      \ \n\nWhat does the wrist toolbox signify in terms of tool usage?"
+    narration: Welcome to the scent-slot of our Pipe-Creature in the Foundry. Here, the creature
+      has grown a bolted toolbox attached to its glowing quill arm. Wrenches sit in that box.
+      Think of this as the concept of tools attaching per call. Tools attach to a PromptRunner,
+      not the whole agent forever. Tool and LlmTool methods stay invisible until that call
+      chain attaches them. Previously we had the split workbench, which mixed code and LLM.
+      Scope tools narrowly. Can you recall where the toolbox is bolted?
     narration_enriched: true
     overlay: withToolObject
     recall_cue: Wrist toolbox → per-call tools.
@@ -405,80 +168,17 @@ floors:
     metaphor_part: scent-slot
     hero_now: A toolbox bolted only onto the quill wrist.
     hero_from: The creature grows a steel stamp-hand and a glowing quill-hand.
-    hero_becomes: The pipe-creature sprouts oversized scent glands shaped like intricate filters.
-    hero_silhouette: A pipe-creature with large, decorative filters attached to its body.
-    hero_shot: Captured from above, emphasizing the elaborate design of the scent filters.
-    hero_tell: The filters exude a diverse range of scents that represent the types of inputs
-      processed.
-    visible:
-    - toolbox
-    - bolted
-    - quill
-    - wrist
-    - filters
-    - exude
-    - diverse
-    - range
-    - scents
-    - represent
-    - types
-    - inputs
-    - processed
-    - foundry
-    - walls
-    - wrenches
-    - second
-    - desk
-    - invisible
-    - tags
-    - lettering
-    - scent
-    - slot
-    - pipe
-    - creature
-    - compass
-    - grown
-    - steel
-    - stamp
-    - hand
-    - glowing
-    - represents
-    - tools
-    - attach
-    - call
-    - understand
-    - permanently
-    - fixed
-    - entire
-    - agent
-    - specific
-    - promptrunner
-    - moment
-    - needed
-    - matters
-    - because
-    - allows
-    - flexibility
-    - efficiency
-    - processing
-    - recalling
-    - previous
-    - location
-    - split
-    - workbench
-    - mixed
-    - code
-    - narrowly
-    - scoped
-    - visible
-    - called
-    - signify
-    - terms
-    - tool
-    - usage
-    visible_hero: toolbox
-    visible_setting: A dimly lit, industrial space.
-    grounded: true
+    hero_becomes: Two crates hang from the pipes; only the named crate opens.
+    hero_silhouette: A creature with a toolbox attached to its quill arm, featuring various
+      tools inside.
+    hero_shot: Captured in a close-up, focusing on the toolbox with its lid slightly ajar,
+      revealing the tools within.
+    hero_tell: The toolbox emits a faint metallic scent, like freshly cut steel.
+    must_show:
+    - A creature with a toolbox attached to its quill arm
+    - Wrenches sitting in the bolted toolbox
+    stamp_text:
+    - withToolObject
   - id: named-crates
     seq: 5
     location: Named Crates
@@ -486,18 +186,13 @@ floors:
     visual: Two identical bronze crates. The unlabeled crate is latest-wins and swallows the
       first. Only the named crate opens. The creature hangs both crates from its pipes. No
       stamps or lettering.
-    narration: "Look at the planned hero: Two crates hang from the pipes; only the named crate\
-      \ opens.. That organ is the concept because The passageway's walls are lined with flowing\
-      \ typeface, representing the routes of ideas.. The idea here is Bindings Beat Latest\
-      \ Wins. We are in the Foundry, at the passage-slot, where our hero is now a pipe-creature\
-      \ with a swirling tunnel running through its body. This creature has grown two bronze\
-      \ crates hanging from its pipes, with only one crate labeled, which represents the concept\
-      \ of bindings beat latest wins. \n\nThis means that when two objects of the same type\
-      \ are created, the latest one will overwrite the previous unless it has a name. If you\
-      \ want to ensure the correct instance is used, you must attach a name to the binding\
-      \ with outputBinding and use the technical label @RequireNameMatch. \n\nBefore this,\
-      \ we saw a toolbox bolted onto the quill wrist, which emphasized that tools attach per\
-      \ call. \n\nNow, recall what happens with the labeled crate. What does it represent?"
+    narration: 'We are now in the passage-slot of our Pipe-Creature. The creature, which was
+      just a bolted toolbox, has transformed into a unique form: two bronze crates hang from
+      its pipes, and only the named crate opens. This form encodes the concept of bindings
+      beat latest wins. The latest object of a type wins unless you name it. Use outputBinding
+      plus RequireNameMatch when two values share a type, or the wrong instance surprises
+      you. Remember, we just came from the toolbox, where tools attach per call. Can you recall
+      which crate opens?'
     narration_enriched: true
     overlay: '@RequireNameMatch'
     recall_cue: Labeled crate → named binding.
@@ -506,89 +201,17 @@ floors:
     metaphor_part: passage-slot
     hero_now: Two crates hang from the pipes; only the named crate opens.
     hero_from: A toolbox bolted only onto the quill wrist.
-    hero_becomes: The pipe-creature grows a spiraling passageway through its torso.
-    hero_silhouette: A pipe-creature with a swirling tunnel running through its body.
-    hero_shot: Photographed from the side, showcasing the depth and spiral of the passageway.
-    hero_tell: The passageway's walls are lined with flowing typeface, representing the routes
-      of ideas.
-    visible:
-    - crates
-    - hang
-    - pipes
-    - named
-    - crate
-    - opens
-    - passageway's
-    - walls
-    - lined
-    - flowing
-    - typeface
-    - representing
-    - routes
-    - ideas
-    - identical
-    - bronze
-    - unlabeled
-    - latest
-    - wins
-    - swallows
-    - first
-    - creature
-    - hangs
-    - both
-    - stamps
-    - lettering
-    - planned
-    - hero
-    - organ
-    - because
-    - idea
-    - bindings
-    - beat
-    - foundry
-    - passage
-    - slot
-    - pipe
-    - swirling
-    - tunnel
-    - running
-    - body
-    - grown
-    - hanging
-    - labeled
-    - represents
-    - means
-    - same
-    - type
-    - created
-    - overwrite
-    - previous
-    - unless
-    - name
-    - want
-    - ensure
-    - correct
-    - instance
-    - used
-    - attach
-    - binding
-    - outputbinding
-    - technical
-    - label
-    - requirenamematch
-    - toolbox
-    - bolted
-    - quill
-    - wrist
-    - emphasized
-    - tools
-    - call
-    - recall
-    - happens
-    - represent
-    visible_hero: A swirling pipe.
-    visible_setting: A dark, industrial tunnel with swirling pipes.
-    grounded: true
+    hero_becomes: Four hats stacked on the compass head.
+    hero_silhouette: Pipe-creature hanging two bronze crates from its pipes
+    hero_shot: Captured from below, emphasizing the creature's balance and the crates hanging
+      below.
+    hero_tell: The named crate has a distinct aroma of cedar wood, contrasting with the metallic
+      scent.
+    must_show:
+    - A Pipe-Creature balancing two bronze crates
+    - Only the named crate opens
+    stamp_text:
+    - '@RequireNameMatch'
   - id: hat-rack
     seq: 6
     location: Hat Rack
@@ -596,21 +219,13 @@ floors:
     visual: 'Four hats stack on the compass head: a cheap path cap (GOAP), a greedy gold crown
       (Utility), a gather-then-stop satchel-hat (Hybrid), and an LLM concierge top hat (Supervisor).
       Same pipe-creature, different hat, different walk.'
-    narration: "Look at the planned hero: Four hats stacked on the compass head.. That organ\
-      \ is the concept because The vault's interior glows with pulsating ideas, symbolizing\
-      \ the storage of knowledge.. The idea here is Planner Choice. We are looking at a robotic\
-      \ figure with a crown and stacked hats. Welcome to the Hat Rack, where we find ourselves\
-      \ at the vault-slot of our pipe-creature, now sporting four hats stacked on its compass\
-      \ head. The creature has just grown a spiraling passageway through its torso. \n\nThis\
-      \ new form represents the concept of planner choice. Planner choice is a product decision.\
-      \ Each of the four hats symbolizes a different planning strategy: the cheap path cap\
-      \ represents GOAP, which takes the most cost-effective route to a goal; the greedy gold\
-      \ crown embodies Utility, which aims for the highest net value; the gather-then-stop\
-      \ satchel-hat signifies Hybrid, which collects resources before halting; and the LLM\
-      \ concierge top hat stands for Supervisor, which allows the LLM to choose typed tools,\
-      \ offering flexibility at a higher cost.\n\nRemember, we transitioned from the crates,\
-      \ where we focused on bindings that beat the latest wins. Now, with our four hats, we\
-      \ think about four planners. What do the four hats represent?"
+    narration: 'Welcome to the Foundry, in the vault-slot of our Pipe-Creature. The creature
+      we see now is a glowing bronze type-ingot that has transformed into a fascinating form:
+      four hats stacked on the compass head. Each hat represents a different planning style,
+      which is the concept of planner choice. Planner choice is a product decision that determines
+      how the creature will behave. The cheap path cap, greedy gold crown, gather-then-stop
+      satchel-hat, and LLM concierge top hat each guide our actions differently. Remember,
+      four hats represent four planners. How do they influence decisions?'
     narration_enriched: true
     overlay: planner
     recall_cue: Four hats → four planners.
@@ -618,106 +233,19 @@ floors:
     review_answer: Planner choice — GOAP, Utility, Hybrid, Supervisor
     metaphor_part: vault-slot
     hero_now: Four hats stacked on the compass head.
-    hero_from: The pipe-creature grows a spiraling passageway through its torso.
-    hero_becomes: The pipe-creature develops a vault-like brain, encased in a transparent
-      dome.
-    hero_silhouette: A pipe-creature with a dome-shaped vault for a head.
-    hero_shot: Photographed from the front, highlighting the dome's transparency and contents.
-    hero_tell: The vault's interior glows with pulsating ideas, symbolizing the storage of
-      knowledge.
-    visible:
-    - four
-    - hats
-    - stacked
-    - compass
-    - head
-    - vault's
-    - interior
-    - glows
-    - pulsating
-    - ideas
-    - symbolizing
-    - storage
-    - knowledge
-    - stack
-    - cheap
-    - path
-    - goap
-    - greedy
-    - gold
-    - crown
-    - utility
-    - gather
-    - stop
-    - satchel
-    - hybrid
-    - concierge
-    - supervisor
-    - same
-    - pipe
-    - creature
-    - different
-    - walk
-    - planned
-    - hero
-    - organ
-    - because
-    - idea
+    hero_from: Two crates hang from the pipes; only the named crate opens.
+    hero_becomes: The creature's mouth becomes a record-shaped mold.
+    hero_silhouette: A creature with a multi-hatted head, each hat representing a different
+      planning style.
+    hero_shot: Captured from the front, showcasing the variety of hats and their symbolic
+      meanings.
+    hero_tell: The hats are adorned with intricate patterns that shimmer in the teal light.
+    must_show:
+    - A creature with a multi-hatted head
+    - Four hats stacked on the compass head
+    - Intricate patterns on the hats
+    stamp_text:
     - planner
-    - choice
-    - robotic
-    - figure
-    - welcome
-    - rack
-    - find
-    - ourselves
-    - vault
-    - slot
-    - sporting
-    - grown
-    - spiraling
-    - passageway
-    - torso
-    - form
-    - represents
-    - product
-    - decision
-    - symbolizes
-    - planning
-    - strategy
-    - takes
-    - cost
-    - effective
-    - route
-    - goal
-    - embodies
-    - aims
-    - highest
-    - value
-    - signifies
-    - collects
-    - resources
-    - halting
-    - allows
-    - choose
-    - typed
-    - tools
-    - offering
-    - flexibility
-    - higher
-    - remember
-    - transitioned
-    - crates
-    - focused
-    - bindings
-    - beat
-    - latest
-    - wins
-    - planners
-    - represent
-    visible_hero: A tall figure with stacked hats and a glowing core.
-    visible_setting: A dimly lit interior with large windows.
-    grounded: true
 - id: floor-2
   number: 2
   title: PromptRunner And 1.5 Extras
@@ -727,11 +255,9 @@ floors:
   metaphor:
     region: The Model-Mouth
     role: PromptRunner And 1.5 Extras
-    hero_stage: Speaking Mold with Glass Skull
-    entry: The pipe-creature becomes a speaking mold
-    exit: Mold Mouth [Typed Create Object] → Null Pit [Create Object If Possible] → Envelope
-      Skin [Messages And Contributors] → Glass Skull [Thinking Traces] → Conveyor Spine [Streaming
-      Objects] → Inspector Clipboard [Tool Call Logs]
+    hero_stage: Mold Mouth
+    entry: The pipe-creature transforms into a speaking mold with a glowing teal interior.
+    exit: The mold-mouth speaks into a Null Pit.
   loci:
   - id: mold-mouth
     seq: 1
@@ -739,16 +265,12 @@ floors:
     concept: Typed Create Object
     visual: The creature's mouth is a steel mold that only accepts a record-shaped ingot.
       An example ingot sits beside it. A validation stamp waits. No engraving or lettering.
-    narration: "Welcome to the Mold Mouth, which is our seeing-slot. Here, the hero has transformed\
-      \ from a glowing bronze type-ingot with four hats stacked on its compass head into a\
-      \ record-shaped mold. This mold, made of steel, features a large, transparent spherical\
-      \ glass eye embedded within it. The key detail is that the typewriter iris rotates,\
-      \ typing out visible thoughts and ideas. \n\nThis represents the concept of typed createObject,\
-      \ which allows Ai to generate typed objects through a PromptRunner. The process emphasizes\
-      \ preferring typed createObject and creating(T).fromPrompt over free text. This matters\
-      \ because it ensures clarity and structure in how we define our inputs. \n\nRecapping,\
-      \ we started with a glowing bronze type-ingot and have now encountered a record-shaped\
-      \ mold. Consider this: what does the record mold signify in our process?"
+    narration: Welcome to the Mold Mouth, which is our seeing-slot. Here, the mouth takes
+      the form of a record-shaped mold. This mold encodes the concept of typed create object.
+      Prefer typed createObject and creating T fromPrompt over free text. Ai gives you a PromptRunner.
+      The mold only accepts record-shaped ingots. Remember, this mold was once a glowing bronze
+      type-ingot with four hats stacked on its compass head. As we look closely, can you recall
+      what type of ingot it accepts?
     narration_enriched: true
     overlay: creating(T)
     recall_cue: Record mold → typed create.
@@ -757,83 +279,15 @@ floors:
     metaphor_part: seeing-slot
     hero_now: The mouth is a record-shaped mold.
     hero_from: Four hats stacked on the compass head.
-    hero_becomes: A glowing glass eye with a typewriter iris.
-    hero_silhouette: A large, transparent spherical glass eye embedded within the steel mold.
-    hero_shot: Photographed from the perspective of the mold, capturing the glowing iris inside.
-    hero_tell: The typewriter iris rotates, typing out visible thoughts and ideas.
-    visible:
-    - mouth
-    - record
-    - shaped
-    - mold
-    - typewriter
-    - iris
-    - rotates
-    - typing
-    - visible
-    - thoughts
-    - ideas
-    - creature's
-    - steel
-    - accepts
-    - ingot
-    - example
-    - sits
-    - beside
-    - validation
-    - stamp
-    - waits
-    - engraving
-    - lettering
-    - welcome
-    - seeing
-    - slot
-    - hero
-    - transformed
-    - glowing
-    - bronze
-    - type
-    - four
-    - hats
-    - stacked
-    - compass
-    - head
-    - features
-    - large
-    - transparent
-    - spherical
-    - glass
-    - embedded
-    - within
-    - detail
-    - represents
-    - typed
-    - createobject
-    - allows
-    - generate
-    - promptrunner
-    - process
-    - emphasizes
-    - preferring
-    - creating
-    - fromprompt
-    - free
-    - text
-    - matters
-    - because
-    - ensures
-    - clarity
-    - structure
-    - define
-    - inputs
-    - recapping
-    - started
-    - encountered
-    - consider
-    - signify
-    visible_hero: stamp
-    visible_setting: a studio or workshop environment
-    grounded: true
+    hero_becomes: A glowing glass skull forms above the mold.
+    hero_silhouette: A wide steel mold with a glowing teal interior.
+    hero_shot: Capture the mold from the front, focusing on the record shape.
+    hero_tell: It only accepts record-shaped ingots.
+    must_show:
+    - A wide steel mold with a glowing teal interior
+    - The record-shaped mold accepts only record-shaped ingots
+    stamp_text:
+    - creating(T)
   - id: null-pit
     seq: 2
     location: Null Pit
@@ -841,219 +295,73 @@ floors:
     visual: Soft clay tries the mold and slumps through a dark hole. A warning lantern glows;
       nothing explodes. A side door swings open toward replan. The same creature now looks
       half-melted. No lettering.
-    narration: |-
-      We are in the Null Pit, focusing on the seeing-slot of our hero, which is now a half-melted clay eye that appears to sag and drip like melting wax. This organ grows from the previous record-shaped mold of the mouth. It represents the concept of createObjectIfPossible.
-
-      This concept allows the system to attempt to create an object from incomplete prompts. If it cannot do so, it logs a warning instead of throwing an error. This null result signals the need to replan, often involving human input.
-
-      Recall that we just came from the Mold Mouth, which was the typed create object stage. Now, think of how the slumping clay eye reveals hidden messages within. What does the slump hole represent?
+    narration: Welcome to the Null Pit, the seeing-slot of our type-foundry creature. Here,
+      our hero is a soft, half-melted mass of clay that has just emerged from a record-shaped
+      mold. This unique form represents the concept of createObjectIfPossible. It symbolizes
+      how incomplete prompts can return null, log a warning, and avoid throwing errors. This
+      is crucial because a null result signals the need to replan, often leading to human-in-the-loop
+      interactions. Previously, we had the Mold Mouth, which created typed objects. Now, can
+      you recall what happens when we slump through the hole?
     narration_enriched: true
     overlay: createObjectIfPossible
     recall_cue: Slump hole → null then replan.
     review_question: What does createObjectIfPossible return when the prompt is incomplete?
     review_answer: null, then replan
     metaphor_part: seeing-slot
-    hero_now: Half-melted clay slumping through a null hole.
+    hero_now: Half-melted clay slumping through a dark hole.
     hero_from: The mouth is a record-shaped mold.
-    hero_becomes: A dripping clay eye with a lens-like pupil.
-    hero_silhouette: A bulbous clay eye that appears to sag and drip like melting wax.
-    hero_shot: Captured from above, focusing on the melting edges and the lens pupil.
-    hero_tell: The lens pupil refracts light, revealing hidden messages within.
-    visible:
-    - half
-    - melted
-    - clay
-    - slumping
-    - 'null'
-    - hole
-    - lens
-    - pupil
-    - refracts
-    - light
-    - revealing
-    - hidden
-    - messages
-    - within
-    - soft
-    - tries
-    - mold
-    - slumps
-    - dark
-    - warning
-    - lantern
-    - glows
-    - nothing
-    - explodes
-    - side
-    - door
-    - swings
-    - open
-    - toward
-    - replan
-    - same
-    - creature
-    - looks
-    - lettering
-    - focusing
-    - seeing
-    - slot
-    - hero
-    - appears
-    - drip
-    - melting
-    - organ
-    - grows
-    - previous
-    - record
-    - shaped
-    - mouth
-    - represents
-    - createobjectifpossible
-    - allows
-    - system
-    - attempt
-    - create
-    - incomplete
-    - prompts
-    - cannot
-    - logs
-    - instead
-    - throwing
-    - error
-    - result
-    - signals
-    - need
-    - often
-    - involving
-    - human
-    - input
-    - recall
-    - came
-    - typed
-    - stage
-    - reveals
-    - slump
-    - represent
-    visible_hero: an eye-shaped clay creature
-    visible_setting: a dark, surreal environment
-    grounded: true
+    hero_becomes: The clay grows envelope-skin around its form.
+    hero_silhouette: A soft, half-melted mass.
+    hero_shot: Photograph the clay as it melts, showing the dark hole behind it.
+    hero_tell: The clay oozes toward a warning lantern.
+    must_show:
+    - A soft, half-melted mass of clay
+    - The clay oozes toward a warning lantern
+    stamp_text:
+    - createObjectIfPossible
   - id: envelope-skin
     seq: 3
     location: Envelope Skin
     concept: Messages And Contributors
     visual: The clay grows envelope-skin. A system-colored sash and a user-colored sash stack
       in order. A single fat string scroll is crossed out. No etched words.
-    narration: "We are in the seeing-slot of the Model-Mouth region, where the creature now\
-      \ takes the form of a large, flat eye resembling a sealed envelope, with subtle folds.\
-      \ This eye has evolved from half-melted clay slumping through a null hole, and it is\
-      \ designed to represent the concept of messages and contributors. \n\nThink of this\
-      \ as how prompt contributors build requests from structured messages rather than a single\
-      \ concatenated blob. The eye opens like an envelope, displaying texts and symbols inside,\
-      \ which is essential for the system and user messages to interact through fromMessages.\
-      \ \n\nPreviously, we encountered the Null Pit, where we considered the creation of objects\
-      \ if possible. Now, we see that the envelope-skin allows for a distinct exchange of\
-      \ information. Recall the image of stacked envelopes. What does fromMessages represent?"
+    narration: We are in the seeing-slot of the Model-Mouth region, and our hero now is a
+      clay mass covered in colorful envelopes. This envelope-skin grows as it embodies the
+      concept of messages and contributors. Think of this as how prompt contributors build
+      requests from structured messages, not a single concatenated blob. SystemMessage plus
+      UserMessage are combined through fromMessages. Previously, we were in the Null Pit,
+      where the clay was half-melted and slumping through a dark hole. Can you recall the
+      stacked envelopes?
     narration_enriched: true
     overlay: fromMessages
     recall_cue: Stacked envelopes → fromMessages.
     review_question: How should prompts be structured?
     review_answer: fromMessages — SystemMessage plus UserMessage
     metaphor_part: seeing-slot
-    hero_now: The same body wearing System and User envelopes.
-    hero_from: Half-melted clay slumping through a null hole.
-    hero_becomes: An envelope-shaped eye that opens and closes with messages.
-    hero_silhouette: A large, flat eye resembling a sealed envelope, with subtle folds.
-    hero_shot: Photographed from the front as it opens to reveal shifting contents.
-    hero_tell: The eye opens like an envelope, displaying texts and symbols inside.
-    visible:
-    - same
-    - body
-    - wearing
-    - system
-    - user
-    - envelopes
-    - opens
-    - envelope
-    - displaying
-    - texts
-    - symbols
-    - inside
-    - clay
-    - grows
-    - skin
-    - colored
-    - sash
-    - stack
-    - order
-    - single
-    - string
-    - scroll
-    - crossed
-    - etched
-    - words
-    - seeing
-    - slot
-    - model
-    - mouth
-    - region
-    - creature
-    - takes
-    - form
-    - large
-    - flat
-    - resembling
-    - sealed
-    - subtle
-    - folds
-    - evolved
-    - half
-    - melted
-    - slumping
-    - 'null'
-    - hole
-    - designed
-    - represent
-    - messages
-    - contributors
-    - prompt
-    - build
-    - requests
-    - structured
-    - rather
-    - concatenated
-    - blob
-    - essential
-    - interact
-    - frommessages
-    - previously
-    - encountered
-    - considered
-    - creation
-    - possible
-    - allows
-    - distinct
-    - exchange
-    - information
-    - recall
-    - stacked
-    visible_hero: A large, eye-shaped object on a stacked base.
-    visible_setting: A small, enclosed green room.
-    grounded: true
+    hero_now: The same body wearing stacked system and user envelopes.
+    hero_from: Half-melted clay slumping through a dark hole.
+    hero_becomes: A glass skull grows above the envelope body.
+    hero_silhouette: A clay mass covered in colorful envelopes.
+    hero_shot: Capture the envelopes from the side, showing their stacked nature.
+    hero_tell: The envelopes are labeled with abstract colors.
+    must_show:
+    - A clay mass covered in colorful envelopes
+    - Envelopes labeled with abstract colors
+    stamp_text:
+    - fromMessages
   - id: glass-skull
     seq: 4
     location: Glass Skull
     concept: Thinking Traces
     visual: A glass skull grows on the envelope body. Inside, a silent ticker of thought-light
       pulses. No printed words, no labeled gates, no badge lettering.
-    narration: "Welcome to the Glass Skull, located in the seeing-slot of our Embabel Type-Foundry.\
-      \ Here we see a glass skull ticking decision reasoning. This glass skull is the embodiment\
-      \ of the concept of thinking traces. \n\nThinking traces represent how the system captures\
-      \ and displays a mosaic of thoughts, much like a crystal ball, allowing for a deeper\
-      \ understanding of decision-making processes. This is crucial, as it enables explicit\
-      \ rationale alongside typed results in Embabel 1.5.\n\nPreviously, we encountered the\
-      \ Envelope Skin, where messages and contributors were housed. Now, we can visualize\
-      \ the glass skull with its shimmering orb above, swirling thoughts visible within. Recall\
-      \ this: Glass skull ticker leads us to thinking traces. What does the glass skull represent?"
+    narration: We are now at the seeing-slot of the Glass Skull, which has transformed from
+      the stacked system and user envelopes. The hero now is a translucent skull pulsing with
+      light, representing the concept of thinking traces. This glass skull contains a silent
+      ticker inside, where thought-light pulses, encoding how thinking() operates in Embabel
+      1.5. It requires an explicit rationale and a typed result, activating only when supportsThinking()
+      is true. Remember, this connects back to the envelope skin that communicated messages.
+      What does the glass skull ticker represent?
     narration_enriched: true
     overlay: thinking()
     recall_cue: Glass skull ticker → thinking traces.
@@ -1061,179 +369,47 @@ floors:
     review_answer: Thinking traces — ThinkingResponse
     metaphor_part: seeing-slot
     hero_now: A glass skull ticking decision reasoning.
-    hero_from: The same body wearing System and User envelopes.
-    hero_becomes: A crystal-clear eye with swirling thoughts visible inside.
-    hero_silhouette: A glassy orb that appears to float above the skull, shimmering with light.
-    hero_shot: From a side angle, capturing the swirling thoughts inside the clear eye.
-    hero_tell: The eye captures and displays a mosaic of thoughts like a crystal ball.
-    visible:
-    - glass
-    - skull
-    - ticking
-    - decision
-    - reasoning
-    - captures
-    - displays
-    - mosaic
-    - thoughts
-    - crystal
-    - ball
-    - grows
-    - envelope
-    - body
-    - inside
-    - silent
-    - ticker
-    - thought
-    - light
-    - pulses
-    - printed
-    - words
-    - labeled
-    - gates
-    - badge
-    - lettering
-    - welcome
-    - located
-    - seeing
-    - slot
-    - embabel
-    - type
-    - foundry
-    - embodiment
-    - thinking
-    - traces
-    - represent
-    - system
-    - much
-    - allowing
-    - deeper
-    - understanding
-    - making
-    - processes
-    - crucial
-    - enables
-    - explicit
-    - rationale
-    - alongside
-    - typed
-    - results
-    - previously
-    - encountered
-    - skin
-    - messages
-    - contributors
-    - housed
-    - visualize
-    - shimmering
-    - above
-    - swirling
-    - visible
-    - within
-    - recall
-    - leads
-    visible_hero: green glass skull
-    visible_setting: A darkly lit environment with a stone surface
-    grounded: true
+    hero_from: The same body wearing stacked system and user envelopes.
+    hero_becomes: The spine transforms into a conveyor.
+    hero_silhouette: A translucent skull pulsing with light.
+    hero_shot: Photograph the skull from above, highlighting the ticker inside.
+    hero_tell: Thought-light pulses through the glass.
+    must_show:
+    - Translucent skull pulsing with light
+    - Silent ticker of thought-light
+    stamp_text:
+    - thinking()
   - id: conveyor-spine
     seq: 5
     location: Conveyor Spine
     concept: Streaming Objects
     visual: The spine becomes a conveyor. Glass-brick packets arrive one by one and freeze
       into typed records. A stopwatch hangs. No badges or lettering.
-    narration: "We are in the seeing-slot of the Model-Mouth, where we find a conveyor spine\
-      \ turning JSON into records. This hero just was a glass skull ticking decision reasoning,\
-      \ but now it has transformed into an eye with a moving conveyor belt running through\
-      \ its center, displaying images. This silhouette encodes the concept of streaming objects.\n\
-      \nStreaming objects allow us to emit typed objects as they arrive, which is crucial\
-      \ for processing data efficiently. Think of this as a continuous flow of information,\
-      \ similar to how a conveyor belt operates. \n\nRecalling our previous location, the\
-      \ glass skull represented thinking traces. Now, we are witnessing how that thought materializes\
-      \ into streaming data. \n\nHere’s a quick recall question: How do we process data one\
-      \ brick at a time?"
+    narration: We are in the seeing-slot, looking at the conveyor spine. This glowing bronze
+      type-ingot has transformed into a conveyor spine, which is the concept of streaming
+      objects. createObject waits. Streaming emits typed objects as they arrive. Wrap the
+      runner in StreamingPromptRunnerBuilder, call createObjectStream, and collect with doOnNext.
+      Guard on supportsStreaming. The conveyor spine turns glass bricks into records, where
+      each brick freezes into a typed object as it arrives. Previously, we had the glass skull,
+      which reasoned through decisions. Recall how bricks arrive one at a time — what does
+      it mean to stream?
     narration_enriched: true
     overlay: createObjectStream
     recall_cue: One brick at a time → stream.
     review_question: What emits typed objects as they arrive?
     review_answer: createObjectStream
     metaphor_part: seeing-slot
-    hero_now: A conveyor spine turning JSON into records.
+    hero_now: A conveyor spine turning glass bricks into records.
     hero_from: A glass skull ticking decision reasoning.
-    hero_becomes: A conveyor belt eye that streams visual data.
-    hero_silhouette: An eye with a moving conveyor belt running through its center, displaying
-      images.
-    hero_shot: Captured from below, showcasing the images as they pass through the eye.
-    hero_tell: The eye projects images like a film reel as data flows continuously.
-    visible:
-    - conveyor
-    - spine
-    - turning
-    - json
-    - records
-    - projects
-    - images
-    - film
-    - reel
-    - data
-    - flows
-    - continuously
-    - becomes
-    - glass
-    - brick
-    - packets
-    - arrive
-    - freeze
-    - typed
-    - stopwatch
-    - hangs
-    - badges
-    - lettering
-    - seeing
-    - slot
-    - model
-    - mouth
-    - find
-    - hero
-    - skull
-    - ticking
-    - decision
-    - reasoning
-    - transformed
-    - moving
-    - belt
-    - running
-    - center
-    - displaying
-    - silhouette
-    - encodes
-    - streaming
-    - allow
-    - emit
-    - crucial
-    - processing
-    - efficiently
-    - continuous
-    - flow
-    - information
-    - similar
-    - operates
-    - recalling
-    - previous
-    - location
-    - represented
-    - thinking
-    - traces
-    - witnessing
-    - thought
-    - materializes
-    - quick
-    - recall
-    - question
-    - process
-    - time
-    visible_hero: the eye structure
-    visible_setting: A dimly lit corridor with a large eye structure.
-    grounded: true
+    hero_becomes: An inspector clipboard grows as the last organ.
+    hero_silhouette: A spine lined with glass bricks moving rhythmically.
+    hero_shot: Capture the conveyor in motion, emphasizing the bricks.
+    hero_tell: The bricks freeze into typed records.
+    must_show:
+    - A conveyor spine lined with glass bricks
+    - The bricks freeze into typed records
+    stamp_text:
+    - createObjectStream
   - id: inspector-clipboard
     seq: 6
     location: Inspector Clipboard
@@ -1241,12 +417,13 @@ floors:
     visual: An inspector clipboard grows as the last organ. It photographs every wrench swing
       from the wrist toolbox. Wrenches hang in view. The mold-mouth waits to print a typed
       plan. No lettering on the clipboard.
-    narration: |-
-      We are now in the seeing-slot of the Model-Mouth, where the creature has transformed from a conveyor spine turning JSON into records into an inspector clipboard that watches the wrist toolbox. Imagine this clipboard organ as a large, camera-like eye with a shutter that clicks as it observes. This eye captures images, preserving every action it observes, making it essential for logging tool calls.
-
-      This inspector clipboard encodes the concept of tool call logs. Tool call logs help track the methods used, such as @LlmTool or @Tool, and connect them with withToolObject. In Embabel 1.5, we add withToolCallInspectors to log each call, ensuring that the model uses the tools before writing the typed result.
-
-      Previously, we were at the conveyor spine, streaming objects, and now we are at the inspector clipboard, capturing each moment of action. Recall the clipboard photo—what does it record?
+    narration: Welcome to the Model-Mouth, the seeing-slot of our living type-foundry. Here,
+      our hero form is the clipboard organ, which has grown from the conveyor spine that was
+      turning glass bricks into records. This clipboard encodes the concept of tool call logs.
+      Mark methods LlmTool or Tool, attach them with withToolObject, and on 1.5 add withToolCallInspectors
+      to log each call. The clipboard photographs every swing from the wrist toolbox. Invisible
+      tools are the classic bug. Remember, this clipboard connects to our previous conveyor
+      spine, which streamed objects. Can you recall what the clipboard captures?
     narration_enriched: true
     overlay: withToolCallInspectors
     recall_cue: Clipboard photo → inspected tool call.
@@ -1254,86 +431,16 @@ floors:
     review_answer: withToolCallInspectors
     metaphor_part: seeing-slot
     hero_now: A clipboard organ watching the wrist toolbox.
-    hero_from: A conveyor spine turning JSON into records.
-    hero_becomes: An inspector eye that records actions with a shutter mechanism.
-    hero_silhouette: A large, camera-like eye with a shutter that clicks as it observes.
-    hero_shot: Photographed as the eye blinks, capturing a moment in time.
-    hero_tell: The eye clicks and captures images, preserving every action it observes.
-    visible:
-    - clipboard
-    - organ
-    - watching
-    - wrist
-    - toolbox
-    - clicks
-    - captures
-    - images
-    - preserving
-    - action
-    - observes
-    - inspector
-    - grows
-    - last
-    - photographs
-    - wrench
-    - swing
-    - wrenches
-    - hang
-    - view
-    - mold
-    - mouth
-    - waits
-    - print
-    - typed
-    - plan
-    - lettering
-    - seeing
-    - slot
-    - model
-    - creature
-    - transformed
-    - conveyor
-    - spine
-    - turning
-    - json
-    - records
-    - watches
-    - imagine
-    - large
-    - camera
-    - shutter
-    - making
-    - essential
-    - logging
-    - tool
-    - calls
-    - encodes
-    - call
-    - logs
-    - help
-    - track
-    - methods
-    - used
-    - llmtool
-    - connect
-    - withtoolobject
-    - embabel
-    - withtoolcallinspectors
-    - ensuring
-    - uses
-    - tools
-    - writing
-    - result
-    - previously
-    - streaming
-    - capturing
-    - moment
-    - recall
-    - photo
-    - record
-    visible_hero: camera
-    visible_setting: A dimly lit room with a window.
-    grounded: true
+    hero_from: A conveyor spine turning glass bricks into records.
+    hero_becomes: The finished living foundry, ready for recall.
+    hero_silhouette: A clipboard with a mechanical arm holding a wrench.
+    hero_shot: Photograph the clipboard from a slight angle, showing its detail.
+    hero_tell: It photographs every swing from the wrist toolbox.
+    must_show:
+    - Clipboard organ with a mechanical arm
+    - Wrist toolbox with visible wrenches
+    stamp_text:
+    - tool call logs
 recall:
   enabled: true
   intro: 'End the video with locations only. Ask the learner to name the concept, then reveal:'

@@ -2,8 +2,8 @@
 
 Primary renderer: [jmjava/memory-os](https://github.com/jmjava/memory-os)
 (private; Cloud Agents use `BROAD_REPO_TOKEN` to install the CLI).
-Installed HEAD for this generation: `b776065` (PR #7 fit loop:
-narrate → images → `fit` cycles still ↔ audio ↔ plan → gate).
+Installed HEAD for this generation: `d551e69` (PR #9 scene contract:
+`must_show` + `stamp_text`, then narrate → images → `fit` → gate).
 
 Study source: [`docs/CHEATSHEET.md`](../../CHEATSHEET.md).
 This is **not** a filmed walkthrough of cookbook travel recipes.
