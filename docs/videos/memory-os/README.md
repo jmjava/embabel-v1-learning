@@ -2,8 +2,8 @@
 
 Primary renderer: [jmjava/memory-os](https://github.com/jmjava/memory-os)
 (private; Cloud Agents use `BROAD_REPO_TOKEN` to install the CLI).
-Installed HEAD for this generation: `4d694ac` (creature + body-slot
-`plan`, speak-the-plan `enrich`, `ground`, Q/A + whole-animal review).
+Installed HEAD for this generation: `b776065` (PR #7 fit loop:
+narrate → images → `fit` cycles still ↔ audio ↔ plan → gate).
 
 Study source: [`docs/CHEATSHEET.md`](../../CHEATSHEET.md).
 This is **not** a filmed walkthrough of cookbook travel recipes.
@@ -27,15 +27,15 @@ memoryos compile docs/videos/memory-os/embabel-cheatsheet.md \
   -o docs/videos/memory-os/embabel-cheatsheet.palace.yaml
 memoryos validate docs/videos/memory-os/embabel-cheatsheet.palace.yaml
 memoryos plan    docs/videos/memory-os/embabel-cheatsheet.palace.yaml --force
-memoryos enrich  docs/videos/memory-os/embabel-cheatsheet.palace.yaml --force --visuals --target-seconds 30
+memoryos enrich  docs/videos/memory-os/embabel-cheatsheet.palace.yaml --force --target-seconds 30
 memoryos narrate docs/videos/memory-os/embabel-cheatsheet.palace.yaml --dry-run
 memoryos images  docs/videos/memory-os/embabel-cheatsheet.palace.yaml --dry-run
-memoryos ground  docs/videos/memory-os/embabel-cheatsheet.palace.yaml --dry-run
+memoryos fit     docs/videos/memory-os/embabel-cheatsheet.palace.yaml --dry-run
 memoryos gate    docs/videos/memory-os/embabel-cheatsheet.palace.yaml --spec-only
 memoryos build   docs/videos/memory-os/embabel-cheatsheet.palace.yaml --force
 ```
 
-Build order is narrate → images → ground → gate → render.
+Build order is narrate → images → fit → gate → render.
 One locus stays on screen until its narration finishes (minimum 30s).
 Do not vendor memory-os into this repo; refresh the CLI from git during install.
 

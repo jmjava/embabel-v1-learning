@@ -1,8 +1,7 @@
 # Memory OS plan (cheat-sheet palace)
 
-Memory OS `4d694ac` is installed (`plan` creature + body-slot walk,
-`enrich` speaks that plan, `ground` checks stills against the script,
-`gate` + Q→pause→A + whole-animal review).
+Memory OS `b776065` is installed (PR #7: `fit` cycles still ↔ audio
+↔ plan before the delivery gate).
 Authoring lives in [`embabel-cheatsheet.md`](embabel-cheatsheet.md).
 
 ## Goal
@@ -44,11 +43,9 @@ stamped by the engine — stills must not paint lettering.
 
 ## Status
 
-Shipped on memory-os `4d694ac`: `embabel-cheatsheet.md` → plan →
-enrich (speak the plan) → narrate → images → `ground` → `gate` →
-Q/A + whole-animal-stamped render →
-`docs/videos/recordings/embabel-cheatsheet*.mp4`
-(~14.3 min full, ~6.7 min floor 1, ~6.6 min floor 2).
+Rebuilding on memory-os `b776065`: `embabel-cheatsheet.md` → plan →
+enrich (speak the plan) → narrate → images → `fit` (up to 3 cycles) →
+`gate` → Q/A + whole-animal-stamped render.
 
 ## Out of scope
 

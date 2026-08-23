@@ -21,6 +21,7 @@
 
 ```bash
 memoryos build docs/videos/memory-os/embabel-cheatsheet.palace.yaml --force
+# build = narrate + images + fit + gate + render
 memoryos render docs/videos/memory-os/embabel-cheatsheet.palace.yaml --floor floor-1 --force
 memoryos render docs/videos/memory-os/embabel-cheatsheet.palace.yaml --floor floor-2 --force
 ./scripts/publish-memoryos-videos.sh
