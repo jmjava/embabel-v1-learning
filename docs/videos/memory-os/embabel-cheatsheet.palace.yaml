@@ -78,6 +78,85 @@ floors:
     hero_silhouette: The outline of a pipe-creature topped with a large, intricate gear.
     hero_shot: Photographed from below, capturing the gear head's glow and complexity.
     hero_tell: The gear's teeth are inscribed with symbols for turning ideas into action.
+    visible:
+    - pipe
+    - creature
+    - whose
+    - body
+    - labeled
+    - type
+    - tubes
+    - gear's
+    - teeth
+    - inscribed
+    - symbols
+    - turning
+    - ideas
+    - action
+    - giant
+    - empty
+    - glass
+    - pipes
+    - snake
+    - hall
+    - bronze
+    - seed
+    - splits
+    - becomes
+    - those
+    - source
+    - order
+    - stepping
+    - stones
+    - absent
+    - lettering
+    - welcome
+    - located
+    - head
+    - slot
+    - compass
+    - transformed
+    - sealed
+    - unlabeled
+    - comprised
+    - silhouette
+    - topped
+    - large
+    - intricate
+    - gear
+    - emphasizing
+    - types
+    - wiring
+    - system
+    - matters
+    - because
+    - highlights
+    - actions
+    - rather
+    - follow
+    - structure
+    - defined
+    - understanding
+    - helps
+    - designing
+    - domain
+    - crucial
+    - controlling
+    - flow
+    - processes
+    - reflect
+    - previous
+    - form
+    - evolution
+    - illustrating
+    - transformation
+    - user
+    - input
+    - structured
+    - relate
+    visible_hero: A large golden gear with inscriptions.
+    visible_setting: A dark and cavernous space with a round stone surface.
+    grounded: true
   - id: compass-rotunda
     seq: 2
     location: Compass Rotunda
@@ -110,6 +189,92 @@ floors:
     hero_shot: Captured from a side angle, showcasing the refractive patterns emanating from
       the crystal eye.
     hero_tell: The crystal eye casts beams of organized light, symbolizing clarity in decision-making.
+    visible:
+    - same
+    - creature
+    - spinning
+    - ooda
+    - compass
+    - crystal
+    - casts
+    - beams
+    - organized
+    - light
+    - symbolizing
+    - clarity
+    - decision
+    - making
+    - huge
+    - spins
+    - door
+    - pipe
+    - walks
+    - observe
+    - orient
+    - decide
+    - glow
+    - sequence
+    - creature's
+    - lead
+    - grows
+    - welcome
+    - rotunda
+    - find
+    - ourselves
+    - seeing
+    - slot
+    - transformed
+    - previously
+    - whose
+    - body
+    - labeled
+    - type
+    - tubes
+    - grown
+    - silhouette
+    - features
+    - prominent
+    - multifaceted
+    - visual
+    - represents
+    - replan
+    - action
+    - embabel
+    - reassesses
+    - world
+    - taken
+    - plans
+    - fixed
+    - scripts
+    - 'null'
+    - flipped
+    - conditions
+    - alter
+    - next
+    - step
+    - real
+    - time
+    - loop
+    - connecting
+    - back
+    - previous
+    - location
+    - hall
+    - reminded
+    - types
+    - wiring
+    - actions
+    - moves
+    - forward
+    - embodies
+    - dynamic
+    - nature
+    - planning
+    - recall
+    - represent
+    visible_hero: a crystal emitting light
+    visible_setting: a dark, abstract space with a glowing object
+    grounded: true
   - id: split-workbench
     seq: 3
     location: Split Workbench
@@ -141,6 +306,82 @@ floors:
     hero_shot: Photographed from the front, highlighting the size and shape of the horn speakers.
     hero_tell: The horns emit rhythmic pulses of sound waves, representing the merging of
       ideas.
+    visible:
+    - creature
+    - grows
+    - steel
+    - stamp
+    - hand
+    - glowing
+    - quill
+    - horns
+    - emit
+    - rhythmic
+    - pulses
+    - sound
+    - waves
+    - representing
+    - merging
+    - ideas
+    - workbench
+    - arms
+    - same
+    - left
+    - spring
+    - prints
+    - deterministic
+    - results
+    - right
+    - writes
+    - typed
+    - sign
+    - lettering
+    - welcome
+    - split
+    - embabel
+    - type
+    - foundry
+    - specifically
+    - hearing
+    - slot
+    - pipe
+    - transformed
+    - having
+    - spinning
+    - ooda
+    - compass
+    - growing
+    - form
+    - represents
+    - mixing
+    - code
+    - while
+    - crucial
+    - because
+    - blends
+    - agency
+    - making
+    - services
+    - inside
+    - action
+    - methods
+    - cheaper
+    - testable
+    - safer
+    - previously
+    - rotunda
+    - focusing
+    - replan
+    - visualize
+    - large
+    - horn
+    - speakers
+    - emitting
+    - recall
+    - represent
+    visible_hero: horn speakers
+    visible_setting: A dark, abstract space with a focus on a central object.
+    grounded: true
   - id: bolted-toolbox
     seq: 4
     location: Bolted Toolbox
@@ -169,6 +410,75 @@ floors:
     hero_shot: Captured from above, emphasizing the elaborate design of the scent filters.
     hero_tell: The filters exude a diverse range of scents that represent the types of inputs
       processed.
+    visible:
+    - toolbox
+    - bolted
+    - quill
+    - wrist
+    - filters
+    - exude
+    - diverse
+    - range
+    - scents
+    - represent
+    - types
+    - inputs
+    - processed
+    - foundry
+    - walls
+    - wrenches
+    - second
+    - desk
+    - invisible
+    - tags
+    - lettering
+    - scent
+    - slot
+    - pipe
+    - creature
+    - compass
+    - grown
+    - steel
+    - stamp
+    - hand
+    - glowing
+    - represents
+    - tools
+    - attach
+    - call
+    - understand
+    - permanently
+    - fixed
+    - entire
+    - agent
+    - specific
+    - promptrunner
+    - moment
+    - needed
+    - matters
+    - because
+    - allows
+    - flexibility
+    - efficiency
+    - processing
+    - recalling
+    - previous
+    - location
+    - split
+    - workbench
+    - mixed
+    - code
+    - narrowly
+    - scoped
+    - visible
+    - called
+    - signify
+    - terms
+    - tool
+    - usage
+    visible_hero: toolbox
+    visible_setting: A dimly lit, industrial space.
+    grounded: true
   - id: named-crates
     seq: 5
     location: Named Crates
@@ -176,7 +486,10 @@ floors:
     visual: Two identical bronze crates. The unlabeled crate is latest-wins and swallows the
       first. Only the named crate opens. The creature hangs both crates from its pipes. No
       stamps or lettering.
-    narration: "We are in the Foundry, at the passage-slot, where our hero is now a pipe-creature\
+    narration: "Look at the planned hero: Two crates hang from the pipes; only the named crate\
+      \ opens.. That organ is the concept because The passageway's walls are lined with flowing\
+      \ typeface, representing the routes of ideas.. The idea here is Bindings Beat Latest\
+      \ Wins. We are in the Foundry, at the passage-slot, where our hero is now a pipe-creature\
       \ with a swirling tunnel running through its body. This creature has grown two bronze\
       \ crates hanging from its pipes, with only one crate labeled, which represents the concept\
       \ of bindings beat latest wins. \n\nThis means that when two objects of the same type\
@@ -198,6 +511,84 @@ floors:
     hero_shot: Photographed from the side, showcasing the depth and spiral of the passageway.
     hero_tell: The passageway's walls are lined with flowing typeface, representing the routes
       of ideas.
+    visible:
+    - crates
+    - hang
+    - pipes
+    - named
+    - crate
+    - opens
+    - passageway's
+    - walls
+    - lined
+    - flowing
+    - typeface
+    - representing
+    - routes
+    - ideas
+    - identical
+    - bronze
+    - unlabeled
+    - latest
+    - wins
+    - swallows
+    - first
+    - creature
+    - hangs
+    - both
+    - stamps
+    - lettering
+    - planned
+    - hero
+    - organ
+    - because
+    - idea
+    - bindings
+    - beat
+    - foundry
+    - passage
+    - slot
+    - pipe
+    - swirling
+    - tunnel
+    - running
+    - body
+    - grown
+    - hanging
+    - labeled
+    - represents
+    - means
+    - same
+    - type
+    - created
+    - overwrite
+    - previous
+    - unless
+    - name
+    - want
+    - ensure
+    - correct
+    - instance
+    - used
+    - attach
+    - binding
+    - outputbinding
+    - technical
+    - label
+    - requirenamematch
+    - toolbox
+    - bolted
+    - quill
+    - wrist
+    - emphasized
+    - tools
+    - call
+    - recall
+    - happens
+    - represent
+    visible_hero: A swirling pipe.
+    visible_setting: A dark, industrial tunnel with swirling pipes.
+    grounded: true
   - id: hat-rack
     seq: 6
     location: Hat Rack
@@ -205,18 +596,21 @@ floors:
     visual: 'Four hats stack on the compass head: a cheap path cap (GOAP), a greedy gold crown
       (Utility), a gather-then-stop satchel-hat (Hybrid), and an LLM concierge top hat (Supervisor).
       Same pipe-creature, different hat, different walk.'
-    narration: "Welcome to the Hat Rack, where we find ourselves at the vault-slot of our\
-      \ pipe-creature, now sporting four hats stacked on its compass head. The creature has\
-      \ just grown a spiraling passageway through its torso. \n\nThis new form represents\
-      \ the concept of planner choice. Planner choice is a product decision. Each of the four\
-      \ hats symbolizes a different planning strategy: the cheap path cap represents GOAP,\
-      \ which takes the most cost-effective route to a goal; the greedy gold crown embodies\
-      \ Utility, which aims for the highest net value; the gather-then-stop satchel-hat signifies\
-      \ Hybrid, which collects resources before halting; and the LLM concierge top hat stands\
-      \ for Supervisor, which allows the LLM to choose typed tools, offering flexibility at\
-      \ a higher cost.\n\nRemember, we transitioned from the crates, where we focused on bindings\
-      \ that beat the latest wins. Now, with our four hats, we think about four planners.\
-      \ What do the four hats represent?"
+    narration: "Look at the planned hero: Four hats stacked on the compass head.. That organ\
+      \ is the concept because The vault's interior glows with pulsating ideas, symbolizing\
+      \ the storage of knowledge.. The idea here is Planner Choice. We are looking at a robotic\
+      \ figure with a crown and stacked hats. Welcome to the Hat Rack, where we find ourselves\
+      \ at the vault-slot of our pipe-creature, now sporting four hats stacked on its compass\
+      \ head. The creature has just grown a spiraling passageway through its torso. \n\nThis\
+      \ new form represents the concept of planner choice. Planner choice is a product decision.\
+      \ Each of the four hats symbolizes a different planning strategy: the cheap path cap\
+      \ represents GOAP, which takes the most cost-effective route to a goal; the greedy gold\
+      \ crown embodies Utility, which aims for the highest net value; the gather-then-stop\
+      \ satchel-hat signifies Hybrid, which collects resources before halting; and the LLM\
+      \ concierge top hat stands for Supervisor, which allows the LLM to choose typed tools,\
+      \ offering flexibility at a higher cost.\n\nRemember, we transitioned from the crates,\
+      \ where we focused on bindings that beat the latest wins. Now, with our four hats, we\
+      \ think about four planners. What do the four hats represent?"
     narration_enriched: true
     overlay: planner
     recall_cue: Four hats → four planners.
@@ -231,6 +625,99 @@ floors:
     hero_shot: Photographed from the front, highlighting the dome's transparency and contents.
     hero_tell: The vault's interior glows with pulsating ideas, symbolizing the storage of
       knowledge.
+    visible:
+    - four
+    - hats
+    - stacked
+    - compass
+    - head
+    - vault's
+    - interior
+    - glows
+    - pulsating
+    - ideas
+    - symbolizing
+    - storage
+    - knowledge
+    - stack
+    - cheap
+    - path
+    - goap
+    - greedy
+    - gold
+    - crown
+    - utility
+    - gather
+    - stop
+    - satchel
+    - hybrid
+    - concierge
+    - supervisor
+    - same
+    - pipe
+    - creature
+    - different
+    - walk
+    - planned
+    - hero
+    - organ
+    - because
+    - idea
+    - planner
+    - choice
+    - robotic
+    - figure
+    - welcome
+    - rack
+    - find
+    - ourselves
+    - vault
+    - slot
+    - sporting
+    - grown
+    - spiraling
+    - passageway
+    - torso
+    - form
+    - represents
+    - product
+    - decision
+    - symbolizes
+    - planning
+    - strategy
+    - takes
+    - cost
+    - effective
+    - route
+    - goal
+    - embodies
+    - aims
+    - highest
+    - value
+    - signifies
+    - collects
+    - resources
+    - halting
+    - allows
+    - choose
+    - typed
+    - tools
+    - offering
+    - flexibility
+    - higher
+    - remember
+    - transitioned
+    - crates
+    - focused
+    - bindings
+    - beat
+    - latest
+    - wins
+    - planners
+    - represent
+    visible_hero: A tall figure with stacked hats and a glowing core.
+    visible_setting: A dimly lit interior with large windows.
+    grounded: true
 - id: floor-2
   number: 2
   title: PromptRunner And 1.5 Extras
@@ -274,6 +761,79 @@ floors:
     hero_silhouette: A large, transparent spherical glass eye embedded within the steel mold.
     hero_shot: Photographed from the perspective of the mold, capturing the glowing iris inside.
     hero_tell: The typewriter iris rotates, typing out visible thoughts and ideas.
+    visible:
+    - mouth
+    - record
+    - shaped
+    - mold
+    - typewriter
+    - iris
+    - rotates
+    - typing
+    - visible
+    - thoughts
+    - ideas
+    - creature's
+    - steel
+    - accepts
+    - ingot
+    - example
+    - sits
+    - beside
+    - validation
+    - stamp
+    - waits
+    - engraving
+    - lettering
+    - welcome
+    - seeing
+    - slot
+    - hero
+    - transformed
+    - glowing
+    - bronze
+    - type
+    - four
+    - hats
+    - stacked
+    - compass
+    - head
+    - features
+    - large
+    - transparent
+    - spherical
+    - glass
+    - embedded
+    - within
+    - detail
+    - represents
+    - typed
+    - createobject
+    - allows
+    - generate
+    - promptrunner
+    - process
+    - emphasizes
+    - preferring
+    - creating
+    - fromprompt
+    - free
+    - text
+    - matters
+    - because
+    - ensures
+    - clarity
+    - structure
+    - define
+    - inputs
+    - recapping
+    - started
+    - encountered
+    - consider
+    - signify
+    visible_hero: stamp
+    visible_setting: a studio or workshop environment
+    grounded: true
   - id: null-pit
     seq: 2
     location: Null Pit
@@ -299,6 +859,84 @@ floors:
     hero_silhouette: A bulbous clay eye that appears to sag and drip like melting wax.
     hero_shot: Captured from above, focusing on the melting edges and the lens pupil.
     hero_tell: The lens pupil refracts light, revealing hidden messages within.
+    visible:
+    - half
+    - melted
+    - clay
+    - slumping
+    - 'null'
+    - hole
+    - lens
+    - pupil
+    - refracts
+    - light
+    - revealing
+    - hidden
+    - messages
+    - within
+    - soft
+    - tries
+    - mold
+    - slumps
+    - dark
+    - warning
+    - lantern
+    - glows
+    - nothing
+    - explodes
+    - side
+    - door
+    - swings
+    - open
+    - toward
+    - replan
+    - same
+    - creature
+    - looks
+    - lettering
+    - focusing
+    - seeing
+    - slot
+    - hero
+    - appears
+    - drip
+    - melting
+    - organ
+    - grows
+    - previous
+    - record
+    - shaped
+    - mouth
+    - represents
+    - createobjectifpossible
+    - allows
+    - system
+    - attempt
+    - create
+    - incomplete
+    - prompts
+    - cannot
+    - logs
+    - instead
+    - throwing
+    - error
+    - result
+    - signals
+    - need
+    - often
+    - involving
+    - human
+    - input
+    - recall
+    - came
+    - typed
+    - stage
+    - reveals
+    - slump
+    - represent
+    visible_hero: an eye-shaped clay creature
+    visible_setting: a dark, surreal environment
+    grounded: true
   - id: envelope-skin
     seq: 3
     location: Envelope Skin
@@ -327,6 +965,80 @@ floors:
     hero_silhouette: A large, flat eye resembling a sealed envelope, with subtle folds.
     hero_shot: Photographed from the front as it opens to reveal shifting contents.
     hero_tell: The eye opens like an envelope, displaying texts and symbols inside.
+    visible:
+    - same
+    - body
+    - wearing
+    - system
+    - user
+    - envelopes
+    - opens
+    - envelope
+    - displaying
+    - texts
+    - symbols
+    - inside
+    - clay
+    - grows
+    - skin
+    - colored
+    - sash
+    - stack
+    - order
+    - single
+    - string
+    - scroll
+    - crossed
+    - etched
+    - words
+    - seeing
+    - slot
+    - model
+    - mouth
+    - region
+    - creature
+    - takes
+    - form
+    - large
+    - flat
+    - resembling
+    - sealed
+    - subtle
+    - folds
+    - evolved
+    - half
+    - melted
+    - slumping
+    - 'null'
+    - hole
+    - designed
+    - represent
+    - messages
+    - contributors
+    - prompt
+    - build
+    - requests
+    - structured
+    - rather
+    - concatenated
+    - blob
+    - essential
+    - interact
+    - frommessages
+    - previously
+    - encountered
+    - considered
+    - creation
+    - possible
+    - allows
+    - distinct
+    - exchange
+    - information
+    - recall
+    - stacked
+    visible_hero: A large, eye-shaped object on a stacked base.
+    visible_setting: A small, enclosed green room.
+    grounded: true
   - id: glass-skull
     seq: 4
     location: Glass Skull
@@ -354,6 +1066,75 @@ floors:
     hero_silhouette: A glassy orb that appears to float above the skull, shimmering with light.
     hero_shot: From a side angle, capturing the swirling thoughts inside the clear eye.
     hero_tell: The eye captures and displays a mosaic of thoughts like a crystal ball.
+    visible:
+    - glass
+    - skull
+    - ticking
+    - decision
+    - reasoning
+    - captures
+    - displays
+    - mosaic
+    - thoughts
+    - crystal
+    - ball
+    - grows
+    - envelope
+    - body
+    - inside
+    - silent
+    - ticker
+    - thought
+    - light
+    - pulses
+    - printed
+    - words
+    - labeled
+    - gates
+    - badge
+    - lettering
+    - welcome
+    - located
+    - seeing
+    - slot
+    - embabel
+    - type
+    - foundry
+    - embodiment
+    - thinking
+    - traces
+    - represent
+    - system
+    - much
+    - allowing
+    - deeper
+    - understanding
+    - making
+    - processes
+    - crucial
+    - enables
+    - explicit
+    - rationale
+    - alongside
+    - typed
+    - results
+    - previously
+    - encountered
+    - skin
+    - messages
+    - contributors
+    - housed
+    - visualize
+    - shimmering
+    - above
+    - swirling
+    - visible
+    - within
+    - recall
+    - leads
+    visible_hero: green glass skull
+    visible_setting: A darkly lit environment with a stone surface
+    grounded: true
   - id: conveyor-spine
     seq: 5
     location: Conveyor Spine
@@ -383,6 +1164,76 @@ floors:
       images.
     hero_shot: Captured from below, showcasing the images as they pass through the eye.
     hero_tell: The eye projects images like a film reel as data flows continuously.
+    visible:
+    - conveyor
+    - spine
+    - turning
+    - json
+    - records
+    - projects
+    - images
+    - film
+    - reel
+    - data
+    - flows
+    - continuously
+    - becomes
+    - glass
+    - brick
+    - packets
+    - arrive
+    - freeze
+    - typed
+    - stopwatch
+    - hangs
+    - badges
+    - lettering
+    - seeing
+    - slot
+    - model
+    - mouth
+    - find
+    - hero
+    - skull
+    - ticking
+    - decision
+    - reasoning
+    - transformed
+    - moving
+    - belt
+    - running
+    - center
+    - displaying
+    - silhouette
+    - encodes
+    - streaming
+    - allow
+    - emit
+    - crucial
+    - processing
+    - efficiently
+    - continuous
+    - flow
+    - information
+    - similar
+    - operates
+    - recalling
+    - previous
+    - location
+    - represented
+    - thinking
+    - traces
+    - witnessing
+    - thought
+    - materializes
+    - quick
+    - recall
+    - question
+    - process
+    - time
+    visible_hero: the eye structure
+    visible_setting: A dimly lit corridor with a large eye structure.
+    grounded: true
   - id: inspector-clipboard
     seq: 6
     location: Inspector Clipboard
@@ -408,6 +1259,81 @@ floors:
     hero_silhouette: A large, camera-like eye with a shutter that clicks as it observes.
     hero_shot: Photographed as the eye blinks, capturing a moment in time.
     hero_tell: The eye clicks and captures images, preserving every action it observes.
+    visible:
+    - clipboard
+    - organ
+    - watching
+    - wrist
+    - toolbox
+    - clicks
+    - captures
+    - images
+    - preserving
+    - action
+    - observes
+    - inspector
+    - grows
+    - last
+    - photographs
+    - wrench
+    - swing
+    - wrenches
+    - hang
+    - view
+    - mold
+    - mouth
+    - waits
+    - print
+    - typed
+    - plan
+    - lettering
+    - seeing
+    - slot
+    - model
+    - creature
+    - transformed
+    - conveyor
+    - spine
+    - turning
+    - json
+    - records
+    - watches
+    - imagine
+    - large
+    - camera
+    - shutter
+    - making
+    - essential
+    - logging
+    - tool
+    - calls
+    - encodes
+    - call
+    - logs
+    - help
+    - track
+    - methods
+    - used
+    - llmtool
+    - connect
+    - withtoolobject
+    - embabel
+    - withtoolcallinspectors
+    - ensuring
+    - uses
+    - tools
+    - writing
+    - result
+    - previously
+    - streaming
+    - capturing
+    - moment
+    - recall
+    - photo
+    - record
+    visible_hero: camera
+    visible_setting: A dimly lit room with a window.
+    grounded: true
 recall:
   enabled: true
   intro: 'End the video with locations only. Ask the learner to name the concept, then reveal:'

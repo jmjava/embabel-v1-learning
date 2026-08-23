@@ -43,9 +43,11 @@ stamped by the engine — stills must not paint lettering.
 
 ## Status
 
-Rebuilding on memory-os `b776065`: `embabel-cheatsheet.md` → plan →
-enrich (speak the plan) → narrate → images → `fit` (up to 3 cycles) →
-`gate` → Q/A + whole-animal-stamped render.
+Shipped on memory-os `b776065`: `embabel-cheatsheet.md` → plan →
+enrich → narrate → images → `fit` (3 cycles) → `gate` →
+`docs/videos/recordings/embabel-cheatsheet*.mp4`
+(~16.3 min full, ~8.0 min floor 1, ~7.2 min floor 2).
+Authoring no longer names numbered floor tiles.
 
 ## Out of scope
 
