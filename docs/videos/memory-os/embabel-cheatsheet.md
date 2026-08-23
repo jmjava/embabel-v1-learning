@@ -83,10 +83,9 @@ the model-mouth
 
 ## Scene 1 --- Pipe Hall: Types Are The Wiring
 
-**Visual:** Giant glass pipes labeled `UserInput`, `Story`,
-`ReviewedStory` snake through the hall. Floor tiles numbered 1-2-3
-are crossed out. The bronze seed splits and becomes a pipe-creature
-whose body is those types. No `if` signs anywhere.
+**Visual:** Giant empty glass pipes snake through the hall. The bronze
+seed splits and becomes a pipe-creature whose body is those tubes.
+Source-order stepping stones are absent. No lettering.
 
 **Overlay:** `@Action types`
 
@@ -150,8 +149,8 @@ glowing quill-hand.
 
 **Visual:** One workbench, two arms of the same creature. The left
 is a Spring steel stamp that prints deterministic results. The
-right is a glowing quill that writes typed LLM objects. A sign
-reads "not every action needs a model."
+right is a glowing quill that writes typed LLM objects. No sign,
+no lettering.
 
 **Overlay:** `code + LLM`
 
@@ -181,9 +180,8 @@ quill-hand.
 ## Scene 4 --- Bolted Toolbox: Tools Attach Per Call
 
 **Visual:** A toolbox is bolted to the quill wrist, not to the
-foundry walls. `@Tool` wrenches sit in the box. A second desk has
-no box and the wrenches are invisible. A tag reads
-`withToolObject`.
+foundry walls. Wrenches sit in the box. A second desk has no box
+and the wrenches are invisible. No tags or lettering.
 
 **Overlay:** `withToolObject`
 
@@ -213,9 +211,8 @@ the labeled one opens.
 ## Scene 5 --- Named Crates: Bindings Beat Latest Wins
 
 **Visual:** Two identical bronze crates. The unlabeled crate is
-latest-wins and swallows the first. The crate stamped
-`outputBinding` opens only for `@RequireNameMatch`. The creature
-hangs both crates from its pipes.
+latest-wins and swallows the first. Only the named crate opens.
+The creature hangs both crates from its pipes. No stamps or lettering.
 
 **Overlay:** `@RequireNameMatch`
 
@@ -299,8 +296,8 @@ and inspect tool calls.
 ## Scene 1 --- Mold Mouth: Typed Create Object
 
 **Visual:** The creature's mouth is a steel mold that only accepts
-a record-shaped ingot. `creating(Story.class)` is engraved on the
-mold. An example ingot sits beside it. A validation stamp waits.
+a record-shaped ingot. An example ingot sits beside it. A
+validation stamp waits. No engraving or lettering.
 
 **Overlay:** `creating(T)`
 
@@ -329,10 +326,10 @@ mold. An example ingot sits beside it. A validation stamp waits.
 
 ## Scene 2 --- Null Pit: Create Object If Possible
 
-**Visual:** Soft clay tries the mold and slumps through a hole
-labeled `null`. A warning lantern glows; nothing explodes. A
-side door marked `REPLAN` opens. The same creature now looks
-half-melted.
+**Visual:** Soft clay tries the mold and slumps through a dark
+hole. A warning lantern glows; nothing explodes. A side door
+swings open toward replan. The same creature now looks
+half-melted. No lettering.
 
 **Overlay:** `createObjectIfPossible`
 
@@ -360,9 +357,9 @@ half-melted.
 
 ## Scene 3 --- Envelope Skin: Messages And Contributors
 
-**Visual:** The clay grows envelope-skin. A `SystemMessage` sash
-and a `UserMessage` sash stack in order. A single fat string
-scroll is crossed out. `fromMessages` is etched on the stack.
+**Visual:** The clay grows envelope-skin. A system-colored sash
+and a user-colored sash stack in order. A single fat string
+scroll is crossed out. No etched words.
 
 **Overlay:** `fromMessages`
 
@@ -392,9 +389,8 @@ scroll is crossed out. `fromMessages` is etched on the stack.
 ## Scene 4 --- Glass Skull: Thinking Traces
 
 **Visual:** A glass skull grows on the envelope body. Inside, a
-ticker prints `<decision_reasoning>`. A gate reads
-`supportsThinking`. A card shows `ThinkingResponse` with result
-plus thinking blocks. A 1.5 badge hangs from the skull.
+silent ticker of thought-light pulses. No printed words, no
+labeled gates, no badge lettering.
 
 **Overlay:** `thinking()`
 
@@ -423,10 +419,9 @@ plus thinking blocks. A 1.5 badge hangs from the skull.
 
 ## Scene 5 --- Conveyor Spine: Streaming Objects
 
-**Visual:** The spine becomes a conveyor. JSON bricks arrive one
-by one and freeze into typed records. A gate reads
-`supportsStreaming`. A stopwatch hangs. A 1.5 badge is riveted
-to the belt.
+**Visual:** The spine becomes a conveyor. Glass-brick packets
+arrive one by one and freeze into typed records. A stopwatch
+hangs. No badges or lettering.
 
 **Overlay:** `createObjectStream`
 
@@ -456,8 +451,9 @@ to the belt.
 ## Scene 6 --- Inspector Clipboard: Tool Call Logs
 
 **Visual:** An inspector clipboard grows as the last organ. It
-photographs every wrench swing from the wrist toolbox. `@LlmTool`
-wrenches hang in view. The mold-mouth then prints a typed plan.
+photographs every wrench swing from the wrist toolbox. Wrenches
+hang in view. The mold-mouth waits to print a typed plan. No
+lettering on the clipboard.
 
 **Overlay:** `withToolCallInspectors`
 
