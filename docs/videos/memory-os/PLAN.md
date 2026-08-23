@@ -1,7 +1,7 @@
 # Memory OS plan (cheat-sheet palace)
 
-Memory OS `b776065` is installed (PR #7: `fit` cycles still ↔ audio
-↔ plan before the delivery gate).
+Memory OS `d551e69` is installed (PR #9: per-locus `must_show` /
+`stamp_text` contract; `fit` only checks those props).
 Authoring lives in [`embabel-cheatsheet.md`](embabel-cheatsheet.md).
 
 ## Goal
@@ -43,11 +43,11 @@ stamped by the engine — stills must not paint lettering.
 
 ## Status
 
-Shipped on memory-os `b776065`: `embabel-cheatsheet.md` → plan →
-enrich → narrate → images → `fit` (3 cycles) → `gate` →
-`docs/videos/recordings/embabel-cheatsheet*.mp4`
-(~16.3 min full, ~8.0 min floor 1, ~7.2 min floor 2).
-Authoring no longer names numbered floor tiles.
+Palace replanned on memory-os `d551e69` (PR #9). Each locus now has a
+`must_show` / `stamp_text` contract written with the narration. Next:
+narrate → images → real contract `fit` → `gate` → render. Hero fields
+are physical objects only (no `OODA` / `UserInput` / `JSON` in the still
+brief); lettering is stamped.
 
 ## Out of scope
 

@@ -31,12 +31,12 @@ plans, then opens a mouth that speaks typed objects.
 
 **Hero:** A glowing bronze type-ingot that starts unlabeled, sprouts
 typed pipes and a compass eye, grows a split workbench and a bolted
-toolbox, then becomes a mold-mouth that can slump to null, wear
-message-skin, think in a glass skull, stream JSON vertebrae, and
-sprout an inspector clipboard.
+toolbox, then becomes a mold-mouth that can slump through a dark hole,
+wear envelope-skin, think in a glass skull, stream glass-brick
+vertebrae, and sprout an inspector clipboard.
 
 **Hero origin:** A sealed unlabeled bronze seed held in the foundry
-gate, stamped only `UserInput`.
+gate.
 
 **Metaphor material:** Warm bronze architecture, glass pipes of
 flowing types, coal-orange light in the foundry, cooler teal light
@@ -103,9 +103,13 @@ Source-order stepping stones are absent. No lettering.
 
 **Metaphor part:** The seed splits into typed pipes.
 
-**Hero from:** Sealed unlabeled bronze seed stamped `UserInput`.
+**Hero from:** Sealed unlabeled bronze seed.
 
-**Hero now:** A pipe-creature whose body is labeled type-tubes.
+**Hero now:** A pipe-creature whose body is glass type-tubes.
+
+**Hero silhouette:** Bronze seed split into a pipe-creature of tubes
+
+**Hero tell:** The body is empty glass pipes, not stepping stones
 
 **Hero becomes:** The lead pipe grows a spinning compass eye.
 
@@ -115,9 +119,10 @@ Source-order stepping stones are absent. No lettering.
 
 ## Scene 2 --- Compass Rotunda: Replan After Every Action
 
-**Visual:** A huge OODA compass spins after every door the
-pipe-creature walks through. Observe, Orient, Decide, Act glow in
-sequence. The creature's lead pipe grows a compass for an eye.
+**Visual:** A huge brass compass spins after every door the
+pipe-creature walks through. Four glowing quadrants pulse in sequence.
+The creature's lead pipe grows a compass for an eye. No painted
+letters on the dial.
 
 **Overlay:** `REPLAN`
 
@@ -135,10 +140,14 @@ sequence. The creature's lead pipe grows a compass for an eye.
 
 **Metaphor part:** The compass eye.
 
-**Hero from:** A pipe-creature of labeled type-tubes.
+**Hero from:** A pipe-creature of glass type-tubes.
 
-**Hero now:** The same creature with a spinning OODA compass for an
+**Hero now:** The same creature with a spinning brass compass for an
 eye.
+
+**Hero silhouette:** Pipe-creature with a spinning compass for an eye
+
+**Hero tell:** The needle twitches after every door
 
 **Hero becomes:** The body splits into a steel stamp-hand and a
 glowing quill-hand.
@@ -173,6 +182,10 @@ no lettering.
 **Hero now:** The creature grows a steel stamp-hand and a glowing
 quill-hand.
 
+**Hero silhouette:** Split-armed creature, stamp-hand and quill-hand
+
+**Hero tell:** One steel stamp-hand, one glowing quill-hand
+
 **Hero becomes:** A toolbox bolts onto the quill wrist only.
 
 ------------------------------------------------------------------------
@@ -203,8 +216,12 @@ and the wrenches are invisible. No tags or lettering.
 
 **Hero now:** A toolbox bolted only onto the quill wrist.
 
+**Hero silhouette:** Quill-armed creature with a wrist toolbox
+
+**Hero tell:** The toolbox is bolted to one wrist only
+
 **Hero becomes:** Two identical crates hang from the pipes; only
-the labeled one opens.
+the named one opens.
 
 ------------------------------------------------------------------------
 
@@ -234,6 +251,10 @@ The creature hangs both crates from its pipes. No stamps or lettering.
 
 **Hero now:** Two crates hang from the pipes; only the named crate
 opens.
+
+**Hero silhouette:** Pipe-creature hanging two bronze crates
+
+**Hero tell:** Only one crate lid swings open
 
 **Hero becomes:** Four hats stack on the compass head.
 
@@ -267,6 +288,10 @@ Same pipe-creature, different hat, different walk.
 **Hero from:** Named crates on the pipes.
 
 **Hero now:** Four hats stacked on the compass head.
+
+**Hero silhouette:** Pipe-creature wearing a stack of four hats
+
+**Hero tell:** Four different hats stacked on the compass head
 
 **Hero becomes:** The creature's mouth becomes a record-shaped
 mold.
@@ -320,7 +345,11 @@ validation stamp waits. No engraving or lettering.
 
 **Hero now:** The mouth is a record-shaped mold.
 
-**Hero becomes:** Soft clay slumps through a hole labeled `null`.
+**Hero silhouette:** Creature whose mouth is a record-shaped mold
+
+**Hero tell:** The mouth only accepts a record-shaped ingot
+
+**Hero becomes:** Soft clay slumps through a dark hole.
 
 ------------------------------------------------------------------------
 
@@ -349,9 +378,13 @@ half-melted. No lettering.
 
 **Hero from:** Record-shaped mold-mouth.
 
-**Hero now:** Half-melted clay slumping through a `null` hole.
+**Hero now:** Half-melted clay slumping through a dark hole.
 
-**Hero becomes:** Envelope-skin labeled System and User.
+**Hero silhouette:** Half-melted clay creature over a dark hole
+
+**Hero tell:** Soft clay slumps through the hole without exploding
+
+**Hero becomes:** Envelope-skin in two stacked sashes.
 
 ------------------------------------------------------------------------
 
@@ -378,9 +411,13 @@ scroll is crossed out. No etched words.
 
 **Metaphor part:** Envelope-skin.
 
-**Hero from:** Half-melted clay at the null hole.
+**Hero from:** Half-melted clay at the dark hole.
 
-**Hero now:** The same body wearing System and User envelopes.
+**Hero now:** The same body wearing stacked system and user envelopes.
+
+**Hero silhouette:** Clay body wearing two stacked envelope sashes
+
+**Hero tell:** Two colored sashes stacked in speaking order
 
 **Hero becomes:** A glass skull with a thinking ticker.
 
@@ -413,7 +450,11 @@ labeled gates, no badge lettering.
 
 **Hero now:** A glass skull ticking decision reasoning.
 
-**Hero becomes:** A conveyor spine of JSON bricks.
+**Hero silhouette:** Envelope body with a ticking glass skull
+
+**Hero tell:** Silent thought-light pulses inside the glass skull
+
+**Hero becomes:** A conveyor spine of glass bricks.
 
 ------------------------------------------------------------------------
 
@@ -442,7 +483,11 @@ hangs. No badges or lettering.
 
 **Hero from:** Glass skull with a thinking ticker.
 
-**Hero now:** A conveyor spine turning JSON into records.
+**Hero now:** A conveyor spine turning glass bricks into records.
+
+**Hero silhouette:** Creature with a conveyor of glass-brick vertebrae
+
+**Hero tell:** Bricks arrive one by one and freeze into records
 
 **Hero becomes:** An inspector clipboard as the last organ.
 
@@ -472,9 +517,13 @@ lettering on the clipboard.
 
 **Metaphor part:** The inspector clipboard.
 
-**Hero from:** Conveyor spine of JSON bricks.
+**Hero from:** Conveyor spine of glass bricks.
 
 **Hero now:** A clipboard organ watching the wrist toolbox.
+
+**Hero silhouette:** Creature with a clipboard as its last organ
+
+**Hero tell:** The clipboard photographs every wrench swing
 
 **Hero becomes:** The finished living foundry, ready for recall.
 
