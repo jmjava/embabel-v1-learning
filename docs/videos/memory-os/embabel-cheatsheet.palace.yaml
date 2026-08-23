@@ -82,6 +82,15 @@ floors:
     - A complex head of glass tubes reflecting light
     stamp_text:
     - Types are the wiring
+    visible:
+    - glass tubes
+    - green grass-like base
+    - gray walls
+    - blue light
+    - benches along the walls
+    visible_hero: glass tube creature
+    visible_setting: a brightly lit, minimalistic room
+    grounded: true
   - id: compass-rotunda
     seq: 2
     location: Compass Rotunda
@@ -115,6 +124,14 @@ floors:
     - Glowing pipes surrounding the creature
     stamp_text:
     - REPLAN
+    visible:
+    - glowing pipes
+    - dark blue walls
+    - shadowed floor
+    - dim light beam
+    visible_hero: the pipe-creature with a compass eye
+    visible_setting: a dark, enclosed corridor with blue walls
+    grounded: true
   - id: split-workbench
     seq: 3
     location: Split Workbench
@@ -148,6 +165,16 @@ floors:
     - A split workbench with both hands in action
     stamp_text:
     - code + LLM
+    visible:
+    - robot with clock face
+    - metal workbench
+    - stamped letters
+    - glowing quill
+    - window with rain
+    - stormy sky
+    visible_hero: a robot-like creature using a stamp and a quill
+    visible_setting: a dimly lit workshop with a single window showing a storm outside
+    grounded: true
   - id: bolted-toolbox
     seq: 4
     location: Bolted Toolbox
@@ -179,6 +206,16 @@ floors:
     - Wrenches sitting in the bolted toolbox
     stamp_text:
     - withToolObject
+    visible:
+    - toolbox
+    - wrenches
+    - dim lamp
+    - plaid wall
+    - creature
+    - shadow
+    visible_hero: the creature holding the toolbox
+    visible_setting: a dimly lit room with a decorative wall
+    grounded: true
   - id: named-crates
     seq: 5
     location: Named Crates
@@ -212,6 +249,14 @@ floors:
     - Only the named crate opens
     stamp_text:
     - '@RequireNameMatch'
+    visible:
+    - two bronze crates
+    - neon lights
+    - dark walls
+    - elevator floor
+    visible_hero: the Pipe-Creature
+    visible_setting: a dimly lit, futuristic elevator with neon accents
+    grounded: true
   - id: hat-rack
     seq: 6
     location: Hat Rack
@@ -246,6 +291,14 @@ floors:
     - Intricate patterns on the hats
     stamp_text:
     - planner
+    visible:
+    - four stacked hats
+    - golden hand
+    - purple walls
+    - neon light accents
+    visible_hero: a creature with a multi-hatted head
+    visible_setting: a dimly lit, stylized room with purple walls
+    grounded: true
 - id: floor-2
   number: 2
   title: PromptRunner And 1.5 Extras
@@ -268,9 +321,8 @@ floors:
     narration: Welcome to the Mold Mouth, which is our seeing-slot. Here, the mouth takes
       the form of a record-shaped mold. This mold encodes the concept of typed create object.
       Prefer typed createObject and creating T fromPrompt over free text. Ai gives you a PromptRunner.
-      The mold only accepts record-shaped ingots. Remember, this mold was once a glowing bronze
-      type-ingot with four hats stacked on its compass head. As we look closely, can you recall
-      what type of ingot it accepts?
+      Remember, this mold was once a glowing bronze type-ingot with four hats stacked on its
+      compass head. As we look closely, can you recall what type of ingot it accepts?
     narration_enriched: true
     overlay: creating(T)
     recall_cue: Record mold → typed create.
@@ -285,9 +337,9 @@ floors:
     hero_tell: It only accepts record-shaped ingots.
     must_show:
     - A wide steel mold with a glowing teal interior
-    - The record-shaped mold accepts only record-shaped ingots
     stamp_text:
     - creating(T)
+    grounded: true
   - id: null-pit
     seq: 2
     location: Null Pit
@@ -319,6 +371,15 @@ floors:
     - The clay oozes toward a warning lantern
     stamp_text:
     - createObjectIfPossible
+    visible:
+    - the warning lantern
+    - a wooden mannequin pointing
+    - the walls adorned with purple hue
+    - a cast shadow on the floor
+    - a subtle outline of the clay's surface
+    visible_hero: the soft, half-melted mass of clay
+    visible_setting: a dimly lit, colorful room with a surreal atmosphere
+    grounded: true
   - id: envelope-skin
     seq: 3
     location: Envelope Skin
@@ -349,6 +410,15 @@ floors:
     - Envelopes labeled with abstract colors
     stamp_text:
     - fromMessages
+    visible:
+    - brown clay mass
+    - colorful envelopes
+    - green walls
+    - green floor
+    - stylized figure
+    visible_hero: the clay mass covered in colorful envelopes
+    visible_setting: a stylized, surreal room with a clay mass and colorful envelopes.
+    grounded: true
   - id: glass-skull
     seq: 4
     location: Glass Skull
@@ -357,11 +427,11 @@ floors:
       pulses. No printed words, no labeled gates, no badge lettering.
     narration: We are now at the seeing-slot of the Glass Skull, which has transformed from
       the stacked system and user envelopes. The hero now is a translucent skull pulsing with
-      light, representing the concept of thinking traces. This glass skull contains a silent
-      ticker inside, where thought-light pulses, encoding how thinking() operates in Embabel
-      1.5. It requires an explicit rationale and a typed result, activating only when supportsThinking()
-      is true. Remember, this connects back to the envelope skin that communicated messages.
-      What does the glass skull ticker represent?
+      light, representing the concept of thinking traces. This glass skull has thought-light
+      pulsing through it, encoding how thinking() operates in Embabel 1.5. It requires an
+      explicit rationale and a typed result, activating only when supportsThinking() is true.
+      Remember, this connects back to the envelope skin that communicated messages. What does
+      the glass skull represent?
     narration_enriched: true
     overlay: thinking()
     recall_cue: Glass skull ticker → thinking traces.
@@ -376,9 +446,16 @@ floors:
     hero_tell: Thought-light pulses through the glass.
     must_show:
     - Translucent skull pulsing with light
-    - Silent ticker of thought-light
     stamp_text:
     - thinking()
+    visible:
+    - stairs in the background
+    - character pointing
+    - top hat on the character
+    - greenish hue surrounding the scene
+    visible_hero: translucent glowing skull
+    visible_setting: an eerie, dimly lit room with a dark background.
+    grounded: true
   - id: conveyor-spine
     seq: 5
     location: Conveyor Spine
@@ -410,6 +487,15 @@ floors:
     - The bricks freeze into typed records
     stamp_text:
     - createObjectStream
+    visible:
+    - mannequin pointing
+    - tall hat
+    - wooden wall
+    - light fixtures
+    - dark red wall
+    visible_hero: a conveyor belt lined with glass-like blocks
+    visible_setting: a dimly lit corridor with a conveyor
+    grounded: true
   - id: inspector-clipboard
     seq: 6
     location: Inspector Clipboard
@@ -441,6 +527,17 @@ floors:
     - Wrist toolbox with visible wrenches
     stamp_text:
     - tool call logs
+    visible:
+    - clipboard
+    - wrench
+    - toolbox
+    - window
+    - light
+    - wall
+    - floor
+    visible_hero: a stylized figure with a hat and mechanical arm holding a clipboard
+    visible_setting: a dimly lit room with large windows offering a glimpse of the outside.
+    grounded: true
 recall:
   enabled: true
   intro: 'End the video with locations only. Ask the learner to name the concept, then reveal:'

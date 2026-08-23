@@ -43,11 +43,9 @@ stamped by the engine — stills must not paint lettering.
 
 ## Status
 
-Palace replanned on memory-os `d551e69` (PR #9). Each locus now has a
-`must_show` / `stamp_text` contract written with the narration. Next:
-narrate → images → real contract `fit` → `gate` → render. Hero fields
-are physical objects only (no `OODA` / `UserInput` / `JSON` in the still
-brief); lettering is stamped.
+Films rebuilt on memory-os `d551e69` (PR #9 contract). `fit` checked
+`must_show` items only (not the old bag-of-words lecture). Gate passed.
+Published lengths: full ~12.2 min, floor 1 ~5.5 min, floor 2 ~5.7 min.
 
 ## Out of scope
 
