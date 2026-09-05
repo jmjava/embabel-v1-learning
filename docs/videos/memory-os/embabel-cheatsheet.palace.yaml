@@ -40,6 +40,7 @@ floors:
     the process replans after every action, tools attach per call, and planner choice is a
     product decision.'
   recall_route: Types → Replan → Code+LLM → Per-call tools → Named bindings → Planner hats
+  frozen: true
   metaphor:
     region: The Foundry
     role: Mental Model
@@ -305,6 +306,7 @@ floors:
   objective: Remember how Ai and PromptRunner create typed objects, fail softly, speak in
     messages, and — on Embabel 1.5 — think, stream, and inspect tool calls.
   recall_route: creating → ifPossible → fromMessages → thinking → stream → inspectors
+  frozen: true
   metaphor:
     region: The Model-Mouth
     role: PromptRunner And 1.5 Extras

@@ -2,8 +2,9 @@
 
 Primary renderer: [jmjava/memory-os](https://github.com/jmjava/memory-os)
 (private; Cloud Agents use `BROAD_REPO_TOKEN` to install the CLI).
-Installed HEAD for this generation: `d551e69` (PR #9 scene contract:
-`must_show` + `stamp_text`, then narrate → images → `fit` → gate).
+Installed HEAD for this generation: `8822fcb` (PR #10 incremental freeze
+on top of the PR #9 scene contract: `must_show` + `stamp_text`, then
+narrate → images → `fit` → gate).
 
 Study source: [`docs/CHEATSHEET.md`](../../CHEATSHEET.md).
 This is **not** a filmed walkthrough of cookbook travel recipes.
@@ -33,6 +34,7 @@ memoryos images  docs/videos/memory-os/embabel-cheatsheet.palace.yaml --dry-run
 memoryos fit     docs/videos/memory-os/embabel-cheatsheet.palace.yaml --dry-run
 memoryos gate    docs/videos/memory-os/embabel-cheatsheet.palace.yaml --spec-only
 memoryos build   docs/videos/memory-os/embabel-cheatsheet.palace.yaml --force
+memoryos freeze  docs/videos/memory-os/embabel-cheatsheet.palace.yaml floor-1 floor-2
 ```
 
 Build order is narrate → images → fit → gate → render.

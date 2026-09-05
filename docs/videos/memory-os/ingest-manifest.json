@@ -6,6 +6,7 @@
   "cookbook_repo": "https://github.com/embabel/embabel-cookbook",
   "cookbook_docs": "https://docs.embabel.com/embabel-cookbook/1.5.0/",
   "memory_os_repo": "https://github.com/jmjava/memory-os",
+  "memory_os_sha": "8822fcb5ae813f491daeff7d5f37fce7ff10d213",
   "renderer": {
     "primary": "https://github.com/jmjava/memory-os",
     "fallback": "https://github.com/jmjava/documentation-generator"

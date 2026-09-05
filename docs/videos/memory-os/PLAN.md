@@ -1,7 +1,8 @@
 # Memory OS plan (cheat-sheet palace)
 
-Memory OS `d551e69` is installed (PR #9: per-locus `must_show` /
-`stamp_text` contract; `fit` only checks those props).
+Memory OS `8822fcb` is installed (PR #10 incremental freeze on the
+PR #9 per-locus `must_show` / `stamp_text` contract; `fit` only checks
+those props).
 Authoring lives in [`embabel-cheatsheet.md`](embabel-cheatsheet.md).
 
 ## Goal
@@ -43,9 +44,10 @@ stamped by the engine — stills must not paint lettering.
 
 ## Status
 
-Films rebuilt on memory-os `d551e69` (PR #9 contract). `fit` checked
-`must_show` items only (not the old bag-of-words lecture). Gate passed.
-Published lengths: full ~12.2 min, floor 1 ~5.5 min, floor 2 ~5.7 min.
+Films rebuilt on memory-os `8822fcb` (PR #10 freeze + PR #9 contract).
+`fit` checked `must_show` items only (not the old bag-of-words lecture).
+Finished floors are frozen so later `--force` cannot rewrite them.
+Published lengths: full ~12.3 min, floor 1 ~5.4 min, floor 2 ~5.8 min.
 
 ## Out of scope
 
