@@ -73,3 +73,5 @@ The original request asked for an extensive Embabel demo with Java+Kotlin, linka
 - [x] Printable cheat sheet PDF (`docs/print/embabel-cheatsheet.pdf`, regenerator script)
 - [x] Flashcard quiz per lesson (`docs/QUIZ_FLASHCARDS.md`)
 - [x] 60–90 minute checkbox review circuit (`docs/REVIEW_CIRCUIT.md`)
+- [x] Curated external reading (`docs/READING.md`)
+- [x] Memory OS study campus: categories + hero evolutions (`docs/videos/memory-os/STUDY_CAMPUS.md`)

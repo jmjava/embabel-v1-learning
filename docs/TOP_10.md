@@ -56,4 +56,6 @@ Shell/MCP/A2A discover goals via `@Export`. Application code should call `AgentI
 14. Guardrail `CRITICAL` blocks execution  
 15. Kotlin DSL is great for compact flows; annotations still win for most Java teams  
 
-Study path: [`WALKTHROUGH.md`](WALKTHROUGH.md) → lesson code → [`CHEATSHEET.md`](CHEATSHEET.md).
+Study path: [`WALKTHROUGH.md`](WALKTHROUGH.md) → lesson code → [`CHEATSHEET.md`](CHEATSHEET.md).  
+Memorize with palaces: [`videos/memory-os/STUDY_CAMPUS.md`](videos/memory-os/STUDY_CAMPUS.md).  
+Blogs: [`READING.md`](READING.md).

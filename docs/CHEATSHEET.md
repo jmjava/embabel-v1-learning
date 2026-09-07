@@ -167,3 +167,5 @@ Full map: [`BREAKPOINTS.md`](BREAKPOINTS.md).
 - StuckHandler recovers — it doesn't fix a bad domain model
 - Official cookbook is recipes; this page is the recall list
 - Memory OS palace: cheat-sheet films — [`videos/memory-os/embabel-cheatsheet.md`](videos/memory-os/embabel-cheatsheet.md)
+- Memory OS study campus (all concepts, hero evolutions) — [`videos/memory-os/STUDY_CAMPUS.md`](videos/memory-os/STUDY_CAMPUS.md)
+- External blogs — [`READING.md`](READING.md)

@@ -15,6 +15,8 @@ Type `emb-` in a `.java` / `.kt` file. Full list: [`.vscode/SNIPPETS.md`](../.vs
 | Doc | Use it for |
 |-----|------------|
 | [`CHEATSHEET.md`](CHEATSHEET.md) | **Start here** — extracted API / planner rules |
+| [`READING.md`](READING.md) | Blogs that add motivation / next modules |
+| [`videos/memory-os/STUDY_CAMPUS.md`](videos/memory-os/STUDY_CAMPUS.md) | **Memorize all key concepts** — categories + hero walks |
 | [`VERSIONS.md`](VERSIONS.md) | 1.0 default vs `-Pembabel-15` |
 | [`TOP_10.md`](TOP_10.md) | The ten ideas to memorize |
 | [`print/embabel-cheatsheet.pdf`](print/embabel-cheatsheet.pdf) | **Printable PDF** cheat sheet |
@@ -35,6 +37,7 @@ Type `emb-` in a `.java` / `.kt` file. Full list: [`.vscode/SNIPPETS.md`](../.vs
 6. Read the agent/service class — follow `{@link}` / KDoc cross-links to counterparts.
 7. Debug the matching `*GuidedTest` (breakpoints are declared with `@DebugGuide`).
 8. Drill with [`QUIZ_FLASHCARDS.md`](QUIZ_FLASHCARDS.md); compare languages in [`JAVA_VS_KOTLIN.md`](JAVA_VS_KOTLIN.md).
+9. Memorize with one Memory OS palace at a time: [`videos/memory-os/STUDY_CAMPUS.md`](videos/memory-os/STUDY_CAMPUS.md). Recite the recall route, then read the mapped blog in [`READING.md`](READING.md).
 
 Generate API docs:
 
@@ -66,7 +69,9 @@ Generate API docs:
 
 Lessons 16–21 compile only with `./mvnw test -Pembabel-15`. They illustrate cheat-sheet rules, not a second cookbook.
 
-Official-source map: [`COOKBOOK_15.md`](COOKBOOK_15.md). Memory OS: [`videos/memory-os/PLAN.md`](videos/memory-os/PLAN.md) (no generation yet).
+Official-source map: [`COOKBOOK_15.md`](COOKBOOK_15.md).  
+Blogs: [`READING.md`](READING.md).  
+Memory OS: filmed cheat-sheet [`videos/memory-os/PLAN.md`](videos/memory-os/PLAN.md); study campus (all concepts, hero evolutions) [`videos/memory-os/STUDY_CAMPUS.md`](videos/memory-os/STUDY_CAMPUS.md).
 
 ## Official docs cross-reference
 

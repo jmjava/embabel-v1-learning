@@ -9,13 +9,24 @@ narrate → images → `fit` → gate).
 Study source: [`docs/CHEATSHEET.md`](../../CHEATSHEET.md).
 This is **not** a filmed walkthrough of cookbook travel recipes.
 
+## Study campus (memorize every key concept)
+
+Category / subcategory map and hero-evolution palaces for Memory OS:
+
+- [`STUDY_CAMPUS.md`](STUDY_CAMPUS.md) — taxonomy + recall routes
+- [`CONVENTIONS.md`](CONVENTIONS.md) — palace authoring contract
+- [`heroes/`](heroes/) — one evolving hero per category (authoring; not compiled yet)
+- [`../../READING.md`](../../READING.md) — blogs mapped onto those categories
+
+Filmed track remains the Type-Foundry cheat-sheet palace below.
+
 ## Bundle
 
 | File | Role |
 |------|------|
 | `embabel-cheatsheet.md` | Palace Markdown (authoring) |
 | `embabel-cheatsheet.palace.yaml` | Compiled + planned + enriched engine spec |
-| `ingest-manifest.json` | Locus ↔ lesson ↔ cheat-sheet map |
+| `ingest-manifest.json` | Locus ↔ lesson ↔ cheat-sheet map; `campus_palaces` stubs |
 | `PLAN.md` | Locus table used to author the palace |
 
 Generated assets stay local and are gitignored: `images/`, `audio/`, `build/`.

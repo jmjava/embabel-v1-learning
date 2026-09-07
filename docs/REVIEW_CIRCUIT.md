@@ -21,6 +21,7 @@ Related: [`TOP_10.md`](TOP_10.md) · [`CHEATSHEET.md`](CHEATSHEET.md) · [`CHAPT
 
 - [ ] Skim [`TOP_10.md`](TOP_10.md) (all 10)
 - [ ] Skim [`CHEATSHEET.md`](CHEATSHEET.md) mental model + annotations + planners
+- [ ] Optional: recite one Memory OS recall route from [`videos/memory-os/STUDY_CAMPUS.md`](videos/memory-os/STUDY_CAMPUS.md)
 - [ ] Optional: open PDF and mark 3 things you always forget
 
 ### Block 2 — Canonical agent (15 min)
