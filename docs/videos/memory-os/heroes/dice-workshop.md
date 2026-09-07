@@ -11,19 +11,25 @@ tools are opt-in, and ToolCallContext never enters the JSON schema.
 **Learning method:** Method of loci. One locus = one concept.
 
 **Video style:** First-person workshop. Every locus is the next organ
-of the Customer-Golem. No lettering in stills.
+of the shop-window mannequin. No lettering in stills.
 
 **Narration style:** Mnemonic first, then the rule.
 
 **Metaphor:** A bank-support workshop. The customer statue comes alive
 and grows tools from its own pockets.
 
-**Hero:** A bronze customer-golem. Sewn pockets unzip into wrenches;
-one pocket stays sewn; a toolbox bolts onto a single handshake; a web
-satchel, a clock-hand, and a sealed coat-envelope finish the body.
+**Hero:** A bronze shop-window mannequin. Sewn pockets unzip into
+wrenches; one pocket stays sewn; a toolbox bolts onto a single
+handshake; a web satchel, a clock-hand, and a sealed coat-envelope
+finish the body.
 
-**Hero origin:** A customer statue with every pocket sewn shut — a
-domain record with no tools exposed.
+**Chassis:** a bronze shop-window mannequin
+
+**Hero origin:** A bronze shop mannequin with every pocket sewn shut.
+
+**Camera:** first-person, eye-level, wide-angle, standing just inside the threshold, looking at the next organ of the same hero
+
+**Hero scale:** the hero is architectural — it fills at least 40% of the frame and is the first thing the eye hits
 
 **Metaphor material:** Bank-bronze, leather pockets, coal-orange lamps.
 
@@ -50,7 +56,7 @@ functions. Attachment is narrow. Secrets stay off the schema.
 
 **Metaphor region:** The Pocket Forge
 
-**Hero stage:** Statue becomes a tool-bodied golem
+**Hero stage:** Sewn statue becomes a tool-bodied mannequin
 
 **Metaphor entry:** Sewn-shut statue
 
@@ -78,15 +84,18 @@ not as a fog of strings.
 
 **Metaphor part:** head-slot
 
-**Hero from:** A customer statue with sewn-shut pockets.
+**Hero from:** A bronze shop mannequin with every pocket sewn shut.
 
-**Hero now:** The same statue alive as a person-shaped domain golem.
+**Hero now:** The same mannequin alive as a person-shaped domain statue, pockets still sewn.
 
-**Hero silhouette:** Bronze customer-golem, pockets still sewn
+**Hero silhouette:** Bronze customer-mannequin, pockets still sewn.
 
-**Hero tell:** Skin is structured pockets, not fog
+**Hero tell:** Skin is structured pockets, not fog.
 
-**Hero becomes:** Wrenches unzip from selected pockets.
+**Hero shot:** Front of the living mannequin, sewn pockets catching light.
+
+**Hero becomes:** The same mannequin with selected pockets unzipped into wrenches, clamped to one desk.
+
 
 **Key distinction:** Domain is the bridge to existing systems.
 
@@ -94,8 +103,8 @@ not as a fog of strings.
 
 ## Scene 2 --- Unzipped Wrenches: @Tool + withToolObject
 
-**Visual:** Selected pockets unzip. Wrenches (tool methods) only
-exist while a handshake-clamp holds that golem to one prompt desk.
+**Visual:** Selected pockets unzip. Wrenches only exist while a
+handshake-clamp holds that mannequin to one prompt desk.
 
 **Overlay:** `withToolObject`
 
@@ -113,16 +122,18 @@ exist while a handshake-clamp holds that golem to one prompt desk.
 
 **Metaphor part:** seeing-slot
 
-**Hero from:** Living customer-golem with sewn pockets.
+**Hero from:** The same mannequin alive as a person-shaped domain statue, pockets still sewn.
 
-**Hero now:** The same golem with selected pockets unzipped into
-wrenches, clamped to one desk.
+**Hero now:** The same mannequin with selected pockets unzipped into wrenches, clamped to one desk.
 
-**Hero silhouette:** Golem with unzipped wrench-pockets at one desk
+**Hero silhouette:** Mannequin with unzipped wrench-pockets at one desk.
 
-**Hero tell:** Clamp on one handshake; other desks have no wrenches
+**Hero tell:** Clamp on one handshake; other desks have no wrenches.
 
-**Hero becomes:** One pocket refuses to unzip.
+**Hero shot:** Close on unzipped wrenches clamped to one desk.
+
+**Hero becomes:** The same mannequin with one pocket still sewn shut.
+
 
 **Key distinction:** Annotation without attachment is a silent bug.
 
@@ -130,8 +141,8 @@ wrenches, clamped to one desk.
 
 ## Scene 3 --- Sewn Pocket: Unannotated Stays Private
 
-**Visual:** One pocket stays sewn. A hidden note (`internalRiskNote`)
-never becomes a wrench. The model cannot pick it.
+**Visual:** One pocket stays sewn. A hidden note never becomes a
+wrench. The model cannot pick it.
 
 **Overlay:** `private`
 
@@ -149,16 +160,18 @@ never becomes a wrench. The model cannot pick it.
 
 **Metaphor part:** hearing-slot
 
-**Hero from:** Golem with unzipped wrench-pockets.
+**Hero from:** The same mannequin with selected pockets unzipped into wrenches, clamped to one desk.
 
-**Hero now:** The same golem with one pocket still sewn shut.
+**Hero now:** The same mannequin with one pocket still sewn shut.
 
-**Hero silhouette:** Wrench-golem with one stubborn sewn pocket
+**Hero silhouette:** Wrench-mannequin with one stubborn sewn pocket.
 
-**Hero tell:** A hidden note inside the sewn pocket, no wrench there
+**Hero tell:** A hidden note inside the sewn pocket, no wrench there.
 
-**Hero becomes:** The clamp proves the toolbox is on the desk, not
-the building.
+**Hero shot:** One sewn pocket in the foreground, wrenches behind.
+
+**Hero becomes:** The same mannequin whose wrench-belt is bolted to a single desk.
+
 
 **Key distinction:** Privacy is the default; exposure is opt-in.
 
@@ -167,7 +180,8 @@ the building.
 ## Scene 4 --- Desk Clamp: Per PromptRunner
 
 **Visual:** The wrench-belt is bolted to one prompt desk. A second
-desk in the same workshop has no belt. The golem’s body is unchanged.
+desk in the same workshop has no belt. The mannequin’s body is
+unchanged.
 
 **Overlay:** `PromptRunner`
 
@@ -185,16 +199,18 @@ desk in the same workshop has no belt. The golem’s body is unchanged.
 
 **Metaphor part:** scent-slot
 
-**Hero from:** Golem with one sewn pocket.
+**Hero from:** The same mannequin with one pocket still sewn shut.
 
-**Hero now:** The same golem whose wrench-belt is bolted to a single
-desk.
+**Hero now:** The same mannequin whose wrench-belt is bolted to a single desk.
 
-**Hero silhouette:** Sewn-pocket golem bolted to one prompt desk
+**Hero silhouette:** Sewn-pocket mannequin bolted to one prompt desk.
 
-**Hero tell:** Second empty desk beside it
+**Hero tell:** Second empty desk beside it.
 
-**Hero becomes:** A web-satchel hangs from the clamped belt.
+**Hero shot:** Belt bolted to one desk; empty desk beside.
+
+**Hero becomes:** The same mannequin with a web-satchel hanging from the belt.
+
 
 **Key distinction:** Agent-scoped tools are a mental bug.
 
@@ -221,15 +237,18 @@ from the belt. Some instruments only work if a provider lamp is lit.
 
 **Metaphor part:** passage-slot
 
-**Hero from:** Golem bolted to one desk.
+**Hero from:** The same mannequin whose wrench-belt is bolted to a single desk.
 
-**Hero now:** The same golem with a web-satchel hanging from the belt.
+**Hero now:** The same mannequin with a web-satchel hanging from the belt.
 
-**Hero silhouette:** Desk-bolted golem with a bundled instrument satchel
+**Hero silhouette:** Desk-bolted mannequin with a bundled instrument satchel.
 
-**Hero tell:** Provider lamp must be lit or instruments stay dull
+**Hero tell:** Provider lamp must be lit or instruments stay dull.
 
-**Hero becomes:** A clock-hand grows from a custom pocket.
+**Hero shot:** Satchel hanging from the belt, dull instruments until the lamp.
+
+**Hero becomes:** The same mannequin with a custom clock-hand grown from one pocket.
+
 
 **Key distinction:** Bundles are not magically global either.
 
@@ -238,7 +257,7 @@ from the belt. Some instruments only work if a provider lamp is lit.
 ## Scene 6 --- Clock Hand: @LlmTool
 
 **Visual:** A custom clock-hand sprouts from a workshop pocket,
-discovered only when a stamp presses `Tool.fromInstance`.
+discovered only when a stamp-press kisses that pocket.
 
 **Overlay:** `@LlmTool`
 
@@ -256,16 +275,18 @@ discovered only when a stamp presses `Tool.fromInstance`.
 
 **Metaphor part:** vault-slot
 
-**Hero from:** Golem with a web-satchel.
+**Hero from:** The same mannequin with a web-satchel hanging from the belt.
 
-**Hero now:** The same golem with a custom clock-hand from one pocket.
+**Hero now:** The same mannequin with a custom clock-hand grown from one pocket.
 
-**Hero silhouette:** Satchel-golem with a clock-hand tool
+**Hero silhouette:** Satchel-mannequin with a clock-hand tool.
 
-**Hero tell:** Stamp press beside the clock-hand; hand hidden until stamped
+**Hero tell:** Stamp press beside the clock-hand; hand hidden until stamped.
 
-**Hero becomes:** A sealed envelope slides under the coat, never
-shown to the wrenches.
+**Hero shot:** Clock-hand growing from a pocket at the stamp press.
+
+**Hero becomes:** The same mannequin with a sealed envelope under the coat.
+
 
 **Key distinction:** `@LlmTool` and domain `@Tool` are different
 attachments with the same per-call rule.
@@ -274,8 +295,8 @@ attachments with the same per-call rule.
 
 ## Scene 7 --- Coat Envelope: ToolCallContext
 
-**Visual:** A sealed envelope under the coat (tenant, auth). Wrenches
-cannot read it. It never enters the tool JSON.
+**Visual:** A sealed envelope under the coat. Wrenches cannot read it.
+It never becomes a tool in the box.
 
 **Overlay:** `ToolCallContext`
 
@@ -293,15 +314,18 @@ cannot read it. It never enters the tool JSON.
 
 **Metaphor part:** works-slot
 
-**Hero from:** Golem with a clock-hand.
+**Hero from:** The same mannequin with a custom clock-hand grown from one pocket.
 
-**Hero now:** The same golem with a sealed envelope under the coat.
+**Hero now:** The same mannequin with a sealed envelope under the coat.
 
-**Hero silhouette:** Clock-hand golem with a coat-hidden envelope
+**Hero silhouette:** Clock-hand mannequin with a coat-hidden envelope.
 
-**Hero tell:** Envelope under the coat; wrenches cannot open it
+**Hero tell:** Envelope under the coat; wrenches cannot open it.
 
-**Hero becomes:** The finished workshop golem, ready for recall.
+**Hero shot:** Coat lifted just enough to show the sealed envelope.
+
+**Hero becomes:** The finished bronze shop-window mannequin, ready for recall.
+
 
 **Key distinction:** Schema ≠ security context.
 
@@ -313,10 +337,15 @@ cannot read it. It never enters the tool JSON.
 
 # 3. Final Active-Recall Sequence
 
-Unzip, sewn, clamp, satchel, clock, envelope. Name which one the model
-never sees.
+End the video with locations only. Ask the learner to name the
+concept, then reveal:
 
-------------------------------------------------------------------------
+### Floor 1
+
+**Domain as tools**
+
+`DICE → Tool → Private → Per-call → Groups → LlmTool → ToolCallContext`
+
 
 # 4. Study Map
 

@@ -11,20 +11,25 @@ debugger stops.
 **Learning method:** Method of loci. One locus = one concept.
 
 **Video style:** First-person vault. Every locus is the next organ of
-the Gate-Warden. No lettering in stills.
+the walking palace-gate. No lettering in stills.
 
 **Narration style:** Mnemonic first, then the rule.
 
 **Metaphor:** The city gate. The warden *is* the safety and the
 doorbell.
 
-**Hero:** A bronze gate-warden. CRITICAL weld-bars → two rail kinds →
-seed pouch → replan compass vs sealed tomb → hide-cloak → doorbell
-shaped like the gift → options cloak → export key → fake-mirror →
-debugger spyglass.
+**Hero:** An iron palace-gate that learned to walk. Weld-bars → two
+rail-grates → seed pouch → replan compass vs sealed tomb → hide-cloak
+→ gift-shaped doorbell → options cloak → export key → skeletal
+mirror → five-notch spyglass.
 
-**Hero origin:** An open gate with no lock — an agent that would talk
-to anyone.
+**Chassis:** an iron palace-gate that learned to walk
+
+**Hero origin:** An open iron gate with no lock.
+
+**Camera:** first-person, eye-level, wide-angle, standing just inside the threshold, looking at the next organ of the same hero
+
+**Hero scale:** the hero is architectural — it fills at least 40% of the frame and is the first thing the eye hits
 
 **Metaphor material:** Cold bronze bars, warning-orange welds, a little
 teal on the invoke floor.
@@ -78,15 +83,18 @@ the gate never speaks.
 
 **Metaphor part:** head-slot
 
-**Hero from:** An open gate with no lock.
+**Hero from:** An open iron gate with no lock.
 
-**Hero now:** The same gate-warden with CRITICAL bars welded shut.
+**Hero now:** The same gate-warden with weld-bars fused shut across the mouth.
 
-**Hero silhouette:** Gate-figure with glowing weld-bars across the mouth
+**Hero silhouette:** Gate-figure with glowing weld-bars across the mouth.
 
-**Hero tell:** Bars fully welded; log-bowl catching lesser sparks
+**Hero tell:** Bars fully welded; a log-bowl catching lesser sparks.
 
-**Hero becomes:** Two different rails grow — inbound and outbound.
+**Hero shot:** Weld-bars filling the mouth of the gate.
+
+**Hero becomes:** The same gate-warden with an inbound grate and an outbound grate.
+
 
 **Key distinction:** Severity is the difference between log and halt.
 
@@ -113,16 +121,18 @@ checks what the mouth says. Same warden, two inspections.
 
 **Metaphor part:** seeing-slot
 
-**Hero from:** Warden with CRITICAL weld-bars.
+**Hero from:** The same gate-warden with weld-bars fused shut across the mouth.
 
-**Hero now:** The same warden with inbound and outbound inspection
-grates.
+**Hero now:** The same gate-warden with an inbound grate and an outbound grate.
 
-**Hero silhouette:** Barred warden with two separate grates
+**Hero silhouette:** Barred warden with two separate grates.
 
-**Hero tell:** Visitors checked on the way in; speech checked on the way out
+**Hero tell:** Visitors checked on the way in; speech checked on the way out.
 
-**Hero becomes:** A seed pouch grows for when the path dies.
+**Hero shot:** Two grates, inbound and outbound.
+
+**Hero becomes:** The same gate-warden pouring a fact-seed from a pouch.
+
 
 **Key distinction:** Two directions, two interfaces.
 
@@ -150,15 +160,18 @@ domain heart does not get rewritten.
 
 **Metaphor part:** hearing-slot
 
-**Hero from:** Warden with twin grates.
+**Hero from:** The same gate-warden with an inbound grate and an outbound grate.
 
-**Hero now:** The same warden pouring a fact-seed from a pouch.
+**Hero now:** The same gate-warden pouring a fact-seed from a pouch.
 
-**Hero silhouette:** Twin-grate warden with a seed pouch
+**Hero silhouette:** Twin-grate warden with a seed pouch.
 
-**Hero tell:** A small bronze dog-seed on the floor; domain heart untouched
+**Hero tell:** A small bronze dog-seed on the floor; the domain heart untouched.
 
-**Hero becomes:** A compass in one hand, a sealed tomb in the other.
+**Hero shot:** Seed pouch pouring a small bronze dog.
+
+**Hero becomes:** The same gate-warden holding a replan-compass in one hand and a sealed tomb in the other.
+
 
 **Key distinction:** Recovery ≠ remodeling.
 
@@ -185,15 +198,18 @@ when nothing can be done. The warden chooses.
 
 **Metaphor part:** scent-slot
 
-**Hero from:** Warden with a seed pouch.
+**Hero from:** The same gate-warden pouring a fact-seed from a pouch.
 
-**Hero now:** The same warden holding a replan-compass and a sealed tomb.
+**Hero now:** The same gate-warden holding a replan-compass in one hand and a sealed tomb in the other.
 
-**Hero silhouette:** Seed-warden with a compass in one hand and a tomb in the other
+**Hero silhouette:** Seed-warden with a compass in one hand and a tomb in the other.
 
-**Hero tell:** Two distinct objects, one per hand
+**Hero tell:** Two distinct objects, one per hand.
 
-**Hero becomes:** A cloak that hides an object without burning it.
+**Hero shot:** Compass in one hand, tomb in the other.
+
+**Hero becomes:** The same gate-warden cloaking an ingot while a history-chest stays full.
+
 
 **Key distinction:** Two outcomes; do not collapse them.
 
@@ -220,15 +236,18 @@ history-chest behind the gate. It is only gone from consideration.
 
 **Metaphor part:** passage-slot
 
-**Hero from:** Warden with compass and tomb.
+**Hero from:** The same gate-warden holding a replan-compass in one hand and a sealed tomb in the other.
 
-**Hero now:** The same warden cloaking an ingot; chest still full.
+**Hero now:** The same gate-warden cloaking an ingot while a history-chest stays full.
 
-**Hero silhouette:** Compass-warden draping a cloak over an ingot
+**Hero silhouette:** Compass-warden draping a cloak over an ingot.
 
-**Hero tell:** History-chest visible behind the cloak
+**Hero tell:** History-chest visible behind the cloak.
 
-**Hero becomes:** A doorbell shaped like the gift it wants.
+**Hero shot:** Cloak over an ingot; chest still full.
+
+**Hero becomes:** The same gate-warden whose doorbell is cut in the shape of the goal gift.
+
 
 ### Floor 1 Recall Route
 
@@ -272,15 +291,18 @@ a matching gift rings the warden. Selection by return type.
 
 **Metaphor part:** vault-slot
 
-**Hero from:** Warden cloaking an ingot.
+**Hero from:** The same gate-warden cloaking an ingot while a history-chest stays full.
 
-**Hero now:** The same warden whose doorbell is shaped like the goal gift.
+**Hero now:** The same gate-warden whose doorbell is cut in the shape of the goal gift.
 
-**Hero silhouette:** Cloaked warden with a goal-shaped doorbell
+**Hero silhouette:** Cloaked warden with a goal-shaped doorbell.
 
-**Hero tell:** Only a matching-shaped gift rings it
+**Hero tell:** Only a matching-shaped gift rings it.
 
-**Hero becomes:** A cloak of knobs — verbosity, budget, tool envelope.
+**Hero shot:** Doorbell cut as a gift-shape.
+
+**Hero becomes:** The same gate-warden wearing an options cloak with three clasps.
+
 
 **Key distinction:** You call the goal type, not a string name by habit.
 
@@ -308,15 +330,18 @@ the workshop (tool-call context). Child wardens wear the same cloak.
 
 **Metaphor part:** works-slot
 
-**Hero from:** Warden with a gift doorbell.
+**Hero from:** The same gate-warden whose doorbell is cut in the shape of the goal gift.
 
-**Hero now:** The same warden wearing an options cloak with three clasps.
+**Hero now:** The same gate-warden wearing an options cloak with three clasps.
 
-**Hero silhouette:** Doorbell-warden in a three-clasp cloak
+**Hero silhouette:** Doorbell-warden in a three-clasp cloak.
 
-**Hero tell:** Child warden in the same cloak standing behind
+**Hero tell:** A child warden in the same cloak standing behind.
 
-**Hero becomes:** The keyhole from the armory appears in the gate.
+**Hero shot:** Three clasps on the cloak, child warden behind.
+
+**Hero becomes:** The same gate-warden with an export keyhole in the vault door.
+
 
 **Key distinction:** Options are the production envelope.
 
@@ -325,7 +350,8 @@ the workshop (tool-call context). Child wardens wear the same cloak.
 ## Scene 3 --- Export Key: @Export again at the edge
 
 **Visual:** The armory keyhole reappears in the vault door. Shell,
-MCP, A2A keys. A lock-disc waits for later security (Greenhouse).
+remote-protocol, and handshake keys. A lock-disc waits for later
+security in the greenhouse.
 
 **Overlay:** `@Export`
 
@@ -343,16 +369,18 @@ MCP, A2A keys. A lock-disc waits for later security (Greenhouse).
 
 **Metaphor part:** grasp-slot
 
-**Hero from:** Warden in an options cloak.
+**Hero from:** The same gate-warden wearing an options cloak with three clasps.
 
-**Hero now:** The same warden with the export keyhole in the vault door.
+**Hero now:** The same gate-warden with an export keyhole in the vault door.
 
-**Hero silhouette:** Cloaked warden beside a keyhole door and a lock-disc
+**Hero silhouette:** Cloaked warden beside a keyhole door and a lock-disc.
 
-**Hero tell:** Lock-disc present but unused — later palace
+**Hero tell:** Lock-disc present but unused — later palace.
 
-**Hero becomes:** A mirror that only reflects prompt-structure, not
-poetry.
+**Hero shot:** Keyhole in the vault door with an unused lock-disc.
+
+**Hero becomes:** The same gate-warden holding a skeletal prompt-mirror.
+
 
 **Key distinction:** Discovery and invocation are both explicit.
 
@@ -380,15 +408,18 @@ mirror.
 
 **Metaphor part:** stand-slot
 
-**Hero from:** Warden at the export keyhole.
+**Hero from:** The same gate-warden with an export keyhole in the vault door.
 
-**Hero now:** The same warden holding a fake-structure mirror.
+**Hero now:** The same gate-warden holding a skeletal prompt-mirror.
 
-**Hero silhouette:** Keyhole-warden with a skeletal prompt-mirror
+**Hero silhouette:** Keyhole-warden with a skeletal prompt-mirror.
 
-**Hero tell:** Mirror shows bones, not verses
+**Hero tell:** Mirror shows bones, not verses.
 
-**Hero becomes:** A spyglass aimed at the five first stops.
+**Hero shot:** Skeletal prompt-mirror close-up.
+
+**Hero becomes:** The same gate-warden aiming a five-notch spyglass.
+
 
 **Key distinction:** Fakes make the curriculum offline-first.
 
@@ -396,9 +427,9 @@ mirror.
 
 ## Scene 5 --- Spyglass: Debug First Stops
 
-**Visual:** A spyglass with five notches: action entry, createObject
-line, return/post, condition/planner, goal bell. The guided test is
-the path.
+**Visual:** A spyglass with five notches: action entry, mold-line,
+return-post, condition-planner, goal bell. The guided test is the
+path.
 
 **Overlay:** `@DebugGuide`
 
@@ -416,15 +447,18 @@ the path.
 
 **Metaphor part:** exit-slot
 
-**Hero from:** Warden with a fake-structure mirror.
+**Hero from:** The same gate-warden holding a skeletal prompt-mirror.
 
-**Hero now:** The same warden aiming a five-notch spyglass.
+**Hero now:** The same gate-warden aiming a five-notch spyglass.
 
-**Hero silhouette:** Mirror-warden with a five-notch spyglass
+**Hero silhouette:** Mirror-warden with a five-notch spyglass.
 
-**Hero tell:** Five distinct notches on the spyglass
+**Hero tell:** Five distinct notches on the spyglass.
 
-**Hero becomes:** The finished vault warden, ready for recall.
+**Hero shot:** Five-notch spyglass aimed at the walk.
+
+**Hero becomes:** The finished iron palace-gate that learned to walk, ready for recall.
+
 
 **Key distinction:** Tests are the guided doors, not live shells.
 
@@ -436,10 +470,21 @@ the path.
 
 # 4. Final Active-Recall Sequence
 
-Bars, two grates, seed, compass/tomb, cloak, doorbell, options, key,
-mirror, spyglass.
+End the video with locations only. Ask the learner to name the
+concept, then reveal:
 
-------------------------------------------------------------------------
+### Floor 1
+
+**Safety**
+
+`CRITICAL → Rail kinds → Seed facts → REPLAN → hide()`
+
+### Floor 2
+
+**Invoke, export, prove**
+
+`Invocation → ProcessOptions → Export → Fakes → Breakpoints`
+
 
 # 5. Study Map
 

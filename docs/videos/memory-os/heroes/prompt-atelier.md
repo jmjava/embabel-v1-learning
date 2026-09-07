@@ -12,19 +12,25 @@ models.
 **Learning method:** Method of loci. One locus = one concept.
 
 **Video style:** First-person atelier beside the mold-mouth. Every
-locus is the next organ of the Quill-Wisp. No lettering in stills.
+locus is the next organ of the glass fountain-pen. No lettering in
+stills.
 
 **Narration style:** Mnemonic first, then the rule.
 
-**Metaphor:** A side studio off the Model-Mouth. A quill-spark learns
-to speak without becoming a full foundry creature.
+**Metaphor:** A side studio off the Model-Mouth. A fountain-pen spark
+learns to speak without becoming a full foundry creature.
 
-**Hero:** A teal quill-wisp. Jarred Spring spark → named lantern →
-mask-sashes → two-throated choir → validation stamp → local lantern
-plus boring thermostat.
+**Hero:** A glass fountain-pen the size of a person. Jarred spark →
+named lantern → mask-sashes → two-throated choir → validation stamp
+→ local lantern plus boring thermostat.
 
-**Hero origin:** A loose quill-spark drifting off the foundry
-mold-mouth, not yet an agent.
+**Chassis:** a glass fountain-pen the size of a person
+
+**Hero origin:** A loose glass fountain-pen sparking beside the mold-mouth.
+
+**Camera:** first-person, eye-level, wide-angle, standing just inside the threshold, looking at the next organ of the same hero
+
+**Hero scale:** the hero is architectural — it fills at least 40% of the frame and is the first thing the eye hits
 
 **Metaphor material:** Teal glass, quill-light, quiet bronze desks.
 
@@ -78,15 +84,18 @@ No agent plaque. The jar still pours typed ink.
 
 **Metaphor part:** head-slot
 
-**Hero from:** A loose quill-spark beside the mold-mouth.
+**Hero from:** A loose glass fountain-pen sparking beside the mold-mouth.
 
-**Hero now:** The same spark inside a Spring-jar on a bean desk.
+**Hero now:** The same fountain-pen trapped in a Spring-jar on a bean desk.
 
-**Hero silhouette:** Teal spark in a glass Spring-jar
+**Hero silhouette:** Glass fountain-pen in a Spring-jar.
 
-**Hero tell:** No agent plaque on the desk; jar still pours ink
+**Hero tell:** No agent plaque on the desk; the jar still pours ink.
 
-**Hero becomes:** A name-plate lantern hangs from the jar lid.
+**Hero shot:** The jarred pen fills the frame on a plain desk.
+
+**Hero becomes:** The same jarred fountain-pen with a name-lantern hanging from the lid.
+
 
 **Key distinction:** `Ai` helper ≠ GOAP process.
 
@@ -113,15 +122,18 @@ interaction in the log-fog.
 
 **Metaphor part:** seeing-slot
 
-**Hero from:** Spark in a Spring-jar.
+**Hero from:** The same fountain-pen trapped in a Spring-jar on a bean desk.
 
-**Hero now:** The same jarred spark with a name-lantern on the lid.
+**Hero now:** The same jarred fountain-pen with a name-lantern hanging from the lid.
 
-**Hero silhouette:** Spring-jar spark with a hanging name-lantern
+**Hero silhouette:** Jarred pen with a hanging name-lantern.
 
-**Hero tell:** Only this lantern cuts the log-fog
+**Hero tell:** Only this lantern cuts the log-fog.
 
-**Hero becomes:** Mask-sashes wrap the jar (personas).
+**Hero shot:** Lantern hanging from the lid into log-fog.
+
+**Hero becomes:** The same jarred fountain-pen wearing two mask-sashes.
+
 
 **Key distinction:** Naming is observability, not prompting.
 
@@ -148,15 +160,18 @@ sober reviewer-mask. The prompt string stays thin.
 
 **Metaphor part:** hearing-slot
 
-**Hero from:** Jarred spark with a name-lantern.
+**Hero from:** The same jarred fountain-pen with a name-lantern hanging from the lid.
 
-**Hero now:** The same spark wearing two mask-sashes.
+**Hero now:** The same jarred fountain-pen wearing two mask-sashes.
 
-**Hero silhouette:** Named-jar spark wrapped in two mask-sashes
+**Hero silhouette:** Named-jar pen wrapped in two mask-sashes.
 
-**Hero tell:** Two masks; the prompt ribbon stays thin
+**Hero tell:** Two masks; the prompt ribbon stays thin.
 
-**Hero becomes:** The wisp splits into two throats, cheap and strong.
+**Hero shot:** Two mask-sashes wrapping the jar, thin prompt ribbon.
+
+**Hero becomes:** The same fountain-pen with two role-collared throats, cheap and strong.
+
 
 **Key distinction:** Contributors compose; they do not replace types.
 
@@ -164,8 +179,8 @@ sober reviewer-mask. The prompt string stays thin.
 
 ## Scene 4 --- Two Throats: Mix Models
 
-**Visual:** The wisp grows two throats: a small cheap throat for
-drafts, a larger throat for review. Role-collars, not hard-wired
+**Visual:** The fountain-pen grows two throats: a small cheap throat
+for drafts, a larger throat for review. Role-collars, not hard-wired
 names.
 
 **Overlay:** `withLlm / role`
@@ -184,15 +199,18 @@ names.
 
 **Metaphor part:** scent-slot
 
-**Hero from:** Spark wearing mask-sashes.
+**Hero from:** The same jarred fountain-pen wearing two mask-sashes.
 
-**Hero now:** The same spark with two role-collared throats.
+**Hero now:** The same fountain-pen with two role-collared throats, cheap and strong.
 
-**Hero silhouette:** Masked wisp with a small throat and a large throat
+**Hero silhouette:** Masked pen with a small throat and a large throat.
 
-**Hero tell:** Role-collars, not nameplates, on the throats
+**Hero tell:** Role-collars, not nameplates, on the throats.
 
-**Hero becomes:** A validation stamp waits beside the ink.
+**Hero shot:** Two unlike throats with role-collars.
+
+**Hero becomes:** The same two-throated fountain-pen with a validation stamp beside the ink.
+
 
 **Key distinction:** Role config survives model swaps.
 
@@ -219,16 +237,18 @@ grid never leaves the jar. Kotlin needs the stamp on the *field*.
 
 **Metaphor part:** passage-slot
 
-**Hero from:** Two-throated wisp.
+**Hero from:** The same fountain-pen with two role-collared throats, cheap and strong.
 
-**Hero now:** The same wisp with a validation stamp beside the ink.
+**Hero now:** The same two-throated fountain-pen with a validation stamp beside the ink.
 
-**Hero silhouette:** Two-throated wisp next to a pattern-grid stamp
+**Hero silhouette:** Two-throated pen next to a pattern-grid stamp.
 
-**Hero tell:** Failed ink never leaves the jar
+**Hero tell:** Failed ink never leaves the jar.
 
-**Hero becomes:** A local lantern and a boring thermostat grow on
-the jar.
+**Hero shot:** Pattern-grid stamp waiting beside the ink.
+
+**Hero becomes:** The same fountain-pen with a local lantern and a locked boring thermostat.
+
 
 **Key distinction:** Schema + validation beat prompt begging.
 
@@ -236,9 +256,9 @@ the jar.
 
 ## Scene 6 --- Local Lantern: Temperature And Local Models
 
-**Visual:** A small local lantern (Ollama/Docker) lights the desk. A
-thermostat locked at a boring setting. A fancy temperature dial is
-crossed by a dead needle.
+**Visual:** A small local lantern lights the desk. A thermostat
+locked at a boring setting. A fancy temperature dial is crossed by
+a dead needle.
 
 **Overlay:** `local / temperature`
 
@@ -256,16 +276,18 @@ crossed by a dead needle.
 
 **Metaphor part:** vault-slot
 
-**Hero from:** Wisp with a validation stamp.
+**Hero from:** The same two-throated fountain-pen with a validation stamp beside the ink.
 
-**Hero now:** The same wisp with a local lantern and a locked boring
-thermostat.
+**Hero now:** The same fountain-pen with a local lantern and a locked boring thermostat.
 
-**Hero silhouette:** Stamped wisp with a small lantern and a locked thermostat
+**Hero silhouette:** Stamped pen with a small lantern and a locked thermostat.
 
-**Hero tell:** Fancy temperature dial’s needle is dead
+**Hero tell:** The fancy temperature dial's needle is dead.
 
-**Hero becomes:** The finished atelier wisp, ready for recall.
+**Hero shot:** Small local lantern and a locked thermostat.
+
+**Hero becomes:** The finished glass fountain-pen the size of a person, ready for recall.
+
 
 **Key distinction:** Focused steps enable local models.
 
@@ -277,9 +299,15 @@ thermostat.
 
 # 3. Final Active-Recall Sequence
 
-Jar, lantern, sashes, two throats, stamp, local lamp.
+End the video with locations only. Ask the learner to name the
+concept, then reveal:
 
-------------------------------------------------------------------------
+### Floor 1
+
+**Call-shape extras**
+
+`Injected Ai → withId → Personas → Mix models → Validation → Local/temp`
+
 
 # 4. Study Map
 

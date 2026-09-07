@@ -10,7 +10,7 @@ organ on one evolving hero.
 Conventions: [`CONVENTIONS.md`](CONVENTIONS.md).  
 Filmed already: [`embabel-cheatsheet.md`](embabel-cheatsheet.md)
 (Type-Foundry).  
-Authoring (not yet compiled): [`heroes/`](heroes/).  
+Authoring (compile-clean, not filmed): [`heroes/`](heroes/).  
 Blogs that add to training: [`../../READING.md`](../../READING.md).
 
 ## How to study
@@ -41,16 +41,16 @@ One palace per sitting. Do not binge the campus.
 Shared material: bronze + glass type-pipes; coal-orange on 1.0 floors;
 teal on 1.5 / frontier. Heroes are siblings of the unlabeled type-ingot.
 
-| # | Palace | Category | Hero | Loci | Status |
-|---|--------|----------|------|------|--------|
-| 0 | [Type-Foundry](embabel-cheatsheet.md) | Cheat-sheet core | Type-ingot → pipe-creature → mold-mouth | 12 | Filmed |
-| A | [Planning Citadel](heroes/planning-citadel.md) | Planning core | Compass-Serpent | 10 | Authoring |
-| B | [Annotation Armory](heroes/annotation-armory.md) | Agent definition | Badge-Beetle | 8 | Authoring |
-| C | [DICE Workshop](heroes/dice-workshop.md) | Domain & tools | Customer-Golem | 7 | Authoring |
-| D | [Prompt Atelier](heroes/prompt-atelier.md) | LLM extras beyond foundry floor 2 | Quill-Wisp | 6 | Authoring |
-| E | [Looping Observatory](heroes/looping-observatory.md) | Conditions, HITL, loops, subagents | Hourglass-Sentinel | 10 | Authoring |
-| F | [Safety Vault](heroes/safety-vault.md) | Safety, stuck, invoke, test | Gate-Warden | 10 | Authoring |
-| G | [Frontier Greenhouse](heroes/frontier-greenhouse.md) | Next modules from blogs | Glass-Librarian | 8 | Authoring |
+| # | Palace | Category | Chassis | Loci | Status |
+|---|--------|----------|---------|------|--------|
+| 0 | [Type-Foundry](embabel-cheatsheet.md) | Cheat-sheet core | Type-ingot → pipe-creature → mold-mouth | 12 | Filmed (frozen) |
+| A | [Planning Citadel](heroes/planning-citadel.md) | Planning core | Bronze compass-serpent | 10 | Compile-clean |
+| B | [Annotation Armory](heroes/annotation-armory.md) | Agent definition | Brass clockwork scarab | 8 | Compile-clean |
+| C | [DICE Workshop](heroes/dice-workshop.md) | Domain & tools | Bronze shop-window mannequin | 7 | Compile-clean |
+| D | [Prompt Atelier](heroes/prompt-atelier.md) | LLM extras beyond foundry floor 2 | Glass fountain-pen | 6 | Compile-clean |
+| E | [Looping Observatory](heroes/looping-observatory.md) | Conditions, HITL, loops, subagents | Bronze hourglass-sentinel | 10 | Compile-clean |
+| F | [Safety Vault](heroes/safety-vault.md) | Safety, stuck, invoke, test | Iron palace-gate that learned to walk | 10 | Compile-clean |
+| G | [Frontier Greenhouse](heroes/frontier-greenhouse.md) | Next modules from blogs | Stained-glass library-cart | 8 | Compile-clean (do not film) |
 
 ## Category / subcategory index
 
