@@ -38,11 +38,14 @@ Examples: `emb-agent`, `emb-action`, `emb-hitl`, `emb-subagent`, `emb-repeat`, `
 
 Start at **[`docs/CHEATSHEET.md`](docs/CHEATSHEET.md)**, then **[`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md)**.  
 Official-source map: **[`docs/COOKBOOK_15.md`](docs/COOKBOOK_15.md)**.  
-Memory OS: **cheat-sheet palace** — [`docs/videos/memory-os/embabel-cheatsheet.md`](docs/videos/memory-os/embabel-cheatsheet.md) · [player](https://jmjava.github.io/embabel-v1-learning/).
+External blogs: **[`docs/READING.md`](docs/READING.md)**.  
+Memory OS: **cheat-sheet palace** — [`docs/videos/memory-os/embabel-cheatsheet.md`](docs/videos/memory-os/embabel-cheatsheet.md) · **study campus (hero evolutions)** — [`docs/videos/memory-os/STUDY_CAMPUS.md`](docs/videos/memory-os/STUDY_CAMPUS.md) · [player](https://jmjava.github.io/embabel-v1-learning/).
 
 | Doc | Purpose |
 |-----|---------|
 | [docs/CHEATSHEET.md](docs/CHEATSHEET.md) | Extracted API / planner rules (primary) |
+| [docs/READING.md](docs/READING.md) | Curated blogs mapped onto the curriculum |
+| [docs/videos/memory-os/STUDY_CAMPUS.md](docs/videos/memory-os/STUDY_CAMPUS.md) | Memory palaces: categories, subcategories, hero evolutions |
 | [docs/VERSIONS.md](docs/VERSIONS.md) | 1.0 vs 1.5 on the same branch |
 | [docs/COOKBOOK_15.md](docs/COOKBOOK_15.md) | What we pulled from Guide + Cookbook |
 | [docs/REVIEW_CIRCUIT.md](docs/REVIEW_CIRCUIT.md) | 60–90 min checkbox review circuit |

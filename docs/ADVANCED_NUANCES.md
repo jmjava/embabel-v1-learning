@@ -43,3 +43,5 @@ Companion to the lesson Javadocs. These are the sharp edges worth memorizing.
 ## Still thinner in this repo (see SPEC_COMPLETENESS)
 
 RAG ToolishRag, MCP security, A2A, streaming/thinking, observability exporters, Agent Skills, ConcurrentAgentProcess.
+
+Memorization hooks for those APIs (not lessons yet): Frontier Greenhouse in [`videos/memory-os/STUDY_CAMPUS.md`](videos/memory-os/STUDY_CAMPUS.md). Blogs: [`READING.md`](READING.md).

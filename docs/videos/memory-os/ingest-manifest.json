@@ -127,5 +127,71 @@
       "source": "docs/CHEATSHEET.md#tools-remember-the-attachment-scope",
       "video_path": "docs/videos/recordings/embabel-cheatsheet-floor-2.mp4"
     }
+  ],
+  "campus_palaces": [
+    {
+      "id": "embabel-cheatsheet",
+      "category": "Cheat-sheet core",
+      "markdown": "docs/videos/memory-os/embabel-cheatsheet.md",
+      "hero": "type-ingot",
+      "loci": 12,
+      "status": "filmed"
+    },
+    {
+      "id": "embabel-planning-citadel",
+      "category": "A Planning core",
+      "markdown": "docs/videos/memory-os/heroes/planning-citadel.md",
+      "hero": "compass-serpent",
+      "loci": 10,
+      "status": "authoring"
+    },
+    {
+      "id": "embabel-annotation-armory",
+      "category": "B Agent definition",
+      "markdown": "docs/videos/memory-os/heroes/annotation-armory.md",
+      "hero": "badge-beetle",
+      "loci": 8,
+      "status": "authoring"
+    },
+    {
+      "id": "embabel-dice-workshop",
+      "category": "C Domain and DICE tools",
+      "markdown": "docs/videos/memory-os/heroes/dice-workshop.md",
+      "hero": "customer-golem",
+      "loci": 7,
+      "status": "authoring"
+    },
+    {
+      "id": "embabel-prompt-atelier",
+      "category": "D LLM extras",
+      "markdown": "docs/videos/memory-os/heroes/prompt-atelier.md",
+      "hero": "quill-wisp",
+      "loci": 6,
+      "status": "authoring"
+    },
+    {
+      "id": "embabel-looping-observatory",
+      "category": "E Conditions HITL loops",
+      "markdown": "docs/videos/memory-os/heroes/looping-observatory.md",
+      "hero": "hourglass-sentinel",
+      "loci": 10,
+      "status": "authoring"
+    },
+    {
+      "id": "embabel-safety-vault",
+      "category": "F Production envelope",
+      "markdown": "docs/videos/memory-os/heroes/safety-vault.md",
+      "hero": "gate-warden",
+      "loci": 10,
+      "status": "authoring"
+    },
+    {
+      "id": "embabel-frontier-greenhouse",
+      "category": "G Frontier blogs",
+      "markdown": "docs/videos/memory-os/heroes/frontier-greenhouse.md",
+      "hero": "glass-librarian",
+      "loci": 8,
+      "status": "authoring"
+    }
   ]
 }
