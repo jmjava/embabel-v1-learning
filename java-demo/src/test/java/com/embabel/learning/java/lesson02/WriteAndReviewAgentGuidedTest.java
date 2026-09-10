@@ -50,7 +50,9 @@ class WriteAndReviewAgentGuidedTest {
         reviewCtx.expectResponse("A thrilling tale of bravery!");
         var reviewed = agent.reviewStory(input, story, reviewCtx.ai());
         assertTrue(reviewed.review().contains("bravery"));
+        assertEquals(0.85, reviewed.score(), 0.01);
         var reviewPrompt = reviewCtx.getLlmInvocations().getFirst().getMessages().getFirst().getContent();
         assertTrue(reviewPrompt.toLowerCase().contains("review"), reviewPrompt);
+        assertTrue(reviewPrompt.contains("knight"), reviewPrompt);
     }
 }

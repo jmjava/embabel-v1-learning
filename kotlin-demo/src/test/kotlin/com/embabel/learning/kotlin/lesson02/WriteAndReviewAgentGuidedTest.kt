@@ -32,7 +32,8 @@ class WriteAndReviewAgentGuidedTest {
 
         val craftCtx = FakeOperationContext.create()
         craftCtx.expectResponse(Story("Once upon a time Sir Galahad..."))
-        agent.craftStory(input, craftCtx)
+        val story = agent.craftStory(input, craftCtx)
+        assertTrue(story.text.contains("Galahad"))
 
         val promptRunner = craftCtx.promptRunner as FakePromptRunner
         val craftPrompt = promptRunner.llmInvocations.first().messages.first().content
@@ -41,7 +42,11 @@ class WriteAndReviewAgentGuidedTest {
 
         val reviewCtx = FakeOperationContext.create()
         reviewCtx.expectResponse("A thrilling tale of bravery!")
-        val reviewed = agent.reviewStory(input, Story("Once..."), reviewCtx)
+        val reviewed = agent.reviewStory(input, story, reviewCtx)
         assertTrue(reviewed.review.contains("bravery"))
+        assertEquals(0.85, reviewed.score, 0.01)
+        val reviewPrompt = reviewCtx.promptRunner.llmInvocations.first().messages.first().content
+        assertTrue(reviewPrompt.lowercase().contains("review"), reviewPrompt)
+        assertTrue(reviewPrompt.contains("knight"), reviewPrompt)
     }
 }
