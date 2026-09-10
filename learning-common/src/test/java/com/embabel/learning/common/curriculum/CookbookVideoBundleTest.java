@@ -37,6 +37,15 @@ class CookbookVideoBundleTest {
                 CookbookChapterCatalog.MEMORY_OS_REPO,
                 manifest.get("memory_os_repo").asText()
         );
+        assertEquals(
+                CookbookChapterCatalog.MEMORY_OS_SHA,
+                manifest.get("memory_os_sha").asText()
+        );
+        String installScript = Files.readString(root.resolve("scripts/memoryos-cloud-install.sh"));
+        assertTrue(
+                installScript.contains("@8822fcb"),
+                "memoryos-cloud-install.sh must pin memory-os @8822fcb"
+        );
     }
 
     private static Path findRepoRoot() {

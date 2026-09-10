@@ -12,6 +12,7 @@ public final class CookbookChapterCatalog {
     public static final String COOKBOOK_DOCS = "https://docs.embabel.com/embabel-cookbook/1.5.0/";
     public static final String COOKBOOK_VERSION = "1.5.0";
     public static final String MEMORY_OS_REPO = "https://github.com/jmjava/memory-os";
+    public static final String MEMORY_OS_SHA = "8822fcb5ae813f491daeff7d5f37fce7ff10d213";
     public static final String DOCGEN_REPO = "https://github.com/jmjava/documentation-generator";
 
     private CookbookChapterCatalog() {

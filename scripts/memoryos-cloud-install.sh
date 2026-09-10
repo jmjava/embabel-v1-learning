@@ -17,8 +17,9 @@ if [ -z "${BROAD_REPO_TOKEN:-}" ]; then
   exit 1
 fi
 
+# Consumer pin is 8822fcb (ingest-manifest memory_os_sha). Do not float to main HEAD.
 "${VENV}/bin/pip" install --upgrade \
-  "memoryos @ git+https://x-access-token:${BROAD_REPO_TOKEN}@github.com/jmjava/memory-os.git"
+  "memoryos @ git+https://x-access-token:${BROAD_REPO_TOKEN}@github.com/jmjava/memory-os.git@8822fcb"
 sudo ln -sfn "${VENV}/bin/memoryos" /usr/local/bin/memoryos
 
 if [ -x ./mvnw ]; then
