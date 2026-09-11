@@ -32,7 +32,11 @@ memoryos render docs/videos/memory-os/embabel-cheatsheet.palace.yaml --floor flo
 ```
 
 Raw engine output stays under `docs/videos/memory-os/build/` (gitignored).
-The publish script copies the three palace films into `docs/videos/recordings/`.
+The publish script is fail-closed: it copies only into `docs/videos/recordings/`,
+rejects a symlink, file, or escaped destination (including
+`MEMORYOS_PUBLISH_DEST`), requires [`index.html`](index.html) to embed those
+three MP4 names, and checks destination size after copy. It does not rebuild
+films. Pin stays `8822fcb`.
 
 ## If the site returns 404
 
