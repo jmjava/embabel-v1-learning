@@ -57,3 +57,10 @@ GitHub Pages player: https://jmjava.github.io/embabel-v1-learning/
 After a successful `memoryos build`, run `./scripts/publish-memoryos-videos.sh`
 (fail-closed: destination must be `docs/videos/recordings/`) and commit the
 LFS-tracked MP4s. The script does not rebuild films. Pin stays `8822fcb`.
+
+Published cheat-sheet films fail current `memoryos evaluate` / `gate`
+checks: think pauses are 2.5s (8822fcb default) vs the current 12.5s
+method hold, and there is no reverse walk. That gap is recorded in
+`ingest-manifest.json` (`published_film_gate`) and checked by
+`scripts/check-published-film-gate-record.sh`. Do not rebuild films to
+clear it.
