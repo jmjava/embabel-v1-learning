@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  memoryos-pin:
+    name: CookbookVideoBundleTest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: "21"
+          distribution: "temurin"
+          cache: maven
+
+      # Pins stay 8822fcb. This job is not Pages. Removing memory_os_sha
+      # or the install-script pin makes CookbookVideoBundleTest fail.
+      - name: Run CookbookVideoBundleTest
+        run: ./mvnw -B -pl learning-common test -Dtest=CookbookVideoBundleTest
