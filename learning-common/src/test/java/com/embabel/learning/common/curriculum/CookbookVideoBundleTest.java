@@ -6,8 +6,10 @@ import org.junit.jupiter.api.Test;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CookbookVideoBundleTest {
@@ -46,6 +48,60 @@ class CookbookVideoBundleTest {
                 installScript.contains("@8822fcb"),
                 "memoryos-cloud-install.sh must pin memory-os @8822fcb"
         );
+    }
+
+    @Test
+    void installScriptAssertsMemoryOsShaNotVersionString() throws Exception {
+        Path root = findRepoRoot();
+        Path helper = root.resolve("scripts/memoryos-assert-pin.sh");
+        String installScript = Files.readString(root.resolve("scripts/memoryos-cloud-install.sh"));
+        String helperScript = Files.readString(helper);
+
+        assertTrue(
+                installScript.contains("@8822fcb"),
+                "memoryos-cloud-install.sh must pin memory-os @8822fcb"
+        );
+        assertTrue(
+                installScript.contains("memoryos-assert-pin.sh"),
+                "install must verify the recorded SHA after pip, not only print --version"
+        );
+        assertTrue(
+                helperScript.contains("8822fcb5ae813f491daeff7d5f37fce7ff10d213")
+                        || helperScript.contains("8822fcb"),
+                "assert helper must pin 8822fcb"
+        );
+        assertTrue(
+                helperScript.contains("direct_url") && helperScript.contains("commit_id"),
+                "assert helper must read PEP 610 commit_id, not __version__"
+        );
+
+        Path good = Files.createTempFile("memoryos-direct-url-good", ".json");
+        Path drifted = Files.createTempFile("memoryos-direct-url-drift", ".json");
+        Path versionOnly = Files.createTempFile("memoryos-direct-url-version", ".json");
+        Files.writeString(good, """
+                {"url":"https://github.com/jmjava/memory-os.git","vcs_info":{"vcs":"git","commit_id":"8822fcb5ae813f491daeff7d5f37fce7ff10d213","requested_revision":"8822fcb"}}
+                """);
+        Files.writeString(drifted, """
+                {"url":"https://github.com/jmjava/memory-os.git","vcs_info":{"vcs":"git","commit_id":"2e94f8d000000000000000000000000000000000","requested_revision":"2e94f8d"}}
+                """);
+        Files.writeString(versionOnly, """
+                {"url":"https://github.com/jmjava/memory-os.git","version":"0.1.0"}
+                """);
+
+        assertEquals(0, runAssertPin(helper, good), "pin 8822fcb must pass");
+        assertNotEquals(0, runAssertPin(helper, drifted), "2e94f8d must fail even though version is 0.1.0");
+        assertNotEquals(0, runAssertPin(helper, versionOnly), "version 0.1.0 without a SHA must fail");
+    }
+
+    private static int runAssertPin(Path helper, Path directUrlJson) throws Exception {
+        ProcessBuilder pb = new ProcessBuilder("bash", helper.toString());
+        pb.environment().put("MEMORYOS_DIRECT_URL_JSON", directUrlJson.toString());
+        pb.redirectErrorStream(true);
+        Process process = pb.start();
+        String output = new String(process.getInputStream().readAllBytes());
+        boolean finished = process.waitFor(20, TimeUnit.SECONDS);
+        assertTrue(finished, "memoryos-assert-pin.sh timed out\n" + output);
+        return process.exitValue();
     }
 
     private static Path findRepoRoot() {
