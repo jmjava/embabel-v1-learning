@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
@@ -191,6 +192,93 @@ class CookbookVideoBundleTest {
         assertEquals(0, runPagesValidate(root), "unbroken repo docs must still pass");
     }
 
+    @Test
+    void publishScriptValidatesRecordingsDestination() throws Exception {
+        Path root = findRepoRoot();
+        String script = Files.readString(root.resolve("scripts/publish-memoryos-videos.sh"));
+        assertTrue(
+                script.contains("docs/videos/recordings"),
+                "publish script must target docs/videos/recordings"
+        );
+        assertTrue(
+                script.contains("MEMORYOS_PUBLISH_DEST"),
+                "publish script must reject a destination override"
+        );
+        assertTrue(
+                script.contains("-L") && script.contains("symlink"),
+                "publish script must reject a symlink destination"
+        );
+        assertTrue(
+                script.contains("index.html") && script.contains("videos/recordings/"),
+                "publish script must require the Pages player to embed dest names"
+        );
+        assertTrue(
+                script.contains("wc -c") || script.contains("size mismatch"),
+                "publish script must check destination size after copy"
+        );
+        assertFalse(
+                script.contains("copy_if_present"),
+                "publish script must not be a soft bare-cp helper"
+        );
+    }
+
+    @Test
+    void publishCopiesIntoValidatedRecordings() throws Exception {
+        Path tmp = publishFixture("publish-ok-");
+        writePublishFilm(tmp, "embabel-cheatsheet.mp4", "full-palace");
+        writePublishFilm(tmp, "embabel-cheatsheet-floor-1.mp4", "floor-one");
+        writePublishFilm(tmp, "embabel-cheatsheet-floor-2.mp4", "floor-two");
+
+        assertEquals(0, runPublish(tmp), "validated recordings dest must accept a good copy");
+        for (String name : PUBLISH_FILMS) {
+            Path dest = tmp.resolve("docs/videos/recordings").resolve(name);
+            Path src = tmp.resolve("docs/videos/memory-os/build/video").resolve(name);
+            assertTrue(Files.isRegularFile(dest), "missing published " + dest);
+            assertEquals(Files.size(src), Files.size(dest), "size mismatch for " + name);
+        }
+    }
+
+    @Test
+    void wrongPublishDestinationFailsClosed() throws Exception {
+        Path tmp = publishFixture("publish-wrong-dest-");
+        writePublishFilm(tmp, "embabel-cheatsheet.mp4", "full-palace");
+        writePublishFilm(tmp, "embabel-cheatsheet-floor-1.mp4", "floor-one");
+        writePublishFilm(tmp, "embabel-cheatsheet-floor-2.mp4", "floor-two");
+
+        Path evil = Files.createTempDirectory("publish-evil-dest-");
+        int status = runPublish(tmp, Map.of("MEMORYOS_PUBLISH_DEST", evil.toString()));
+        assertNotEquals(0, status, "overridden dest must fail closed");
+        try (Stream<Path> leaked = Files.list(evil)) {
+            assertEquals(0, leaked.count(), "wrong dest must not receive films");
+        }
+    }
+
+    @Test
+    void symlinkRecordingsDestinationFailsClosed() throws Exception {
+        Path tmp = publishFixture("publish-symlink-dest-");
+        writePublishFilm(tmp, "embabel-cheatsheet.mp4", "full-palace");
+        writePublishFilm(tmp, "embabel-cheatsheet-floor-1.mp4", "floor-one");
+        writePublishFilm(tmp, "embabel-cheatsheet-floor-2.mp4", "floor-two");
+
+        Path recordings = tmp.resolve("docs/videos/recordings");
+        Path evil = Files.createTempDirectory("publish-symlink-evil-");
+        Files.deleteIfExists(recordings);
+        Files.createSymbolicLink(recordings, evil);
+
+        int status = runPublish(tmp);
+        assertNotEquals(0, status, "symlink recordings dest must fail closed");
+        try (Stream<Path> leaked = Files.list(evil)) {
+            assertEquals(0, leaked.count(), "symlink dest must not receive films");
+        }
+    }
+
+    @Test
+    void missingPublishSourceFailsClosed() throws Exception {
+        Path tmp = publishFixture("publish-missing-src-");
+        Files.createDirectories(tmp.resolve("docs/videos/recordings"));
+        assertNotEquals(0, runPublish(tmp), "missing build/video sources must fail closed");
+    }
+
     private static boolean proseFilesPin8822fcb(Path root) throws Exception {
         Path dir = root.resolve("docs/videos/memory-os");
         JsonNode manifest = new ObjectMapper().readTree(dir.resolve("ingest-manifest.json").toFile());
@@ -218,6 +306,46 @@ class CookbookVideoBundleTest {
             Path file = dir.resolve(name);
             Files.writeString(file, Files.readString(file).replace(from, to));
         }
+    }
+
+    private static final List<String> PUBLISH_FILMS = List.of(
+            "embabel-cheatsheet.mp4",
+            "embabel-cheatsheet-floor-1.mp4",
+            "embabel-cheatsheet-floor-2.mp4"
+    );
+
+    private static Path publishFixture(String prefix) throws Exception {
+        Path tmp = Files.createTempDirectory(prefix);
+        Files.createDirectories(tmp.resolve("docs/videos/memory-os/build/video"));
+        Files.createDirectories(tmp.resolve("docs/videos/recordings"));
+        Files.writeString(tmp.resolve("docs/index.html"), """
+                <source src="videos/recordings/embabel-cheatsheet.mp4" type="video/mp4">
+                <source src="videos/recordings/embabel-cheatsheet-floor-1.mp4" type="video/mp4">
+                <source src="videos/recordings/embabel-cheatsheet-floor-2.mp4" type="video/mp4">
+                """);
+        return tmp;
+    }
+
+    private static void writePublishFilm(Path root, String name, String payload) throws Exception {
+        Path dest = root.resolve("docs/videos/memory-os/build/video").resolve(name);
+        Files.createDirectories(dest.getParent());
+        Files.writeString(dest, payload);
+    }
+
+    private static int runPublish(Path repoRoot) throws Exception {
+        return runPublish(repoRoot, Map.of());
+    }
+
+    private static int runPublish(Path repoRoot, Map<String, String> extraEnv) throws Exception {
+        Path helper = findRepoRoot().resolve("scripts/publish-memoryos-videos.sh");
+        ProcessBuilder pb = new ProcessBuilder("bash", helper.toString(), repoRoot.toString());
+        pb.environment().putAll(extraEnv);
+        pb.redirectErrorStream(true);
+        Process process = pb.start();
+        String output = new String(process.getInputStream().readAllBytes());
+        boolean finished = process.waitFor(20, TimeUnit.SECONDS);
+        assertTrue(finished, "publish-memoryos-videos.sh timed out\n" + output);
+        return process.exitValue();
     }
 
     private static int runPagesValidate(Path repoRoot) throws Exception {
