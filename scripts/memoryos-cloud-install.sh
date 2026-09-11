@@ -18,6 +18,8 @@ if [ -z "${BROAD_REPO_TOKEN:-}" ]; then
 fi
 
 # Consumer pin is 8822fcb (ingest-manifest memory_os_sha). Do not float to main HEAD.
+# After install, assert the recorded git SHA — both 8822fcb and 2e94f8d report 0.1.0.
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 "${VENV}/bin/pip" install --upgrade \
   "memoryos @ git+https://x-access-token:${BROAD_REPO_TOKEN}@github.com/jmjava/memory-os.git@8822fcb"
 sudo ln -sfn "${VENV}/bin/memoryos" /usr/local/bin/memoryos
@@ -29,4 +31,6 @@ fi
 command -v memoryos >/dev/null
 command -v ffmpeg >/dev/null
 memoryos --help >/dev/null
-echo "memoryos-cloud-install: ok ($(memoryos --version 2>/dev/null || echo memoryos))"
+MEMORYOS_VENV="${VENV}" MEMORYOS_PYTHON="${VENV}/bin/python" \
+  "${HERE}/memoryos-assert-pin.sh"
+echo "memoryos-cloud-install: ok (pin 8822fcb)"
