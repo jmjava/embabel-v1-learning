@@ -5,6 +5,10 @@
 ## How it is published
 
 - Workflow: [`.github/workflows/pages.yml`](../.github/workflows/pages.yml)
+- Deploy runs [`scripts/validate-pages-docs.sh`](../scripts/validate-pages-docs.sh)
+  first. Broken palace Markdown front matter (`**Purpose:**` and the other
+  memory-os header labels) fails the job before upload. This is not a film
+  rebuild and does not run `memoryos validate` / gate on recordings.
 - Artifact root is [`docs/`](.) so [`index.html`](index.html) is the homepage.
 - Players embed MP4s from [`videos/recordings/`](videos/recordings/).
 - Checkout uses `lfs: true`. Track new recordings with Git LFS:
