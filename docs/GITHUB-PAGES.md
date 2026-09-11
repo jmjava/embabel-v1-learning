@@ -9,6 +9,9 @@
   first. Broken palace Markdown front matter (`**Purpose:**` and the other
   memory-os header labels) fails the job before upload. This is not a film
   rebuild and does not run `memoryos validate` / gate on recordings.
+  Published 8822fcb films fail current evaluate/gate (2.5s vs 12.5s
+  think pause; no reverse walk). That mismatch is a checked record in
+  `videos/memory-os/ingest-manifest.json`, not a recut.
 - Artifact root is [`docs/`](.) so [`index.html`](index.html) is the homepage.
 - Players embed MP4s from [`videos/recordings/`](videos/recordings/).
 - Checkout uses `lfs: true`. Track new recordings with Git LFS:

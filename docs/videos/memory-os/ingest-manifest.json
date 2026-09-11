@@ -19,6 +19,15 @@
     "floors": 2,
     "loci": 12
   },
+  "published_film_gate": {
+    "verdict": "fail",
+    "memoryos_commands": ["evaluate", "gate"],
+    "think_pause_sec": 2.5,
+    "required_think_pause_sec": 12.5,
+    "reverse_walk": false,
+    "required_reverse_walk": true,
+    "films_rebuilt": false
+  },
   "segments": [
     {
       "id": "01",

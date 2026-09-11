@@ -279,6 +279,85 @@ class CookbookVideoBundleTest {
         assertNotEquals(0, runPublish(tmp), "missing build/video sources must fail closed");
     }
 
+    @Test
+    void publishedFilmsFailCurrentMemoryOsEvaluateRecord() throws Exception {
+        Path root = findRepoRoot();
+        JsonNode manifest = new ObjectMapper().readTree(
+                root.resolve("docs/videos/memory-os/ingest-manifest.json").toFile()
+        );
+        JsonNode gate = manifest.get("published_film_gate");
+        assertEquals(
+                "8822fcb5ae813f491daeff7d5f37fce7ff10d213",
+                manifest.get("memory_os_sha").asText(),
+                "pin must stay 8822fcb"
+        );
+        assertEquals("fail", gate.get("verdict").asText(), "published films must be recorded as failing current evaluate/gate");
+        assertEquals(2.5, gate.get("think_pause_sec").asDouble(), "8822fcb films use the 2.5s think pause");
+        assertEquals(12.5, gate.get("required_think_pause_sec").asDouble(), "current evaluate requires 12.5s");
+        assertFalse(gate.get("reverse_walk").asBoolean(), "8822fcb films have no reverse walk");
+        assertTrue(gate.get("required_reverse_walk").asBoolean(), "current evaluate requires a reverse walk");
+        assertFalse(gate.get("films_rebuilt").asBoolean(), "this record is not a film rebuild");
+        String spec = Files.readString(root.resolve("docs/videos/memory-os/embabel-cheatsheet.palace.yaml"));
+        assertFalse(spec.contains("12.5"), "published palace spec must not claim current 12.5s holds");
+        String lowered = spec.toLowerCase();
+        assertFalse(
+                lowered.contains("reverse-walk")
+                        || lowered.contains("reverse walk")
+                        || lowered.contains("recall-reverse"),
+                "published palace spec must not claim a reverse walk"
+        );
+        assertEquals(
+                0,
+                runFilmGateRecord(root),
+                "current published films must be recorded as failing evaluate/gate"
+        );
+    }
+
+    @Test
+    void claimingPublishedFilmsPassCurrentEvaluateGoesRed() throws Exception {
+        Path root = findRepoRoot();
+        Path tmp = copyFilmGateFiles(root, "film-gate-pass-");
+        Path manifest = tmp.resolve("docs/videos/memory-os/ingest-manifest.json");
+        Files.writeString(
+                manifest,
+                Files.readString(manifest).replace("\"verdict\": \"fail\"", "\"verdict\": \"pass\"")
+        );
+        assertNotEquals(
+                0,
+                runFilmGateRecord(tmp),
+                "claiming pass while films still fail current evaluate/gate must go red"
+        );
+        assertEquals(0, runFilmGateRecord(root), "unmutated record must still pass");
+    }
+
+    @Test
+    void lyingAboutPublishedThinkPauseOrReverseWalkGoesRed() throws Exception {
+        Path root = findRepoRoot();
+        Path think = copyFilmGateFiles(root, "film-gate-think-");
+        Path thinkManifest = think.resolve("docs/videos/memory-os/ingest-manifest.json");
+        Files.writeString(
+                thinkManifest,
+                Files.readString(thinkManifest).replace("\"think_pause_sec\": 2.5", "\"think_pause_sec\": 12.5")
+        );
+        assertNotEquals(
+                0,
+                runFilmGateRecord(think),
+                "recording 12.5s while the palace spec is still the 2.5s 8822fcb default must go red"
+        );
+
+        Path reverse = copyFilmGateFiles(root, "film-gate-reverse-");
+        Path reverseManifest = reverse.resolve("docs/videos/memory-os/ingest-manifest.json");
+        Files.writeString(
+                reverseManifest,
+                Files.readString(reverseManifest).replace("\"reverse_walk\": false", "\"reverse_walk\": true")
+        );
+        assertNotEquals(
+                0,
+                runFilmGateRecord(reverse),
+                "recording a reverse walk the palace spec does not have must go red"
+        );
+    }
+
     private static boolean proseFilesPin8822fcb(Path root) throws Exception {
         Path dir = root.resolve("docs/videos/memory-os");
         JsonNode manifest = new ObjectMapper().readTree(dir.resolve("ingest-manifest.json").toFile());
@@ -345,6 +424,36 @@ class CookbookVideoBundleTest {
         String output = new String(process.getInputStream().readAllBytes());
         boolean finished = process.waitFor(20, TimeUnit.SECONDS);
         assertTrue(finished, "publish-memoryos-videos.sh timed out\n" + output);
+        return process.exitValue();
+    }
+
+    private static Path copyFilmGateFiles(Path root, String prefix) throws Exception {
+        Path dest = Files.createTempDirectory(prefix);
+        Path dir = dest.resolve("docs/videos/memory-os");
+        Files.createDirectories(dir);
+        Path src = root.resolve("docs/videos/memory-os");
+        Files.copy(src.resolve("ingest-manifest.json"), dir.resolve("ingest-manifest.json"), StandardCopyOption.REPLACE_EXISTING);
+        Files.copy(
+                src.resolve("embabel-cheatsheet.palace.yaml"),
+                dir.resolve("embabel-cheatsheet.palace.yaml"),
+                StandardCopyOption.REPLACE_EXISTING
+        );
+        Path recordings = dest.resolve("docs/videos/recordings");
+        Files.createDirectories(recordings);
+        for (String name : PUBLISH_FILMS) {
+            Files.writeString(recordings.resolve(name), "lfs-pointer");
+        }
+        return dest;
+    }
+
+    private static int runFilmGateRecord(Path repoRoot) throws Exception {
+        Path helper = findRepoRoot().resolve("scripts/check-published-film-gate-record.sh");
+        ProcessBuilder pb = new ProcessBuilder("bash", helper.toString(), repoRoot.toString());
+        pb.redirectErrorStream(true);
+        Process process = pb.start();
+        String output = new String(process.getInputStream().readAllBytes());
+        boolean finished = process.waitFor(20, TimeUnit.SECONDS);
+        assertTrue(finished, "check-published-film-gate-record.sh timed out\n" + output);
         return process.exitValue();
     }
 
