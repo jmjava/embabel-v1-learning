@@ -63,4 +63,6 @@ checks: think pauses are 2.5s (8822fcb default) vs the current 12.5s
 method hold, and there is no reverse walk. That gap is recorded in
 `ingest-manifest.json` (`published_film_gate`) and checked by
 `scripts/check-published-film-gate-record.sh`. Do not rebuild films to
-clear it.
+clear it. Leftover #10 locks the consumer pin at `8822fcb`:
+`scripts/check-memoryos-pin-lock.sh` goes red if the pin changes without
+an explicit leftover under `leftovers/memory-os/`.
