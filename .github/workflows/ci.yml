@@ -26,7 +26,8 @@ jobs:
           distribution: "temurin"
           cache: maven
 
-      # Pins stay 8822fcb. This job is not Pages. Removing memory_os_sha
-      # or the install-script pin makes CookbookVideoBundleTest fail.
+      # Pins stay 8822fcb. This job is not Pages. Changing 8822fcb in
+      # ingest-manifest.json, README.md, PLAN.md, or the install-script
+      # pin makes CookbookVideoBundleTest fail.
       - name: Run CookbookVideoBundleTest
         run: ./mvnw -B -pl learning-common test -Dtest=CookbookVideoBundleTest

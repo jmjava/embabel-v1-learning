@@ -7,10 +7,12 @@ import org.junit.jupiter.api.Test;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -96,6 +98,54 @@ class CookbookVideoBundleTest {
     }
 
     @Test
+    void prosePinStays8822fcb() throws Exception {
+        Path root = findRepoRoot();
+        assertTrue(
+                proseFilesPin8822fcb(root),
+                "ingest-manifest.json, README.md, and PLAN.md must pin 8822fcb"
+        );
+        JsonNode manifest = new ObjectMapper().readTree(
+                root.resolve("docs/videos/memory-os/ingest-manifest.json").toFile()
+        );
+        assertEquals(
+                "8822fcb5ae813f491daeff7d5f37fce7ff10d213",
+                manifest.get("memory_os_sha").asText(),
+                "ingest-manifest.json memory_os_sha must stay 8822fcb"
+        );
+        assertTrue(
+                Files.readString(root.resolve("docs/videos/memory-os/README.md")).contains("8822fcb"),
+                "docs/videos/memory-os/README.md must pin 8822fcb"
+        );
+        assertTrue(
+                Files.readString(root.resolve("docs/videos/memory-os/PLAN.md")).contains("8822fcb"),
+                "docs/videos/memory-os/PLAN.md must pin 8822fcb"
+        );
+    }
+
+    @Test
+    void changingProsePinGoesRed() throws Exception {
+        Path root = findRepoRoot();
+        assertTrue(proseFilesPin8822fcb(root), "unmutated repo must still pass");
+
+        Path changed = copyProsePinFiles(root, "prose-pin-changed-");
+        rewriteProsePinFiles(changed, "8822fcb5ae813f491daeff7d5f37fce7ff10d213",
+                "2e94f8d000000000000000000000000000000000");
+        rewriteProsePinFiles(changed, "8822fcb", "2e94f8d");
+        assertFalse(
+                proseFilesPin8822fcb(changed),
+                "changing 8822fcb in ingest-manifest.json, README.md, or PLAN.md must fail"
+        );
+
+        Path removed = copyProsePinFiles(root, "prose-pin-removed-");
+        rewriteProsePinFiles(removed, "8822fcb5ae813f491daeff7d5f37fce7ff10d213", "");
+        rewriteProsePinFiles(removed, "8822fcb", "");
+        assertFalse(
+                proseFilesPin8822fcb(removed),
+                "removing 8822fcb from ingest-manifest.json, README.md, or PLAN.md must fail"
+        );
+    }
+
+    @Test
     void pagesYmlValidatesPalaceFrontMatterBeforeDeploy() throws Exception {
         Path root = findRepoRoot();
         String pages = Files.readString(root.resolve(".github/workflows/pages.yml"));
@@ -139,6 +189,35 @@ class CookbookVideoBundleTest {
         int broken = runPagesValidate(tmp);
         assertNotEquals(0, broken, "broken palace front matter must fail the Pages deploy validate");
         assertEquals(0, runPagesValidate(root), "unbroken repo docs must still pass");
+    }
+
+    private static boolean proseFilesPin8822fcb(Path root) throws Exception {
+        Path dir = root.resolve("docs/videos/memory-os");
+        JsonNode manifest = new ObjectMapper().readTree(dir.resolve("ingest-manifest.json").toFile());
+        JsonNode sha = manifest.get("memory_os_sha");
+        if (sha == null || !"8822fcb5ae813f491daeff7d5f37fce7ff10d213".equals(sha.asText())) {
+            return false;
+        }
+        return Files.readString(dir.resolve("README.md")).contains("8822fcb")
+                && Files.readString(dir.resolve("PLAN.md")).contains("8822fcb");
+    }
+
+    private static Path copyProsePinFiles(Path root, String prefix) throws Exception {
+        Path dest = Files.createTempDirectory(prefix).resolve("docs/videos/memory-os");
+        Files.createDirectories(dest);
+        Path src = root.resolve("docs/videos/memory-os");
+        for (String name : List.of("ingest-manifest.json", "README.md", "PLAN.md")) {
+            Files.copy(src.resolve(name), dest.resolve(name), StandardCopyOption.REPLACE_EXISTING);
+        }
+        return dest.getParent().getParent().getParent();
+    }
+
+    private static void rewriteProsePinFiles(Path root, String from, String to) throws Exception {
+        Path dir = root.resolve("docs/videos/memory-os");
+        for (String name : List.of("ingest-manifest.json", "README.md", "PLAN.md")) {
+            Path file = dir.resolve(name);
+            Files.writeString(file, Files.readString(file).replace(from, to));
+        }
     }
 
     private static int runPagesValidate(Path repoRoot) throws Exception {
