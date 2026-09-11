@@ -6,7 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -91,6 +93,63 @@ class CookbookVideoBundleTest {
         assertEquals(0, runAssertPin(helper, good), "pin 8822fcb must pass");
         assertNotEquals(0, runAssertPin(helper, drifted), "2e94f8d must fail even though version is 0.1.0");
         assertNotEquals(0, runAssertPin(helper, versionOnly), "version 0.1.0 without a SHA must fail");
+    }
+
+    @Test
+    void pagesYmlValidatesPalaceFrontMatterBeforeDeploy() throws Exception {
+        Path root = findRepoRoot();
+        String pages = Files.readString(root.resolve(".github/workflows/pages.yml"));
+        assertTrue(
+                pages.contains("scripts/validate-pages-docs.sh"),
+                "pages.yml must run scripts/validate-pages-docs.sh before deploy"
+        );
+        assertTrue(
+                !pages.contains("continue-on-error"),
+                "pages.yml must not continue-on-error; validate must be able to go red"
+        );
+        int validateAt = pages.indexOf("validate-pages-docs.sh");
+        int uploadAt = pages.indexOf("upload-pages-artifact");
+        int deployAt = pages.indexOf("deploy-pages@");
+        assertTrue(validateAt >= 0, "missing validate-pages-docs.sh in pages.yml");
+        assertTrue(uploadAt > validateAt, "validate must run before upload-pages-artifact");
+        assertTrue(deployAt > uploadAt, "upload must run before deploy-pages");
+        assertEquals(0, runPagesValidate(root), "current palace front matter must pass Pages validate");
+    }
+
+    @Test
+    void brokenPalaceFrontMatterFailsPagesValidate() throws Exception {
+        Path root = findRepoRoot();
+        Path tmp = Files.createTempDirectory("pages-validate-broken-");
+        Path destPalace = tmp.resolve("docs/videos/memory-os");
+        Files.createDirectories(destPalace);
+        Path srcPalace = root.resolve("docs/videos/memory-os");
+        try (Stream<Path> walk = Files.walk(srcPalace)) {
+            for (Path src : walk.filter(path -> path.toString().endsWith(".md")).toList()) {
+                Path rel = srcPalace.relativize(src);
+                Path out = destPalace.resolve(rel);
+                Files.createDirectories(out.getParent());
+                Files.copy(src, out, StandardCopyOption.REPLACE_EXISTING);
+            }
+        }
+        Path cheatsheet = destPalace.resolve("embabel-cheatsheet.md");
+        String original = Files.readString(cheatsheet);
+        assertTrue(original.contains("**Purpose:**"), "fixture must start with a Purpose label");
+        Files.writeString(cheatsheet, original.replace("**Purpose:**", "**Porpoise:**"));
+
+        int broken = runPagesValidate(tmp);
+        assertNotEquals(0, broken, "broken palace front matter must fail the Pages deploy validate");
+        assertEquals(0, runPagesValidate(root), "unbroken repo docs must still pass");
+    }
+
+    private static int runPagesValidate(Path repoRoot) throws Exception {
+        Path helper = findRepoRoot().resolve("scripts/validate-pages-docs.sh");
+        ProcessBuilder pb = new ProcessBuilder("bash", helper.toString(), repoRoot.toString());
+        pb.redirectErrorStream(true);
+        Process process = pb.start();
+        String output = new String(process.getInputStream().readAllBytes());
+        boolean finished = process.waitFor(20, TimeUnit.SECONDS);
+        assertTrue(finished, "validate-pages-docs.sh timed out\n" + output);
+        return process.exitValue();
     }
 
     private static int runAssertPin(Path helper, Path directUrlJson) throws Exception {
