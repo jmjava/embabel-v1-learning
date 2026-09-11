@@ -28,9 +28,11 @@ jobs:
 
       # Pins stay 8822fcb. This job is not Pages. Changing 8822fcb in
       # ingest-manifest.json, README.md, PLAN.md, or the install-script
-      # pin makes CookbookVideoBundleTest fail. Claiming published films
-      # pass current memoryos evaluate/gate (12.5s think pause + reverse
-      # walk) also fails: the 8822fcb recordings are 2.5s and have no
-      # reverse walk. That record is not a film rebuild.
+      # pin makes CookbookVideoBundleTest fail. Leftover #10 also fails
+      # if the consumer pin leaves 8822fcb without an explicit leftover
+      # under leftovers/memory-os/. Claiming published films pass current
+      # memoryos evaluate/gate (12.5s think pause + reverse walk) also
+      # fails: the 8822fcb recordings are 2.5s and have no reverse walk.
+      # That record is not a film rebuild.
       - name: Run CookbookVideoBundleTest
         run: ./mvnw -B -pl learning-common test -Dtest=CookbookVideoBundleTest

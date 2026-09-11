@@ -12,6 +12,8 @@
   Published 8822fcb films fail current evaluate/gate (2.5s vs 12.5s
   think pause; no reverse walk). That mismatch is a checked record in
   `videos/memory-os/ingest-manifest.json`, not a recut.
+  Leftover #10 locks the consumer pin at `8822fcb`; a pin change
+  without an explicit leftover under `leftovers/memory-os/` fails CI.
 - Artifact root is [`docs/`](.) so [`index.html`](index.html) is the homepage.
 - Players embed MP4s from [`videos/recordings/`](videos/recordings/).
 - Checkout uses `lfs: true`. Track new recordings with Git LFS:

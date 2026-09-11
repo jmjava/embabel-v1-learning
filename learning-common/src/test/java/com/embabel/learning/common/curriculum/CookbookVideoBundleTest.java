@@ -147,6 +147,95 @@ class CookbookVideoBundleTest {
     }
 
     @Test
+    void consumerPinLockStays8822fcb() throws Exception {
+        Path root = findRepoRoot();
+        JsonNode manifest = new ObjectMapper().readTree(
+                root.resolve("docs/videos/memory-os/ingest-manifest.json").toFile()
+        );
+        JsonNode lock = manifest.get("pin_lock");
+        assertEquals(
+                "8822fcb5ae813f491daeff7d5f37fce7ff10d213",
+                manifest.get("memory_os_sha").asText(),
+                "memory_os_sha must stay 8822fcb"
+        );
+        assertEquals(10, lock.get("leftover").asInt(), "pin_lock leftover must be #10");
+        assertEquals("lock", lock.get("action").asText(), "leftover #10 is a lock, not a bump");
+        assertEquals(
+                "8822fcb5ae813f491daeff7d5f37fce7ff10d213",
+                lock.get("sha").asText(),
+                "pin_lock.sha must stay 8822fcb"
+        );
+        assertTrue(lock.get("locked").asBoolean(), "pin_lock.locked must stay true");
+        assertTrue(
+                lock.get("authorizing_leftover").isNull(),
+                "no leftover authorizes a pin bump"
+        );
+        assertFalse(lock.get("films_rebuilt").asBoolean(), "leftover #10 does not rebuild films");
+        assertEquals(
+                "8822fcb5ae813f491daeff7d5f37fce7ff10d213",
+                CookbookChapterCatalog.MEMORY_OS_SHA,
+                "CookbookChapterCatalog.MEMORY_OS_SHA must stay 8822fcb"
+        );
+        assertTrue(
+                Files.readString(root.resolve("leftovers/memory-os/10-lock-pin-8822fcb.md"))
+                        .contains("8822fcb"),
+                "leftover #10 lock file must pin 8822fcb"
+        );
+        assertEquals(
+                0,
+                runPinLock(root),
+                "current consumer pin lock must stay 8822fcb with no authorizing leftover"
+        );
+    }
+
+    @Test
+    void changingPinWithoutAuthorizingLeftoverGoesRed() throws Exception {
+        Path root = findRepoRoot();
+        assertEquals(0, runPinLock(root), "unmutated repo must still pass leftover #10 lock");
+
+        Path changed = copyPinLockFiles(root, "pin-lock-changed-");
+        rewriteConsumerPinFiles(changed, "8822fcb5ae813f491daeff7d5f37fce7ff10d213",
+                "2e94f8d000000000000000000000000000000000");
+        rewriteConsumerPinFiles(changed, "8822fcb", "2e94f8d");
+        assertNotEquals(
+                0,
+                runPinLock(changed),
+                "changing 8822fcb without an explicit leftover must go red"
+        );
+        assertEquals(0, runPinLock(root), "unmutated lock must still pass");
+    }
+
+    @Test
+    void claimingAuthorizingLeftoverWithoutLeftoverFileGoesRed() throws Exception {
+        Path root = findRepoRoot();
+        Path claimed = copyPinLockFiles(root, "pin-lock-claimed-");
+        Path manifest = claimed.resolve("docs/videos/memory-os/ingest-manifest.json");
+        Files.writeString(
+                manifest,
+                Files.readString(manifest)
+                        .replace("\"authorizing_leftover\": null", "\"authorizing_leftover\": 99")
+        );
+        assertNotEquals(
+                0,
+                runPinLock(claimed),
+                "claiming leftover 99 without leftovers/memory-os bump file must go red"
+        );
+
+        Path unlocked = copyPinLockFiles(root, "pin-lock-unlocked-");
+        Path unlockedManifest = unlocked.resolve("docs/videos/memory-os/ingest-manifest.json");
+        Files.writeString(
+                unlockedManifest,
+                Files.readString(unlockedManifest).replace("\"locked\": true", "\"locked\": false")
+        );
+        assertNotEquals(
+                0,
+                runPinLock(unlocked),
+                "unlocking pin_lock without an explicit leftover must go red"
+        );
+        assertEquals(0, runPinLock(root), "unmutated lock must still pass");
+    }
+
+    @Test
     void pagesYmlValidatesPalaceFrontMatterBeforeDeploy() throws Exception {
         Path root = findRepoRoot();
         String pages = Files.readString(root.resolve(".github/workflows/pages.yml"));
@@ -385,6 +474,47 @@ class CookbookVideoBundleTest {
             Path file = dir.resolve(name);
             Files.writeString(file, Files.readString(file).replace(from, to));
         }
+    }
+
+    private static final List<String> PIN_LOCK_FILES = List.of(
+            "docs/videos/memory-os/ingest-manifest.json",
+            "docs/videos/memory-os/README.md",
+            "docs/videos/memory-os/PLAN.md",
+            "learning-common/src/main/java/com/embabel/learning/common/curriculum/CookbookChapterCatalog.java",
+            "scripts/memoryos-cloud-install.sh",
+            "scripts/memoryos-assert-pin.sh",
+            "leftovers/memory-os/10-lock-pin-8822fcb.md"
+    );
+
+    private static Path copyPinLockFiles(Path root, String prefix) throws Exception {
+        Path dest = Files.createTempDirectory(prefix);
+        for (String rel : PIN_LOCK_FILES) {
+            Path out = dest.resolve(rel);
+            Files.createDirectories(out.getParent());
+            Files.copy(root.resolve(rel), out, StandardCopyOption.REPLACE_EXISTING);
+        }
+        return dest;
+    }
+
+    private static void rewriteConsumerPinFiles(Path root, String from, String to) throws Exception {
+        for (String rel : PIN_LOCK_FILES) {
+            if (rel.startsWith("leftovers/")) {
+                continue;
+            }
+            Path file = root.resolve(rel);
+            Files.writeString(file, Files.readString(file).replace(from, to));
+        }
+    }
+
+    private static int runPinLock(Path repoRoot) throws Exception {
+        Path helper = findRepoRoot().resolve("scripts/check-memoryos-pin-lock.sh");
+        ProcessBuilder pb = new ProcessBuilder("bash", helper.toString(), repoRoot.toString());
+        pb.redirectErrorStream(true);
+        Process process = pb.start();
+        String output = new String(process.getInputStream().readAllBytes());
+        boolean finished = process.waitFor(20, TimeUnit.SECONDS);
+        assertTrue(finished, "check-memoryos-pin-lock.sh timed out\n" + output);
+        return process.exitValue();
     }
 
     private static final List<String> PUBLISH_FILMS = List.of(

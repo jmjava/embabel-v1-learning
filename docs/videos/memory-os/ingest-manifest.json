@@ -28,6 +28,16 @@
     "required_reverse_walk": true,
     "films_rebuilt": false
   },
+  "pin_lock": {
+    "leftover": 10,
+    "action": "lock",
+    "sha": "8822fcb5ae813f491daeff7d5f37fce7ff10d213",
+    "prefix": "8822fcb",
+    "locked": true,
+    "authorizing_leftover": null,
+    "films_rebuilt": false,
+    "reason": "Do not bump 8822fcb from a memory-os leftover"
+  },
   "segments": [
     {
       "id": "01",

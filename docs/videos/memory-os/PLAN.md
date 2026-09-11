@@ -50,8 +50,9 @@ Finished floors are frozen so later `--force` cannot rewrite them.
 Published lengths: full ~12.3 min, floor 1 ~5.4 min, floor 2 ~5.8 min.
 Those recordings fail current `memoryos evaluate` / `gate` (2.5s think
 pause vs 12.5s; no reverse walk). The failure is recorded in
-`ingest-manifest.json` — do not rebuild films to clear it. Pin stays
-`8822fcb`.
+`ingest-manifest.json` — do not rebuild films to clear it. Leftover #10
+locks the consumer pin at `8822fcb`; changing it without an explicit
+leftover must go red. Pin stays `8822fcb`.
 
 ## Out of scope
 
