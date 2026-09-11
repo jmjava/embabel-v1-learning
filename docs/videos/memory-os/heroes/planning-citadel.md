@@ -21,11 +21,16 @@ the rule. Pause for recall.
 type-ingot. The serpent *is* the plan.
 
 **Hero:** A bronze compass-serpent. Four organs become its body, then
-OODA scales, a type-pipe belly, a cost rattle, a brick-wall tail, then
-four planner hoods that fuse one at a time.
+pulsing scale-bands, a type-pipe belly, a cost rattle, a brick-wall
+tail, then four planner hoods that fuse one at a time.
 
-**Hero origin:** The spinning compass-eye that left the foundry
-pipe-creature and slithered into the citadel gate.
+**Chassis:** a bronze compass-serpent the size of a citadel aisle
+
+**Hero origin:** A spinning bronze compass that crawled off the type-ingot.
+
+**Camera:** first-person, eye-level, wide-angle, standing just inside the threshold, looking at the next organ of the same hero
+
+**Hero scale:** the hero is architectural — it fills at least 40% of the frame and is the first thing the eye hits
 
 **Metaphor material:** Warm bronze coils, glass type-pipes, coal-orange
 arrow-light.
@@ -82,17 +87,18 @@ labels.
 
 **Metaphor part:** head-slot
 
-**Hero from:** A spinning compass that crawled off the type-ingot.
+**Hero from:** A spinning bronze compass that crawled off the type-ingot.
 
-**Hero now:** A compass-serpent with legs, a goal-bell, lantern-ribs,
-and a domain-heart.
+**Hero now:** A compass-serpent with action-legs, a goal-bell, lantern-ribs, and a domain-heart.
 
-**Hero silhouette:** Compass-headed serpent with four distinct organs
+**Hero silhouette:** Compass-headed serpent with four distinct organs.
 
-**Hero tell:** Four different organs, not a plain snake
+**Hero tell:** Four different organs, not a plain snake.
 
-**Hero becomes:** The coils freeze into an un-drawn maze; no painted
-arrows.
+**Hero shot:** From above, the four organs fill the frame.
+
+**Hero becomes:** The same compass-serpent whose coils are an undrawn maze with no arrows.
+
 
 **Key distinction:** Domain is not decoration — types are control flow.
 
@@ -120,16 +126,18 @@ lies cracked.
 
 **Metaphor part:** seeing-slot
 
-**Hero from:** Compass-serpent with four organs.
+**Hero from:** A compass-serpent with action-legs, a goal-bell, lantern-ribs, and a domain-heart.
 
-**Hero now:** The same serpent whose coils are an un-drawn maze.
+**Hero now:** The same compass-serpent whose coils are an undrawn maze with no arrows.
 
-**Hero silhouette:** Serpent coiled as a maze with no arrows
+**Hero silhouette:** Serpent coiled as a maze with no painted arrows.
 
-**Hero tell:** Cracked flowchart slate on the floor; coils have no arrows
+**Hero tell:** Cracked flowchart slate on the floor; coils have no arrows.
 
-**Hero becomes:** The belly turns into glass pipes that light when a
-new type is born.
+**Hero shot:** Wide first-person into the coiled maze, no arrows.
+
+**Hero becomes:** The same compass-serpent with a glass-pipe belly that lights when a new type is born.
+
 
 **Key distinction:** Source order is not execution order.
 
@@ -138,7 +146,8 @@ new type is born.
 ## Scene 3 --- Pipe Belly: Return Posts An Effect
 
 **Visual:** The maze-belly becomes glass pipes. When the serpent
-births a new shaped ingot, the next pipe lights. No `if` signs.
+births a new shaped ingot, the next pipe lights. No painted branch
+signs.
 
 **Overlay:** `return type`
 
@@ -156,17 +165,18 @@ births a new shaped ingot, the next pipe lights. No `if` signs.
 
 **Metaphor part:** hearing-slot
 
-**Hero from:** Serpent coiled as an un-drawn maze.
+**Hero from:** The same compass-serpent whose coils are an undrawn maze with no arrows.
 
-**Hero now:** The same serpent with a glass-pipe belly that lights on
-new types.
+**Hero now:** The same compass-serpent with a glass-pipe belly that lights when a new type is born.
 
-**Hero silhouette:** Maze-serpent with a glowing glass-pipe belly
+**Hero silhouette:** Maze-serpent with a glowing glass-pipe belly.
 
-**Hero tell:** A new ingot appears and the next pipe lights
+**Hero tell:** A new ingot appears and the next pipe lights.
 
-**Hero becomes:** Four scale-quadrants pulse Observe, Orient, Decide,
-Act around the compass head.
+**Hero shot:** Low angle on the belly pipes as one lights.
+
+**Hero becomes:** The same compass-serpent wearing four pulsing compass scale-bands.
+
 
 **Key distinction:** Types, not method order, chain the plan.
 
@@ -194,15 +204,18 @@ every door. The pipe-belly stays. No letters on the bands.
 
 **Metaphor part:** scent-slot
 
-**Hero from:** Serpent with a glass-pipe belly.
+**Hero from:** The same compass-serpent with a glass-pipe belly that lights when a new type is born.
 
-**Hero now:** The same serpent wearing four pulsing OODA scale-bands.
+**Hero now:** The same compass-serpent wearing four pulsing compass scale-bands.
 
-**Hero silhouette:** Pipe-belly serpent with four compass scale-bands
+**Hero silhouette:** Pipe-belly serpent wearing four compass scale-bands.
 
-**Hero tell:** Bands pulse only after a door, then the coils re-weave
+**Hero tell:** Bands pulse only after a door, then the coils re-weave.
 
-**Hero becomes:** A merchant scale grows as a rattle on the tail.
+**Hero shot:** Close on the compass head as four bands pulse.
+
+**Hero becomes:** The same compass-serpent with a two-ticket cost-scale rattle on the tail.
+
 
 **Key distinction:** Replan is the default loop, not an error path.
 
@@ -231,15 +244,18 @@ rings for both.
 
 **Metaphor part:** passage-slot
 
-**Hero from:** Serpent with OODA scale-bands.
+**Hero from:** The same compass-serpent wearing four pulsing compass scale-bands.
 
-**Hero now:** The same serpent with a cost-scale rattle on the tail.
+**Hero now:** The same compass-serpent with a two-ticket cost-scale rattle on the tail.
 
-**Hero silhouette:** OODA-serpent with a hanging two-ticket rattle
+**Hero silhouette:** Scale-banded serpent with a hanging two-ticket rattle.
 
-**Hero tell:** Identical tickets; only the light one slams the scale
+**Hero tell:** Identical tickets; only the light one slams the scale.
 
-**Hero becomes:** The tail hits a brick wall and stops, still alive.
+**Hero shot:** Side shot of the tail rattle slamming the light ticket.
+
+**Hero becomes:** The same compass-serpent whose tail is pressed to a brick wall.
+
 
 **Key distinction:** Cost is a planner heuristic, not billing.
 
@@ -267,15 +283,18 @@ History clips hang from the lantern-ribs.
 
 **Metaphor part:** vault-slot
 
-**Hero from:** Serpent with a cost-scale rattle.
+**Hero from:** The same compass-serpent with a two-ticket cost-scale rattle on the tail.
 
-**Hero now:** The same serpent whose tail is pressed to a brick wall.
+**Hero now:** The same compass-serpent whose tail is pressed to a brick wall.
 
-**Hero silhouette:** Cost-rattle serpent stopped at a brick wall
+**Hero silhouette:** Cost-rattle serpent stopped at a brick wall.
 
-**Hero tell:** Leftover ingot on the floor; serpent still breathing
+**Hero tell:** Leftover ingot on the floor; the serpent is still breathing.
 
-**Hero becomes:** A cheap-path cap fuses over the compass (GOAP).
+**Hero shot:** The tail pressed to brick; leftover ingot in the foreground.
+
+**Hero becomes:** The same compass-serpent wearing a fused cheap-path work-cap.
+
 
 ### Floor 1 Recall Route
 
@@ -320,15 +339,18 @@ ignored.
 
 **Metaphor part:** works-slot
 
-**Hero from:** Serpent pressed to a brick wall.
+**Hero from:** The same compass-serpent whose tail is pressed to a brick wall.
 
-**Hero now:** The same serpent wearing a fused cheap-path cap.
+**Hero now:** The same compass-serpent wearing a fused cheap-path work-cap.
 
-**Hero silhouette:** Brick-tail serpent with a fused work-cap
+**Hero silhouette:** Brick-tail serpent with a fused work-cap.
 
-**Hero tell:** Walks only the lit cheap pipes; gold piles ignored
+**Hero tell:** Walks only the lit cheap pipes; gold piles ignored.
 
-**Hero becomes:** Gold-crown claws that will not let go.
+**Hero shot:** Front view of the fused work-cap walking a lit pipe.
+
+**Hero becomes:** The same compass-serpent with greedy gold-crown claws grabbing value piles.
+
 
 **Key distinction:** GOAP optimizes path cost, not exploration.
 
@@ -355,15 +377,18 @@ value pile, then the next, and may never reach the goal-bell.
 
 **Metaphor part:** grasp-slot
 
-**Hero from:** Serpent with a cheap-path cap.
+**Hero from:** The same compass-serpent wearing a fused cheap-path work-cap.
 
-**Hero now:** The same serpent with gold-crown claws grabbing piles.
+**Hero now:** The same compass-serpent with greedy gold-crown claws grabbing value piles.
 
-**Hero silhouette:** Capped serpent with greedy gold claws
+**Hero silhouette:** Capped serpent with greedy gold claws.
 
-**Hero tell:** Claws full of gold; goal-bell still distant
+**Hero tell:** Claws full of gold; the goal-bell still distant.
 
-**Hero becomes:** A satchel-hood that fills, then zips shut.
+**Hero shot:** Claws grabbing piles, goal-bell far behind.
+
+**Hero becomes:** The same compass-serpent wearing a satchel-hood that zips shut at the goal-bell.
+
 
 **Key distinction:** Value is not the same knob as GOAP cost.
 
@@ -389,15 +414,18 @@ slams when the goal-bell is reachable.
 
 **Metaphor part:** stand-slot
 
-**Hero from:** Serpent with gold-crown claws.
+**Hero from:** The same compass-serpent with greedy gold-crown claws grabbing value piles.
 
-**Hero now:** The same serpent wearing a satchel-hood that zips shut.
+**Hero now:** The same compass-serpent wearing a satchel-hood that zips shut at the goal-bell.
 
-**Hero silhouette:** Gold-clawed serpent with a zipping satchel-hood
+**Hero silhouette:** Gold-clawed serpent with a zipping satchel-hood.
 
-**Hero tell:** Satchel fills, then the zipper slams at the goal-bell
+**Hero tell:** Satchel fills, then the zipper slams at the goal-bell.
 
-**Hero becomes:** A concierge top-hat mouth that talks to typed tools.
+**Hero shot:** Satchel zipper slamming as the bell rings.
+
+**Hero becomes:** The same compass-serpent with a concierge top-hat mouth and a description megaphone.
+
 
 **Key distinction:** Hybrid still needs a real goal, not endless gather.
 
@@ -405,7 +433,7 @@ slams when the goal-bell is reachable.
 
 ## Scene 4 --- Concierge Mouth: Supervisor
 
-**Visual:** An LLM concierge top-hat becomes the mouth. It points at
+**Visual:** A concierge top-hat becomes the mouth. It points at
 typed tool-doors. A megaphone grows because mumbled door names
 confuse it. Same legs as always.
 
@@ -426,16 +454,18 @@ confuse it. Same legs as always.
 
 **Metaphor part:** exit-slot
 
-**Hero from:** Serpent with a zipping satchel-hood.
+**Hero from:** The same compass-serpent wearing a satchel-hood that zips shut at the goal-bell.
 
-**Hero now:** The same serpent with a concierge mouth and description
-megaphone.
+**Hero now:** The same compass-serpent with a concierge top-hat mouth and a description megaphone.
 
-**Hero silhouette:** Satchel-serpent with a talking top-hat mouth
+**Hero silhouette:** Satchel-serpent with a talking top-hat mouth.
 
-**Hero tell:** Megaphone at the mouth; legs unchanged
+**Hero tell:** Megaphone at the mouth; the legs are unchanged.
 
-**Hero becomes:** The finished citadel serpent, ready for recall.
+**Hero shot:** Mouth and megaphone dominate; legs still visible as traces.
+
+**Hero becomes:** The finished bronze compass-serpent the size of a citadel aisle, ready for recall.
+
 
 **Key distinction:** Type-informed is not deterministic.
 
@@ -447,10 +477,21 @@ megaphone.
 
 # 4. Final Active-Recall Sequence
 
-`Four objects → No FSM → Type posts effect → OODA → cost → Stuck`
-then `GOAP → Utility → Hybrid → Supervisor`
+End the video with locations only. Ask the learner to name the
+concept, then reveal:
 
-------------------------------------------------------------------------
+### Floor 1
+
+**How a process lives**
+
+`Four objects → No FSM → Type posts effect → OODA → cost → Stuck status`
+
+### Floor 2
+
+**Four planners**
+
+`GOAP → Utility → Hybrid → Supervisor`
+
 
 # 5. Study Map
 

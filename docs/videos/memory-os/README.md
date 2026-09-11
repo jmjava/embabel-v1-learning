@@ -15,7 +15,7 @@ Category / subcategory map and hero-evolution palaces for Memory OS:
 
 - [`STUDY_CAMPUS.md`](STUDY_CAMPUS.md) — taxonomy + recall routes
 - [`CONVENTIONS.md`](CONVENTIONS.md) — palace authoring contract
-- [`heroes/`](heroes/) — one evolving hero per category (authoring; not compiled yet)
+- [`heroes/`](heroes/) — one evolving hero per category (compile-clean Markdown; not filmed)
 - [`../../READING.md`](../../READING.md) — blogs mapped onto those categories
 
 Filmed track remains the Type-Foundry cheat-sheet palace below.

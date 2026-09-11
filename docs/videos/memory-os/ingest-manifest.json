@@ -7,6 +7,7 @@
   "cookbook_docs": "https://docs.embabel.com/embabel-cookbook/1.5.0/",
   "memory_os_repo": "https://github.com/jmjava/memory-os",
   "memory_os_sha": "8822fcb5ae813f491daeff7d5f37fce7ff10d213",
+  "campus_compile_sha": "bfa05e1c74a6f8e77a8fd7e5214fe2d598011d31",
   "renderer": {
     "primary": "https://github.com/jmjava/memory-os",
     "fallback": "https://github.com/jmjava/documentation-generator"
@@ -143,31 +144,31 @@
       "markdown": "docs/videos/memory-os/heroes/planning-citadel.md",
       "hero": "compass-serpent",
       "loci": 10,
-      "status": "authoring"
+      "status": "compile-clean"
     },
     {
       "id": "embabel-annotation-armory",
       "category": "B Agent definition",
       "markdown": "docs/videos/memory-os/heroes/annotation-armory.md",
-      "hero": "badge-beetle",
+      "hero": "clockwork-scarab",
       "loci": 8,
-      "status": "authoring"
+      "status": "compile-clean"
     },
     {
       "id": "embabel-dice-workshop",
       "category": "C Domain and DICE tools",
       "markdown": "docs/videos/memory-os/heroes/dice-workshop.md",
-      "hero": "customer-golem",
+      "hero": "shop-mannequin",
       "loci": 7,
-      "status": "authoring"
+      "status": "compile-clean"
     },
     {
       "id": "embabel-prompt-atelier",
       "category": "D LLM extras",
       "markdown": "docs/videos/memory-os/heroes/prompt-atelier.md",
-      "hero": "quill-wisp",
+      "hero": "fountain-pen",
       "loci": 6,
-      "status": "authoring"
+      "status": "compile-clean"
     },
     {
       "id": "embabel-looping-observatory",
@@ -175,23 +176,23 @@
       "markdown": "docs/videos/memory-os/heroes/looping-observatory.md",
       "hero": "hourglass-sentinel",
       "loci": 10,
-      "status": "authoring"
+      "status": "compile-clean"
     },
     {
       "id": "embabel-safety-vault",
       "category": "F Production envelope",
       "markdown": "docs/videos/memory-os/heroes/safety-vault.md",
-      "hero": "gate-warden",
+      "hero": "walking-palace-gate",
       "loci": 10,
-      "status": "authoring"
+      "status": "compile-clean"
     },
     {
       "id": "embabel-frontier-greenhouse",
       "category": "G Frontier blogs",
       "markdown": "docs/videos/memory-os/heroes/frontier-greenhouse.md",
-      "hero": "glass-librarian",
+      "hero": "library-cart",
       "loci": 8,
-      "status": "authoring"
+      "status": "compile-clean"
     }
   ]
 }

@@ -52,8 +52,8 @@ Published lengths: full ~12.3 min, floor 1 ~5.4 min, floor 2 ~5.8 min.
 ## Out of scope
 
 - Re-filming cookbook travel rooms
-- Compiling the new campus palaces in [`heroes/`](heroes/) until a Memory OS
-  ingest pass is scheduled (authoring is the source of truth today)
+- Filming campus palaces in [`heroes/`](heroes/) until a Memory OS
+  ingest pass is scheduled (Markdown compiles; do not `plan`/`build`)
 - Docgen narration rewrites (optional later; cheat sheet is the source)
 
 ## Study campus (not yet filmed)

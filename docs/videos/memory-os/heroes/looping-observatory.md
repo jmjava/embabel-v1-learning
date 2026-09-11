@@ -18,13 +18,18 @@ is the next organ of the Hourglass-Sentinel. No lettering in stills.
 **Metaphor:** A night observatory where time is the planner’s loop.
 The sentinel *is* waiting, scoring, and handing off.
 
-**Hero:** A bronze hourglass-sentinel. Lantern-heart (pure condition)
-→ gate rings → paused sand (HITL) → heavy glass (high cost) → side
-mold then human crank → score-bell cycles → max-flip pegs → chambered
-states → looping broom → child hourglass with a typed ticket.
+**Hero:** A bronze hourglass-sentinel. Lantern-heart → gate rings →
+paused sand and a human crank → heavy glass → side mold then crank
+→ score-bell cycles → flip pegs → chambered states → looping broom
+→ child hourglass with a ticket-mold.
 
-**Hero origin:** A frozen hourglass on the observatory roof — sand
-stuck, no organs yet.
+**Chassis:** a bronze hourglass the size of a sentinel
+
+**Hero origin:** A frozen bronze hourglass on the observatory roof.
+
+**Camera:** first-person, eye-level, wide-angle, standing just inside the threshold, looking at the next organ of the same hero
+
+**Hero scale:** the hero is architectural — it fills at least 40% of the frame and is the first thing the eye hits
 
 **Metaphor material:** Night bronze, sand-glass, coal-orange starlight,
 teal score-light on floor 2.
@@ -79,15 +84,18 @@ without moving sand. Many moths bump it — it may be asked often.
 
 **Metaphor part:** head-slot
 
-**Hero from:** A frozen hourglass on the roof.
+**Hero from:** A frozen bronze hourglass on the observatory roof.
 
-**Hero now:** The same hourglass with a lantern-heart moths keep bumping.
+**Hero now:** The same hourglass with a lantern-heart that moths keep bumping.
 
-**Hero silhouette:** Hourglass with a flickering lantern heart
+**Hero silhouette:** Hourglass with a flickering lantern heart.
 
-**Hero tell:** Moths bump the lantern; sand still frozen
+**Hero tell:** Moths bump the lantern; sand still frozen.
 
-**Hero becomes:** Two gate-rings grow around the waist, only one open.
+**Hero shot:** Lantern-heart filling the upper bulb, moths bumping.
+
+**Hero becomes:** The same hourglass with two gate-rings at the waist, only one open.
+
 
 **Key distinction:** Conditions are facts, not actions.
 
@@ -95,9 +103,9 @@ without moving sand. Many moths bump it — it may be asked often.
 
 ## Scene 2 --- Twin Gates: pre / post
 
-**Visual:** Two rings around the waist. One ring must already be open
-(`pre`). The other slams shut after passage (`post`). Sibling windows:
-only one lights.
+**Visual:** Two rings around the waist. One ring must already be
+open. The other slams shut after passage. Sibling windows: only
+one lights.
 
 **Overlay:** `pre / post`
 
@@ -115,15 +123,18 @@ only one lights.
 
 **Metaphor part:** seeing-slot
 
-**Hero from:** Hourglass with a lantern-heart.
+**Hero from:** The same hourglass with a lantern-heart that moths keep bumping.
 
-**Hero now:** The same hourglass with two gate-rings at the waist.
+**Hero now:** The same hourglass with two gate-rings at the waist, only one open.
 
-**Hero silhouette:** Lantern-hourglass with two waist gate-rings
+**Hero silhouette:** Lantern-hourglass with two waist gate-rings.
 
-**Hero tell:** Sibling windows; only one ring open at a time
+**Hero tell:** Sibling windows; only one ring open at a time.
 
-**Hero becomes:** Sand freezes until a human turns the crank.
+**Hero shot:** Waist rings, one open, one shut.
+
+**Hero becomes:** The same hourglass with sand frozen mid-air and a huge human crank.
+
 
 **Key distinction:** `pre`/`post` are names, not method pointers by luck.
 
@@ -150,15 +161,18 @@ it dumps a form-shaped ingot into the glass, then sand falls again.
 
 **Metaphor part:** hearing-slot
 
-**Hero from:** Hourglass with twin gate-rings.
+**Hero from:** The same hourglass with two gate-rings at the waist, only one open.
 
-**Hero now:** The same hourglass with sand frozen and a human crank.
+**Hero now:** The same hourglass with sand frozen mid-air and a huge human crank.
 
-**Hero silhouette:** Gated hourglass with a huge human crank
+**Hero silhouette:** Gated hourglass with a huge human crank.
 
-**Hero tell:** Sand mid-air until the crank turns; a form-ingot drops in
+**Hero tell:** Sand mid-air until the crank turns; a form-ingot drops in.
 
-**Hero becomes:** The glass itself turns heavy and expensive.
+**Hero shot:** Frozen sand and the huge crank.
+
+**Hero becomes:** The same hourglass, now lead-heavy, standing beside a cheap mold-path.
+
 
 **Key distinction:** Pause is a type post, not a special FSM node.
 
@@ -184,15 +198,18 @@ glows beside it. The planner prefers the mold unless the mold fails.
 
 **Metaphor part:** scent-slot
 
-**Hero from:** Hourglass with a human crank.
+**Hero from:** The same hourglass with sand frozen mid-air and a huge human crank.
 
-**Hero now:** The same hourglass, now lead-heavy, beside a cheap mold-path.
+**Hero now:** The same hourglass, now lead-heavy, standing beside a cheap mold-path.
 
-**Hero silhouette:** Crank-hourglass of lead beside a cheap mold
+**Hero silhouette:** Crank-hourglass of lead beside a cheap mold.
 
-**Hero tell:** Planner walks the mold-path; lead glass waits
+**Hero tell:** Planner walks the mold-path; lead glass waits.
 
-**Hero becomes:** Soft clay tries the mold, then slumps toward the crank.
+**Hero shot:** Lead glass beside a cheap glowing mold-path.
+
+**Hero becomes:** The same lead hourglass catching slumped clay, then offering the crank.
+
 
 **Key distinction:** Cost is how you keep humans off the happy path.
 
@@ -219,16 +236,18 @@ glows beside it. The planner prefers the mold unless the mold fails.
 
 **Metaphor part:** passage-slot
 
-**Hero from:** Lead hourglass beside a cheap mold.
+**Hero from:** The same hourglass, now lead-heavy, standing beside a cheap mold-path.
 
-**Hero now:** The same hourglass catching slumped clay, then offering
-the crank.
+**Hero now:** The same lead hourglass catching slumped clay, then offering the crank.
 
-**Hero silhouette:** Lead hourglass under a null-hole, crank ready
+**Hero silhouette:** Lead hourglass under a null-hole, crank ready.
 
-**Hero tell:** Warning lantern, no explosion; crank only after the slump
+**Hero tell:** Warning lantern, no explosion; crank only after the slump.
 
-**Hero becomes:** Sand begins cycling past a score-bell.
+**Hero shot:** Clay slumping through a hole toward the crank.
+
+**Hero becomes:** The same hourglass cycling sand past a critic score-bell.
+
 
 ### Floor 1 Recall Route
 
@@ -273,15 +292,18 @@ color, not a number painted on glass.
 
 **Metaphor part:** vault-slot
 
-**Hero from:** Hourglass catching slumped clay.
+**Hero from:** The same lead hourglass catching slumped clay, then offering the crank.
 
-**Hero now:** The same hourglass cycling sand past a score-bell.
+**Hero now:** The same hourglass cycling sand past a critic score-bell.
 
-**Hero silhouette:** Slump-hourglass with a critic score-bell
+**Hero silhouette:** Slump-hourglass with a critic score-bell.
 
-**Hero tell:** Bell rings a tone; dome opens only when the tone is high
+**Hero tell:** Bell rings a tone; the dome opens only when the tone is high.
 
-**Hero becomes:** Pegs cap how many flips are allowed.
+**Hero shot:** Sand cycling past the score-bell.
+
+**Hero becomes:** The same hourglass with wooden flip-pegs counting cycles.
+
 
 **Key distinction:** Needs ActionContext, not bare `Ai`.
 
@@ -308,16 +330,18 @@ tone-so-far is kept and the dome still opens — a safety cap.
 
 **Metaphor part:** works-slot
 
-**Hero from:** Hourglass with a score-bell.
+**Hero from:** The same hourglass cycling sand past a critic score-bell.
 
-**Hero now:** The same hourglass with flip-pegs counting cycles.
+**Hero now:** The same hourglass with wooden flip-pegs counting cycles.
 
-**Hero silhouette:** Score-bell hourglass with a row of flip-pegs
+**Hero silhouette:** Score-bell hourglass with a row of flip-pegs.
 
-**Hero tell:** Last peg falls; dome opens anyway with the best tone
+**Hero tell:** Last peg falls; the dome opens anyway with the best tone.
 
-**Hero becomes:** The glass splits into chambers; only one set of
-gears spins.
+**Hero shot:** Peg row counting flips.
+
+**Hero becomes:** The same hourglass split into stacked chambers, only one spinning.
+
 
 **Key distinction:** Caps are production, not pessimism.
 
@@ -345,15 +369,18 @@ frosted glass. Non-state sand can still show.
 
 **Metaphor part:** grasp-slot
 
-**Hero from:** Hourglass with flip-pegs.
+**Hero from:** The same hourglass with wooden flip-pegs counting cycles.
 
-**Hero now:** The same hourglass split into stacked state-chambers.
+**Hero now:** The same hourglass split into stacked chambers, only one spinning.
 
-**Hero silhouette:** Pegged hourglass of stacked chambers, one spinning
+**Hero silhouette:** Pegged hourglass of stacked chambers, one spinning.
 
-**Hero tell:** Frosted prior chamber; one gear-set spinning
+**Hero tell:** Frosted prior chamber; one gear-set spinning.
 
-**Hero becomes:** A broom appears only in the looping chamber.
+**Hero shot:** Stacked chambers, only one spinning.
+
+**Hero becomes:** The same chambered hourglass with a broom only in the looping chamber.
+
 
 **Key distinction:** States are honest loops; do not fight GOAP.
 
@@ -381,17 +408,18 @@ erase the prize.
 
 **Metaphor part:** stand-slot
 
-**Hero from:** Chambered hourglass.
+**Hero from:** The same hourglass split into stacked chambers, only one spinning.
 
-**Hero now:** The same hourglass with a broom only in the looping
-chamber.
+**Hero now:** The same chambered hourglass with a broom only in the looping chamber.
 
-**Hero silhouette:** Chambered hourglass holding a broom in one room
+**Hero silhouette:** Chambered hourglass holding a broom in one room.
 
-**Hero tell:** Goal chamber has no broom
+**Hero tell:** Goal chamber has no broom.
 
-**Hero becomes:** A child hourglass sits in the palm with a ticket
-mold.
+**Hero shot:** Broom only in the looping chamber.
+
+**Hero becomes:** The same hourglass holding a child hourglass and a ticket-mold.
+
 
 **Key distinction:** Clear is for iteration hygiene, not for done.
 
@@ -400,8 +428,8 @@ mold.
 ## Scene 5 --- Child Glass: Subagent.consuming
 
 **Visual:** A smaller hourglass in the palm. The parent must fill a
-ticket-mold (`consuming(T)`) before the child will spin. The child
-wears the parent’s cloak (verbosity/options).
+ticket-mold before the child will spin. The child wears the parent’s
+cloak.
 
 **Overlay:** `Subagent.consuming(T)`
 
@@ -420,16 +448,18 @@ wears the parent’s cloak (verbosity/options).
 
 **Metaphor part:** exit-slot
 
-**Hero from:** Chambered hourglass with a loop broom.
+**Hero from:** The same chambered hourglass with a broom only in the looping chamber.
 
-**Hero now:** The same hourglass holding a child hourglass and a
-ticket-mold.
+**Hero now:** The same hourglass holding a child hourglass and a ticket-mold.
 
-**Hero silhouette:** Broom-hourglass with a child glass in its palm
+**Hero silhouette:** Broom-hourglass with a child glass in its palm.
 
-**Hero tell:** Ticket-mold in the parent’s other hand; child wears the parent cloak
+**Hero tell:** Ticket-mold in the other hand; the child wears the parent cloak.
 
-**Hero becomes:** The finished observatory sentinel, ready for recall.
+**Hero shot:** Child hourglass in the palm with a ticket-mold.
+
+**Hero becomes:** The finished bronze hourglass the size of a sentinel, ready for recall.
+
 
 **Key distinction:** Handoff is typed tool-call, not a hidden method.
 
@@ -441,9 +471,21 @@ ticket-mold.
 
 # 4. Final Active-Recall Sequence
 
-Lantern, gates, crank, lead, slump, bell, pegs, chambers, broom, child.
+End the video with locations only. Ask the learner to name the
+concept, then reveal:
 
-------------------------------------------------------------------------
+### Floor 1
+
+**Eligibility and HITL**
+
+`Pure condition → pre/post → HITL wait → High cost → ifPossible+HITL`
+
+### Floor 2
+
+**Iteration and composition**
+
+`RepeatUntil score → maxIterations → State hide → clearBlackboard → Subagent schema`
+
 
 # 5. Study Map
 
