@@ -4,6 +4,7 @@ import com.embabel.agent.api.annotation.Action;
 import com.embabel.agent.api.annotation.RequireNameMatch;
 import com.embabel.agent.api.common.Ai;
 import com.embabel.agent.domain.io.UserInput;
+import com.embabel.agent.test.unit.FakeOperationContext;
 import com.embabel.learning.common.curriculum.DebugGuide;
 import com.embabel.learning.common.domain.Critique;
 import com.embabel.learning.common.domain.ResearchDraft;
@@ -57,5 +58,24 @@ class ConditionalResearchAgentGuidedTest {
         assertEquals("carefulDraft", rewriteAction.outputBinding());
         assertTrue(rewriteAction.canRerun());
         assertNotNull(rewrite.getParameters()[1].getAnnotation(RequireNameMatch.class));
+    }
+
+    @Test
+    @DebugGuide(
+            breakpoints = {"ConditionalResearchAgent#draftFast"},
+            watch = "research topic stays in the fast-draft prompt"
+    )
+    void draftFastPromptKeepsTheTopic() {
+        var ctx = FakeOperationContext.create();
+        var topic = "Why do tides follow the moon?";
+        ctx.expectResponse(new ResearchDraft(topic, "The moon raises the tides.", "fast"));
+
+        var draft = new ConditionalResearchAgent().draftFast(new UserInput(topic), ctx.ai());
+
+        assertEquals(topic, draft.topic());
+        assertEquals("The moon raises the tides.", draft.content());
+        var prompt = ctx.getLlmInvocations().getFirst().getPrompt();
+        assertTrue(prompt.contains("Write a brief research draft"), prompt);
+        assertTrue(prompt.contains(topic), prompt);
     }
 }
