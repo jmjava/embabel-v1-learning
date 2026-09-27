@@ -282,6 +282,55 @@ class CookbookVideoBundleTest {
     }
 
     @Test
+    void missingPagesIndexFailsCacheBustAndPresentIndexStillCacheBusts() throws Exception {
+        Path root = findRepoRoot();
+        String pages = Files.readString(root.resolve(".github/workflows/pages.yml"));
+        assertTrue(
+                pages.contains("scripts/cache-bust-pages-index.sh"),
+                "pages.yml cache-bust step must run scripts/cache-bust-pages-index.sh"
+        );
+        assertFalse(
+                pages.contains("SystemExit(0)"),
+                "pages.yml must not treat a missing docs/index.html as success"
+        );
+        int bustAt = pages.indexOf("cache-bust-pages-index.sh");
+        int uploadAt = pages.indexOf("upload-pages-artifact");
+        assertTrue(bustAt >= 0, "missing cache-bust-pages-index.sh in pages.yml");
+        assertTrue(uploadAt > bustAt, "cache-bust must run before upload-pages-artifact");
+
+        Path missing = Files.createTempDirectory("pages-index-missing-");
+        Files.createDirectories(missing.resolve("docs"));
+        assertNotEquals(
+                0,
+                runCacheBust(missing),
+                "missing docs/index.html must fail the cache-bust step"
+        );
+
+        Path present = Files.createTempDirectory("pages-index-present-");
+        Files.createDirectories(present.resolve("docs"));
+        Path index = present.resolve("docs/index.html");
+        Files.writeString(
+                index,
+                """
+                <source src="videos/recordings/embabel-cheatsheet.mp4" type="video/mp4">
+                <source src="videos/recordings/already.mp4?v=old" type="video/mp4">
+                """
+        );
+        assertEquals(0, runCacheBust(present), "a present index must still cache-bust");
+        String rewritten = Files.readString(index);
+        assertTrue(
+                rewritten.contains("src=\"videos/recordings/embabel-cheatsheet.mp4?v=abc123def456\""),
+                "present index must gain a sha query on recording URLs"
+        );
+        assertTrue(
+                rewritten.contains("src=\"videos/recordings/already.mp4?v=abc123def456\""),
+                "an existing cache-bust query must be replaced"
+        );
+        assertFalse(rewritten.contains("?v=old"), "previous query string must not remain");
+        assertEquals(0, runCacheBustSelfCheck(root), "cache-bust script self-check must pass");
+    }
+
+    @Test
     void publishScriptValidatesRecordingsDestination() throws Exception {
         Path root = findRepoRoot();
         String script = Files.readString(root.resolve("scripts/publish-memoryos-videos.sh"));
@@ -584,6 +633,30 @@ class CookbookVideoBundleTest {
         String output = new String(process.getInputStream().readAllBytes());
         boolean finished = process.waitFor(20, TimeUnit.SECONDS);
         assertTrue(finished, "check-published-film-gate-record.sh timed out\n" + output);
+        return process.exitValue();
+    }
+
+    private static int runCacheBust(Path repoRoot) throws Exception {
+        Path helper = findRepoRoot().resolve("scripts/cache-bust-pages-index.sh");
+        ProcessBuilder pb = new ProcessBuilder("bash", helper.toString(), repoRoot.toString());
+        pb.environment().put("GITHUB_SHA", "abc123def4567890abcdef");
+        pb.redirectErrorStream(true);
+        Process process = pb.start();
+        String output = new String(process.getInputStream().readAllBytes());
+        boolean finished = process.waitFor(20, TimeUnit.SECONDS);
+        assertTrue(finished, "cache-bust-pages-index.sh timed out\n" + output);
+        return process.exitValue();
+    }
+
+    private static int runCacheBustSelfCheck(Path repoRoot) throws Exception {
+        Path helper = repoRoot.resolve("scripts/cache-bust-pages-index.sh");
+        ProcessBuilder pb = new ProcessBuilder("bash", helper.toString(), "--self-check");
+        pb.redirectErrorStream(true);
+        Process process = pb.start();
+        String output = new String(process.getInputStream().readAllBytes());
+        boolean finished = process.waitFor(20, TimeUnit.SECONDS);
+        assertTrue(finished, "cache-bust self-check timed out\n" + output);
+        assertTrue(output.contains("missing index exits non-zero"), output);
         return process.exitValue();
     }
 
