@@ -4,6 +4,7 @@ import com.embabel.agent.api.annotation.Action;
 import com.embabel.agent.api.annotation.RequireNameMatch;
 import com.embabel.agent.api.common.Ai;
 import com.embabel.agent.domain.io.UserInput;
+import com.embabel.agent.test.unit.FakeOperationContext;
 import com.embabel.learning.common.curriculum.DebugGuide;
 import com.embabel.learning.common.domain.Critique;
 import com.embabel.learning.common.domain.ResearchDraft;
@@ -57,5 +58,30 @@ class ConditionalResearchAgentGuidedTest {
         assertEquals("carefulDraft", rewriteAction.outputBinding());
         assertTrue(rewriteAction.canRerun());
         assertNotNull(rewrite.getParameters()[1].getAnnotation(RequireNameMatch.class));
+    }
+
+    @Test
+    @DebugGuide(
+            breakpoints = {"ConditionalResearchAgent#rewriteCarefully"},
+            watch = "topic, previous draft, and critique feedback stay in the rewrite prompt"
+    )
+    void rewriteCarefullyKeepsTopicDraftAndFeedback() {
+        var ctx = FakeOperationContext.create();
+        ctx.expectResponse(new ResearchDraft("tides", "The moon raises the tides.", "careful"));
+        var topic = "Why do tides follow the moon?";
+        var previous = "Tides are caused by wind.";
+        var feedback = "Name the moon, not the wind.";
+
+        var rewritten = new ConditionalResearchAgent().rewriteCarefully(
+                new UserInput(topic),
+                new ResearchDraft(topic, previous, "fast"),
+                new Critique(false, feedback),
+                ctx.ai());
+
+        assertEquals("The moon raises the tides.", rewritten.content());
+        var prompt = ctx.getLlmInvocations().getFirst().getPrompt();
+        assertTrue(prompt.contains(topic), prompt);
+        assertTrue(prompt.contains(previous), prompt);
+        assertTrue(prompt.contains(feedback), prompt);
     }
 }
