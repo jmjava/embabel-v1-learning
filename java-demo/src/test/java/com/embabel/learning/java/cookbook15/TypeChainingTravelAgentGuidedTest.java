@@ -3,6 +3,7 @@ package com.embabel.learning.java.cookbook15;
 import com.embabel.agent.domain.io.UserInput;
 import com.embabel.agent.test.unit.FakeOperationContext;
 import com.embabel.learning.common.curriculum.DebugGuide;
+import com.embabel.learning.common.domain.TravelIntent;
 import com.embabel.learning.common.domain.TripBrief;
 import com.embabel.learning.common.domain.TripOption;
 import org.junit.jupiter.api.Test;
@@ -46,5 +47,26 @@ class TypeChainingTravelAgentGuidedTest {
                 FakeOperationContext.create().ai()
         );
         assertInstanceOf(TypeChainingTravelAgent.ItineraryRequest.class, request);
+    }
+
+    @Test
+    @DebugGuide(
+            breakpoints = {"TypeChainingTravelAgent#classify"},
+            watch = "ambiguous request stays in the classification prompt"
+    )
+    void classifyAmbiguousRequestKeepsTheUserText() {
+        var agent = new TypeChainingTravelAgent();
+        var text = "I need help choosing something for next month";
+        var ctx = FakeOperationContext.create();
+        ctx.expectResponse(TravelIntent.UNKNOWN);
+
+        var request = agent.classify(new UserInput(text), ctx.ai());
+
+        assertInstanceOf(TypeChainingTravelAgent.ItineraryRequest.class, request);
+        assertEquals(text, request.userInput().getContent());
+        var prompt = ctx.getLlmInvocations().getFirst().getPrompt();
+        assertTrue(prompt.contains("Classify this request as FLIGHT or ITINERARY."), prompt);
+        assertTrue(prompt.contains("Request:"), prompt);
+        assertTrue(prompt.contains(text), prompt);
     }
 }
