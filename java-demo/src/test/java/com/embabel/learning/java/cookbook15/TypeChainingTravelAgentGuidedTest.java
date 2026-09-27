@@ -47,4 +47,27 @@ class TypeChainingTravelAgentGuidedTest {
         );
         assertInstanceOf(TypeChainingTravelAgent.ItineraryRequest.class, request);
     }
+
+    @Test
+    @DebugGuide(
+            breakpoints = {"TypeChainingTravelAgent#planFlight"},
+            watch = "user request stays in the flight recommendation prompt"
+    )
+    void planFlightPromptKeepsTheRequest() {
+        var agent = new TypeChainingTravelAgent();
+        var text = "Find me a flight from New York to London";
+        var ctx = FakeOperationContext.create();
+        ctx.expectResponse(new TripBrief("London", "BA178", "JFK to LHR overnight", "LHR"));
+
+        var brief = agent.planFlight(
+                new TypeChainingTravelAgent.FlightRequest(new UserInput(text)),
+                ctx.ai()
+        );
+
+        assertEquals("LHR", brief.brief().highlight());
+        var prompt = ctx.getLlmInvocations().getFirst().getPrompt();
+        assertTrue(prompt.contains("Recommend one specific flight for:"), prompt);
+        assertTrue(prompt.contains("Use airport codes in the highlight field."), prompt);
+        assertTrue(prompt.contains(text), prompt);
+    }
 }
