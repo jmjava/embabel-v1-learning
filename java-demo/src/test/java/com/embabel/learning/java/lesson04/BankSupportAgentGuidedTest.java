@@ -62,4 +62,35 @@ class BankSupportAgentGuidedTest {
         assertNotNull(BankCustomer.class.getMethod("balance", boolean.class).getAnnotation(Tool.class));
         assertNull(BankCustomer.class.getMethod("internalRiskNote").getAnnotation(Tool.class));
     }
+
+    @Test
+    @DebugGuide(
+            breakpoints = {
+                    "BankCustomer#balance — includePending adds pendingAmount",
+                    "BankCustomer#internalRiskNote — HIGH_PENDING when pending exceeds half the settled balance",
+                    "BankSupportAgent#supportCustomer — Grace Hopper prompt"
+            },
+            watch = "settled balance stays 80; pending-inclusive balance is 220; prompt contains HIGH_PENDING"
+    )
+    void highPendingCustomerKeepsRiskAndPendingBalance() {
+        var grace = new InMemoryCustomerRepository().findById(2L);
+        assertNotNull(grace);
+        assertEquals(80.0f, grace.balance(false), 0.0f);
+        assertEquals(220.0f, grace.balance(true), 0.0f);
+        assertEquals("HIGH_PENDING", grace.internalRiskNote());
+
+        var atHalf = new BankCustomer(3L, "Boundary", 100.0f, 50.0f);
+        assertEquals(150.0f, atHalf.balance(true), 0.0f);
+        assertEquals("NORMAL", atHalf.internalRiskNote());
+
+        var agent = new BankSupportAgent(new InMemoryCustomerRepository());
+        var ctx = FakeOperationContext.create();
+        ctx.expectResponse(new SupportOutput("Grace, pending activity is high.", false, 8));
+        agent.supportCustomer(new SupportInput(2L, "Why is my balance low?"), ctx);
+
+        var prompt = ctx.getLlmInvocations().getFirst().getMessages().getFirst().getContent();
+        assertTrue(prompt.contains("Grace Hopper"), prompt);
+        assertTrue(prompt.contains("HIGH_PENDING"), prompt);
+        assertTrue(prompt.contains("Why is my balance low?"), prompt);
+    }
 }
