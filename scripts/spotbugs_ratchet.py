@@ -232,6 +232,7 @@ def cmd_cayc(repo: Path, baseline: Path, base: str) -> int:
 
 def self_test() -> int:
     previous_ci = os.environ.pop("CI", None)
+    previous_actions = os.environ.pop("GITHUB_ACTIONS", None)
     try:
         return _self_test()
     finally:
@@ -239,6 +240,10 @@ def self_test() -> int:
             os.environ.pop("CI", None)
         else:
             os.environ["CI"] = previous_ci
+        if previous_actions is None:
+            os.environ.pop("GITHUB_ACTIONS", None)
+        else:
+            os.environ["GITHUB_ACTIONS"] = previous_actions
 
 
 def _self_test() -> int:
