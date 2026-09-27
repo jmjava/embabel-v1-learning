@@ -36,10 +36,46 @@
             <artifactId>spring-ai-model</artifactId>
             <version>1.1.7</version>
         </dependency>
+        <dependency>
+            <groupId>com.tngtech.archunit</groupId>
+            <artifactId>archunit-junit5</artifactId>
+            <version>1.4.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+            </plugin>
+            <!-- PIT on CookbookChapterCatalog, which CookbookChapterCatalogTest
+                 already exercises. Threshold is the measured kill rate. -->
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>1.19.4</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.pitest</groupId>
+                        <artifactId>pitest-junit5-plugin</artifactId>
+                        <version>1.2.3</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <targetClasses>
+                        <param>com.embabel.learning.common.curriculum.CookbookChapterCatalog</param>
+                    </targetClasses>
+                    <targetTests>
+                        <param>com.embabel.learning.common.curriculum.CookbookChapterCatalogTest</param>
+                    </targetTests>
+                    <failWhenNoMutations>true</failWhenNoMutations>
+                    <timestampedReports>false</timestampedReports>
+                    <!-- Measured 7/7 killed (100%) by CookbookChapterCatalogTest. -->
+                    <mutationThreshold>100</mutationThreshold>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
