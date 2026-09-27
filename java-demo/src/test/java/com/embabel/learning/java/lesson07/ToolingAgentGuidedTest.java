@@ -2,6 +2,9 @@ package com.embabel.learning.java.lesson07;
 
 import com.embabel.agent.api.annotation.LlmTool;
 import com.embabel.agent.api.tool.Tool;
+import com.embabel.agent.core.CoreToolGroups;
+import com.embabel.agent.domain.io.UserInput;
+import com.embabel.agent.test.unit.FakeOperationContext;
 import com.embabel.learning.common.curriculum.DebugGuide;
 import org.junit.jupiter.api.Test;
 
@@ -35,5 +38,34 @@ class ToolingAgentGuidedTest {
             }
         }
         assertTrue(found || ann != null);
+    }
+
+    @Test
+    @DebugGuide(
+            breakpoints = {"ToolingAgent#answer"},
+            watch = "question and server_time in the prompt; web group plus server_time tool"
+    )
+    void answerPromptKeepsQuestionAndAttachesServerTime() {
+        var ctx = FakeOperationContext.create();
+        ctx.expectResponse(new ToolingAgent.ToolingAnswer("Tides follow the moon.", "server_time"));
+        var question = "Why do tides follow the moon?";
+
+        var answer = new ToolingAgent().answer(new UserInput(question), ctx.ai());
+
+        assertEquals("Tides follow the moon.", answer.answer());
+        var invocation = ctx.getLlmInvocations().getFirst();
+        var prompt = invocation.getPrompt();
+        assertTrue(prompt.contains(question), prompt);
+        assertTrue(prompt.contains("server_time"), prompt);
+
+        var groups = invocation.getInteraction().getToolGroups();
+        assertTrue(
+                groups.stream().anyMatch(group -> CoreToolGroups.WEB.equals(group.getRole())),
+                groups.toString()
+        );
+        var names = invocation.getInteraction().getTools().stream()
+                .map(tool -> tool.getDefinition().getName())
+                .toList();
+        assertTrue(names.contains("server_time"), names.toString());
     }
 }
