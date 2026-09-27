@@ -23,8 +23,10 @@
   git add .gitattributes docs/videos/recordings/*.mp4
   ```
 
-- Cache-busting: the workflow appends `?v=<short-sha>` to every
-  `videos/recordings/*.mp4` URL in the *deployed* `index.html`.
+- Cache-busting: the workflow runs
+  [`scripts/cache-bust-pages-index.sh`](../scripts/cache-bust-pages-index.sh),
+  which appends `?v=<short-sha>` to every `videos/recordings/*.mp4` URL in
+  the *deployed* `index.html`. A missing `docs/index.html` fails that step.
 
 ## Generate recordings
 

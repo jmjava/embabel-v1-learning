@@ -8,6 +8,7 @@ on:
       - 'docs/**'
       - '.github/workflows/pages.yml'
       - 'scripts/validate-pages-docs.sh'
+      - 'scripts/cache-bust-pages-index.sh'
   workflow_dispatch:
 
 permissions:
@@ -35,21 +36,7 @@ jobs:
       - name: Cache-bust video URLs
         env:
           GITHUB_SHA: ${{ github.sha }}
-        run: |
-          python3 <<'PY'
-          import os, pathlib, re
-          sha = os.environ["GITHUB_SHA"][:12]
-          path = pathlib.Path("docs/index.html")
-          if not path.exists():
-              raise SystemExit(0)
-          text = path.read_text(encoding="utf-8")
-          new = re.sub(
-              r'src="(videos/recordings/[^"?]+\.mp4)(?:\?[^"]*)?"',
-              lambda m: f'src="{m.group(1)}?v={sha}"',
-              text,
-          )
-          path.write_text(new, encoding="utf-8")
-          PY
+        run: ./scripts/cache-bust-pages-index.sh
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
