@@ -1,0 +1,27 @@
+# Frozen SpotBugs findings for learning-common and java-demo.
+# CI fails when a fingerprint appears that is not listed here.
+# Do not refresh this file in CI. Update locally with:
+#   python3 scripts/spotbugs_ratchet.py --mode update
+java-demo|DM_CONVERT_CASE|3|com.embabel.learning.java.lesson12.GuardedJokeAgent$NoPasswordTopics|validate|com/embabel/learning/java/lesson12/GuardedJokeAgent.java|59
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson02.WriteAndReviewAgent|craftStory|com/embabel/learning/java/lesson02/WriteAndReviewAgent.java|86
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson02.WriteAndReviewAgent|reviewStory|com/embabel/learning/java/lesson02/WriteAndReviewAgent.java|110
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson03.PersonalizedBriefAgent|extractPerson|com/embabel/learning/java/lesson03/PersonalizedBriefAgent.java|55
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson03.PersonalizedBriefAgent|writeBrief|com/embabel/learning/java/lesson03/PersonalizedBriefAgent.java|78
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson04.BankSupportAgent|supportCustomer|com/embabel/learning/java/lesson04/BankSupportAgent.java|61
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson05.HitlProfileAgent|extractProfile|com/embabel/learning/java/lesson05/HitlProfileAgent.java|38
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson05.HitlProfileAgent|welcome|com/embabel/learning/java/lesson05/HitlProfileAgent.java|60
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson06.ConditionalResearchAgent|critique|com/embabel/learning/java/lesson06/ConditionalResearchAgent.java|62
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson06.ConditionalResearchAgent|draftFast|com/embabel/learning/java/lesson06/ConditionalResearchAgent.java|51
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson06.ConditionalResearchAgent|publish|com/embabel/learning/java/lesson06/ConditionalResearchAgent.java|107
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson06.ConditionalResearchAgent|rewriteCarefully|com/embabel/learning/java/lesson06/ConditionalResearchAgent.java|93
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson07.ToolingAgent|answer|com/embabel/learning/java/lesson07/ToolingAgent.java|77
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson08.SubagentHandoffAgent|compose|com/embabel/learning/java/lesson08/SubagentHandoffAgent.java|50
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson09.RepeatUntilStoryAgent|lambda$rewriteUntilSatisfied$0|com/embabel/learning/java/lesson09/RepeatUntilStoryAgent.java|52
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson09.RepeatUntilStoryAgent|lambda$rewriteUntilSatisfied$1|com/embabel/learning/java/lesson09/RepeatUntilStoryAgent.java|61
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson10.SupervisorKitchenAgent|chooseCook|com/embabel/learning/java/lesson10/SupervisorKitchenAgent.java|53
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson10.SupervisorKitchenAgent|prepareMeal|com/embabel/learning/java/lesson10/SupervisorKitchenAgent.java|78
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson10.SupervisorKitchenAgent|takeOrder|com/embabel/learning/java/lesson10/SupervisorKitchenAgent.java|64
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson10.UtilityTriageComponent|route|com/embabel/learning/java/lesson10/UtilityTriageComponent.java|68
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson10.UtilityTriageComponent|score|com/embabel/learning/java/lesson10/UtilityTriageComponent.java|55
+java-demo|VA_FORMAT_STRING_USES_NEWLINE|2|com.embabel.learning.java.lesson11.StatefulDraftAgent$Drafting|refine|com/embabel/learning/java/lesson11/StatefulDraftAgent.java|46
+learning-common|DM_CONVERT_CASE|3|com.embabel.learning.common.service.InterestService|summarizeInterest|com/embabel/learning/common/service/InterestService.java|18

@@ -87,6 +87,28 @@
                     </dependency>
                 </dependencies>
             </plugin>
+            <!-- detekt:check only. create-baseline is not bound and CI does not run it. -->
+            <plugin>
+                <groupId>com.github.ozsie</groupId>
+                <artifactId>detekt-maven-plugin</artifactId>
+                <version>1.23.8</version>
+                <configuration>
+                    <config>${maven.multiModuleProjectDirectory}/detekt.yml</config>
+                    <baseline>${project.basedir}/detekt-baseline.xml</baseline>
+                    <buildUponDefaultConfig>true</buildUponDefaultConfig>
+                    <failBuildOnMaxIssuesReached>true</failBuildOnMaxIssuesReached>
+                    <autoCorrect>false</autoCorrect>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>detekt-check</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

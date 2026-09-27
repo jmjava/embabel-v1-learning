@@ -139,6 +139,19 @@
                     <artifactId>dokka-maven-plugin</artifactId>
                     <version>2.0.0</version>
                 </plugin>
+                <!-- Report only. spotbugs:check is not bound, and CI compares
+                     config/spotbugs-baseline.txt without rewriting it. -->
+                <plugin>
+                    <groupId>com.github.spotbugs</groupId>
+                    <artifactId>spotbugs-maven-plugin</artifactId>
+                    <version>4.9.3.0</version>
+                    <configuration>
+                        <effort>Max</effort>
+                        <threshold>Low</threshold>
+                        <xmlOutput>true</xmlOutput>
+                        <includeTests>false</includeTests>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
