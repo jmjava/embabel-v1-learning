@@ -4,8 +4,10 @@ import com.embabel.agent.api.annotation.Action;
 import com.embabel.agent.api.annotation.RequireNameMatch;
 import com.embabel.agent.api.common.Ai;
 import com.embabel.agent.domain.io.UserInput;
+import com.embabel.agent.test.unit.FakeOperationContext;
 import com.embabel.learning.common.curriculum.DebugGuide;
 import com.embabel.learning.common.domain.Critique;
+import com.embabel.learning.common.domain.FinalReport;
 import com.embabel.learning.common.domain.ResearchDraft;
 import org.junit.jupiter.api.Test;
 
@@ -57,5 +59,28 @@ class ConditionalResearchAgentGuidedTest {
         assertEquals("carefulDraft", rewriteAction.outputBinding());
         assertTrue(rewriteAction.canRerun());
         assertNotNull(rewrite.getParameters()[1].getAnnotation(RequireNameMatch.class));
+    }
+
+    @Test
+    @DebugGuide(
+            breakpoints = {"ConditionalResearchAgent#publish"},
+            watch = "user input and critique feedback stay in the final-report prompt"
+    )
+    void publishKeepsUserInputAndCritiqueFeedback() {
+        var ctx = FakeOperationContext.create();
+        var topic = "Why do tides follow the moon?";
+        var feedback = "Name the moon, not the wind.";
+        var critique = new Critique(true, feedback);
+        ctx.expectResponse(new FinalReport("Tides", "The moon raises the tides.", critique));
+
+        var report = new ConditionalResearchAgent().publish(
+                critique,
+                ctx.ai(),
+                new UserInput(topic));
+
+        assertEquals("The moon raises the tides.", report.body());
+        var prompt = ctx.getLlmInvocations().getFirst().getPrompt();
+        assertTrue(prompt.contains(topic), prompt);
+        assertTrue(prompt.contains(feedback), prompt);
     }
 }
