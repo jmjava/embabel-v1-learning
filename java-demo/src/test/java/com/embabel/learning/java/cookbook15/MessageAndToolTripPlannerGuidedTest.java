@@ -39,4 +39,31 @@ class MessageAndToolTripPlannerGuidedTest {
         assertTrue(tools.getWeather("Paris").contains("Paris"));
         assertTrue(tools.getTopAttractions("Paris").contains("museum"));
     }
+
+    @Test
+    @DebugGuide(
+            breakpoints = {
+                    "MessageAndToolTripPlanner#planWithTools",
+                    "withToolObject(TravelLookupTools)"
+            },
+            watch = "weather and attractions tools on the prompt runner"
+    )
+    void planWithToolsAttachesWeatherAndAttractions() {
+        var ctx = FakeOperationContext.create();
+        ctx.expectResponse(new TripBrief("Paris", "train", "3 days", "Louvre"));
+        var brief = new MessageAndToolTripPlanner(ctx.ai()).planWithTools("Paris");
+        assertEquals("Paris", brief.destination());
+
+        var invocation = ctx.getLlmInvocations().getFirst();
+        var prompt = invocation.getPrompt();
+        assertTrue(prompt.contains("Paris"), prompt);
+        assertTrue(prompt.toLowerCase().contains("weather"), prompt);
+        assertTrue(prompt.toLowerCase().contains("attractions"), prompt);
+
+        var names = invocation.getInteraction().getTools().stream()
+                .map(tool -> tool.getDefinition().getName().toLowerCase())
+                .toList();
+        assertTrue(names.stream().anyMatch(name -> name.contains("weather")), names.toString());
+        assertTrue(names.stream().anyMatch(name -> name.contains("attraction")), names.toString());
+    }
 }
