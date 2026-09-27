@@ -36,3 +36,35 @@ jobs:
       # That record is not a film rebuild.
       - name: Run CookbookVideoBundleTest
         run: ./mvnw -B -pl learning-common test -Dtest=CookbookVideoBundleTest
+
+  kotlin-guided:
+    name: Kotlin guided tests (${{ matrix.name }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Embabel 1.0
+            profile: ""
+          - name: Embabel 1.5
+            profile: "-Pembabel-15"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: "21"
+          distribution: "temurin"
+          cache: maven
+
+      # kotlin-demo's only tests are offline GuidedTests (FakeOperationContext
+      # or pure unit checks). None call a live model, so none are excluded.
+      # -Dtest=*GuidedTest selects them, including Cookbook15GuidedTest, and
+      # leaves CookbookVideoBundleTest on the job above. The 1.0 surefire
+      # exclude **/cookbook15/** would otherwise skip that class; selecting
+      # it here is safe because it uses FakeOperationContext. -Pembabel-15
+      # is the profile that clears the exclude. Pins stay 8822fcb. This job
+      # does not rebuild films.
+      - name: Run Kotlin guided tests
+        run: ./mvnw -B -pl kotlin-demo -am test -Dsurefire.failIfNoSpecifiedTests=false -Dtest='*GuidedTest' ${{ matrix.profile }}
