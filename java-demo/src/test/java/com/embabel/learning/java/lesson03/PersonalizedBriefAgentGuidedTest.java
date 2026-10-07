@@ -36,4 +36,28 @@ class PersonalizedBriefAgentGuidedTest {
         var brief = agent.writeBrief(person, summary, briefCtx.ai());
         assertEquals("Ada", brief.name());
     }
+
+    @Test
+    @DebugGuide(
+            breakpoints = {"PersonalizedBriefAgent#writeBrief"},
+            watch = "person name and interest summary stay in the brief prompt"
+    )
+    void writeBriefPromptKeepsNameAndInterestSummary() {
+        var agent = new PersonalizedBriefAgent(new InterestService());
+        var person = new PersonProfile("Ada Lovelace", "analytical engines");
+        var summary = agent.summarizeInterest(person);
+        var ctx = FakeOperationContext.create();
+        ctx.expectResponse(new PersonalizedBriefAgent.PersonalizedBrief(
+                "Ada Lovelace",
+                "Ada Lovelace pioneered analytical engines."
+        ));
+
+        var brief = agent.writeBrief(person, summary, ctx.ai());
+
+        assertEquals("Ada Lovelace", brief.name());
+        var prompt = ctx.getLlmInvocations().getFirst().getMessages().getFirst().getContent();
+        assertTrue(prompt.contains("personalized brief"), prompt);
+        assertTrue(prompt.contains(person.name()), prompt);
+        assertTrue(prompt.contains(summary.summary()), prompt);
+    }
 }
