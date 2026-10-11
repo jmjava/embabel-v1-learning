@@ -1,0 +1,7 @@
+# detekt configuration for kotlin-demo, merged on top of the default rule set.
+#
+# New findings fail the build (maxIssues: 0). Today's findings are frozen in
+# kotlin-demo/detekt-baseline.xml. mvn detekt:check does not rewrite that file.
+# detekt:create-baseline is not part of CI. autoCorrect stays off.
+build:
+  maxIssues: 0
