@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>MagicNumber:RepeatUntilStoryAgent.kt$RepeatUntilStoryAgent$0.8</ID>
+    <ID>MagicNumber:RepeatUntilStoryAgent.kt$RepeatUntilStoryAgent$5</ID>
+    <ID>MagicNumber:StreamingTripPlanner.kt$StreamingTripPlanner$120</ID>
+    <ID>MagicNumber:WriteAndReviewAgent.kt$WriteAndReviewAgent$0.7</ID>
+    <ID>MagicNumber:WriteAndReviewAgent.kt$WriteAndReviewAgent$0.85</ID>
+    <ID>SpreadOperator:KotlinLearningApplication.kt$(*args)</ID>
+    <ID>UnusedParameter:HeuristicTravelAgent.kt$HeuristicTravelAgent$userInput: UserInput</ID>
+  </CurrentIssues>
+</SmellBaseline>
