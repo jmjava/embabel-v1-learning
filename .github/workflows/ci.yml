@@ -38,7 +38,7 @@ jobs:
       # reverse walk) also fails: the 8822fcb recordings are 2.5s and have
       # no reverse walk. That record is not a film rebuild.
       - name: Run offline learning-common tests
-        run: ./mvnw -B -pl learning-common test -Dtest=CookbookChapterCatalogTest,LessonCoverageTest,CookbookVideoBundleTest
+        run: ./mvnw -B -pl learning-common test -Dtest=CookbookChapterCatalogTest,LessonCoverageTest,CookbookVideoBundleTest,OfflineLearningCommonCiTest
 
   maintainability:
     name: Maintainability ratchets
