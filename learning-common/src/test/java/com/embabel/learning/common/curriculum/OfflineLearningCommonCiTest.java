@@ -22,7 +22,12 @@ class OfflineLearningCommonCiTest {
         assertTrue(ci.contains("LessonCoverageTest"), "CI must run LessonCoverageTest");
         assertTrue(ci.contains("CookbookVideoBundleTest"), "CI must run CookbookVideoBundleTest");
         assertFalse(ci.contains("continue-on-error"), "offline tests must be able to go red");
-        assertFalse(ci.contains("GuidedTest"), "java-demo GuidedTest classes stay out of this job");
+        int offlineAt = ci.indexOf("  memoryos-pin:");
+        int nextJob = ci.indexOf("\n  maintainability:", offlineAt);
+        assertTrue(offlineAt >= 0, "offline learning-common job is present");
+        assertTrue(nextJob > offlineAt, "maintainability job follows the offline job");
+        String offlineJob = ci.substring(offlineAt, nextJob);
+        assertFalse(offlineJob.contains("GuidedTest"), "java-demo GuidedTest classes stay out of this job");
     }
 
     private static Path findRepoRoot() {
